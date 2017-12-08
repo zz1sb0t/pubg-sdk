@@ -49,7 +49,7 @@ struct FAutoCompleteCommand
 struct FGameModeName
 {
 	struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	struct FStringClassReference                       GameMode;                                                 // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	struct FStringClassReference                       GameMode;                                                 // 0x0010(0x0010) (CPF_Edit)
 };
 
 }

@@ -25,10 +25,74 @@ enum class EMutableParameterType : uint8_t
 };
 
 
+// Enum CustomizableObject.ECustomizableObjectRelevancy
+enum class ECustomizableObjectRelevancy : uint8_t
+{
+	ECustomizableObjectRelevancy__All = 0,
+	ECustomizableObjectRelevancy__ClientOnly = 1,
+	ECustomizableObjectRelevancy__ECustomizableObjectRelevancy_MAX = 2
+};
+
+
 
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct CustomizableObject.CustomizableObjectBoolParameterValue
+// 0x0018
+struct FCustomizableObjectBoolParameterValue
+{
+	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
+	bool                                               ParameterValue;                                           // 0x0010(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct CustomizableObject.CustomizableObjectIntParameterValue
+// 0x0028
+struct FCustomizableObjectIntParameterValue
+{
+	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
+	int                                                ParameterValue;                                           // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	struct FString                                     ParameterValueName;                                       // 0x0018(0x0010) (CPF_ZeroConstructor)
+};
+
+// ScriptStruct CustomizableObject.CustomizableObjectFloatParameterValue
+// 0x0018
+struct FCustomizableObjectFloatParameterValue
+{
+	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
+	float                                              ParameterValue;                                           // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct CustomizableObject.CustomizableObjectVectorParameterValue
+// 0x0020
+struct FCustomizableObjectVectorParameterValue
+{
+	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
+	struct FLinearColor                                ParameterValue;                                           // 0x0010(0x0010) (CPF_Edit, CPF_EditConst, CPF_IsPlainOldData)
+};
+
+// ScriptStruct CustomizableObject.CustomizableObjectProjector
+// 0x002C
+struct FCustomizableObjectProjector
+{
+	struct FVector                                     Position;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_IsPlainOldData)
+	struct FVector                                     Direction;                                                // 0x000C(0x000C) (CPF_Edit, CPF_IsPlainOldData)
+	struct FVector                                     Up;                                                       // 0x0018(0x000C) (CPF_Edit, CPF_IsPlainOldData)
+	struct FVector2D                                     Scale;                                                    // 0x0024(0x0008) (CPF_Edit, CPF_IsPlainOldData)
+};
+
+// ScriptStruct CustomizableObject.CustomizableObjectProjectorParameterValue
+// 0x0040
+struct FCustomizableObjectProjectorParameterValue
+{
+	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
+	struct FCustomizableObjectProjector                Value;                                                    // 0x0010(0x002C) (CPF_Edit, CPF_EditConst)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+};
 
 // ScriptStruct CustomizableObject.GeneratedTexture
 // 0x0028
@@ -107,79 +171,26 @@ struct FMutableModelParameterValue
 struct FMutableModelParameterProperties
 {
 	struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor)
-	TEnumAsByte<EMutableParameterType>                 Type;                                                     // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EMutableParameterType                              Type;                                                     // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	int                                                ImageDescriptionCount;                                    // 0x0014(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TArray<struct FMutableModelParameterValue>         PossibleValues;                                           // 0x0018(0x0010) (CPF_ZeroConstructor)
 };
 
-// ScriptStruct CustomizableObject.CustomizableObjectBoolParameterValue
-// 0x0018
-struct FCustomizableObjectBoolParameterValue
+// ScriptStruct CustomizableObject.PendingReleaseSkeletalMeshInfo
+// 0x0010
+struct FPendingReleaseSkeletalMeshInfo
 {
-	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
-	bool                                               ParameterValue;                                           // 0x0010(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
+	class USkeletalMesh*                               SkeletalMesh;                                             // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	double                                             Timestamp;                                                // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// ScriptStruct CustomizableObject.CustomizableObjectIntParameterValue
-// 0x0028
-struct FCustomizableObjectIntParameterValue
+// ScriptStruct CustomizableObject.CustomizedMaterialTexture2D
+// 0x0010
+struct FCustomizedMaterialTexture2D
 {
-	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
-	int                                                ParameterValue;                                           // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	struct FString                                     ParameterValueName;                                       // 0x0018(0x0010) (CPF_ZeroConstructor)
-};
-
-// ScriptStruct CustomizableObject.CustomizableObjectFloatParameterValue
-// 0x0018
-struct FCustomizableObjectFloatParameterValue
-{
-	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
-	float                                              ParameterValue;                                           // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct CustomizableObject.CustomizableObjectVectorParameterValue
-// 0x0020
-struct FCustomizableObjectVectorParameterValue
-{
-	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
-	struct FLinearColor                                ParameterValue;                                           // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-};
-
-// ScriptStruct CustomizableObject.CustomizableObjectProjector
-// 0x002C
-struct FCustomizableObjectProjector
-{
-	class Vector3D                                     Position;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Direction;                                                // 0x000C(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Up;                                                       // 0x0018(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector2D                                     Scale;                                                    // 0x0024(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// ScriptStruct CustomizableObject.CustomizableObjectProjectorParameterValue
-// 0x0040
-struct FCustomizableObjectProjectorParameterValue
-{
-	struct FString                                     ParameterName;                                            // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
-	struct FCustomizableObjectProjector                Value;                                                    // 0x0010(0x002C) (CPF_Edit, CPF_EditConst)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct CustomizableObject.MutableSkeletalMeshTracker
-// 0x0008
-struct FMutableSkeletalMeshTracker
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-};
-
-// ScriptStruct CustomizableObject.MutableTextureTracker
-// 0x0008
-struct FMutableTextureTracker
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	struct FName                                       Name;                                                     // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	class UTexture2D*                                  Texture;                                                  // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct CustomizableObject.CustomizableObjectIdentifier
@@ -189,14 +200,6 @@ struct FCustomizableObjectIdentifier
 	struct FString                                     CustomizableObjectGroupName;                              // 0x0000(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     CustomizableObjectName;                                   // 0x0010(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     Guid;                                                     // 0x0020(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-};
-
-// ScriptStruct CustomizableObject.CustomizedMaterialTexture2D
-// 0x0010
-struct FCustomizedMaterialTexture2D
-{
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	class UTexture2D*                                  Texture;                                                  // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 }

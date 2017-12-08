@@ -12,6 +12,83 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
+// Function HitNotifyWidget.HitNotifyWidget_C.GetBloodSpotWidget
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UBloodSpotWidget_C*      return                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UHitNotifyWidget_C::GetBloodSpotWidget(class UBloodSpotWidget_C** returnValue)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4476ad9f);
+
+	UHitNotifyWidget_C_GetBloodSpotWidget_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (returnValue != nullptr)
+		*returnValue = params.returnValue;
+}
+
+
+// Function HitNotifyWidget.HitNotifyWidget_C.InitializeBloodSpotWidgets
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHitNotifyWidget_C::InitializeBloodSpotWidgets()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8221f86a);
+
+	UHitNotifyWidget_C_InitializeBloodSpotWidgets_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HitNotifyWidget.HitNotifyWidget_C.InitializeKoreanRating
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHitNotifyWidget_C::InitializeKoreanRating()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1ecb594e);
+
+	UHitNotifyWidget_C_InitializeKoreanRating_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HitNotifyWidget.HitNotifyWidget_C.InitializeChineseLicensing
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHitNotifyWidget_C::InitializeChineseLicensing()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdc239202);
+
+	UHitNotifyWidget_C_InitializeChineseLicensing_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function HitNotifyWidget.HitNotifyWidget_C.DamagedPercentToDamage
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -20,7 +97,8 @@ namespace Classes
 
 void UHitNotifyWidget_C::DamagedPercentToDamage(float DamagedPercent, float* Damage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.DamagedPercentToDamage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xafb2382b);
 
 	UHitNotifyWidget_C_DamagedPercentToDamage_Params params;
 	params.DamagedPercent = DamagedPercent;
@@ -43,7 +121,8 @@ void UHitNotifyWidget_C::DamagedPercentToDamage(float DamagedPercent, float* Dam
 
 void UHitNotifyWidget_C::GetPlayerHealthPercent(float* HealthPercent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.GetPlayerHealthPercent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9f25b58b);
 
 	UHitNotifyWidget_C_GetPlayerHealthPercent_Params params;
 
@@ -65,7 +144,8 @@ void UHitNotifyWidget_C::GetPlayerHealthPercent(float* HealthPercent)
 
 void UHitNotifyWidget_C::PostAkEvent(class UAkAudioEvent* AkEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.PostAkEvent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5c3a0d6f);
 
 	UHitNotifyWidget_C_PostAkEvent_Params params;
 	params.AkEvent = AkEvent;
@@ -86,7 +166,8 @@ void UHitNotifyWidget_C::PostAkEvent(class UAkAudioEvent* AkEvent)
 
 void UHitNotifyWidget_C::SetRTPCValue(const struct FString& RTPC, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.SetRTPCValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdca06f73);
 
 	UHitNotifyWidget_C_SetRTPCValue_Params params;
 	params.RTPC = RTPC;
@@ -108,7 +189,8 @@ void UHitNotifyWidget_C::SetRTPCValue(const struct FString& RTPC, float Value)
 
 void UHitNotifyWidget_C::DamagedPercentToDamagePercent(float DamagedPercent, float* DamagePercent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.DamagedPercentToDamagePercent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa817e5a2);
 
 	UHitNotifyWidget_C_DamagedPercentToDamagePercent_Params params;
 	params.DamagedPercent = DamagedPercent;
@@ -129,7 +211,8 @@ void UHitNotifyWidget_C::DamagedPercentToDamagePercent(float DamagedPercent, flo
 
 void UHitNotifyWidget_C::PlayHitNotifySound()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.PlayHitNotifySound");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x96af3c88);
 
 	UHitNotifyWidget_C_PlayHitNotifySound_Params params;
 
@@ -142,13 +225,14 @@ void UHitNotifyWidget_C::PlayHitNotifySound()
 
 
 // Function HitNotifyWidget.HitNotifyWidget_C.GetRandomScale
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 Scale                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Scale                          (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void UHitNotifyWidget_C::GetRandomScale(class Vector2D* Scale)
+void UHitNotifyWidget_C::GetRandomScale(struct FVector2D* Scale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.GetRandomScale");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6c18213a);
 
 	UHitNotifyWidget_C_GetRandomScale_Params params;
 
@@ -164,13 +248,14 @@ void UHitNotifyWidget_C::GetRandomScale(class Vector2D* Scale)
 
 
 // Function HitNotifyWidget.HitNotifyWidget_C.GetRandomTranslation
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 Translation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Translation                    (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void UHitNotifyWidget_C::GetRandomTranslation(class Vector2D* Translation)
+void UHitNotifyWidget_C::GetRandomTranslation(struct FVector2D* Translation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.GetRandomTranslation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x74b3011d);
 
 	UHitNotifyWidget_C_GetRandomTranslation_Params params;
 
@@ -186,18 +271,58 @@ void UHitNotifyWidget_C::GetRandomTranslation(class Vector2D* Translation)
 
 
 // Function HitNotifyWidget.HitNotifyWidget_C.OnHitNotify
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
 // float                          DamagePercent                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EDamageTypeCategory> DamageTypeCategory             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 void UHitNotifyWidget_C::OnHitNotify(float DamagePercent, TEnumAsByte<EDamageTypeCategory> DamageTypeCategory)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.OnHitNotify");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb0b21a18);
 
 	UHitNotifyWidget_C_OnHitNotify_Params params;
 	params.DamagePercent = DamagePercent;
 	params.DamageTypeCategory = DamageTypeCategory;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HitNotifyWidget.HitNotifyWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UHitNotifyWidget_C::Construct()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd1752baa);
+
+	UHitNotifyWidget_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HitNotifyWidget.HitNotifyWidget_C.ExecuteUbergraph_HitNotifyWidget
+// ()
+// Parameters:
+// int                            EntryPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UHitNotifyWidget_C::ExecuteUbergraph_HitNotifyWidget(int EntryPoint)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x186e5d39);
+
+	UHitNotifyWidget_C_ExecuteUbergraph_HitNotifyWidget_Params params;
+	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
 

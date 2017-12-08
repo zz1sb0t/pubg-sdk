@@ -23,11 +23,11 @@ struct AOceanManager_LoadLandscapeHeightmap_Params
 // Function OceanPlugin.OceanManager.GetWaveHeightValue
 struct AOceanManager_GetWaveHeightValue_Params
 {
-	class Vector3D                                     Location;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	class UWorld*                                      World;                                                    // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               HeightOnly;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               TwoIterations;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function OceanPlugin.OceanManager.GetHeightmapPixel
@@ -35,7 +35,66 @@ struct AOceanManager_GetHeightmapPixel_Params
 {
 	float                                              U;                                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              V;                                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function OceanPlugin.AdvancedBuoyancyComponent.TriangleArea
+struct UAdvancedBuoyancyComponent_TriangleArea_Params
+{
+	struct FVector                                     A;                                                        // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     B;                                                        // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     C;                                                        // (CPF_Parm, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function OceanPlugin.AdvancedBuoyancyComponent.SplitTriangle
+struct UAdvancedBuoyancyComponent_SplitTriangle_Params
+{
+	struct FBuoyancyVertex                             H;                                                        // (CPF_Parm)
+	struct FBuoyancyVertex                             M;                                                        // (CPF_Parm)
+	struct FBuoyancyVertex                             L;                                                        // (CPF_Parm)
+	struct FVector                                     InArrow;                                                  // (CPF_Parm, CPF_IsPlainOldData)
+	TArray<struct FForceTriangle>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+};
+
+// Function OceanPlugin.AdvancedBuoyancyComponent.SetMeshDensity
+struct UAdvancedBuoyancyComponent_SetMeshDensity_Params
+{
+	float                                              NewDensity;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              NewWaterDensity;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function OceanPlugin.AdvancedBuoyancyComponent.GetOceanDepthFromGrid
+struct UAdvancedBuoyancyComponent_GetOceanDepthFromGrid_Params
+{
+	struct FVector                                     Position;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	bool                                               bJustGetHeightAtLocation;                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function OceanPlugin.AdvancedBuoyancyComponent.GetOcean
+struct UAdvancedBuoyancyComponent_GetOcean_Params
+{
+};
+
+// Function OceanPlugin.AdvancedBuoyancyComponent.DrawDebugStuff
+struct UAdvancedBuoyancyComponent_DrawDebugStuff_Params
+{
+	struct FForceTriangle                              TriForce;                                                 // (CPF_Parm)
+	struct FColor                                      DebugColor;                                               // (CPF_Parm, CPF_IsPlainOldData)
+};
+
+// Function OceanPlugin.AdvancedBuoyancyComponent.ApplySlamForce
+struct UAdvancedBuoyancyComponent_ApplySlamForce_Params
+{
+	struct FVector                                     SlamForce;                                                // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     TriCenter;                                                // (CPF_Parm, CPF_IsPlainOldData)
+};
+
+// Function OceanPlugin.AdvancedBuoyancyComponent.ApplyForce
+struct UAdvancedBuoyancyComponent_ApplyForce_Params
+{
+	struct FForceTriangle                              TriForce;                                                 // (CPF_Parm)
 };
 
 // Function OceanPlugin.CustomVehicleController.GetIsDriving
@@ -153,7 +212,7 @@ struct ATimeManager_GetDayOfYear_Params
 // Function OceanPlugin.TimeManager.CalculateSunAngle
 struct ATimeManager_CalculateSunAngle_Params
 {
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FRotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function OceanPlugin.TimeManager.CalculateMoonPhase
@@ -165,7 +224,7 @@ struct ATimeManager_CalculateMoonPhase_Params
 // Function OceanPlugin.TimeManager.CalculateMoonAngle
 struct ATimeManager_CalculateMoonAngle_Params
 {
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FRotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 }

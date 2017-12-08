@@ -20,9 +20,10 @@ struct AParachutePlayer_C_UserConstructionScript_Params
 };
 
 // Function ParachutePlayer.ParachutePlayer_C.АР„З|·xЗ_
-struct AParachutePlayer_C_АР„З|·xЗ__Params
+/*struct AParachutePlayer_C_АР„З|·xЗ__Params
 {
 };
+*/
 
 // Function ParachutePlayer.ParachutePlayer_C.ReceiveEndPlay
 struct AParachutePlayer_C_ReceiveEndPlay_Params
@@ -37,9 +38,9 @@ struct AParachutePlayer_C_ReceiveHit_Params
 	class AActor**                                     Other;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UPrimitiveComponent**                        OtherComp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool*                                              bSelfMoved;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D*                                    HitLocation;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D*                                    HitNormal;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D*                                    NormalImpulse;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector*                                    HitLocation;                                              // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector*                                    HitNormal;                                                // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector*                                    NormalImpulse;                                            // (CPF_Parm, CPF_IsPlainOldData)
 	struct FHitResult*                                 Hit;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 };
 

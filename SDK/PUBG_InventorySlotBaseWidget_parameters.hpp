@@ -135,6 +135,16 @@ struct UInventorySlotBaseWidget_C_Up_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.RaiseEnterEvent
+struct UInventorySlotBaseWidget_C_RaiseEnterEvent_Params
+{
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.RaiseLeaveEvent
+struct UInventorySlotBaseWidget_C_RaiseLeaveEvent_Params
+{
+};
+
 // Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.GetBackgroundState
 struct UInventorySlotBaseWidget_C_GetBackgroundState_Params
 {
@@ -237,51 +247,6 @@ struct UInventorySlotBaseWidget_C_GetBackgroundTexture_Bp_Params
 	class UTexture*                                    BackgroundTexture;                                        // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.UpdateDragDroppingItem
-struct UInventorySlotBaseWidget_C_UpdateDragDroppingItem_Params
-{
-	class UItem*                                       DroppingItem;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnMouseEnter
-struct UInventorySlotBaseWidget_C_OnMouseEnter_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
-	struct FPointerEvent*                              MouseEvent;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-};
-
-// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnMouseLeave
-struct UInventorySlotBaseWidget_C_OnMouseLeave_Params
-{
-	struct FPointerEvent*                              MouseEvent;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-};
-
-// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnDragEnter
-struct UInventorySlotBaseWidget_C_OnDragEnter_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
-	struct FPointerEvent*                              PointerEvent;                                             // (CPF_Parm)
-	class UDragDropOperation**                         Operation;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnDragLeave
-struct UInventorySlotBaseWidget_C_OnDragLeave_Params
-{
-	struct FPointerEvent*                              PointerEvent;                                             // (CPF_Parm)
-	class UDragDropOperation**                         Operation;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnUpdateItem
-struct UInventorySlotBaseWidget_C_OnUpdateItem_Params
-{
-	class UItem*                                       Item;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.Destruct
-struct UInventorySlotBaseWidget_C_Destruct_Params
-{
-};
-
 // Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.ShowToolTip
 struct UInventorySlotBaseWidget_C_ShowToolTip_Params
 {
@@ -319,10 +284,80 @@ struct UInventorySlotBaseWidget_C_OnInputWidgetInputB_Params
 {
 };
 
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.Destruct
+struct UInventorySlotBaseWidget_C_Destruct_Params
+{
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnUpdateItem
+struct UInventorySlotBaseWidget_C_OnUpdateItem_Params
+{
+	class UItem*                                       Item;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnDragLeave
+struct UInventorySlotBaseWidget_C_OnDragLeave_Params
+{
+	struct FPointerEvent*                              PointerEvent;                                             // (CPF_Parm)
+	class UDragDropOperation**                         Operation;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnDragEnter
+struct UInventorySlotBaseWidget_C_OnDragEnter_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FPointerEvent*                              PointerEvent;                                             // (CPF_Parm)
+	class UDragDropOperation**                         Operation;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnMouseLeave
+struct UInventorySlotBaseWidget_C_OnMouseLeave_Params
+{
+	struct FPointerEvent*                              MouseEvent;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnMouseEnter
+struct UInventorySlotBaseWidget_C_OnMouseEnter_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FPointerEvent*                              MouseEvent;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.UpdateDragDroppingItem
+struct UInventorySlotBaseWidget_C_UpdateDragDroppingItem_Params
+{
+	class UItem*                                       DroppingItem;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.ExecuteUbergraph_InventorySlotBaseWidget
 struct UInventorySlotBaseWidget_C_ExecuteUbergraph_InventorySlotBaseWidget_Params
 {
 	int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnDoSlotAction__DelegateSignature
+struct UInventorySlotBaseWidget_C_OnDoSlotAction__DelegateSignature_Params
+{
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnLeaveSlot__DelegateSignature
+struct UInventorySlotBaseWidget_C_OnLeaveSlot__DelegateSignature_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnEnterSlot__DelegateSignature
+struct UInventorySlotBaseWidget_C_OnEnterSlot__DelegateSignature_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnChildFocusSlotID__DelegateSignature
+struct UInventorySlotBaseWidget_C_OnChildFocusSlotID__DelegateSignature_Params
+{
+	EEquipSlotID                                       FocusSlotID;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.RefreshFocus__DelegateSignature

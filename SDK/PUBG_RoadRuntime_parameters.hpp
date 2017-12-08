@@ -18,8 +18,9 @@ namespace Classes
 struct ACrossActor_UpdateSideMesh_Params
 {
 	class UStaticMesh*                                 InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      MeshRelativeRotation;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      MeshRelativeRotation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeScale;                                        // (CPF_Parm, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsEnable;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsNormalized;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -29,8 +30,9 @@ struct ACrossActor_UpdateSideMesh_Params
 struct ACrossActor_UpdateSideActor_Params
 {
 	class UClass*                                      InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ActorRelativeLocation;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ActorRelativeRotation;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     ActorRelativeLocation;                                    // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      ActorRelativeRotation;                                    // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     ActorRelativeScale;                                       // (CPF_Parm, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsEnable;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsNormalized;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40,8 +42,9 @@ struct ACrossActor_UpdateSideActor_Params
 struct ACrossActor_PushSideMesh_Params
 {
 	class UStaticMesh*                                 InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      MeshRelativeRotation;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      MeshRelativeRotation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeScale;                                        // (CPF_Parm, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsEnable;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsNormalized;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -51,8 +54,9 @@ struct ACrossActor_PushSideMesh_Params
 struct ACrossActor_PushSideActor_Params
 {
 	class UClass*                                      InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ActorRelativeLocation;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ActorRelativeRotation;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     ActorRelativeLocation;                                    // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      ActorRelativeRotation;                                    // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     ActorRelativeScale;                                       // (CPF_Parm, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsEnable;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               IsNormalized;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -73,8 +77,9 @@ struct ARoadActor_UpdateSplineMesh_Params
 struct ARoadActor_UpdateSideMeshes_Params
 {
 	class UStaticMesh*                                 InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      MeshRelativeRotation;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      MeshRelativeRotation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeScale;                                        // (CPF_Parm, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InShift;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InSpacing;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -86,8 +91,9 @@ struct ARoadActor_UpdateSideMeshes_Params
 struct ARoadActor_UpdateSideActor_Params
 {
 	class UClass*                                      InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ActorRelativeLocation;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ActorRelativeRotation;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     ActorRelativeLocation;                                    // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      ActorRelativeRotation;                                    // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     ActorRelativeScale;                                       // (CPF_Parm, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InShift;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InSpacing;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -108,8 +114,9 @@ struct ARoadActor_UpdateSegment_Params
 struct ARoadActor_PushSideMesh_Params
 {
 	class UStaticMesh*                                 InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      MeshRelativeRotation;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      MeshRelativeRotation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeScale;                                        // (CPF_Parm, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InShift;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InSpacing;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -121,8 +128,9 @@ struct ARoadActor_PushSideMesh_Params
 struct ARoadActor_PushSideActor_Params
 {
 	class UClass*                                      InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ActorRelativeLocation;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ActorRelativeRotation;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     ActorRelativeLocation;                                    // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      ActorRelativeRotation;                                    // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     ActorRelativeScale;                                       // (CPF_Parm, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InShift;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InSpacing;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -130,8 +138,27 @@ struct ARoadActor_PushSideActor_Params
 	bool                                               IsNormalized;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function RoadRuntime.RoadActor.PushCurbsMeshes
+struct ARoadActor_PushCurbsMeshes_Params
+{
+	class UStaticMesh*                                 InPrototype;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UStaticMesh*                                 InStartPrototype;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UStaticMesh*                                 InEndPrototype;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeLocation;                                     // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     MeshRelativeScale;                                        // (CPF_Parm, CPF_IsPlainOldData)
+	int                                                SocketIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsEnable;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               InStartEnable;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               InEndEnable;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function RoadRuntime.RoadActor.DestroySideObjects
 struct ARoadActor_DestroySideObjects_Params
+{
+};
+
+// Function RoadRuntime.RoadActor.DestroySideCurbs
+struct ARoadActor_DestroySideCurbs_Params
 {
 };
 
@@ -143,7 +170,7 @@ struct ARoadActor_ClearSplineMeshes_Params
 // Function RoadRuntime.RoadActor.ApproxLength
 struct ARoadActor_ApproxLength_Params
 {
-	struct FInterpCurveVector                          SplineInfo;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+	struct FInterpCurveVector                          SplineInfo;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	float                                              Start;                                                    // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              End;                                                      // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                ApproxSections;                                           // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)

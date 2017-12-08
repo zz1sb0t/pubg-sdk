@@ -135,6 +135,31 @@ struct UInventoryListBaseWidget_C_Up_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.HandleOnLeaveSlot
+struct UInventoryListBaseWidget_C_HandleOnLeaveSlot_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.HandleOnEnterSlot
+struct UInventoryListBaseWidget_C_HandleOnEnterSlot_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnItemSlotWidgetCreated
+struct UInventoryListBaseWidget_C_OnItemSlotWidgetCreated_Params
+{
+	class UItemSlotWidget_C*                           ItemSlotWidget;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.HandleOnDoSlotAction
+struct UInventoryListBaseWidget_C_HandleOnDoSlotAction_Params
+{
+};
+
 // Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetScrollAccelation
 struct UInventoryListBaseWidget_C_GetScrollAccelation_Params
 {
@@ -324,6 +349,31 @@ struct UInventoryListBaseWidget_C_OnSlotScrollMoving_Params
 struct UInventoryListBaseWidget_C_ExecuteUbergraph_InventoryListBaseWidget_Params
 {
 	int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnLeaveSlot__DelegateSignature
+struct UInventoryListBaseWidget_C_OnLeaveSlot__DelegateSignature_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnEnterSlot__DelegateSignature
+struct UInventoryListBaseWidget_C_OnEnterSlot__DelegateSignature_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnDoSlotAction__DelegateSignature
+struct UInventoryListBaseWidget_C_OnDoSlotAction__DelegateSignature_Params
+{
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnInventoryDrop__DelegateSignature
+struct UInventoryListBaseWidget_C_OnInventoryDrop__DelegateSignature_Params
+{
+	class UDragDropOperation*                          Operation;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function InventoryListBaseWidget.InventoryListBaseWidget_C.RefreshFocus__DelegateSignature

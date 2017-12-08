@@ -21,7 +21,8 @@ namespace Classes
 
 void UWidgetFunctionLibrary_C::STATIC_GetOwningShooterCharacter(class UUserWidget* UserWidget, class UObject* __WorldContext, class ATslCharacter** ShooterCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WidgetFunctionLibrary.WidgetFunctionLibrary_C.GetOwningShooterCharacter");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xab3bd80);
 
 	UWidgetFunctionLibrary_C_GetOwningShooterCharacter_Params params;
 	params.UserWidget = UserWidget;

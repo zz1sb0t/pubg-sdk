@@ -14,6 +14,11 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.UpdateReplicateCharacter
+struct UObserverTagManagerWidget_C_UpdateReplicateCharacter_Params
+{
+};
+
 // Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.RemoveReplicateCharacter
 struct UObserverTagManagerWidget_C_RemoveReplicateCharacter_Params
 {
@@ -31,6 +36,21 @@ struct UObserverTagManagerWidget_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.Construct
+struct UObserverTagManagerWidget_C_Construct_Params
+{
+};
+
+// Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.CustomTick
+struct UObserverTagManagerWidget_C_CustomTick_Params
+{
+};
+
+// Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.TimerCheckUpdateList
+struct UObserverTagManagerWidget_C_TimerCheckUpdateList_Params
+{
 };
 
 // Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.ExecuteUbergraph_ObserverTagManagerWidget

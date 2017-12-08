@@ -13,14 +13,15 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LobbyCharacterBase.LobbyCharacterBase_C
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x0890 - 0x0890)
 class ALobbyCharacterBase_C : public ALobbyCharacter
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass LobbyCharacterBase.LobbyCharacterBase_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x1ba81ec5);
 		return ptr;
 	}
 

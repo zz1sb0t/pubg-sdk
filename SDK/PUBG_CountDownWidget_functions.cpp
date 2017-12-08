@@ -19,7 +19,8 @@ namespace Classes
 
 void UCountDownWidget_C::GetTslGameState(class ATslGameState** GameState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.GetTslGameState");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x83b5157f);
 
 	UCountDownWidget_C_GetTslGameState_Params params;
 
@@ -41,7 +42,8 @@ void UCountDownWidget_C::GetTslGameState(class ATslGameState** GameState)
 
 void UCountDownWidget_C::On_CountDownBlock_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.On_CountDownBlock_Prepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8d5e4706);
 
 	UCountDownWidget_C_On_CountDownBlock_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -61,7 +63,8 @@ void UCountDownWidget_C::On_CountDownBlock_Prepass_1(class UWidget* BoundWidget)
 
 void UCountDownWidget_C::On_CountDownText_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.On_CountDownText_Prepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x89e4c73c);
 
 	UCountDownWidget_C_On_CountDownText_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -77,11 +80,12 @@ void UCountDownWidget_C::On_CountDownText_Prepass_1(class UWidget* BoundWidget)
 // Function CountDownWidget.CountDownWidget_C.Get_CountDownText_Visibility_1
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// TEnumAsByte<ESlateVisibility>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// ESlateVisibility               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ESlateVisibility> UCountDownWidget_C::Get_CountDownText_Visibility_1()
+ESlateVisibility UCountDownWidget_C::Get_CountDownText_Visibility_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.Get_CountDownText_Visibility_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x57febd67);
 
 	UCountDownWidget_C_Get_CountDownText_Visibility_1_Params params;
 
@@ -102,7 +106,8 @@ TEnumAsByte<ESlateVisibility> UCountDownWidget_C::Get_CountDownText_Visibility_1
 
 struct FText UCountDownWidget_C::Get_CountDownText_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.Get_CountDownText_Text_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x26bf9dc2);
 
 	UCountDownWidget_C_Get_CountDownText_Text_1_Params params;
 

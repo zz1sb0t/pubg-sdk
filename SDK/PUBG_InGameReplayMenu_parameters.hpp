@@ -23,13 +23,13 @@ struct UInGameReplayMenu_C_SetHUD_Params
 // Function InGameReplayMenu.InGameReplayMenu_C.GotoReplayList
 struct UInGameReplayMenu_C_GotoReplayList_Params
 {
-	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupButtonID                                     ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function InGameReplayMenu.InGameReplayMenu_C.QuitReplay
 struct UInGameReplayMenu_C_QuitReplay_Params
 {
-	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupButtonID                                     ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function InGameReplayMenu.InGameReplayMenu_C.BndEvt__Button_Exit_K2Node_ComponentBoundEvent_228_OnButtonClickedEvent__DelegateSignature

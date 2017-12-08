@@ -20,7 +20,8 @@ namespace Classes
 
 class UWidget* UPresetColorComboBoxWidget_C::On_ComboBox_GenerateWidget_1(struct FString* Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PresetColorComboBoxWidget.PresetColorComboBoxWidget_C.On_ComboBox_GenerateWidget_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc2178b4);
 
 	UPresetColorComboBoxWidget_C_On_ComboBox_GenerateWidget_1_Params params;
 	params.Item = Item;

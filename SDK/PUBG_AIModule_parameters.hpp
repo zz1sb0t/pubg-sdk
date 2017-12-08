@@ -70,7 +70,7 @@ struct AAIController_OnGameplayTaskResourcesClaimed_Params
 // Function AIModule.AIController.MoveToLocation
 struct AAIController_MoveToLocation_Params
 {
-	class Vector3D                                     Dest;                                                     // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	struct FVector                                     Dest;                                                     // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	float                                              AcceptanceRadius;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               bStopOnOverlap;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               bUsePathfinding;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -103,7 +103,7 @@ struct AAIController_K2_SetFocus_Params
 // Function AIModule.AIController.K2_SetFocalPoint
 struct AAIController_K2_SetFocalPoint_Params
 {
-	class Vector3D                                     FP;                                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     FP;                                                       // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.AIController.K2_ClearFocus
@@ -132,7 +132,7 @@ struct AAIController_GetMoveStatus_Params
 // Function AIModule.AIController.GetImmediateMoveDestination
 struct AAIController_GetImmediateMoveDestination_Params
 {
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.AIController.GetFocusActor
@@ -145,13 +145,13 @@ struct AAIController_GetFocusActor_Params
 struct AAIController_GetFocalPointOnActor_Params
 {
 	class AActor*                                      Actor;                                                    // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.AIController.GetFocalPoint
 struct AAIController_GetFocalPoint_Params
 {
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.AIController.GetAIPerceptionComponent
@@ -166,19 +166,25 @@ struct AAIController_ClaimTaskResource_Params
 	class UClass*                                      ResourceClass;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function AIModule.PathFollowingComponent.OnNavDataRegistered
+struct UPathFollowingComponent_OnNavDataRegistered_Params
+{
+	class ANavigationData*                             NavData;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function AIModule.PathFollowingComponent.OnActorBump
 struct UPathFollowingComponent_OnActorBump_Params
 {
 	class AActor*                                      SelfActor;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class AActor*                                      OtherActor;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     NormalImpulse;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     NormalImpulse;                                            // (CPF_Parm, CPF_IsPlainOldData)
 	struct FHitResult                                  Hit;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.PathFollowingComponent.GetPathDestination
 struct UPathFollowingComponent_GetPathDestination_Params
 {
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.PathFollowingComponent.GetPathActionType
@@ -208,8 +214,8 @@ struct UAIBlueprintHelperLibrary_SpawnAIFromClass_Params
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UClass*                                      PawnClass;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UBehaviorTree*                               BehaviorTree;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Location;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      Rotation;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      Rotation;                                                 // (CPF_Parm, CPF_IsPlainOldData)
 	bool                                               bNoCollisionFail;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class APawn*                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
@@ -234,21 +240,21 @@ struct UAIBlueprintHelperLibrary_LockAIResourcesWithAnimation_Params
 // Function AIModule.AIBlueprintHelperLibrary.IsValidAIRotation
 struct UAIBlueprintHelperLibrary_IsValidAIRotation_Params
 {
-	class Rotator                                      Rotation;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FRotator                                      Rotation;                                                 // (CPF_Parm, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.AIBlueprintHelperLibrary.IsValidAILocation
 struct UAIBlueprintHelperLibrary_IsValidAILocation_Params
 {
-	class Vector3D                                     Location;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_Parm, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.AIBlueprintHelperLibrary.IsValidAIDirection
 struct UAIBlueprintHelperLibrary_IsValidAIDirection_Params
 {
-	class Vector3D                                     DirectionVector;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     DirectionVector;                                          // (CPF_Parm, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -271,53 +277,11 @@ struct UAIBlueprintHelperLibrary_CreateMoveToProxyObject_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class APawn*                                       Pawn;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Destination;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Destination;                                              // (CPF_Parm, CPF_IsPlainOldData)
 	class AActor*                                      TargetActor;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              AcceptanceRadius;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               bStopOnOverlap;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UAIAsyncTaskBlueprintProxy*                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function AIModule.PawnActionsComponent.K2_PushAction
-struct UPawnActionsComponent_K2_PushAction_Params
-{
-	class UPawnAction*                                 NewAction;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UObject*                                     Instigator;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function AIModule.PawnActionsComponent.K2_PerformAction
-struct UPawnActionsComponent_K2_PerformAction_Params
-{
-	class APawn*                                       Pawn;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPawnAction*                                 Action;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function AIModule.PawnActionsComponent.K2_ForceAbortAction
-struct UPawnActionsComponent_K2_ForceAbortAction_Params
-{
-	class UPawnAction*                                 ActionToAbort;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EPawnActionAbortState>                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function AIModule.PawnActionsComponent.K2_AbortAction
-struct UPawnActionsComponent_K2_AbortAction_Params
-{
-	class UPawnAction*                                 ActionToAbort;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EPawnActionAbortState>                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function AIModule.AISystem.AILoggingVerbose
-struct UAISystem_AILoggingVerbose_Params
-{
-};
-
-// Function AIModule.AISystem.AIIgnorePlayers
-struct UAISystem_AIIgnorePlayers_Params
-{
 };
 
 // Function AIModule.AIPerceptionSystem.ReportPerceptionEvent
@@ -479,15 +443,15 @@ struct UAISense_Damage_ReportDamageEvent_Params
 	class AActor*                                      DamagedActor;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class AActor*                                      Instigator;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              DamageAmount;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     EventLocation;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     HitLocation;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     EventLocation;                                            // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     HitLocation;                                              // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.AISense_Hearing.ReportNoiseEvent
 struct UAISense_Hearing_ReportNoiseEvent_Params
 {
 	class UObject*                                     WorldContext;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     NoiseLocation;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     NoiseLocation;                                            // (CPF_Parm, CPF_IsPlainOldData)
 	float                                              Loudness;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class AActor*                                      Instigator;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MaxRange;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -510,11 +474,21 @@ struct UAISense_Prediction_RequestControllerPredictionEvent_Params
 	float                                              PredictionTime;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function AIModule.AISystem.AILoggingVerbose
+struct UAISystem_AILoggingVerbose_Params
+{
+};
+
+// Function AIModule.AISystem.AIIgnorePlayers
+struct UAISystem_AIIgnorePlayers_Params
+{
+};
+
 // Function AIModule.AITask_MoveTo.AIMoveTo
 struct UAITask_MoveTo_AIMoveTo_Params
 {
 	class AAIController*                               Controller;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     GoalLocation;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     GoalLocation;                                             // (CPF_Parm, CPF_IsPlainOldData)
 	class AActor*                                      GoalActor;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              AcceptanceRadius;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EAIOptionFlag>                         StopOnOverlap;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -522,6 +496,14 @@ struct UAITask_MoveTo_AIMoveTo_Params
 	bool                                               bUsePathfinding;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               bLockAILogic;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UAITask_MoveTo*                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.AITask_RunEQS.RunEQS
+struct UAITask_RunEQS_RunEQS_Params
+{
+	class AAIController*                               Controller;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UEnvQuery*                                   QueryTemplate;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UAITask_RunEQS*                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BrainComponent.StopLogic
@@ -533,6 +515,18 @@ struct UBrainComponent_StopLogic_Params
 // Function AIModule.BrainComponent.RestartLogic
 struct UBrainComponent_RestartLogic_Params
 {
+};
+
+// Function AIModule.BrainComponent.IsRunning
+struct UBrainComponent_IsRunning_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.BrainComponent.IsPaused
+struct UBrainComponent_IsPaused_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BehaviorTreeComponent.SetDynamicSubtree
@@ -561,7 +555,7 @@ struct UBehaviorTreeComponent_AddCooldownTagDuration_Params
 struct UBlackboardComponent_SetValueAsVector_Params
 {
 	struct FName                                       KeyName;                                                  // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	class Vector3D                                     VectorValue;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     VectorValue;                                              // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BlackboardComponent.SetValueAsString
@@ -575,7 +569,7 @@ struct UBlackboardComponent_SetValueAsString_Params
 struct UBlackboardComponent_SetValueAsRotator_Params
 {
 	struct FName                                       KeyName;                                                  // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	class Rotator                                      VectorValue;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FRotator                                      VectorValue;                                              // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BlackboardComponent.SetValueAsObject
@@ -638,7 +632,7 @@ struct UBlackboardComponent_IsVectorValueSet_Params
 struct UBlackboardComponent_GetValueAsVector_Params
 {
 	struct FName                                       KeyName;                                                  // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BlackboardComponent.GetValueAsString
@@ -652,7 +646,7 @@ struct UBlackboardComponent_GetValueAsString_Params
 struct UBlackboardComponent_GetValueAsRotator_Params
 {
 	struct FName                                       KeyName;                                                  // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FRotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BlackboardComponent.GetValueAsObject
@@ -708,7 +702,7 @@ struct UBlackboardComponent_GetValueAsBool_Params
 struct UBlackboardComponent_GetRotationFromEntry_Params
 {
 	struct FName                                       KeyName;                                                  // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	class Rotator                                      ResultRotation;                                           // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FRotator                                      ResultRotation;                                           // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -716,7 +710,7 @@ struct UBlackboardComponent_GetRotationFromEntry_Params
 struct UBlackboardComponent_GetLocationFromEntry_Params
 {
 	struct FName                                       KeyName;                                                  // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	class Vector3D                                     ResultLocation;                                           // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     ResultLocation;                                           // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -744,7 +738,7 @@ struct UBTFunctionLibrary_SetBlackboardValueAsVector_Params
 {
 	class UBTNode*                                     NodeOwner;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FBlackboardKeySelector                      Key;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	class Vector3D                                     Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Value;                                                    // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsString
@@ -760,7 +754,7 @@ struct UBTFunctionLibrary_SetBlackboardValueAsRotator_Params
 {
 	class UBTNode*                                     NodeOwner;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FBlackboardKeySelector                      Key;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	class Rotator                                      Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FRotator                                      Value;                                                    // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BTFunctionLibrary.SetBlackboardValueAsObject
@@ -838,7 +832,7 @@ struct UBTFunctionLibrary_GetBlackboardValueAsVector_Params
 {
 	class UBTNode*                                     NodeOwner;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FBlackboardKeySelector                      Key;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsString
@@ -854,7 +848,7 @@ struct UBTFunctionLibrary_GetBlackboardValueAsRotator_Params
 {
 	class UBTNode*                                     NodeOwner;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FBlackboardKeySelector                      Key;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FRotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BTFunctionLibrary.GetBlackboardValueAsObject
@@ -1004,12 +998,6 @@ struct UBTDecorator_BlueprintBase_ReceiveExecutionFinish_Params
 	TEnumAsByte<EBTNodeResult>                         NodeResult;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveConditionCheck
-struct UBTDecorator_BlueprintBase_ReceiveConditionCheck_Params
-{
-	class AActor*                                      OwnerActor;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
 struct UBTDecorator_BlueprintBase_PerformConditionCheckAI_Params
 {
@@ -1035,12 +1023,6 @@ struct UBTDecorator_BlueprintBase_IsDecoratorObserverActive_Params
 struct UBTDecorator_BlueprintBase_IsDecoratorExecutionActive_Params
 {
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function AIModule.BTDecorator_BlueprintBase.FinishConditionCheck
-struct UBTDecorator_BlueprintBase_FinishConditionCheck_Params
-{
-	bool                                               bAllowExecution;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function AIModule.BTService_BlueprintBase.ReceiveTickAI
@@ -1180,32 +1162,12 @@ struct UBTTask_BlueprintBase_FinishAbort_Params
 {
 };
 
-// Function AIModule.PawnAction.GetActionPriority
-struct UPawnAction_GetActionPriority_Params
-{
-	TEnumAsByte<EAIRequestPriority>                    ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function AIModule.PawnAction.Finish
-struct UPawnAction_Finish_Params
-{
-	TEnumAsByte<EPawnActionResult>                     WithResult;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function AIModule.PawnAction.CreateActionInstance
-struct UPawnAction_CreateActionInstance_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UClass*                                      ActionClass;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPawnAction*                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
 // Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
 struct UEnvQueryContext_BlueprintBase_ProvideSingleLocation_Params
 {
 	class UObject*                                     QuerierObject;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class AActor*                                      QuerierActor;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ResultingLocation;                                        // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     ResultingLocation;                                        // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
@@ -1221,7 +1183,7 @@ struct UEnvQueryContext_BlueprintBase_ProvideLocationsSet_Params
 {
 	class UObject*                                     QuerierObject;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class AActor*                                      QuerierActor;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<class Vector3D>                             ResultingLocationSet;                                     // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+	TArray<struct FVector>                             ResultingLocationSet;                                     // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 };
 
 // Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
@@ -1242,7 +1204,7 @@ struct UEnvQueryInstanceBlueprintWrapper_SetNamedParam_Params
 // Function AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsLocations
 struct UEnvQueryInstanceBlueprintWrapper_GetResultsAsLocations_Params
 {
-	TArray<class Vector3D>                             ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+	TArray<struct FVector>                             ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 };
 
 // Function AIModule.EnvQueryInstanceBlueprintWrapper.GetResultsAsActors
@@ -1285,13 +1247,13 @@ struct UEnvQueryGenerator_BlueprintBase_GetQuerier_Params
 // Function AIModule.EnvQueryGenerator_BlueprintBase.DoItemGeneration
 struct UEnvQueryGenerator_BlueprintBase_DoItemGeneration_Params
 {
-	TArray<class Vector3D>                             ContextLocations;                                         // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+	TArray<struct FVector>                             ContextLocations;                                         // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 };
 
 // Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedVector
 struct UEnvQueryGenerator_BlueprintBase_AddGeneratedVector_Params
 {
-	class Vector3D                                     GeneratedVector;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     GeneratedVector;                                          // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
@@ -1300,10 +1262,104 @@ struct UEnvQueryGenerator_BlueprintBase_AddGeneratedActor_Params
 	class AActor*                                      GeneratedActor;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
+struct UNavLocalGridManager_SetLocalNavigationGridDensity_Params
+{
+	class UObject*                                     WorldContext;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              CellSize;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
+struct UNavLocalGridManager_RemoveLocalNavigationGrid_Params
+{
+	class UObject*                                     WorldContext;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                GridId;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath
+struct UNavLocalGridManager_FindLocalNavigationGridPath_Params
+{
+	class UObject*                                     WorldContext;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Start;                                                    // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+	struct FVector                                     End;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TArray<struct FVector>                             PathPoints;                                               // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
+struct UNavLocalGridManager_AddLocalNavigationGridForPoints_Params
+{
+	class UObject*                                     WorldContext;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<struct FVector>                             Locations;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+	int                                                Radius2D;                                                 // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Height;                                                   // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
+struct UNavLocalGridManager_AddLocalNavigationGridForPoint_Params
+{
+	class UObject*                                     WorldContext;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+	int                                                Radius2D;                                                 // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Height;                                                   // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
+struct UNavLocalGridManager_AddLocalNavigationGridForCapsule_Params
+{
+	class UObject*                                     WorldContext;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+	float                                              CapsuleRadius;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              CapsuleHalfHeight;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Radius2D;                                                 // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Height;                                                   // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
+struct UNavLocalGridManager_AddLocalNavigationGridForBox_Params
+{
+	class UObject*                                     WorldContext;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+	struct FVector                                     Extent;                                                   // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      Rotation;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	int                                                Radius2D;                                                 // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Height;                                                   // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRebuildGrids;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
 // Function AIModule.CrowdFollowingComponent.SuspendCrowdSteering
 struct UCrowdFollowingComponent_SuspendCrowdSteering_Params
 {
 	bool                                               bSuspend;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function AIModule.PawnAction.GetActionPriority
+struct UPawnAction_GetActionPriority_Params
+{
+	TEnumAsByte<EAIRequestPriority>                    ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.PawnAction.Finish
+struct UPawnAction_Finish_Params
+{
+	TEnumAsByte<EPawnActionResult>                     WithResult;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function AIModule.PawnAction.CreateActionInstance
+struct UPawnAction_CreateActionInstance_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ActionClass;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPawnAction*                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function AIModule.PawnAction_BlueprintBase.ActionTick
@@ -1338,6 +1394,38 @@ struct UPawnAction_BlueprintBase_ActionFinished_Params
 	TEnumAsByte<EPawnActionResult>                     WithResult;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function AIModule.PawnActionsComponent.K2_PushAction
+struct UPawnActionsComponent_K2_PushAction_Params
+{
+	class UPawnAction*                                 NewAction;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UObject*                                     Instigator;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.PawnActionsComponent.K2_PerformAction
+struct UPawnActionsComponent_K2_PerformAction_Params
+{
+	class APawn*                                       Pawn;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPawnAction*                                 Action;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<EAIRequestPriority>                    Priority;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.PawnActionsComponent.K2_ForceAbortAction
+struct UPawnActionsComponent_K2_ForceAbortAction_Params
+{
+	class UPawnAction*                                 ActionToAbort;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<EPawnActionAbortState>                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function AIModule.PawnActionsComponent.K2_AbortAction
+struct UPawnActionsComponent_K2_AbortAction_Params
+{
+	class UPawnAction*                                 ActionToAbort;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<EPawnActionAbortState>                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
 // Function AIModule.PawnSensingComponent.SetSensingUpdatesEnabled
 struct UPawnSensingComponent_SetSensingUpdatesEnabled_Params
 {
@@ -1366,7 +1454,7 @@ struct UPawnSensingComponent_SeePawnDelegate__DelegateSignature_Params
 struct UPawnSensingComponent_HearNoiseDelegate__DelegateSignature_Params
 {
 	class APawn*                                       Instigator;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Location;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	float                                              Volume;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 

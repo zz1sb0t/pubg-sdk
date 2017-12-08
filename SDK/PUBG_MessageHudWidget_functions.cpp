@@ -12,6 +12,48 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
+// Function MessageHudWidget.MessageHudWidget_C.Icon_DisplayKilledMessage
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// struct FDeathMessage           Input                          (CPF_Parm)
+
+void UMessageHudWidget_C::Icon_DisplayKilledMessage(const struct FDeathMessage& Input)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1c20e345);
+
+	UMessageHudWidget_C_Icon_DisplayKilledMessage_Params params;
+	params.Input = Input;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function MessageHudWidget.MessageHudWidget_C.Normal_DisplayKilledMessage
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// struct FDeathMessage           InputPin                       (CPF_Parm)
+
+void UMessageHudWidget_C::Normal_DisplayKilledMessage(const struct FDeathMessage& InputPin)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x868be16f);
+
+	UMessageHudWidget_C_Normal_DisplayKilledMessage_Params params;
+	params.InputPin = InputPin;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function MessageHudWidget.MessageHudWidget_C.CreateGamePlayMessage
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
@@ -25,7 +67,8 @@ namespace Classes
 
 void UMessageHudWidget_C::CreateGamePlayMessage(const struct FText& Message, TEnumAsByte<ETextJustify> TextAlignment, int TextSize, float Duration, bool bUseFade_In, class UAkAudioEvent* Sound, class UNewSystemMessageWidget_C** MessageWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.CreateGamePlayMessage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4c86efdc);
 
 	UMessageHudWidget_C_CreateGamePlayMessage_Params params;
 	params.Message = Message;
@@ -49,14 +92,15 @@ void UMessageHudWidget_C::CreateGamePlayMessage(const struct FText& Message, TEn
 // Function MessageHudWidget.MessageHudWidget_C.OnDisplayMessage
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// TEnumAsByte<ESystemMessageType> MessageType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// ESystemMessageType             MessageType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FText                   Message                        (CPF_Parm)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UAkAudioEvent*           Sound                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UMessageHudWidget_C::OnDisplayMessage(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message, float Duration, class UAkAudioEvent* Sound)
+void UMessageHudWidget_C::OnDisplayMessage(ESystemMessageType MessageType, const struct FText& Message, float Duration, class UAkAudioEvent* Sound)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.OnDisplayMessage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xec819b7f);
 
 	UMessageHudWidget_C_OnDisplayMessage_Params params;
 	params.MessageType = MessageType;
@@ -81,11 +125,14 @@ void UMessageHudWidget_C::OnDisplayMessage(TEnumAsByte<ESystemMessageType> Messa
 // int                            TextSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bUseFade_In                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bShowMyKillCount               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bUseMessagePool                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UNewSystemMessageWidget_C* MessageWidget                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UMessageHudWidget_C::CreateKillMessage(const struct FDeathMessage& DeathMessage, TEnumAsByte<ETextJustify> TextAlignment, const struct FSlateColor& TextColor, int TextSize, float Duration, bool bUseFade_In, class UNewSystemMessageWidget_C** MessageWidget)
+void UMessageHudWidget_C::CreateKillMessage(const struct FDeathMessage& DeathMessage, TEnumAsByte<ETextJustify> TextAlignment, const struct FSlateColor& TextColor, int TextSize, float Duration, bool bUseFade_In, bool bShowMyKillCount, bool bUseMessagePool, class UNewSystemMessageWidget_C** MessageWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.CreateKillMessage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5e9da7f0);
 
 	UMessageHudWidget_C_CreateKillMessage_Params params;
 	params.DeathMessage = DeathMessage;
@@ -94,6 +141,8 @@ void UMessageHudWidget_C::CreateKillMessage(const struct FDeathMessage& DeathMes
 	params.TextSize = TextSize;
 	params.Duration = Duration;
 	params.bUseFade_In = bUseFade_In;
+	params.bShowMyKillCount = bShowMyKillCount;
+	params.bUseMessagePool = bUseMessagePool;
 
 	auto flags = fn->FunctionFlags;
 
@@ -120,7 +169,8 @@ void UMessageHudWidget_C::CreateKillMessage(const struct FDeathMessage& DeathMes
 
 void UMessageHudWidget_C::CreateSystemMessage(const struct FText& Message, TEnumAsByte<ETextJustify> TextAlignment, const struct FSlateColor& TextColor, int TextSize, float Duration, bool bUseFade_In, class UAkAudioEvent* Sound, class UNewSystemMessageWidget_C** MessageWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.CreateSystemMessage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf2cd4ec1);
 
 	UMessageHudWidget_C_CreateSystemMessage_Params params;
 	params.Message = Message;
@@ -143,13 +193,14 @@ void UMessageHudWidget_C::CreateSystemMessage(const struct FText& Message, TEnum
 
 
 // Function MessageHudWidget.MessageHudWidget_C.OnDisplayKilledMessage
-// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
 // struct FDeathMessage           DeathMessage                   (CPF_Parm)
 
 void UMessageHudWidget_C::OnDisplayKilledMessage(const struct FDeathMessage& DeathMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.OnDisplayKilledMessage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa0e7d886);
 
 	UMessageHudWidget_C_OnDisplayKilledMessage_Params params;
 	params.DeathMessage = DeathMessage;
@@ -165,12 +216,13 @@ void UMessageHudWidget_C::OnDisplayKilledMessage(const struct FDeathMessage& Dea
 // Function MessageHudWidget.MessageHudWidget_C.OnDisplaySystemMessage
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// TEnumAsByte<ESystemMessageType> MessageType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// ESystemMessageType             MessageType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FText                   Message                        (CPF_Parm)
 
-void UMessageHudWidget_C::OnDisplaySystemMessage(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message)
+void UMessageHudWidget_C::OnDisplaySystemMessage(ESystemMessageType MessageType, const struct FText& Message)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.OnDisplaySystemMessage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1f21f272);
 
 	UMessageHudWidget_C_OnDisplaySystemMessage_Params params;
 	params.MessageType = MessageType;
@@ -189,7 +241,8 @@ void UMessageHudWidget_C::OnDisplaySystemMessage(TEnumAsByte<ESystemMessageType>
 
 void UMessageHudWidget_C::InitializeMessageHUD()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.InitializeMessageHUD");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x725761f5);
 
 	UMessageHudWidget_C_InitializeMessageHUD_Params params;
 
@@ -206,7 +259,8 @@ void UMessageHudWidget_C::InitializeMessageHUD()
 
 void UMessageHudWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.Construct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3ac4fbe);
 
 	UMessageHudWidget_C_Construct_Params params;
 
@@ -225,7 +279,8 @@ void UMessageHudWidget_C::Construct()
 
 void UMessageHudWidget_C::ExecuteUbergraph_MessageHudWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageHudWidget.MessageHudWidget_C.ExecuteUbergraph_MessageHudWidget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2ba1f887);
 
 	UMessageHudWidget_C_ExecuteUbergraph_MessageHudWidget_Params params;
 	params.EntryPoint = EntryPoint;

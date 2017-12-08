@@ -298,6 +298,12 @@ struct UWeaponEquipmentWidget_C_ExecuteUbergraph_WeaponEquipmentWidget_Params
 	int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnInventoryDrop__DelegateSignature
+struct UWeaponEquipmentWidget_C_OnInventoryDrop__DelegateSignature_Params
+{
+	class UDragDropOperation*                          Operation;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

@@ -15,11 +15,12 @@ namespace Classes
 // Function UMG.Widget.SetVisibility
 // (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// TEnumAsByte<ESlateVisibility>  InVisibility                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// ESlateVisibility               InVisibility                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UWidget::SetVisibility(TEnumAsByte<ESlateVisibility> InVisibility)
+void UWidget::SetVisibility(ESlateVisibility InVisibility)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetVisibility");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc0b6ba42);
 
 	UWidget_SetVisibility_Params params;
 	params.InVisibility = InVisibility;
@@ -40,7 +41,8 @@ void UWidget::SetVisibility(TEnumAsByte<ESlateVisibility> InVisibility)
 
 void UWidget::SetUserFocus(class APlayerController* PlayerController)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetUserFocus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x71085d95);
 
 	UWidget_SetUserFocus_Params params;
 	params.PlayerController = PlayerController;
@@ -61,7 +63,8 @@ void UWidget::SetUserFocus(class APlayerController* PlayerController)
 
 void UWidget::SetToolTipText(const struct FText& InToolTipText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetToolTipText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x81e39232);
 
 	UWidget_SetToolTipText_Params params;
 	params.InToolTipText = InToolTipText;
@@ -78,11 +81,12 @@ void UWidget::SetToolTipText(const struct FText& InToolTipText)
 // Function UMG.Widget.SetToolTip
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 void UWidget::SetToolTip(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetToolTip");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa5b2c247);
 
 	UWidget_SetToolTip_Params params;
 	params.Widget = Widget;
@@ -99,11 +103,12 @@ void UWidget::SetToolTip(class UWidget* Widget)
 // Function UMG.Widget.SetRenderTranslation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Translation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Translation                    (CPF_Parm, CPF_IsPlainOldData)
 
-void UWidget::SetRenderTranslation(const class Vector2D& Translation)
+void UWidget::SetRenderTranslation(const struct FVector2D& Translation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTranslation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6c766baf);
 
 	UWidget_SetRenderTranslation_Params params;
 	params.Translation = Translation;
@@ -120,11 +125,12 @@ void UWidget::SetRenderTranslation(const class Vector2D& Translation)
 // Function UMG.Widget.SetRenderTransformPivot
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Pivot                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Pivot                          (CPF_Parm, CPF_IsPlainOldData)
 
-void UWidget::SetRenderTransformPivot(const class Vector2D& Pivot)
+void UWidget::SetRenderTransformPivot(const struct FVector2D& Pivot)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTransformPivot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6f18e7e);
 
 	UWidget_SetRenderTransformPivot_Params params;
 	params.Pivot = Pivot;
@@ -145,7 +151,8 @@ void UWidget::SetRenderTransformPivot(const class Vector2D& Pivot)
 
 void UWidget::SetRenderTransform(const struct FWidgetTransform& InTransform)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderTransform");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc7a5f0d6);
 
 	UWidget_SetRenderTransform_Params params;
 	params.InTransform = InTransform;
@@ -162,11 +169,12 @@ void UWidget::SetRenderTransform(const struct FWidgetTransform& InTransform)
 // Function UMG.Widget.SetRenderShear
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Shear                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Shear                          (CPF_Parm, CPF_IsPlainOldData)
 
-void UWidget::SetRenderShear(const class Vector2D& Shear)
+void UWidget::SetRenderShear(const struct FVector2D& Shear)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderShear");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1fac7cf5);
 
 	UWidget_SetRenderShear_Params params;
 	params.Shear = Shear;
@@ -183,11 +191,12 @@ void UWidget::SetRenderShear(const class Vector2D& Shear)
 // Function UMG.Widget.SetRenderScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Scale                          (CPF_Parm, CPF_IsPlainOldData)
 
-void UWidget::SetRenderScale(const class Vector2D& Scale)
+void UWidget::SetRenderScale(const struct FVector2D& Scale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderScale");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4cebf340);
 
 	UWidget_SetRenderScale_Params params;
 	params.Scale = Scale;
@@ -208,10 +217,37 @@ void UWidget::SetRenderScale(const class Vector2D& Scale)
 
 void UWidget::SetRenderAngle(float Angle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetRenderAngle");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4435514b);
 
 	UWidget_SetRenderAngle_Params params;
 	params.Angle = Angle;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Widget.SetNavigationRule
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// EUINavigation                  Direction                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EUINavigationRule              Rule                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FName                   WidgetToFocus                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UWidget::SetNavigationRule(EUINavigation Direction, EUINavigationRule Rule, const struct FName& WidgetToFocus)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x27be70b6);
+
+	UWidget_SetNavigationRule_Params params;
+	params.Direction = Direction;
+	params.Rule = Rule;
+	params.WidgetToFocus = WidgetToFocus;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -227,7 +263,8 @@ void UWidget::SetRenderAngle(float Angle)
 
 void UWidget::SetKeyboardFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetKeyboardFocus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7283bf5f);
 
 	UWidget_SetKeyboardFocus_Params params;
 
@@ -247,7 +284,8 @@ void UWidget::SetKeyboardFocus()
 
 void UWidget::SetIsEnabled(bool bInIsEnabled)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetIsEnabled");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd7532945);
 
 	UWidget_SetIsEnabled_Params params;
 	params.bInIsEnabled = bInIsEnabled;
@@ -268,10 +306,35 @@ void UWidget::SetIsEnabled(bool bInIsEnabled)
 
 void UWidget::SetCursor(TEnumAsByte<EMouseCursor> InCursor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.SetCursor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcffb3ddc);
 
 	UWidget_SetCursor_Params params;
 	params.InCursor = InCursor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Widget.SetAllNavigationRules
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// EUINavigationRule              Rule                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FName                   WidgetToFocus                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UWidget::SetAllNavigationRules(EUINavigationRule Rule, const struct FName& WidgetToFocus)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x98428c7e);
+
+	UWidget_SetAllNavigationRules_Params params;
+	params.Rule = Rule;
+	params.WidgetToFocus = WidgetToFocus;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -287,7 +350,8 @@ void UWidget::SetCursor(TEnumAsByte<EMouseCursor> InCursor)
 
 void UWidget::ResetCursor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.ResetCursor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf7e6d1e1);
 
 	UWidget_ResetCursor_Params params;
 
@@ -305,7 +369,8 @@ void UWidget::ResetCursor()
 
 void UWidget::RemoveFromParent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.RemoveFromParent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8fe228ca);
 
 	UWidget_RemoveFromParent_Params params;
 
@@ -325,7 +390,8 @@ void UWidget::RemoveFromParent()
 
 struct FEventReply UWidget::OnReply__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.OnReply__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc1f60eff);
 
 	UWidget_OnReply__DelegateSignature_Params params;
 
@@ -348,7 +414,8 @@ struct FEventReply UWidget::OnReply__DelegateSignature()
 
 struct FEventReply UWidget::OnPointerEvent__DelegateSignature(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.OnPointerEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe80e864);
 
 	UWidget_OnPointerEvent__DelegateSignature_Params params;
 	params.MyGeometry = MyGeometry;
@@ -371,7 +438,8 @@ struct FEventReply UWidget::OnPointerEvent__DelegateSignature(const struct FGeom
 
 bool UWidget::IsVisible()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.IsVisible");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x12e4573c);
 
 	UWidget_IsVisible_Params params;
 
@@ -393,7 +461,8 @@ bool UWidget::IsVisible()
 
 bool UWidget::IsHovered()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.IsHovered");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1ec5ebf);
 
 	UWidget_IsHovered_Params params;
 
@@ -413,7 +482,8 @@ bool UWidget::IsHovered()
 
 void UWidget::InvalidateLayoutAndVolatility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.InvalidateLayoutAndVolatility");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x289d66ef);
 
 	UWidget_InvalidateLayoutAndVolatility_Params params;
 
@@ -434,7 +504,8 @@ void UWidget::InvalidateLayoutAndVolatility()
 
 bool UWidget::HasUserFocusedDescendants(class APlayerController* PlayerController)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasUserFocusedDescendants");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x14abe70e);
 
 	UWidget_HasUserFocusedDescendants_Params params;
 	params.PlayerController = PlayerController;
@@ -458,7 +529,8 @@ bool UWidget::HasUserFocusedDescendants(class APlayerController* PlayerControlle
 
 bool UWidget::HasUserFocus(class APlayerController* PlayerController)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasUserFocus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xea92c9d);
 
 	UWidget_HasUserFocus_Params params;
 	params.PlayerController = PlayerController;
@@ -481,7 +553,8 @@ bool UWidget::HasUserFocus(class APlayerController* PlayerController)
 
 bool UWidget::HasMouseCapture()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasMouseCapture");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbae9adf3);
 
 	UWidget_HasMouseCapture_Params params;
 
@@ -503,7 +576,8 @@ bool UWidget::HasMouseCapture()
 
 bool UWidget::HasKeyboardFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasKeyboardFocus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7707cb37);
 
 	UWidget_HasKeyboardFocus_Params params;
 
@@ -525,7 +599,8 @@ bool UWidget::HasKeyboardFocus()
 
 bool UWidget::HasFocusedDescendants()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasFocusedDescendants");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcd16b9f7);
 
 	UWidget_HasFocusedDescendants_Params params;
 
@@ -547,7 +622,8 @@ bool UWidget::HasFocusedDescendants()
 
 bool UWidget::HasAnyUserFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.HasAnyUserFocus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc91b9cbf);
 
 	UWidget_HasAnyUserFocus_Params params;
 
@@ -565,11 +641,12 @@ bool UWidget::HasAnyUserFocus()
 // DelegateFunction UMG.Widget.GetWidget__DelegateSignature
 // (FUNC_Public, FUNC_Delegate)
 // Parameters:
-// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UWidget* UWidget::GetWidget__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetWidget__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf5159bd8);
 
 	UWidget_GetWidget__DelegateSignature_Params params;
 
@@ -586,11 +663,12 @@ class UWidget* UWidget::GetWidget__DelegateSignature()
 // Function UMG.Widget.GetVisibility
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// TEnumAsByte<ESlateVisibility>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// ESlateVisibility               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ESlateVisibility> UWidget::GetVisibility()
+ESlateVisibility UWidget::GetVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetVisibility");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe8165416);
 
 	UWidget_GetVisibility_Params params;
 
@@ -612,7 +690,8 @@ TEnumAsByte<ESlateVisibility> UWidget::GetVisibility()
 
 struct FText UWidget::GetText__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetText__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x36cff0fb);
 
 	UWidget_GetText__DelegateSignature_Params params;
 
@@ -629,11 +708,12 @@ struct FText UWidget::GetText__DelegateSignature()
 // DelegateFunction UMG.Widget.GetSlateVisibility__DelegateSignature
 // (FUNC_Public, FUNC_Delegate)
 // Parameters:
-// TEnumAsByte<ESlateVisibility>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// ESlateVisibility               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ESlateVisibility> UWidget::GetSlateVisibility__DelegateSignature()
+ESlateVisibility UWidget::GetSlateVisibility__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateVisibility__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf24924f7);
 
 	UWidget_GetSlateVisibility__DelegateSignature_Params params;
 
@@ -654,7 +734,8 @@ TEnumAsByte<ESlateVisibility> UWidget::GetSlateVisibility__DelegateSignature()
 
 struct FSlateColor UWidget::GetSlateColor__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateColor__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x82ce2600);
 
 	UWidget_GetSlateColor__DelegateSignature_Params params;
 
@@ -675,7 +756,8 @@ struct FSlateColor UWidget::GetSlateColor__DelegateSignature()
 
 struct FSlateBrush UWidget::GetSlateBrush__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetSlateBrush__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9f5aa56b);
 
 	UWidget_GetSlateBrush__DelegateSignature_Params params;
 
@@ -692,11 +774,12 @@ struct FSlateBrush UWidget::GetSlateBrush__DelegateSignature()
 // Function UMG.Widget.GetParent
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class UPanelWidget*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UPanelWidget*            ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UPanelWidget* UWidget::GetParent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetParent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8905d9b6);
 
 	UWidget_GetParent_Params params;
 
@@ -718,7 +801,8 @@ class UPanelWidget* UWidget::GetParent()
 
 class APlayerController* UWidget::GetOwningPlayer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetOwningPlayer");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xef89a9e5);
 
 	UWidget_GetOwningPlayer_Params params;
 
@@ -740,7 +824,8 @@ class APlayerController* UWidget::GetOwningPlayer()
 
 TEnumAsByte<EMouseCursor> UWidget::GetMouseCursor__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetMouseCursor__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe6d60cab);
 
 	UWidget_GetMouseCursor__DelegateSignature_Params params;
 
@@ -757,11 +842,12 @@ TEnumAsByte<EMouseCursor> UWidget::GetMouseCursor__DelegateSignature()
 // DelegateFunction UMG.Widget.GetLinearColor__DelegateSignature
 // (FUNC_Public, FUNC_Delegate, FUNC_HasDefaults)
 // Parameters:
-// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
 struct FLinearColor UWidget::GetLinearColor__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetLinearColor__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdf5524b2);
 
 	UWidget_GetLinearColor__DelegateSignature_Params params;
 
@@ -782,7 +868,8 @@ struct FLinearColor UWidget::GetLinearColor__DelegateSignature()
 
 bool UWidget::GetIsEnabled()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetIsEnabled");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2fc67221);
 
 	UWidget_GetIsEnabled_Params params;
 
@@ -804,7 +891,8 @@ bool UWidget::GetIsEnabled()
 
 int UWidget::GetInt32__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetInt32__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x68dc675e);
 
 	UWidget_GetInt32__DelegateSignature_Params params;
 
@@ -825,7 +913,8 @@ int UWidget::GetInt32__DelegateSignature()
 
 float UWidget::GetFloat__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetFloat__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9b923cfc);
 
 	UWidget_GetFloat__DelegateSignature_Params params;
 
@@ -842,11 +931,12 @@ float UWidget::GetFloat__DelegateSignature()
 // Function UMG.Widget.GetDesiredSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UWidget::GetDesiredSize()
+struct FVector2D UWidget::GetDesiredSize()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.GetDesiredSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe385305b);
 
 	UWidget_GetDesiredSize_Params params;
 
@@ -864,15 +954,39 @@ class Vector2D UWidget::GetDesiredSize()
 // DelegateFunction UMG.Widget.GetCheckBoxState__DelegateSignature
 // (FUNC_Public, FUNC_Delegate)
 // Parameters:
-// TEnumAsByte<ECheckBoxState>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// ECheckBoxState                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ECheckBoxState> UWidget::GetCheckBoxState__DelegateSignature()
+ECheckBoxState UWidget::GetCheckBoxState__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetCheckBoxState__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x62c20544);
 
 	UWidget_GetCheckBoxState__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.Widget.GetCachedGeometry
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FGeometry               ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+
+struct FGeometry UWidget::GetCachedGeometry()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9a686ec);
+
+	UWidget_GetCachedGeometry_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -889,7 +1003,8 @@ TEnumAsByte<ECheckBoxState> UWidget::GetCheckBoxState__DelegateSignature()
 
 bool UWidget::GetBool__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GetBool__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x81bf5ecc);
 
 	UWidget_GetBool__DelegateSignature_Params params;
 
@@ -907,11 +1022,12 @@ bool UWidget::GetBool__DelegateSignature()
 // (FUNC_Public, FUNC_Delegate)
 // Parameters:
 // struct FString                 Item                           (CPF_Parm, CPF_ZeroConstructor)
-// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UWidget* UWidget::GenerateWidgetForString__DelegateSignature(const struct FString& Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GenerateWidgetForString__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x548200e3);
 
 	UWidget_GenerateWidgetForString__DelegateSignature_Params params;
 	params.Item = Item;
@@ -930,11 +1046,12 @@ class UWidget* UWidget::GenerateWidgetForString__DelegateSignature(const struct 
 // (FUNC_Public, FUNC_Delegate)
 // Parameters:
 // class UObject*                 Item                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UWidget* UWidget::GenerateWidgetForObject__DelegateSignature(class UObject* Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.GenerateWidgetForObject__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2b8e0e1);
 
 	UWidget_GenerateWidgetForObject__DelegateSignature_Params params;
 	params.Item = Item;
@@ -956,7 +1073,8 @@ class UWidget* UWidget::GenerateWidgetForObject__DelegateSignature(class UObject
 
 void UWidget::ForceVolatile(bool bForce)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.ForceVolatile");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xca2e0f37);
 
 	UWidget_ForceVolatile_Params params;
 	params.bForce = bForce;
@@ -975,7 +1093,8 @@ void UWidget::ForceVolatile(bool bForce)
 
 void UWidget::ForceLayoutPrepass()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Widget.ForceLayoutPrepass");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd715373);
 
 	UWidget_ForceLayoutPrepass_Params params;
 
@@ -991,11 +1110,12 @@ void UWidget::ForceLayoutPrepass()
 // DelegateFunction UMG.Widget.EventForWidget__DelegateSignature
 // (FUNC_Public, FUNC_Delegate)
 // Parameters:
-// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 void UWidget::EventForWidget__DelegateSignature(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.Widget.EventForWidget__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x980efafd);
 
 	UWidget_EventForWidget__DelegateSignature_Params params;
 	params.BoundWidget = BoundWidget;
@@ -1013,7 +1133,8 @@ void UWidget::EventForWidget__DelegateSignature(class UWidget* BoundWidget)
 
 void UUserWidget::UnregisterInputComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.UnregisterInputComponent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdc2b44fe);
 
 	UUserWidget_UnregisterInputComponent_Params params;
 
@@ -1034,7 +1155,8 @@ void UUserWidget::UnregisterInputComponent()
 
 void UUserWidget::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Tick");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdaa8635a);
 
 	UUserWidget_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1056,7 +1178,8 @@ void UUserWidget::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 
 void UUserWidget::StopListeningForInputAction(const struct FName& ActionName, TEnumAsByte<EInputEvent> EventType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopListeningForInputAction");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x81f89f5d);
 
 	UUserWidget_StopListeningForInputAction_Params params;
 	params.ActionName = ActionName;
@@ -1076,7 +1199,8 @@ void UUserWidget::StopListeningForInputAction(const struct FName& ActionName, TE
 
 void UUserWidget::StopListeningForAllInputActions()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopListeningForAllInputActions");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd9855207);
 
 	UUserWidget_StopListeningForAllInputActions_Params params;
 
@@ -1092,11 +1216,12 @@ void UUserWidget::StopListeningForAllInputActions()
 // Function UMG.UserWidget.StopAnimation
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 void UUserWidget::StopAnimation(class UWidgetAnimation* InAnimation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.StopAnimation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x102fe84d);
 
 	UUserWidget_StopAnimation_Params params;
 	params.InAnimation = InAnimation;
@@ -1113,12 +1238,13 @@ void UUserWidget::StopAnimation(class UWidgetAnimation* InAnimation)
 // Function UMG.UserWidget.SetPositionInViewport
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Position                       (CPF_Parm, CPF_IsPlainOldData)
 // bool                           bRemoveDPIScale                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UUserWidget::SetPositionInViewport(const class Vector2D& Position, bool bRemoveDPIScale)
+void UUserWidget::SetPositionInViewport(const struct FVector2D& Position, bool bRemoveDPIScale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPositionInViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd0b45d59);
 
 	UUserWidget_SetPositionInViewport_Params params;
 	params.Position = Position;
@@ -1136,12 +1262,13 @@ void UUserWidget::SetPositionInViewport(const class Vector2D& Position, bool bRe
 // Function UMG.UserWidget.SetPlaybackSpeed
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // float                          PlaybackSpeed                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 void UUserWidget::SetPlaybackSpeed(class UWidgetAnimation* InAnimation, float PlaybackSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPlaybackSpeed");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x31b7ad5);
 
 	UUserWidget_SetPlaybackSpeed_Params params;
 	params.InAnimation = InAnimation;
@@ -1163,10 +1290,33 @@ void UUserWidget::SetPlaybackSpeed(class UWidgetAnimation* InAnimation, float Pl
 
 void UUserWidget::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x724f9152);
 
 	UUserWidget_SetPadding_Params params;
 	params.InPadding = InPadding;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.UserWidget.SetOwningPlayer
+// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class APlayerController*       LocalPlayerController          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUserWidget::SetOwningPlayer(class APlayerController* LocalPlayerController)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8a7f5cfc);
+
+	UUserWidget_SetOwningPlayer_Params params;
+	params.LocalPlayerController = LocalPlayerController;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1184,7 +1334,8 @@ void UUserWidget::SetPadding(const struct FMargin& InPadding)
 
 void UUserWidget::SetOwningLocalPlayer(class ULocalPlayer* LocalPlayer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetOwningLocalPlayer");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4e139563);
 
 	UUserWidget_SetOwningLocalPlayer_Params params;
 	params.LocalPlayer = LocalPlayer;
@@ -1201,12 +1352,13 @@ void UUserWidget::SetOwningLocalPlayer(class ULocalPlayer* LocalPlayer)
 // Function UMG.UserWidget.SetNumLoopsToPlay
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // int                            NumLoopsToPlay                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 void UUserWidget::SetNumLoopsToPlay(class UWidgetAnimation* InAnimation, int NumLoopsToPlay)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetNumLoopsToPlay");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x91da7d03);
 
 	UUserWidget_SetNumLoopsToPlay_Params params;
 	params.InAnimation = InAnimation;
@@ -1228,7 +1380,8 @@ void UUserWidget::SetNumLoopsToPlay(class UWidgetAnimation* InAnimation, int Num
 
 void UUserWidget::SetInputActionPriority(int NewPriority)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetInputActionPriority");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x969e2e57);
 
 	UUserWidget_SetInputActionPriority_Params params;
 	params.NewPriority = NewPriority;
@@ -1249,7 +1402,8 @@ void UUserWidget::SetInputActionPriority(int NewPriority)
 
 void UUserWidget::SetInputActionBlocking(bool bShouldBlock)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetInputActionBlocking");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf46be236);
 
 	UUserWidget_SetInputActionBlocking_Params params;
 	params.bShouldBlock = bShouldBlock;
@@ -1270,7 +1424,8 @@ void UUserWidget::SetInputActionBlocking(bool bShouldBlock)
 
 void UUserWidget::SetForegroundColor(const struct FSlateColor& InForegroundColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetForegroundColor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xccd4f8c5);
 
 	UUserWidget_SetForegroundColor_Params params;
 	params.InForegroundColor = InForegroundColor;
@@ -1287,11 +1442,12 @@ void UUserWidget::SetForegroundColor(const struct FSlateColor& InForegroundColor
 // Function UMG.UserWidget.SetDesiredSizeInViewport
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Size                           (CPF_Parm, CPF_IsPlainOldData)
 
-void UUserWidget::SetDesiredSizeInViewport(const class Vector2D& Size)
+void UUserWidget::SetDesiredSizeInViewport(const struct FVector2D& Size)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetDesiredSizeInViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5d9b9a53);
 
 	UUserWidget_SetDesiredSizeInViewport_Params params;
 	params.Size = Size;
@@ -1308,11 +1464,12 @@ void UUserWidget::SetDesiredSizeInViewport(const class Vector2D& Size)
 // Function UMG.UserWidget.SetColorAndOpacity
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InColorAndOpacity              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InColorAndOpacity              (CPF_Parm, CPF_IsPlainOldData)
 
 void UUserWidget::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetColorAndOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xedf8c0ae);
 
 	UUserWidget_SetColorAndOpacity_Params params;
 	params.InColorAndOpacity = InColorAndOpacity;
@@ -1333,7 +1490,8 @@ void UUserWidget::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacit
 
 void UUserWidget::SetAnchorsInViewport(const struct FAnchors& Anchors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetAnchorsInViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x392ed308);
 
 	UUserWidget_SetAnchorsInViewport_Params params;
 	params.Anchors = Anchors;
@@ -1350,11 +1508,12 @@ void UUserWidget::SetAnchorsInViewport(const struct FAnchors& Anchors)
 // Function UMG.UserWidget.SetAlignmentInViewport
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Alignment                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Alignment                      (CPF_Parm, CPF_IsPlainOldData)
 
-void UUserWidget::SetAlignmentInViewport(const class Vector2D& Alignment)
+void UUserWidget::SetAlignmentInViewport(const struct FVector2D& Alignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.SetAlignmentInViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x15a824a5);
 
 	UUserWidget_SetAlignmentInViewport_Params params;
 	params.Alignment = Alignment;
@@ -1371,11 +1530,12 @@ void UUserWidget::SetAlignmentInViewport(const class Vector2D& Alignment)
 // Function UMG.UserWidget.ReverseAnimation
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 void UUserWidget::ReverseAnimation(class UWidgetAnimation* InAnimation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.ReverseAnimation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbe6e28d9);
 
 	UUserWidget_ReverseAnimation_Params params;
 	params.InAnimation = InAnimation;
@@ -1394,7 +1554,8 @@ void UUserWidget::ReverseAnimation(class UWidgetAnimation* InAnimation)
 
 void UUserWidget::RemoveFromViewport()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.RemoveFromViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x79dc186f);
 
 	UUserWidget_RemoveFromViewport_Params params;
 
@@ -1412,12 +1573,34 @@ void UUserWidget::RemoveFromViewport()
 
 void UUserWidget::RegisterInputComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.RegisterInputComponent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4cdfde0f);
 
 	UUserWidget_RegisterInputComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.UserWidget.PreConstruct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           IsDesignTime                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUserWidget::PreConstruct(bool IsDesignTime)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8899f147);
+
+	UUserWidget_PreConstruct_Params params;
+	params.IsDesignTime = IsDesignTime;
+
+	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1432,7 +1615,8 @@ void UUserWidget::RegisterInputComponent()
 
 void UUserWidget::PlaySound(class USoundBase* SoundToPlay)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlaySound");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2e20afb4);
 
 	UUserWidget_PlaySound_Params params;
 	params.SoundToPlay = SoundToPlay;
@@ -1449,7 +1633,7 @@ void UUserWidget::PlaySound(class USoundBase* SoundToPlay)
 // Function UMG.UserWidget.PlayAnimationTo
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // float                          StartAtTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // float                          EndAtTime                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            NumLoopsToPlay                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -1458,7 +1642,8 @@ void UUserWidget::PlaySound(class USoundBase* SoundToPlay)
 
 void UUserWidget::PlayAnimationTo(class UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode> PlayMode, float PlaybackSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimationTo");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2266c22c);
 
 	UUserWidget_PlayAnimationTo_Params params;
 	params.InAnimation = InAnimation;
@@ -1480,7 +1665,7 @@ void UUserWidget::PlayAnimationTo(class UWidgetAnimation* InAnimation, float Sta
 // Function UMG.UserWidget.PlayAnimation
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // float                          StartAtTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            NumLoopsToPlay                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EUMGSequencePlayMode> PlayMode                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -1488,7 +1673,8 @@ void UUserWidget::PlayAnimationTo(class UWidgetAnimation* InAnimation, float Sta
 
 void UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float StartAtTime, int NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode> PlayMode, float PlaybackSpeed)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PlayAnimation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x211c04ff);
 
 	UUserWidget_PlayAnimation_Params params;
 	params.InAnimation = InAnimation;
@@ -1509,12 +1695,13 @@ void UUserWidget::PlayAnimation(class UWidgetAnimation* InAnimation, float Start
 // Function UMG.UserWidget.PauseAnimation
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
 float UUserWidget::PauseAnimation(class UWidgetAnimation* InAnimation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.PauseAnimation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa432b745);
 
 	UUserWidget_PauseAnimation_Params params;
 	params.InAnimation = InAnimation;
@@ -1539,7 +1726,8 @@ float UUserWidget::PauseAnimation(class UWidgetAnimation* InAnimation)
 
 struct FEventReply UUserWidget::OnTouchStarted(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchStarted");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4dcb50a2);
 
 	UUserWidget_OnTouchStarted_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1564,7 +1752,8 @@ struct FEventReply UUserWidget::OnTouchStarted(const struct FGeometry& MyGeometr
 
 struct FEventReply UUserWidget::OnTouchMoved(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchMoved");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xaad18c58);
 
 	UUserWidget_OnTouchMoved_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1589,7 +1778,8 @@ struct FEventReply UUserWidget::OnTouchMoved(const struct FGeometry& MyGeometry,
 
 struct FEventReply UUserWidget::OnTouchGesture(const struct FGeometry& MyGeometry, const struct FPointerEvent& GestureEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchGesture");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7a8460a4);
 
 	UUserWidget_OnTouchGesture_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1614,7 +1804,8 @@ struct FEventReply UUserWidget::OnTouchGesture(const struct FGeometry& MyGeometr
 
 struct FEventReply UUserWidget::OnTouchEnded(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnTouchEnded");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa64a3b79);
 
 	UUserWidget_OnTouchEnded_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1639,7 +1830,8 @@ struct FEventReply UUserWidget::OnTouchEnded(const struct FGeometry& MyGeometry,
 
 struct FEventReply UUserWidget::OnPreviewMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPreviewMouseButtonDown");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9115b59b);
 
 	UUserWidget_OnPreviewMouseButtonDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1664,7 +1856,8 @@ struct FEventReply UUserWidget::OnPreviewMouseButtonDown(const struct FGeometry&
 
 struct FEventReply UUserWidget::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPreviewKeyDown");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3a613d17);
 
 	UUserWidget_OnPreviewKeyDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1687,7 +1880,8 @@ struct FEventReply UUserWidget::OnPreviewKeyDown(const struct FGeometry& MyGeome
 
 void UUserWidget::OnPaint(struct FPaintContext* Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnPaint");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x204c1f12);
 
 	UUserWidget_OnPaint_Params params;
 
@@ -1711,7 +1905,8 @@ void UUserWidget::OnPaint(struct FPaintContext* Context)
 
 struct FEventReply UUserWidget::OnMouseWheel(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseWheel");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x21619038);
 
 	UUserWidget_OnMouseWheel_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1736,7 +1931,8 @@ struct FEventReply UUserWidget::OnMouseWheel(const struct FGeometry& MyGeometry,
 
 struct FEventReply UUserWidget::OnMouseMove(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseMove");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd553d908);
 
 	UUserWidget_OnMouseMove_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1759,7 +1955,8 @@ struct FEventReply UUserWidget::OnMouseMove(const struct FGeometry& MyGeometry, 
 
 void UUserWidget::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseLeave");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x56b14364);
 
 	UUserWidget_OnMouseLeave_Params params;
 	params.MouseEvent = MouseEvent;
@@ -1780,7 +1977,8 @@ void UUserWidget::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 
 void UUserWidget::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseEnter");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x40e1325b);
 
 	UUserWidget_OnMouseEnter_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1803,7 +2001,8 @@ void UUserWidget::OnMouseEnter(const struct FGeometry& MyGeometry, const struct 
 
 struct FEventReply UUserWidget::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonUp");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3ea8e4f8);
 
 	UUserWidget_OnMouseButtonUp_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1828,7 +2027,8 @@ struct FEventReply UUserWidget::OnMouseButtonUp(const struct FGeometry& MyGeomet
 
 struct FEventReply UUserWidget::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonDown");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9816bb67);
 
 	UUserWidget_OnMouseButtonDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1853,7 +2053,8 @@ struct FEventReply UUserWidget::OnMouseButtonDown(const struct FGeometry& MyGeom
 
 struct FEventReply UUserWidget::OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMouseButtonDoubleClick");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc28e6a98);
 
 	UUserWidget_OnMouseButtonDoubleClick_Params params;
 	params.InMyGeometry = InMyGeometry;
@@ -1878,7 +2079,8 @@ struct FEventReply UUserWidget::OnMouseButtonDoubleClick(const struct FGeometry&
 
 struct FEventReply UUserWidget::OnMotionDetected(const struct FGeometry& MyGeometry, const struct FMotionEvent& InMotionEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnMotionDetected");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa899a56a);
 
 	UUserWidget_OnMotionDetected_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1903,7 +2105,8 @@ struct FEventReply UUserWidget::OnMotionDetected(const struct FGeometry& MyGeome
 
 struct FEventReply UUserWidget::OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyUp");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xeab17ecc);
 
 	UUserWidget_OnKeyUp_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1928,7 +2131,8 @@ struct FEventReply UUserWidget::OnKeyUp(const struct FGeometry& MyGeometry, cons
 
 struct FEventReply UUserWidget::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyDown");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf47ba4a3);
 
 	UUserWidget_OnKeyDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1953,7 +2157,8 @@ struct FEventReply UUserWidget::OnKeyDown(const struct FGeometry& MyGeometry, co
 
 struct FEventReply UUserWidget::OnKeyChar(const struct FGeometry& MyGeometry, const struct FCharacterEvent& InCharacterEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnKeyChar");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6907075b);
 
 	UUserWidget_OnKeyChar_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1978,7 +2183,8 @@ struct FEventReply UUserWidget::OnKeyChar(const struct FGeometry& MyGeometry, co
 
 struct FEventReply UUserWidget::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnFocusReceived");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb5891327);
 
 	UUserWidget_OnFocusReceived_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2001,7 +2207,8 @@ struct FEventReply UUserWidget::OnFocusReceived(const struct FGeometry& MyGeomet
 
 void UUserWidget::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnFocusLost");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xffe003ac);
 
 	UUserWidget_OnFocusLost_Params params;
 	params.InFocusEvent = InFocusEvent;
@@ -2024,7 +2231,8 @@ void UUserWidget::OnFocusLost(const struct FFocusEvent& InFocusEvent)
 
 bool UUserWidget::OnDrop(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDrop");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa7ca733d);
 
 	UUserWidget_OnDrop_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2051,7 +2259,8 @@ bool UUserWidget::OnDrop(const struct FGeometry& MyGeometry, const struct FPoint
 
 bool UUserWidget::OnDragOver(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragOver");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdbe21962);
 
 	UUserWidget_OnDragOver_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2076,7 +2285,8 @@ bool UUserWidget::OnDragOver(const struct FGeometry& MyGeometry, const struct FP
 
 void UUserWidget::OnDragLeave(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragLeave");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x133fd511);
 
 	UUserWidget_OnDragLeave_Params params;
 	params.PointerEvent = PointerEvent;
@@ -2099,7 +2309,8 @@ void UUserWidget::OnDragLeave(const struct FPointerEvent& PointerEvent, class UD
 
 void UUserWidget::OnDragEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragEnter");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6b510046);
 
 	UUserWidget_OnDragEnter_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2123,7 +2334,8 @@ void UUserWidget::OnDragEnter(const struct FGeometry& MyGeometry, const struct F
 
 void UUserWidget::OnDragDetected(const struct FGeometry& MyGeometry, const struct FPointerEvent& PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragDetected");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe005070e);
 
 	UUserWidget_OnDragDetected_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2148,7 +2360,8 @@ void UUserWidget::OnDragDetected(const struct FGeometry& MyGeometry, const struc
 
 void UUserWidget::OnDragCancelled(const struct FPointerEvent& PointerEvent, class UDragDropOperation* Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnDragCancelled");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xac86106d);
 
 	UUserWidget_OnDragCancelled_Params params;
 	params.PointerEvent = PointerEvent;
@@ -2171,7 +2384,8 @@ void UUserWidget::OnDragCancelled(const struct FPointerEvent& PointerEvent, clas
 
 struct FEventReply UUserWidget::OnControllerButtonReleased(const struct FGeometry& MyGeometry, const struct FControllerEvent& ControllerEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnControllerButtonReleased");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xddb7eb17);
 
 	UUserWidget_OnControllerButtonReleased_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2196,7 +2410,8 @@ struct FEventReply UUserWidget::OnControllerButtonReleased(const struct FGeometr
 
 struct FEventReply UUserWidget::OnControllerButtonPressed(const struct FGeometry& MyGeometry, const struct FControllerEvent& ControllerEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnControllerButtonPressed");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8e095bc0);
 
 	UUserWidget_OnControllerButtonPressed_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2221,7 +2436,8 @@ struct FEventReply UUserWidget::OnControllerButtonPressed(const struct FGeometry
 
 struct FEventReply UUserWidget::OnControllerAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FControllerEvent& ControllerEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnControllerAnalogValueChanged");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4263b067);
 
 	UUserWidget_OnControllerAnalogValueChanged_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2240,11 +2456,12 @@ struct FEventReply UUserWidget::OnControllerAnalogValueChanged(const struct FGeo
 // Function UMG.UserWidget.OnAnimationStarted
 // (FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 // Parameters:
-// class UWidgetAnimation*        Animation                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        Animation                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 void UUserWidget::OnAnimationStarted(class UWidgetAnimation* Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnimationStarted");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc359a9bf);
 
 	UUserWidget_OnAnimationStarted_Params params;
 	params.Animation = Animation;
@@ -2261,11 +2478,12 @@ void UUserWidget::OnAnimationStarted(class UWidgetAnimation* Animation)
 // Function UMG.UserWidget.OnAnimationFinished
 // (FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 // Parameters:
-// class UWidgetAnimation*        Animation                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        Animation                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 void UUserWidget::OnAnimationFinished(class UWidgetAnimation* Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnimationFinished");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6f9e55c2);
 
 	UUserWidget_OnAnimationFinished_Params params;
 	params.Animation = Animation;
@@ -2288,7 +2506,8 @@ void UUserWidget::OnAnimationFinished(class UWidgetAnimation* Animation)
 
 struct FEventReply UUserWidget::OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.OnAnalogValueChanged");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd47608f);
 
 	UUserWidget_OnAnalogValueChanged_Params params;
 	params.MyGeometry = MyGeometry;
@@ -2314,7 +2533,8 @@ struct FEventReply UUserWidget::OnAnalogValueChanged(const struct FGeometry& MyG
 
 void UUserWidget::ListenForInputAction(const struct FName& ActionName, TEnumAsByte<EInputEvent> EventType, bool bConsume, const struct FScriptDelegate& Callback)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.ListenForInputAction");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdcdcc6fd);
 
 	UUserWidget_ListenForInputAction_Params params;
 	params.ActionName = ActionName;
@@ -2338,7 +2558,8 @@ void UUserWidget::ListenForInputAction(const struct FName& ActionName, TEnumAsBy
 
 bool UUserWidget::IsPlayingAnimation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsPlayingAnimation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7e9692ad);
 
 	UUserWidget_IsPlayingAnimation_Params params;
 
@@ -2361,7 +2582,8 @@ bool UUserWidget::IsPlayingAnimation()
 
 bool UUserWidget::IsListeningForInputAction(const struct FName& ActionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsListeningForInputAction");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe88b0859);
 
 	UUserWidget_IsListeningForInputAction_Params params;
 	params.ActionName = ActionName;
@@ -2384,7 +2606,8 @@ bool UUserWidget::IsListeningForInputAction(const struct FName& ActionName)
 
 bool UUserWidget::IsInViewport()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsInViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7552a956);
 
 	UUserWidget_IsInViewport_Params params;
 
@@ -2406,7 +2629,8 @@ bool UUserWidget::IsInViewport()
 
 bool UUserWidget::IsInteractable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsInteractable");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4c578a3b);
 
 	UUserWidget_IsInteractable_Params params;
 
@@ -2427,7 +2651,8 @@ bool UUserWidget::IsInteractable()
 
 bool UUserWidget::IsAnyAnimationPlaying()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsAnyAnimationPlaying");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbc006cfd);
 
 	UUserWidget_IsAnyAnimationPlaying_Params params;
 
@@ -2445,12 +2670,13 @@ bool UUserWidget::IsAnyAnimationPlaying()
 // Function UMG.UserWidget.IsAnimationPlaying
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
 bool UUserWidget::IsAnimationPlaying(class UWidgetAnimation* InAnimation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.IsAnimationPlaying");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4885138d);
 
 	UUserWidget_IsAnimationPlaying_Params params;
 	params.InAnimation = InAnimation;
@@ -2473,7 +2699,8 @@ bool UUserWidget::IsAnimationPlaying(class UWidgetAnimation* InAnimation)
 
 class APawn* UUserWidget::GetOwningPlayerPawn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetOwningPlayerPawn");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb622b7b2);
 
 	UUserWidget_GetOwningPlayerPawn_Params params;
 
@@ -2495,7 +2722,8 @@ class APawn* UUserWidget::GetOwningPlayerPawn()
 
 class APlayerController* UUserWidget::GetOwningPlayer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetOwningPlayer");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x318198f0);
 
 	UUserWidget_GetOwningPlayer_Params params;
 
@@ -2517,7 +2745,8 @@ class APlayerController* UUserWidget::GetOwningPlayer()
 
 class ULocalPlayer* UUserWidget::GetOwningLocalPlayer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetOwningLocalPlayer");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xadb7377);
 
 	UUserWidget_GetOwningLocalPlayer_Params params;
 
@@ -2539,7 +2768,8 @@ class ULocalPlayer* UUserWidget::GetOwningLocalPlayer()
 
 bool UUserWidget::GetIsVisible()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetIsVisible");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xafd7b9af);
 
 	UUserWidget_GetIsVisible_Params params;
 
@@ -2557,15 +2787,62 @@ bool UUserWidget::GetIsVisible()
 // Function UMG.UserWidget.GetAnimationCurrentTime
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidgetAnimation*        InAnimation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
 float UUserWidget::GetAnimationCurrentTime(class UWidgetAnimation* InAnimation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.GetAnimationCurrentTime");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x36fcf895);
 
 	UUserWidget_GetAnimationCurrentTime_Params params;
 	params.InAnimation = InAnimation;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.UserWidget.GetAnchorsInViewport
+// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FAnchors                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+
+struct FAnchors UUserWidget::GetAnchorsInViewport()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd9b970bc);
+
+	UUserWidget_GetAnchorsInViewport_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.UserWidget.GetAlignmentInViewport
+// (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+
+struct FVector2D UUserWidget::GetAlignmentInViewport()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x75d1c4e1);
+
+	UUserWidget_GetAlignmentInViewport_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -2583,7 +2860,8 @@ float UUserWidget::GetAnimationCurrentTime(class UWidgetAnimation* InAnimation)
 
 void UUserWidget::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Destruct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x12586757);
 
 	UUserWidget_Destruct_Params params;
 
@@ -2600,7 +2878,8 @@ void UUserWidget::Destruct()
 
 void UUserWidget::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.Construct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2159d1d8);
 
 	UUserWidget_Construct_Params params;
 
@@ -2619,7 +2898,8 @@ void UUserWidget::Construct()
 
 void UUserWidget::AddToViewport(int ZOrder)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.AddToViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xde2758f);
 
 	UUserWidget_AddToViewport_Params params;
 	params.ZOrder = ZOrder;
@@ -2641,7 +2921,8 @@ void UUserWidget::AddToViewport(int ZOrder)
 
 bool UUserWidget::AddToPlayerScreen(int ZOrder)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UserWidget.AddToPlayerScreen");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4ab2ff06);
 
 	UUserWidget_AddToPlayerScreen_Params params;
 	params.ZOrder = ZOrder;
@@ -2665,7 +2946,8 @@ bool UUserWidget::AddToPlayerScreen(int ZOrder)
 
 class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::STATIC_DownloadImage(const struct FString& URL)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.AsyncTaskDownloadImage.DownloadImage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x46ee0b93);
 
 	UAsyncTaskDownloadImage_DownloadImage_Params params;
 	params.URL = URL;
@@ -2688,7 +2970,8 @@ class UAsyncTaskDownloadImage* UAsyncTaskDownloadImage::STATIC_DownloadImage(con
 
 void UDragDropOperation::Drop(const struct FPointerEvent& PointerEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.Drop");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9e2aba91);
 
 	UDragDropOperation_Drop_Params params;
 	params.PointerEvent = PointerEvent;
@@ -2709,7 +2992,8 @@ void UDragDropOperation::Drop(const struct FPointerEvent& PointerEvent)
 
 void UDragDropOperation::Dragged(const struct FPointerEvent& PointerEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.Dragged");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xfa44a694);
 
 	UDragDropOperation_Dragged_Params params;
 	params.PointerEvent = PointerEvent;
@@ -2730,7 +3014,8 @@ void UDragDropOperation::Dragged(const struct FPointerEvent& PointerEvent)
 
 void UDragDropOperation::DragCancelled(const struct FPointerEvent& PointerEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.DragDropOperation.DragCancelled");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x31048819);
 
 	UDragDropOperation_DragCancelled_Params params;
 	params.PointerEvent = PointerEvent;
@@ -2751,7 +3036,8 @@ void UDragDropOperation::DragCancelled(const struct FPointerEvent& PointerEvent)
 
 bool UBoolBinding::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.BoolBinding.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3b71e8c4);
 
 	UBoolBinding_GetValue_Params params;
 
@@ -2773,7 +3059,8 @@ bool UBoolBinding::GetValue()
 
 struct FSlateBrush UBrushBinding::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.BrushBinding.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa06a45f4);
 
 	UBrushBinding_GetValue_Params params;
 
@@ -2791,11 +3078,12 @@ struct FSlateBrush UBrushBinding::GetValue()
 // Function UMG.CheckedStateBinding.GetValue
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_Const)
 // Parameters:
-// TEnumAsByte<ECheckBoxState>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// ECheckBoxState                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ECheckBoxState> UCheckedStateBinding::GetValue()
+ECheckBoxState UCheckedStateBinding::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CheckedStateBinding.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9d2f2b36);
 
 	UCheckedStateBinding_GetValue_Params params;
 
@@ -2817,7 +3105,8 @@ TEnumAsByte<ECheckBoxState> UCheckedStateBinding::GetValue()
 
 struct FSlateColor UColorBinding::GetSlateValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ColorBinding.GetSlateValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3ca9f470);
 
 	UColorBinding_GetSlateValue_Params params;
 
@@ -2835,11 +3124,12 @@ struct FSlateColor UColorBinding::GetSlateValue()
 // Function UMG.ColorBinding.GetLinearValue
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_Const)
 // Parameters:
-// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
 struct FLinearColor UColorBinding::GetLinearValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ColorBinding.GetLinearValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x957a918c);
 
 	UColorBinding_GetLinearValue_Params params;
 
@@ -2861,7 +3151,8 @@ struct FLinearColor UColorBinding::GetLinearValue()
 
 float UFloatBinding::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.FloatBinding.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7afe6026);
 
 	UFloatBinding_GetValue_Params params;
 
@@ -2883,7 +3174,8 @@ float UFloatBinding::GetValue()
 
 int UInt32Binding::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Int32Binding.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd2e31e28);
 
 	UInt32Binding_GetValue_Params params;
 
@@ -2905,7 +3197,8 @@ int UInt32Binding::GetValue()
 
 TEnumAsByte<EMouseCursor> UMouseCursorBinding::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MouseCursorBinding.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd3ff2917);
 
 	UMouseCursorBinding_GetValue_Params params;
 
@@ -2927,7 +3220,8 @@ TEnumAsByte<EMouseCursor> UMouseCursorBinding::GetValue()
 
 struct FText UTextBinding::GetTextValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetTextValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8ce6918e);
 
 	UTextBinding_GetTextValue_Params params;
 
@@ -2949,7 +3243,8 @@ struct FText UTextBinding::GetTextValue()
 
 struct FString UTextBinding::GetStringValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBinding.GetStringValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x700cca4);
 
 	UTextBinding_GetStringValue_Params params;
 
@@ -2967,11 +3262,12 @@ struct FString UTextBinding::GetStringValue()
 // Function UMG.VisibilityBinding.GetValue
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_Const)
 // Parameters:
-// TEnumAsByte<ESlateVisibility>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// ESlateVisibility               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ESlateVisibility> UVisibilityBinding::GetValue()
+ESlateVisibility UVisibilityBinding::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.VisibilityBinding.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3c28ff58);
 
 	UVisibilityBinding_GetValue_Params params;
 
@@ -2989,11 +3285,12 @@ TEnumAsByte<ESlateVisibility> UVisibilityBinding::GetValue()
 // Function UMG.WidgetBinding.GetValue
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_Const)
 // Parameters:
-// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UWidget* UWidgetBinding::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBinding.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x83289378);
 
 	UWidgetBinding_GetValue_Params params;
 
@@ -3013,12 +3310,13 @@ class UWidget* UWidgetBinding::GetValue()
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FGeometry               Geometry                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 LocalCoordinate                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 ScreenPosition                 (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 LocalCoordinate                (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void USlateBlueprintLibrary::STATIC_ScreenToWidgetLocal(class UObject* WorldContextObject, const struct FGeometry& Geometry, const class Vector2D& ScreenPosition, class Vector2D* LocalCoordinate)
+void USlateBlueprintLibrary::STATIC_ScreenToWidgetLocal(class UObject* WorldContextObject, const struct FGeometry& Geometry, const struct FVector2D& ScreenPosition, struct FVector2D* LocalCoordinate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.ScreenToWidgetLocal");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xca80d3cb);
 
 	USlateBlueprintLibrary_ScreenToWidgetLocal_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -3041,12 +3339,13 @@ void USlateBlueprintLibrary::STATIC_ScreenToWidgetLocal(class UObject* WorldCont
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 AbsoluteCoordinate             (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 ScreenPosition                 (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 AbsoluteCoordinate             (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void USlateBlueprintLibrary::STATIC_ScreenToWidgetAbsolute(class UObject* WorldContextObject, const class Vector2D& ScreenPosition, class Vector2D* AbsoluteCoordinate)
+void USlateBlueprintLibrary::STATIC_ScreenToWidgetAbsolute(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FVector2D* AbsoluteCoordinate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.ScreenToWidgetAbsolute");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf293bd51);
 
 	USlateBlueprintLibrary_ScreenToWidgetAbsolute_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -3064,18 +3363,47 @@ void USlateBlueprintLibrary::STATIC_ScreenToWidgetAbsolute(class UObject* WorldC
 }
 
 
+// Function UMG.SlateBlueprintLibrary.ScreenToViewport
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults)
+// Parameters:
+// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 ScreenPosition                 (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 ViewportPosition               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+
+void USlateBlueprintLibrary::STATIC_ScreenToViewport(class UObject* WorldContextObject, const struct FVector2D& ScreenPosition, struct FVector2D* ViewportPosition)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5ea532a8);
+
+	USlateBlueprintLibrary_ScreenToViewport_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.ScreenPosition = ScreenPosition;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ViewportPosition != nullptr)
+		*ViewportPosition = params.ViewportPosition;
+}
+
+
 // Function UMG.SlateBlueprintLibrary.LocalToViewport
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FGeometry               Geometry                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 LocalCoordinate                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 PixelPosition                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ViewportPosition               (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 LocalCoordinate                (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 PixelPosition                  (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FVector2D                 ViewportPosition               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void USlateBlueprintLibrary::STATIC_LocalToViewport(class UObject* WorldContextObject, const struct FGeometry& Geometry, const class Vector2D& LocalCoordinate, class Vector2D* PixelPosition, class Vector2D* ViewportPosition)
+void USlateBlueprintLibrary::STATIC_LocalToViewport(class UObject* WorldContextObject, const struct FGeometry& Geometry, const struct FVector2D& LocalCoordinate, struct FVector2D* PixelPosition, struct FVector2D* ViewportPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.LocalToViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa81994b3);
 
 	USlateBlueprintLibrary_LocalToViewport_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -3100,12 +3428,13 @@ void USlateBlueprintLibrary::STATIC_LocalToViewport(class UObject* WorldContextO
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FGeometry               Geometry                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 LocalCoordinate                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 LocalCoordinate                (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D USlateBlueprintLibrary::STATIC_LocalToAbsolute(const struct FGeometry& Geometry, const class Vector2D& LocalCoordinate)
+struct FVector2D USlateBlueprintLibrary::STATIC_LocalToAbsolute(const struct FGeometry& Geometry, const struct FVector2D& LocalCoordinate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.LocalToAbsolute");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd837dc1a);
 
 	USlateBlueprintLibrary_LocalToAbsolute_Params params;
 	params.Geometry = Geometry;
@@ -3126,12 +3455,13 @@ class Vector2D USlateBlueprintLibrary::STATIC_LocalToAbsolute(const struct FGeom
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FGeometry               Geometry                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 AbsoluteCoordinate             (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+// struct FVector2D                 AbsoluteCoordinate             (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool USlateBlueprintLibrary::STATIC_IsUnderLocation(const struct FGeometry& Geometry, const class Vector2D& AbsoluteCoordinate)
+bool USlateBlueprintLibrary::STATIC_IsUnderLocation(const struct FGeometry& Geometry, const struct FVector2D& AbsoluteCoordinate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.IsUnderLocation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x86f08950);
 
 	USlateBlueprintLibrary_IsUnderLocation_Params params;
 	params.Geometry = Geometry;
@@ -3152,14 +3482,42 @@ bool USlateBlueprintLibrary::STATIC_IsUnderLocation(const struct FGeometry& Geom
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FGeometry               Geometry                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D USlateBlueprintLibrary::STATIC_GetLocalSize(const struct FGeometry& Geometry)
+struct FVector2D USlateBlueprintLibrary::STATIC_GetLocalSize(const struct FGeometry& Geometry)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.GetLocalSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2ea1a12f);
 
 	USlateBlueprintLibrary_GetLocalSize_Params params;
 	params.Geometry = Geometry;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.SlateBlueprintLibrary.EqualEqual_SlateBrush
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// Parameters:
+// struct FSlateBrush             A                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+// struct FSlateBrush             B                              (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool USlateBlueprintLibrary::STATIC_EqualEqual_SlateBrush(const struct FSlateBrush& A, const struct FSlateBrush& B)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf4c2b6d1);
+
+	USlateBlueprintLibrary_EqualEqual_SlateBrush_Params params;
+	params.A = A;
+	params.B = B;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -3176,13 +3534,14 @@ class Vector2D USlateBlueprintLibrary::STATIC_GetLocalSize(const struct FGeometr
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 AbsoluteDesktopCoordinate      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 PixelPosition                  (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ViewportPosition               (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 AbsoluteDesktopCoordinate      (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 PixelPosition                  (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FVector2D                 ViewportPosition               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void USlateBlueprintLibrary::STATIC_AbsoluteToViewport(class UObject* WorldContextObject, const class Vector2D& AbsoluteDesktopCoordinate, class Vector2D* PixelPosition, class Vector2D* ViewportPosition)
+void USlateBlueprintLibrary::STATIC_AbsoluteToViewport(class UObject* WorldContextObject, const struct FVector2D& AbsoluteDesktopCoordinate, struct FVector2D* PixelPosition, struct FVector2D* ViewportPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.AbsoluteToViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcb352a47);
 
 	USlateBlueprintLibrary_AbsoluteToViewport_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -3206,12 +3565,13 @@ void USlateBlueprintLibrary::STATIC_AbsoluteToViewport(class UObject* WorldConte
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FGeometry               Geometry                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// class Vector2D                 AbsoluteCoordinate             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 AbsoluteCoordinate             (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D USlateBlueprintLibrary::STATIC_AbsoluteToLocal(const struct FGeometry& Geometry, const class Vector2D& AbsoluteCoordinate)
+struct FVector2D USlateBlueprintLibrary::STATIC_AbsoluteToLocal(const struct FGeometry& Geometry, const struct FVector2D& AbsoluteCoordinate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SlateBlueprintLibrary.AbsoluteToLocal");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcaa85622);
 
 	USlateBlueprintLibrary_AbsoluteToLocal_Params params;
 	params.Geometry = Geometry;
@@ -3228,6 +3588,72 @@ class Vector2D USlateBlueprintLibrary::STATIC_AbsoluteToLocal(const struct FGeom
 }
 
 
+// Function UMG.BackgroundBlurSlot.SetVerticalAlignment
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EVerticalAlignment> InVerticalAlignment            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBackgroundBlurSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd8888582);
+
+	UBackgroundBlurSlot_SetVerticalAlignment_Params params;
+	params.InVerticalAlignment = InVerticalAlignment;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.BackgroundBlurSlot.SetPadding
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FMargin                 InPadding                      (CPF_Parm)
+
+void UBackgroundBlurSlot::SetPadding(const struct FMargin& InPadding)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb5838760);
+
+	UBackgroundBlurSlot_SetPadding_Params params;
+	params.InPadding = InPadding;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.BackgroundBlurSlot.SetHorizontalAlignment
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBackgroundBlurSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x74151744);
+
+	UBackgroundBlurSlot_SetHorizontalAlignment_Params params;
+	params.InHorizontalAlignment = InHorizontalAlignment;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function UMG.BorderSlot.SetVerticalAlignment
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -3235,7 +3661,8 @@ class Vector2D USlateBlueprintLibrary::STATIC_AbsoluteToLocal(const struct FGeom
 
 void UBorderSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb7b75a1);
 
 	UBorderSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -3256,7 +3683,8 @@ void UBorderSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVertica
 
 void UBorderSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xca29c5db);
 
 	UBorderSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -3277,7 +3705,8 @@ void UBorderSlot::SetPadding(const struct FMargin& InPadding)
 
 void UBorderSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.BorderSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5669cd2b);
 
 	UBorderSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -3298,7 +3727,8 @@ void UBorderSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHor
 
 void UButtonSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x82ee296f);
 
 	UButtonSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -3319,7 +3749,8 @@ void UButtonSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVertica
 
 void UButtonSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9aa5cab9);
 
 	UButtonSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -3340,7 +3771,8 @@ void UButtonSlot::SetPadding(const struct FMargin& InPadding)
 
 void UButtonSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ButtonSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x524bd121);
 
 	UButtonSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -3361,7 +3793,8 @@ void UButtonSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHor
 
 void UCanvasPanelSlot::SetZOrder(int InZOrder)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetZOrder");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x86e9248a);
 
 	UCanvasPanelSlot_SetZOrder_Params params;
 	params.InZOrder = InZOrder;
@@ -3378,11 +3811,12 @@ void UCanvasPanelSlot::SetZOrder(int InZOrder)
 // Function UMG.CanvasPanelSlot.SetSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 InSize                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InSize                         (CPF_Parm, CPF_IsPlainOldData)
 
-void UCanvasPanelSlot::SetSize(const class Vector2D& InSize)
+void UCanvasPanelSlot::SetSize(const struct FVector2D& InSize)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd3b82abb);
 
 	UCanvasPanelSlot_SetSize_Params params;
 	params.InSize = InSize;
@@ -3399,11 +3833,12 @@ void UCanvasPanelSlot::SetSize(const class Vector2D& InSize)
 // Function UMG.CanvasPanelSlot.SetPosition
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 InPosition                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InPosition                     (CPF_Parm, CPF_IsPlainOldData)
 
-void UCanvasPanelSlot::SetPosition(const class Vector2D& InPosition)
+void UCanvasPanelSlot::SetPosition(const struct FVector2D& InPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetPosition");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe1766581);
 
 	UCanvasPanelSlot_SetPosition_Params params;
 	params.InPosition = InPosition;
@@ -3424,7 +3859,8 @@ void UCanvasPanelSlot::SetPosition(const class Vector2D& InPosition)
 
 void UCanvasPanelSlot::SetOffsets(const struct FMargin& InOffset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetOffsets");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3939fa88);
 
 	UCanvasPanelSlot_SetOffsets_Params params;
 	params.InOffset = InOffset;
@@ -3441,11 +3877,12 @@ void UCanvasPanelSlot::SetOffsets(const struct FMargin& InOffset)
 // Function UMG.CanvasPanelSlot.SetMinimum
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
-// class Vector2D                 InMinimumAnchors               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InMinimumAnchors               (CPF_Parm, CPF_IsPlainOldData)
 
-void UCanvasPanelSlot::SetMinimum(const class Vector2D& InMinimumAnchors)
+void UCanvasPanelSlot::SetMinimum(const struct FVector2D& InMinimumAnchors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetMinimum");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1dc042ac);
 
 	UCanvasPanelSlot_SetMinimum_Params params;
 	params.InMinimumAnchors = InMinimumAnchors;
@@ -3462,11 +3899,12 @@ void UCanvasPanelSlot::SetMinimum(const class Vector2D& InMinimumAnchors)
 // Function UMG.CanvasPanelSlot.SetMaximum
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
-// class Vector2D                 InMaximumAnchors               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InMaximumAnchors               (CPF_Parm, CPF_IsPlainOldData)
 
-void UCanvasPanelSlot::SetMaximum(const class Vector2D& InMaximumAnchors)
+void UCanvasPanelSlot::SetMaximum(const struct FVector2D& InMaximumAnchors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetMaximum");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x167e9ac2);
 
 	UCanvasPanelSlot_SetMaximum_Params params;
 	params.InMaximumAnchors = InMaximumAnchors;
@@ -3487,7 +3925,8 @@ void UCanvasPanelSlot::SetMaximum(const class Vector2D& InMaximumAnchors)
 
 void UCanvasPanelSlot::SetLayout(const struct FAnchorData& InLayoutData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetLayout");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x78feec7a);
 
 	UCanvasPanelSlot_SetLayout_Params params;
 	params.InLayoutData = InLayoutData;
@@ -3508,7 +3947,8 @@ void UCanvasPanelSlot::SetLayout(const struct FAnchorData& InLayoutData)
 
 void UCanvasPanelSlot::SetAutoSize(bool InbAutoSize)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAutoSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x17081c82);
 
 	UCanvasPanelSlot_SetAutoSize_Params params;
 	params.InbAutoSize = InbAutoSize;
@@ -3529,7 +3969,8 @@ void UCanvasPanelSlot::SetAutoSize(bool InbAutoSize)
 
 void UCanvasPanelSlot::SetAnchors(const struct FAnchors& InAnchors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAnchors");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9fa46aaa);
 
 	UCanvasPanelSlot_SetAnchors_Params params;
 	params.InAnchors = InAnchors;
@@ -3546,11 +3987,12 @@ void UCanvasPanelSlot::SetAnchors(const struct FAnchors& InAnchors)
 // Function UMG.CanvasPanelSlot.SetAlignment
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 InAlignment                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InAlignment                    (CPF_Parm, CPF_IsPlainOldData)
 
-void UCanvasPanelSlot::SetAlignment(const class Vector2D& InAlignment)
+void UCanvasPanelSlot::SetAlignment(const struct FVector2D& InAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.SetAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2b6c7807);
 
 	UCanvasPanelSlot_SetAlignment_Params params;
 	params.InAlignment = InAlignment;
@@ -3571,7 +4013,8 @@ void UCanvasPanelSlot::SetAlignment(const class Vector2D& InAlignment)
 
 int UCanvasPanelSlot::GetZOrder()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetZOrder");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe8c427a6);
 
 	UCanvasPanelSlot_GetZOrder_Params params;
 
@@ -3589,11 +4032,12 @@ int UCanvasPanelSlot::GetZOrder()
 // Function UMG.CanvasPanelSlot.GetSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UCanvasPanelSlot::GetSize()
+struct FVector2D UCanvasPanelSlot::GetSize()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdf4c5b17);
 
 	UCanvasPanelSlot_GetSize_Params params;
 
@@ -3611,11 +4055,12 @@ class Vector2D UCanvasPanelSlot::GetSize()
 // Function UMG.CanvasPanelSlot.GetPosition
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UCanvasPanelSlot::GetPosition()
+struct FVector2D UCanvasPanelSlot::GetPosition()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetPosition");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x72ec6545);
 
 	UCanvasPanelSlot_GetPosition_Params params;
 
@@ -3637,7 +4082,8 @@ class Vector2D UCanvasPanelSlot::GetPosition()
 
 struct FMargin UCanvasPanelSlot::GetOffsets()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetOffsets");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9f138bbc);
 
 	UCanvasPanelSlot_GetOffsets_Params params;
 
@@ -3659,7 +4105,8 @@ struct FMargin UCanvasPanelSlot::GetOffsets()
 
 struct FAnchorData UCanvasPanelSlot::GetLayout()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetLayout");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x806148e);
 
 	UCanvasPanelSlot_GetLayout_Params params;
 
@@ -3681,7 +4128,8 @@ struct FAnchorData UCanvasPanelSlot::GetLayout()
 
 bool UCanvasPanelSlot::GetAutoSize()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAutoSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xda2c7e56);
 
 	UCanvasPanelSlot_GetAutoSize_Params params;
 
@@ -3703,7 +4151,8 @@ bool UCanvasPanelSlot::GetAutoSize()
 
 struct FAnchors UCanvasPanelSlot::GetAnchors()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAnchors");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x155c8176);
 
 	UCanvasPanelSlot_GetAnchors_Params params;
 
@@ -3721,11 +4170,12 @@ struct FAnchors UCanvasPanelSlot::GetAnchors()
 // Function UMG.CanvasPanelSlot.GetAlignment
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UCanvasPanelSlot::GetAlignment()
+struct FVector2D UCanvasPanelSlot::GetAlignment()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanelSlot.GetAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa264e42b);
 
 	UCanvasPanelSlot_GetAlignment_Params params;
 
@@ -3747,7 +4197,8 @@ class Vector2D UCanvasPanelSlot::GetAlignment()
 
 void UGridSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4a488b63);
 
 	UGridSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -3768,7 +4219,8 @@ void UGridSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalA
 
 void UGridSlot::SetRowSpan(int InRowSpan)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetRowSpan");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xeb14ff6e);
 
 	UGridSlot_SetRowSpan_Params params;
 	params.InRowSpan = InRowSpan;
@@ -3789,7 +4241,8 @@ void UGridSlot::SetRowSpan(int InRowSpan)
 
 void UGridSlot::SetRow(int InRow)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetRow");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5b75655e);
 
 	UGridSlot_SetRow_Params params;
 	params.InRow = InRow;
@@ -3810,7 +4263,8 @@ void UGridSlot::SetRow(int InRow)
 
 void UGridSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x554f4d5);
 
 	UGridSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -3831,7 +4285,8 @@ void UGridSlot::SetPadding(const struct FMargin& InPadding)
 
 void UGridSlot::SetLayer(int InLayer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetLayer");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8d3732c1);
 
 	UGridSlot_SetLayer_Params params;
 	params.InLayer = InLayer;
@@ -3852,7 +4307,8 @@ void UGridSlot::SetLayer(int InLayer)
 
 void UGridSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x735e288d);
 
 	UGridSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -3873,7 +4329,8 @@ void UGridSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHoriz
 
 void UGridSlot::SetColumnSpan(int InColumnSpan)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetColumnSpan");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcd6df95c);
 
 	UGridSlot_SetColumnSpan_Params params;
 	params.InColumnSpan = InColumnSpan;
@@ -3894,7 +4351,8 @@ void UGridSlot::SetColumnSpan(int InColumnSpan)
 
 void UGridSlot::SetColumn(int InColumn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridSlot.SetColumn");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7f586124);
 
 	UGridSlot_SetColumn_Params params;
 	params.InColumn = InColumn;
@@ -3915,7 +4373,8 @@ void UGridSlot::SetColumn(int InColumn)
 
 void UHorizontalBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7af059b6);
 
 	UHorizontalBoxSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -3936,7 +4395,8 @@ void UHorizontalBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> In
 
 void UHorizontalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd09c539a);
 
 	UHorizontalBoxSlot_SetSize_Params params;
 	params.InSize = InSize;
@@ -3957,7 +4417,8 @@ void UHorizontalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
 
 void UHorizontalBoxSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x843bdcbc);
 
 	UHorizontalBoxSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -3978,7 +4439,8 @@ void UHorizontalBoxSlot::SetPadding(const struct FMargin& InPadding)
 
 void UHorizontalBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBoxSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe76d1eb0);
 
 	UHorizontalBoxSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -3999,7 +4461,8 @@ void UHorizontalBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment
 
 void UOverlaySlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf6207713);
 
 	UOverlaySlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -4020,7 +4483,8 @@ void UOverlaySlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVertic
 
 void UOverlaySlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x95839fe5);
 
 	UOverlaySlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -4041,7 +4505,8 @@ void UOverlaySlot::SetPadding(const struct FMargin& InPadding)
 
 void UOverlaySlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.OverlaySlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc7effdfd);
 
 	UOverlaySlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -4062,7 +4527,8 @@ void UOverlaySlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHo
 
 void UScaleBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6b09dcfc);
 
 	UScaleBoxSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -4083,7 +4549,8 @@ void UScaleBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerti
 
 void UScaleBoxSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4c1c7622);
 
 	UScaleBoxSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -4104,7 +4571,8 @@ void UScaleBoxSlot::SetPadding(const struct FMargin& InPadding)
 
 void UScaleBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBoxSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc63e80d6);
 
 	UScaleBoxSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -4125,7 +4593,8 @@ void UScaleBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InH
 
 void UScrollBoxSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBoxSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3d66f7cb);
 
 	UScrollBoxSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -4146,7 +4615,8 @@ void UScrollBoxSlot::SetPadding(const struct FMargin& InPadding)
 
 void UScrollBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBoxSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x742ea8fb);
 
 	UScrollBoxSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -4167,7 +4637,8 @@ void UScrollBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> In
 
 void USizeBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcdbceb81);
 
 	USizeBoxSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -4188,7 +4659,8 @@ void USizeBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVertic
 
 void USizeBoxSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xeb37427b);
 
 	USizeBoxSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -4209,7 +4681,8 @@ void USizeBoxSlot::SetPadding(const struct FMargin& InPadding)
 
 void USizeBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBoxSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5d03a90b);
 
 	USizeBoxSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -4230,7 +4703,8 @@ void USizeBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHo
 
 void UUniformGridSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x69aed39b);
 
 	UUniformGridSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -4251,7 +4725,8 @@ void UUniformGridSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVe
 
 void UUniformGridSlot::SetRow(int InRow)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetRow");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb095d4d6);
 
 	UUniformGridSlot_SetRow_Params params;
 	params.InRow = InRow;
@@ -4272,7 +4747,8 @@ void UUniformGridSlot::SetRow(int InRow)
 
 void UUniformGridSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1fbacd55);
 
 	UUniformGridSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -4293,7 +4769,8 @@ void UUniformGridSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> 
 
 void UUniformGridSlot::SetColumn(int InColumn)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridSlot.SetColumn");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa0f9dc9c);
 
 	UUniformGridSlot_SetColumn_Params params;
 	params.InColumn = InColumn;
@@ -4314,7 +4791,8 @@ void UUniformGridSlot::SetColumn(int InColumn)
 
 void UVerticalBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9d8bdf74);
 
 	UVerticalBoxSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -4335,7 +4813,8 @@ void UVerticalBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVe
 
 void UVerticalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7a00d62c);
 
 	UVerticalBoxSlot_SetSize_Params params;
 	params.InSize = InSize;
@@ -4356,7 +4835,8 @@ void UVerticalBoxSlot::SetSize(const struct FSlateChildSize& InSize)
 
 void UVerticalBoxSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6385616a);
 
 	UVerticalBoxSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -4377,7 +4857,8 @@ void UVerticalBoxSlot::SetPadding(const struct FMargin& InPadding)
 
 void UVerticalBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.VerticalBoxSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe6cc219e);
 
 	UVerticalBoxSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -4398,7 +4879,8 @@ void UVerticalBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> 
 
 void UWidgetSwitcherSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x923c32ec);
 
 	UWidgetSwitcherSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -4419,7 +4901,8 @@ void UWidgetSwitcherSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> I
 
 void UWidgetSwitcherSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x777797b2);
 
 	UWidgetSwitcherSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -4440,9 +4923,362 @@ void UWidgetSwitcherSlot::SetPadding(const struct FMargin& InPadding)
 
 void UWidgetSwitcherSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcherSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x20cbdb06);
 
 	UWidgetSwitcherSlot_SetHorizontalAlignment_Params params;
+	params.InHorizontalAlignment = InHorizontalAlignment;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.PanelWidget.RemoveChildAt
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UPanelWidget::RemoveChildAt(int Index)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x45181f9d);
+
+	UPanelWidget_RemoveChildAt_Params params;
+	params.Index = Index;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.PanelWidget.RemoveChild
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UPanelWidget::RemoveChild(class UWidget* Content)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8b2f308e);
+
+	UPanelWidget_RemoveChild_Params params;
+	params.Content = Content;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.PanelWidget.HasChild
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UPanelWidget::HasChild(class UWidget* Content)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7e66b8be);
+
+	UPanelWidget_HasChild_Params params;
+	params.Content = Content;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.PanelWidget.HasAnyChildren
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UPanelWidget::HasAnyChildren()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5db3cf33);
+
+	UPanelWidget_HasAnyChildren_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.PanelWidget.GetChildrenCount
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UPanelWidget::GetChildrenCount()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x612bcd5a);
+
+	UPanelWidget_GetChildrenCount_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.PanelWidget.GetChildIndex
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UPanelWidget::GetChildIndex(class UWidget* Content)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1ff66d06);
+
+	UPanelWidget_GetChildIndex_Params params;
+	params.Content = Content;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.PanelWidget.GetChildAt
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UWidget* UPanelWidget::GetChildAt(int Index)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf3abdd21);
+
+	UPanelWidget_GetChildAt_Params params;
+	params.Index = Index;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.PanelWidget.ClearChildren
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UPanelWidget::ClearChildren()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x638772ba);
+
+	UPanelWidget_ClearChildren_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.PanelWidget.AddChild
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UPanelSlot*              ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UPanelSlot* UPanelWidget::AddChild(class UWidget* Content)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x91145a55);
+
+	UPanelWidget_AddChild_Params params;
+	params.Content = Content;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.ContentWidget.SetContent
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UPanelSlot*              ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UPanelSlot* UContentWidget::SetContent(class UWidget* Content)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe7e1c7b8);
+
+	UContentWidget_SetContent_Params params;
+	params.Content = Content;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.ContentWidget.GetContentSlot
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UPanelSlot*              ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UPanelSlot* UContentWidget::GetContentSlot()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x375a0cc0);
+
+	UContentWidget_GetContentSlot_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.ContentWidget.GetContent
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UWidget*                 ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+class UWidget* UContentWidget::GetContent()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x656594c4);
+
+	UContentWidget_GetContent_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function UMG.WindowTitleBarArea.SetVerticalAlignment
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EVerticalAlignment> InVerticalAlignment            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UWindowTitleBarArea::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe1a42d2d);
+
+	UWindowTitleBarArea_SetVerticalAlignment_Params params;
+	params.InVerticalAlignment = InVerticalAlignment;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WindowTitleBarArea.SetPadding
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FMargin                 InPadding                      (CPF_Parm)
+
+void UWindowTitleBarArea::SetPadding(const struct FMargin& InPadding)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x84e55d1f);
+
+	UWindowTitleBarArea_SetPadding_Params params;
+	params.InPadding = InPadding;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.WindowTitleBarArea.SetHorizontalAlignment
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UWindowTitleBarArea::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8ae61c6f);
+
+	UWindowTitleBarArea_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
 
 	auto flags = fn->FunctionFlags;
@@ -4461,7 +5297,8 @@ void UWidgetSwitcherSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignmen
 
 void UWindowTitleBarAreaSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2b174049);
 
 	UWindowTitleBarAreaSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -4482,7 +5319,8 @@ void UWindowTitleBarAreaSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignmen
 
 void UWindowTitleBarAreaSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbdb7e633);
 
 	UWindowTitleBarAreaSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -4503,7 +5341,8 @@ void UWindowTitleBarAreaSlot::SetPadding(const struct FMargin& InPadding)
 
 void UWindowTitleBarAreaSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarAreaSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa14cf223);
 
 	UWindowTitleBarAreaSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -4524,7 +5363,8 @@ void UWindowTitleBarAreaSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlig
 
 void UWrapBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1a7ba7b2);
 
 	UWrapBoxSlot_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -4545,7 +5385,8 @@ void UWrapBoxSlot::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVertic
 
 void UWrapBoxSlot::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbabfe570);
 
 	UWrapBoxSlot_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -4566,7 +5407,8 @@ void UWrapBoxSlot::SetPadding(const struct FMargin& InPadding)
 
 void UWrapBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa2004534);
 
 	UWrapBoxSlot_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -4587,7 +5429,8 @@ void UWrapBoxSlot::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHo
 
 void UWrapBoxSlot::SetFillSpanWhenLessThan(float InFillSpanWhenLessThan)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetFillSpanWhenLessThan");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe87c4ce4);
 
 	UWrapBoxSlot_SetFillSpanWhenLessThan_Params params;
 	params.InFillSpanWhenLessThan = InFillSpanWhenLessThan;
@@ -4608,7 +5451,8 @@ void UWrapBoxSlot::SetFillSpanWhenLessThan(float InFillSpanWhenLessThan)
 
 void UWrapBoxSlot::SetFillEmptySpace(bool InbFillEmptySpace)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WrapBoxSlot.SetFillEmptySpace");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x245c4d1);
 
 	UWrapBoxSlot_SetFillEmptySpace_Params params;
 	params.InbFillEmptySpace = InbFillEmptySpace;
@@ -4629,7 +5473,8 @@ void UWrapBoxSlot::SetFillEmptySpace(bool InbFillEmptySpace)
 
 void UCircularThrobber::SetRadius(float InRadius)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetRadius");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5737f813);
 
 	UCircularThrobber_SetRadius_Params params;
 	params.InRadius = InRadius;
@@ -4650,7 +5495,8 @@ void UCircularThrobber::SetRadius(float InRadius)
 
 void UCircularThrobber::SetPeriod(float InPeriod)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetPeriod");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa94c44be);
 
 	UCircularThrobber_SetPeriod_Params params;
 	params.InPeriod = InPeriod;
@@ -4671,7 +5517,8 @@ void UCircularThrobber::SetPeriod(float InPeriod)
 
 void UCircularThrobber::SetNumberOfPieces(int InNumberOfPieces)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CircularThrobber.SetNumberOfPieces");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4fd8820);
 
 	UCircularThrobber_SetNumberOfPieces_Params params;
 	params.InNumberOfPieces = InNumberOfPieces;
@@ -4692,7 +5539,8 @@ void UCircularThrobber::SetNumberOfPieces(int InNumberOfPieces)
 
 void UComboBoxString::SetSelectedOption(const struct FString& Option)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.SetSelectedOption");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc05afad8);
 
 	UComboBoxString_SetSelectedOption_Params params;
 	params.Option = Option;
@@ -4714,7 +5562,8 @@ void UComboBoxString::SetSelectedOption(const struct FString& Option)
 
 bool UComboBoxString::RemoveOption(const struct FString& Option)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.RemoveOption");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7e110233);
 
 	UComboBoxString_RemoveOption_Params params;
 	params.Option = Option;
@@ -4735,7 +5584,8 @@ bool UComboBoxString::RemoveOption(const struct FString& Option)
 
 void UComboBoxString::RefreshOptions()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.RefreshOptions");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x90ffb2dd);
 
 	UComboBoxString_RefreshOptions_Params params;
 
@@ -4756,7 +5606,8 @@ void UComboBoxString::RefreshOptions()
 
 void UComboBoxString::OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.ComboBoxString.OnSelectionChangedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1fa2d793);
 
 	UComboBoxString_OnSelectionChangedEvent__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -4775,7 +5626,8 @@ void UComboBoxString::OnSelectionChangedEvent__DelegateSignature(const struct FS
 
 void UComboBoxString::OnOpeningEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.ComboBoxString.OnOpeningEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x79dba919);
 
 	UComboBoxString_OnOpeningEvent__DelegateSignature_Params params;
 
@@ -4794,7 +5646,8 @@ void UComboBoxString::OnOpeningEvent__DelegateSignature()
 
 struct FString UComboBoxString::GetSelectedOption()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetSelectedOption");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x79c62f2c);
 
 	UComboBoxString_GetSelectedOption_Params params;
 
@@ -4816,7 +5669,8 @@ struct FString UComboBoxString::GetSelectedOption()
 
 int UComboBoxString::GetOptionCount()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetOptionCount");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc82b601c);
 
 	UComboBoxString_GetOptionCount_Params params;
 
@@ -4839,7 +5693,8 @@ int UComboBoxString::GetOptionCount()
 
 struct FString UComboBoxString::GetOptionAtIndex(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.GetOptionAtIndex");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd3d0f5ec);
 
 	UComboBoxString_GetOptionAtIndex_Params params;
 	params.Index = Index;
@@ -4863,7 +5718,8 @@ struct FString UComboBoxString::GetOptionAtIndex(int Index)
 
 int UComboBoxString::FindOptionIndex(const struct FString& Option)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.FindOptionIndex");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe62939ce);
 
 	UComboBoxString_FindOptionIndex_Params params;
 	params.Option = Option;
@@ -4884,7 +5740,8 @@ int UComboBoxString::FindOptionIndex(const struct FString& Option)
 
 void UComboBoxString::ClearSelection()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.ClearSelection");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf9dc0a57);
 
 	UComboBoxString_ClearSelection_Params params;
 
@@ -4902,7 +5759,8 @@ void UComboBoxString::ClearSelection()
 
 void UComboBoxString::ClearOptions()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.ClearOptions");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xeeefdc87);
 
 	UComboBoxString_ClearOptions_Params params;
 
@@ -4922,7 +5780,8 @@ void UComboBoxString::ClearOptions()
 
 void UComboBoxString::AddOption(const struct FString& Option)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ComboBoxString.AddOption");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcdaf64ba);
 
 	UComboBoxString_AddOption_Params params;
 	params.Option = Option;
@@ -4943,7 +5802,8 @@ void UComboBoxString::AddOption(const struct FString& Option)
 
 void UEditableText::SetText(const struct FText& InText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2641bfb2);
 
 	UEditableText_SetText_Params params;
 	params.InText = InText;
@@ -4964,7 +5824,8 @@ void UEditableText::SetText(const struct FText& InText)
 
 void UEditableText::SetIsReadOnly(bool InbIsReadyOnly)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetIsReadOnly");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x62fb63dd);
 
 	UEditableText_SetIsReadOnly_Params params;
 	params.InbIsReadyOnly = InbIsReadyOnly;
@@ -4985,7 +5846,8 @@ void UEditableText::SetIsReadOnly(bool InbIsReadyOnly)
 
 void UEditableText::SetIsPassword(bool InbIsPassword)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetIsPassword");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdd60c9e0);
 
 	UEditableText_SetIsPassword_Params params;
 	params.InbIsPassword = InbIsPassword;
@@ -5006,7 +5868,8 @@ void UEditableText::SetIsPassword(bool InbIsPassword)
 
 void UEditableText::SetHintText(const struct FText& InHintText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableText.SetHintText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x79f3fc95);
 
 	UEditableText_SetHintText_Params params;
 	params.InHintText = InHintText;
@@ -5028,7 +5891,8 @@ void UEditableText::SetHintText(const struct FText& InHintText)
 
 void UEditableText::OnEditableTextCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableText.OnEditableTextCommittedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x89b4c60f);
 
 	UEditableText_OnEditableTextCommittedEvent__DelegateSignature_Params params;
 	params.Text = Text;
@@ -5049,7 +5913,8 @@ void UEditableText::OnEditableTextCommittedEvent__DelegateSignature(const struct
 
 void UEditableText::OnEditableTextChangedEvent__DelegateSignature(const struct FText& Text)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableText.OnEditableTextChangedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2097d1c5);
 
 	UEditableText_OnEditableTextChangedEvent__DelegateSignature_Params params;
 	params.Text = Text;
@@ -5069,7 +5934,8 @@ void UEditableText::OnEditableTextChangedEvent__DelegateSignature(const struct F
 
 struct FText UEditableText::GetText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableText.GetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x999841e6);
 
 	UEditableText_GetText_Params params;
 
@@ -5091,9 +5957,54 @@ struct FText UEditableText::GetText()
 
 void UEditableTextBox::SetText(const struct FText& InText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2a31425f);
 
 	UEditableTextBox_SetText_Params params;
+	params.InText = InText;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.EditableTextBox.SetIsReadOnly
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           bReadOnly                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UEditableTextBox::SetIsReadOnly(bool bReadOnly)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf21bd9ec);
+
+	UEditableTextBox_SetIsReadOnly_Params params;
+	params.bReadOnly = bReadOnly;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.EditableTextBox.SetHintText
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FText                   InText                         (CPF_Parm)
+
+void UEditableTextBox::SetHintText(const struct FText& InText)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9b108d8c);
+
+	UEditableTextBox_SetHintText_Params params;
 	params.InText = InText;
 
 	auto flags = fn->FunctionFlags;
@@ -5112,7 +6023,8 @@ void UEditableTextBox::SetText(const struct FText& InText)
 
 void UEditableTextBox::SetError(const struct FText& InError)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.SetError");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x698a5400);
 
 	UEditableTextBox_SetError_Params params;
 	params.InError = InError;
@@ -5134,7 +6046,8 @@ void UEditableTextBox::SetError(const struct FText& InError)
 
 void UEditableTextBox::OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableTextBox.OnEditableTextBoxCommittedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x46f60df7);
 
 	UEditableTextBox_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
 	params.Text = Text;
@@ -5155,7 +6068,8 @@ void UEditableTextBox::OnEditableTextBoxCommittedEvent__DelegateSignature(const 
 
 void UEditableTextBox::OnEditableTextBoxChangedEvent__DelegateSignature(const struct FText& Text)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.EditableTextBox.OnEditableTextBoxChangedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x94d0fead);
 
 	UEditableTextBox_OnEditableTextBoxChangedEvent__DelegateSignature_Params params;
 	params.Text = Text;
@@ -5175,7 +6089,8 @@ void UEditableTextBox::OnEditableTextBoxChangedEvent__DelegateSignature(const st
 
 bool UEditableTextBox::HasError()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.HasError");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x63a73c48);
 
 	UEditableTextBox_HasError_Params params;
 
@@ -5197,7 +6112,8 @@ bool UEditableTextBox::HasError()
 
 struct FText UEditableTextBox::GetText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.GetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf3d035c3);
 
 	UEditableTextBox_GetText_Params params;
 
@@ -5217,9 +6133,32 @@ struct FText UEditableTextBox::GetText()
 
 void UEditableTextBox::ClearError()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.EditableTextBox.ClearError");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6326865d);
 
 	UEditableTextBox_ClearError_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.ExpandableArea.SetIsExpanded_Animated
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           IsExpanded                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UExpandableArea::SetIsExpanded_Animated(bool IsExpanded)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb1e1193a);
+
+	UExpandableArea_SetIsExpanded_Animated_Params params;
+	params.IsExpanded = IsExpanded;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5237,7 +6176,8 @@ void UEditableTextBox::ClearError()
 
 void UExpandableArea::SetIsExpanded(bool IsExpanded)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ExpandableArea.SetIsExpanded");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x86ede88a);
 
 	UExpandableArea_SetIsExpanded_Params params;
 	params.IsExpanded = IsExpanded;
@@ -5258,7 +6198,8 @@ void UExpandableArea::SetIsExpanded(bool IsExpanded)
 
 bool UExpandableArea::GetIsExpanded()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ExpandableArea.GetIsExpanded");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1d0b277e);
 
 	UExpandableArea_GetIsExpanded_Params params;
 
@@ -5280,7 +6221,8 @@ bool UExpandableArea::GetIsExpanded()
 
 void UImage::SetOpacity(float InOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Image.SetOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x28b9603c);
 
 	UImage_SetOpacity_Params params;
 	params.InOpacity = InOpacity;
@@ -5297,14 +6239,39 @@ void UImage::SetOpacity(float InOpacity)
 // Function UMG.Image.SetColorAndOpacity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InColorAndOpacity              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InColorAndOpacity              (CPF_Parm, CPF_IsPlainOldData)
 
 void UImage::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Image.SetColorAndOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1fbf4ce4);
 
 	UImage_SetColorAndOpacity_Params params;
 	params.InColorAndOpacity = InColorAndOpacity;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.Image.SetBrushFromTextureDynamic
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UTexture2DDynamic*       Texture                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bMatchSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UImage::SetBrushFromTextureDynamic(class UTexture2DDynamic* Texture, bool bMatchSize)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcbcb9df);
+
+	UImage_SetBrushFromTextureDynamic_Params params;
+	params.Texture = Texture;
+	params.bMatchSize = bMatchSize;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5323,7 +6290,8 @@ void UImage::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
 
 void UImage::SetBrushFromTexture(class UTexture2D* Texture, bool bMatchSize)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromTexture");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xff1770ac);
 
 	UImage_SetBrushFromTexture_Params params;
 	params.Texture = Texture;
@@ -5345,7 +6313,8 @@ void UImage::SetBrushFromTexture(class UTexture2D* Texture, bool bMatchSize)
 
 void UImage::SetBrushFromMaterial(class UMaterialInterface* Material)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8fe59e30);
 
 	UImage_SetBrushFromMaterial_Params params;
 	params.Material = Material;
@@ -5366,7 +6335,8 @@ void UImage::SetBrushFromMaterial(class UMaterialInterface* Material)
 
 void UImage::SetBrushFromAsset(class USlateBrushAsset* Asset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrushFromAsset");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8a7a6011);
 
 	UImage_SetBrushFromAsset_Params params;
 	params.Asset = Asset;
@@ -5387,7 +6357,8 @@ void UImage::SetBrushFromAsset(class USlateBrushAsset* Asset)
 
 void UImage::SetBrush(const struct FSlateBrush& InBrush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Image.SetBrush");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6226471f);
 
 	UImage_SetBrush_Params params;
 	params.InBrush = InBrush;
@@ -5408,7 +6379,8 @@ void UImage::SetBrush(const struct FSlateBrush& InBrush)
 
 class UMaterialInstanceDynamic* UImage::GetDynamicMaterial()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Image.GetDynamicMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7a737b33);
 
 	UImage_GetDynamicMaterial_Params params;
 
@@ -5430,7 +6402,8 @@ class UMaterialInstanceDynamic* UImage::GetDynamicMaterial()
 
 void UInputKeySelector::SetSelectedKey(const struct FInputChord& InSelectedKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetSelectedKey");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9dc3521c);
 
 	UInputKeySelector_SetSelectedKey_Params params;
 	params.InSelectedKey = InSelectedKey;
@@ -5451,7 +6424,8 @@ void UInputKeySelector::SetSelectedKey(const struct FInputChord& InSelectedKey)
 
 void UInputKeySelector::SetKeySelectionText(const struct FText& InKeySelectionText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetKeySelectionText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf09ba5b0);
 
 	UInputKeySelector_SetKeySelectionText_Params params;
 	params.InKeySelectionText = InKeySelectionText;
@@ -5472,7 +6446,8 @@ void UInputKeySelector::SetKeySelectionText(const struct FText& InKeySelectionTe
 
 void UInputKeySelector::SetAllowModifierKeys(bool bInAllowModifierKeys)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.SetAllowModifierKeys");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1eca550c);
 
 	UInputKeySelector_SetAllowModifierKeys_Params params;
 	params.bInAllowModifierKeys = bInAllowModifierKeys;
@@ -5493,7 +6468,8 @@ void UInputKeySelector::SetAllowModifierKeys(bool bInAllowModifierKeys)
 
 void UInputKeySelector::OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.InputKeySelector.OnKeySelected__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3943c6cb);
 
 	UInputKeySelector_OnKeySelected__DelegateSignature_Params params;
 	params.SelectedKey = SelectedKey;
@@ -5511,7 +6487,8 @@ void UInputKeySelector::OnKeySelected__DelegateSignature(const struct FInputChor
 
 void UInputKeySelector::OnIsSelectingKeyChanged__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.InputKeySelector.OnIsSelectingKeyChanged__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xad476688);
 
 	UInputKeySelector_OnIsSelectingKeyChanged__DelegateSignature_Params params;
 
@@ -5530,215 +6507,10 @@ void UInputKeySelector::OnIsSelectingKeyChanged__DelegateSignature()
 
 bool UInputKeySelector::GetIsSelectingKey()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.InputKeySelector.GetIsSelectingKey");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8a31214d);
 
 	UInputKeySelector_GetIsSelectingKey_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.PanelWidget.RemoveChildAt
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool UPanelWidget::RemoveChildAt(int Index)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.RemoveChildAt");
-
-	UPanelWidget_RemoveChildAt_Params params;
-	params.Index = Index;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.PanelWidget.RemoveChild
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool UPanelWidget::RemoveChild(class UWidget* Content)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.RemoveChild");
-
-	UPanelWidget_RemoveChild_Params params;
-	params.Content = Content;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.PanelWidget.HasChild
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool UPanelWidget::HasChild(class UWidget* Content)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.HasChild");
-
-	UPanelWidget_HasChild_Params params;
-	params.Content = Content;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.PanelWidget.HasAnyChildren
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool UPanelWidget::HasAnyChildren()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.HasAnyChildren");
-
-	UPanelWidget_HasAnyChildren_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.PanelWidget.GetChildrenCount
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-int UPanelWidget::GetChildrenCount()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildrenCount");
-
-	UPanelWidget_GetChildrenCount_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.PanelWidget.GetChildIndex
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-int UPanelWidget::GetChildIndex(class UWidget* Content)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildIndex");
-
-	UPanelWidget_GetChildIndex_Params params;
-	params.Content = Content;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.PanelWidget.GetChildAt
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-class UWidget* UPanelWidget::GetChildAt(int Index)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.GetChildAt");
-
-	UPanelWidget_GetChildAt_Params params;
-	params.Index = Index;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function UMG.PanelWidget.ClearChildren
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-
-void UPanelWidget::ClearChildren()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.ClearChildren");
-
-	UPanelWidget_ClearChildren_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.PanelWidget.AddChild
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UPanelSlot*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-class UPanelSlot* UPanelWidget::AddChild(class UWidget* Content)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.PanelWidget.AddChild");
-
-	UPanelWidget_AddChild_Params params;
-	params.Content = Content;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5754,12 +6526,13 @@ class UPanelSlot* UPanelWidget::AddChild(class UWidget* Content)
 // Function UMG.CanvasPanel.AddChildToCanvas
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UCanvasPanelSlot*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UCanvasPanelSlot*        ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UCanvasPanelSlot* UCanvasPanel::AddChildToCanvas(class UWidget* Content)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CanvasPanel.AddChildToCanvas");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x518fd3ba);
 
 	UCanvasPanel_AddChildToCanvas_Params params;
 	params.Content = Content;
@@ -5775,18 +6548,18 @@ class UCanvasPanelSlot* UCanvasPanel::AddChildToCanvas(class UWidget* Content)
 }
 
 
-// Function UMG.ContentWidget.SetContent
+// Function UMG.BackgroundBlur.SetVerticalAlignment
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UPanelSlot*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// TEnumAsByte<EVerticalAlignment> InVerticalAlignment            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-class UPanelSlot* UContentWidget::SetContent(class UWidget* Content)
+void UBackgroundBlur::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ContentWidget.SetContent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x196ef446);
 
-	UContentWidget_SetContent_Params params;
-	params.Content = Content;
+	UBackgroundBlur_SetVerticalAlignment_Params params;
+	params.InVerticalAlignment = InVerticalAlignment;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5794,21 +6567,21 @@ class UPanelSlot* UContentWidget::SetContent(class UWidget* Content)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
-// Function UMG.ContentWidget.GetContentSlot
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Function UMG.BackgroundBlur.SetPadding
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UPanelSlot*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FMargin                 InPadding                      (CPF_Parm)
 
-class UPanelSlot* UContentWidget::GetContentSlot()
+void UBackgroundBlur::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ContentWidget.GetContentSlot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3477b9ac);
 
-	UContentWidget_GetContentSlot_Params params;
+	UBackgroundBlur_SetPadding_Params params;
+	params.InPadding = InPadding;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -5816,8 +6589,116 @@ class UPanelSlot* UContentWidget::GetContentSlot()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
 
-	return params.ReturnValue;
+
+// Function UMG.BackgroundBlur.SetLowQualityFallbackBrush
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
+// Parameters:
+// struct FSlateBrush             InBrush                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+
+void UBackgroundBlur::SetLowQualityFallbackBrush(const struct FSlateBrush& InBrush)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9b94464e);
+
+	UBackgroundBlur_SetLowQualityFallbackBrush_Params params;
+	params.InBrush = InBrush;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.BackgroundBlur.SetHorizontalAlignment
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBackgroundBlur::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x95af32c0);
+
+	UBackgroundBlur_SetHorizontalAlignment_Params params;
+	params.InHorizontalAlignment = InHorizontalAlignment;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.BackgroundBlur.SetBlurStrength
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          InStrength                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBackgroundBlur::SetBlurStrength(float InStrength)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcb442f9);
+
+	UBackgroundBlur_SetBlurStrength_Params params;
+	params.InStrength = InStrength;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.BackgroundBlur.SetBlurRadius
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// int                            InBlurRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBackgroundBlur::SetBlurRadius(int InBlurRadius)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x97530330);
+
+	UBackgroundBlur_SetBlurRadius_Params params;
+	params.InBlurRadius = InBlurRadius;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.BackgroundBlur.SetApplyAlphaToBlur
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           bInApplyAlphaToBlur            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBackgroundBlur::SetApplyAlphaToBlur(bool bInApplyAlphaToBlur)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8c9fec1);
+
+	UBackgroundBlur_SetApplyAlphaToBlur_Params params;
+	params.bInApplyAlphaToBlur = bInApplyAlphaToBlur;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -5828,7 +6709,8 @@ class UPanelSlot* UContentWidget::GetContentSlot()
 
 void UBorder::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetVerticalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf8aacfc5);
 
 	UBorder_SetVerticalAlignment_Params params;
 	params.InVerticalAlignment = InVerticalAlignment;
@@ -5849,7 +6731,8 @@ void UBorder::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAli
 
 void UBorder::SetPadding(const struct FMargin& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb4a00a67);
 
 	UBorder_SetPadding_Params params;
 	params.InPadding = InPadding;
@@ -5870,7 +6753,8 @@ void UBorder::SetPadding(const struct FMargin& InPadding)
 
 void UBorder::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetHorizontalAlignment");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5aba7617);
 
 	UBorder_SetHorizontalAlignment_Params params;
 	params.InHorizontalAlignment = InHorizontalAlignment;
@@ -5887,11 +6771,12 @@ void UBorder::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizon
 // Function UMG.Border.SetDesiredSizeScale
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 InScale                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InScale                        (CPF_Parm, CPF_IsPlainOldData)
 
-void UBorder::SetDesiredSizeScale(const class Vector2D& InScale)
+void UBorder::SetDesiredSizeScale(const struct FVector2D& InScale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetDesiredSizeScale");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xeb87ef21);
 
 	UBorder_SetDesiredSizeScale_Params params;
 	params.InScale = InScale;
@@ -5908,11 +6793,12 @@ void UBorder::SetDesiredSizeScale(const class Vector2D& InScale)
 // Function UMG.Border.SetContentColorAndOpacity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InContentColorAndOpacity       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InContentColorAndOpacity       (CPF_Parm, CPF_IsPlainOldData)
 
 void UBorder::SetContentColorAndOpacity(const struct FLinearColor& InContentColorAndOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetContentColorAndOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x46756bb6);
 
 	UBorder_SetContentColorAndOpacity_Params params;
 	params.InContentColorAndOpacity = InContentColorAndOpacity;
@@ -5933,7 +6819,8 @@ void UBorder::SetContentColorAndOpacity(const struct FLinearColor& InContentColo
 
 void UBorder::SetBrushFromTexture(class UTexture2D* Texture)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromTexture");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x96cbf2e9);
 
 	UBorder_SetBrushFromTexture_Params params;
 	params.Texture = Texture;
@@ -5954,7 +6841,8 @@ void UBorder::SetBrushFromTexture(class UTexture2D* Texture)
 
 void UBorder::SetBrushFromMaterial(class UMaterialInterface* Material)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9e0ac513);
 
 	UBorder_SetBrushFromMaterial_Params params;
 	params.Material = Material;
@@ -5975,7 +6863,8 @@ void UBorder::SetBrushFromMaterial(class UMaterialInterface* Material)
 
 void UBorder::SetBrushFromAsset(class USlateBrushAsset* Asset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushFromAsset");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xed1bbc08);
 
 	UBorder_SetBrushFromAsset_Params params;
 	params.Asset = Asset;
@@ -5992,11 +6881,12 @@ void UBorder::SetBrushFromAsset(class USlateBrushAsset* Asset)
 // Function UMG.Border.SetBrushColor
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InBrushColor                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InBrushColor                   (CPF_Parm, CPF_IsPlainOldData)
 
 void UBorder::SetBrushColor(const struct FLinearColor& InBrushColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrushColor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x87116bed);
 
 	UBorder_SetBrushColor_Params params;
 	params.InBrushColor = InBrushColor;
@@ -6017,7 +6907,8 @@ void UBorder::SetBrushColor(const struct FLinearColor& InBrushColor)
 
 void UBorder::SetBrush(const struct FSlateBrush& InBrush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.SetBrush");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x66ee2a98);
 
 	UBorder_SetBrush_Params params;
 	params.InBrush = InBrush;
@@ -6038,7 +6929,8 @@ void UBorder::SetBrush(const struct FSlateBrush& InBrush)
 
 class UMaterialInstanceDynamic* UBorder::GetDynamicMaterial()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Border.GetDynamicMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc24b72f0);
 
 	UBorder_GetDynamicMaterial_Params params;
 
@@ -6060,7 +6952,8 @@ class UMaterialInstanceDynamic* UBorder::GetDynamicMaterial()
 
 void UButton::SetStyle(const struct FButtonStyle& InStyle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetStyle");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbcea7e79);
 
 	UButton_SetStyle_Params params;
 	params.InStyle = InStyle;
@@ -6077,11 +6970,12 @@ void UButton::SetStyle(const struct FButtonStyle& InStyle)
 // Function UMG.Button.SetColorAndOpacity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InColorAndOpacity              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InColorAndOpacity              (CPF_Parm, CPF_IsPlainOldData)
 
 void UButton::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetColorAndOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7f36551);
 
 	UButton_SetColorAndOpacity_Params params;
 	params.InColorAndOpacity = InColorAndOpacity;
@@ -6098,11 +6992,12 @@ void UButton::SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity)
 // Function UMG.Button.SetBackgroundColor
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InBackgroundColor              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InBackgroundColor              (CPF_Parm, CPF_IsPlainOldData)
 
 void UButton::SetBackgroundColor(const struct FLinearColor& InBackgroundColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.SetBackgroundColor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x27c107cb);
 
 	UButton_SetBackgroundColor_Params params;
 	params.InBackgroundColor = InBackgroundColor;
@@ -6123,7 +7018,8 @@ void UButton::SetBackgroundColor(const struct FLinearColor& InBackgroundColor)
 
 bool UButton::IsPressed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Button.IsPressed");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x223e02e0);
 
 	UButton_IsPressed_Params params;
 
@@ -6145,7 +7041,8 @@ bool UButton::IsPressed()
 
 void UCheckBox::SetIsChecked(bool InIsChecked)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetIsChecked");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4c19dba0);
 
 	UCheckBox_SetIsChecked_Params params;
 	params.InIsChecked = InIsChecked;
@@ -6162,11 +7059,12 @@ void UCheckBox::SetIsChecked(bool InIsChecked)
 // Function UMG.CheckBox.SetCheckedState
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// TEnumAsByte<ECheckBoxState>    InCheckedState                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// ECheckBoxState                 InCheckedState                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UCheckBox::SetCheckedState(TEnumAsByte<ECheckBoxState> InCheckedState)
+void UCheckBox::SetCheckedState(ECheckBoxState InCheckedState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.SetCheckedState");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x87498d53);
 
 	UCheckBox_SetCheckedState_Params params;
 	params.InCheckedState = InCheckedState;
@@ -6187,7 +7085,8 @@ void UCheckBox::SetCheckedState(TEnumAsByte<ECheckBoxState> InCheckedState)
 
 bool UCheckBox::IsPressed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.IsPressed");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xddf07d9f);
 
 	UCheckBox_IsPressed_Params params;
 
@@ -6209,7 +7108,8 @@ bool UCheckBox::IsPressed()
 
 bool UCheckBox::IsChecked()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.IsChecked");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x55029d12);
 
 	UCheckBox_IsChecked_Params params;
 
@@ -6227,11 +7127,12 @@ bool UCheckBox::IsChecked()
 // Function UMG.CheckBox.GetCheckedState
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// TEnumAsByte<ECheckBoxState>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// ECheckBoxState                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-TEnumAsByte<ECheckBoxState> UCheckBox::GetCheckedState()
+ECheckBoxState UCheckBox::GetCheckedState()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.CheckBox.GetCheckedState");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd1ac45af);
 
 	UCheckBox_GetCheckedState_Params params;
 
@@ -6253,7 +7154,8 @@ TEnumAsByte<ECheckBoxState> UCheckBox::GetCheckedState()
 
 void UInvalidationBox::SetCanCache(bool CanCache)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.SetCanCache");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf816db89);
 
 	UInvalidationBox_SetCanCache_Params params;
 	params.CanCache = CanCache;
@@ -6272,7 +7174,8 @@ void UInvalidationBox::SetCanCache(bool CanCache)
 
 void UInvalidationBox::InvalidateCache()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.InvalidateCache");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6c09f56);
 
 	UInvalidationBox_InvalidateCache_Params params;
 
@@ -6292,7 +7195,8 @@ void UInvalidationBox::InvalidateCache()
 
 bool UInvalidationBox::GetCanCache()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.InvalidationBox.GetCanCache");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x33d31f95);
 
 	UInvalidationBox_GetCanCache_Params params;
 
@@ -6314,7 +7218,8 @@ bool UInvalidationBox::GetCanCache()
 
 void UMenuAnchor::ToggleOpen(bool bFocusOnOpen)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.ToggleOpen");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd997701c);
 
 	UMenuAnchor_ToggleOpen_Params params;
 	params.bFocusOnOpen = bFocusOnOpen;
@@ -6335,7 +7240,8 @@ void UMenuAnchor::ToggleOpen(bool bFocusOnOpen)
 
 bool UMenuAnchor::ShouldOpenDueToClick()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.ShouldOpenDueToClick");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdc76d6c2);
 
 	UMenuAnchor_ShouldOpenDueToClick_Params params;
 
@@ -6357,7 +7263,8 @@ bool UMenuAnchor::ShouldOpenDueToClick()
 
 void UMenuAnchor::Open(bool bFocusMenu)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.Open");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa499e950);
 
 	UMenuAnchor_Open_Params params;
 	params.bFocusMenu = bFocusMenu;
@@ -6378,7 +7285,8 @@ void UMenuAnchor::Open(bool bFocusMenu)
 
 bool UMenuAnchor::IsOpen()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.IsOpen");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x336334f8);
 
 	UMenuAnchor_IsOpen_Params params;
 
@@ -6400,7 +7308,8 @@ bool UMenuAnchor::IsOpen()
 
 bool UMenuAnchor::HasOpenSubMenus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.HasOpenSubMenus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x75e7029e);
 
 	UMenuAnchor_HasOpenSubMenus_Params params;
 
@@ -6418,11 +7327,12 @@ bool UMenuAnchor::HasOpenSubMenus()
 // Function UMG.MenuAnchor.GetMenuPosition
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UMenuAnchor::GetMenuPosition()
+struct FVector2D UMenuAnchor::GetMenuPosition()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.GetMenuPosition");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe6de6c18);
 
 	UMenuAnchor_GetMenuPosition_Params params;
 
@@ -6442,7 +7352,8 @@ class Vector2D UMenuAnchor::GetMenuPosition()
 
 void UMenuAnchor::Close()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MenuAnchor.Close");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x20759d4);
 
 	UMenuAnchor_Close_Params params;
 
@@ -6462,7 +7373,8 @@ void UMenuAnchor::Close()
 
 void URetainerBox::SetTextureParameter(const struct FName& TextureParameter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetTextureParameter");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x510c9d39);
 
 	URetainerBox_SetTextureParameter_Params params;
 	params.TextureParameter = TextureParameter;
@@ -6483,7 +7395,8 @@ void URetainerBox::SetTextureParameter(const struct FName& TextureParameter)
 
 void URetainerBox::SetEffectMaterial(class UMaterialInterface* EffectMaterial)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.SetEffectMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8f05cecf);
 
 	URetainerBox_SetEffectMaterial_Params params;
 	params.EffectMaterial = EffectMaterial;
@@ -6504,7 +7417,8 @@ void URetainerBox::SetEffectMaterial(class UMaterialInterface* EffectMaterial)
 
 class UMaterialInstanceDynamic* URetainerBox::GetEffectMaterial()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.RetainerBox.GetEffectMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x473d1593);
 
 	URetainerBox_GetEffectMaterial_Params params;
 
@@ -6526,7 +7440,8 @@ class UMaterialInstanceDynamic* URetainerBox::GetEffectMaterial()
 
 void UScaleBox::SetUserSpecifiedScale(float InUserSpecifiedScale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetUserSpecifiedScale");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x250f0eb6);
 
 	UScaleBox_SetUserSpecifiedScale_Params params;
 	params.InUserSpecifiedScale = InUserSpecifiedScale;
@@ -6547,7 +7462,8 @@ void UScaleBox::SetUserSpecifiedScale(float InUserSpecifiedScale)
 
 void UScaleBox::SetStretchDirection(TEnumAsByte<EStretchDirection> InStretchDirection)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretchDirection");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9549c419);
 
 	UScaleBox_SetStretchDirection_Params params;
 	params.InStretchDirection = InStretchDirection;
@@ -6568,7 +7484,8 @@ void UScaleBox::SetStretchDirection(TEnumAsByte<EStretchDirection> InStretchDire
 
 void UScaleBox::SetStretch(TEnumAsByte<EStretch> InStretch)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetStretch");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x64e311fa);
 
 	UScaleBox_SetStretch_Params params;
 	params.InStretch = InStretch;
@@ -6589,7 +7506,8 @@ void UScaleBox::SetStretch(TEnumAsByte<EStretch> InStretch)
 
 void UScaleBox::SetIgnoreInheritedScale(bool bInIgnoreInheritedScale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScaleBox.SetIgnoreInheritedScale");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x96e1d325);
 
 	UScaleBox_SetIgnoreInheritedScale_Params params;
 	params.bInIgnoreInheritedScale = bInIgnoreInheritedScale;
@@ -6610,7 +7528,8 @@ void UScaleBox::SetIgnoreInheritedScale(bool bInIgnoreInheritedScale)
 
 void USizeBox::SetWidthOverride(float InWidthOverride)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetWidthOverride");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb9679444);
 
 	USizeBox_SetWidthOverride_Params params;
 	params.InWidthOverride = InWidthOverride;
@@ -6631,7 +7550,8 @@ void USizeBox::SetWidthOverride(float InWidthOverride)
 
 void USizeBox::SetMinDesiredWidth(float InMinDesiredWidth)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMinDesiredWidth");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf0f3152e);
 
 	USizeBox_SetMinDesiredWidth_Params params;
 	params.InMinDesiredWidth = InMinDesiredWidth;
@@ -6652,7 +7572,8 @@ void USizeBox::SetMinDesiredWidth(float InMinDesiredWidth)
 
 void USizeBox::SetMinDesiredHeight(float InMinDesiredHeight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMinDesiredHeight");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x503f21ef);
 
 	USizeBox_SetMinDesiredHeight_Params params;
 	params.InMinDesiredHeight = InMinDesiredHeight;
@@ -6673,7 +7594,8 @@ void USizeBox::SetMinDesiredHeight(float InMinDesiredHeight)
 
 void USizeBox::SetMaxDesiredWidth(float InMaxDesiredWidth)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxDesiredWidth");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x10280488);
 
 	USizeBox_SetMaxDesiredWidth_Params params;
 	params.InMaxDesiredWidth = InMaxDesiredWidth;
@@ -6694,7 +7616,8 @@ void USizeBox::SetMaxDesiredWidth(float InMaxDesiredWidth)
 
 void USizeBox::SetMaxDesiredHeight(float InMaxDesiredHeight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxDesiredHeight");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x90c1553d);
 
 	USizeBox_SetMaxDesiredHeight_Params params;
 	params.InMaxDesiredHeight = InMaxDesiredHeight;
@@ -6715,7 +7638,8 @@ void USizeBox::SetMaxDesiredHeight(float InMaxDesiredHeight)
 
 void USizeBox::SetMaxAspectRatio(float InMaxAspectRatio)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetMaxAspectRatio");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5352821f);
 
 	USizeBox_SetMaxAspectRatio_Params params;
 	params.InMaxAspectRatio = InMaxAspectRatio;
@@ -6736,7 +7660,8 @@ void USizeBox::SetMaxAspectRatio(float InMaxAspectRatio)
 
 void USizeBox::SetHeightOverride(float InHeightOverride)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.SetHeightOverride");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4242e761);
 
 	USizeBox_SetHeightOverride_Params params;
 	params.InHeightOverride = InHeightOverride;
@@ -6755,7 +7680,8 @@ void USizeBox::SetHeightOverride(float InHeightOverride)
 
 void USizeBox::ClearWidthOverride()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearWidthOverride");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe3a7a1cd);
 
 	USizeBox_ClearWidthOverride_Params params;
 
@@ -6773,7 +7699,8 @@ void USizeBox::ClearWidthOverride()
 
 void USizeBox::ClearMinDesiredWidth()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMinDesiredWidth");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x867618ff);
 
 	USizeBox_ClearMinDesiredWidth_Params params;
 
@@ -6791,7 +7718,8 @@ void USizeBox::ClearMinDesiredWidth()
 
 void USizeBox::ClearMinDesiredHeight()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMinDesiredHeight");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9e8a8a74);
 
 	USizeBox_ClearMinDesiredHeight_Params params;
 
@@ -6809,7 +7737,8 @@ void USizeBox::ClearMinDesiredHeight()
 
 void USizeBox::ClearMaxDesiredWidth()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxDesiredWidth");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xefcb8ae1);
 
 	USizeBox_ClearMaxDesiredWidth_Params params;
 
@@ -6827,7 +7756,8 @@ void USizeBox::ClearMaxDesiredWidth()
 
 void USizeBox::ClearMaxDesiredHeight()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxDesiredHeight");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xaafe88e2);
 
 	USizeBox_ClearMaxDesiredHeight_Params params;
 
@@ -6845,7 +7775,8 @@ void USizeBox::ClearMaxDesiredHeight()
 
 void USizeBox::ClearMaxAspectRatio()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearMaxAspectRatio");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3b85258c);
 
 	USizeBox_ClearMaxAspectRatio_Params params;
 
@@ -6863,7 +7794,8 @@ void USizeBox::ClearMaxAspectRatio()
 
 void USizeBox::ClearHeightOverride()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SizeBox.ClearHeightOverride");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3d4785e);
 
 	USizeBox_ClearHeightOverride_Params params;
 
@@ -6884,7 +7816,8 @@ void USizeBox::ClearHeightOverride()
 
 class AActor* UViewport::Spawn(class UClass* ActorClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Viewport.Spawn");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x967be449);
 
 	UViewport_Spawn_Params params;
 	params.ActorClass = ActorClass;
@@ -6903,11 +7836,12 @@ class AActor* UViewport::Spawn(class UClass* ActorClass)
 // Function UMG.Viewport.SetViewRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Rotator                  Rotation                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                  Rotation                       (CPF_Parm, CPF_IsPlainOldData)
 
-void UViewport::SetViewRotation(const class Rotator& Rotation)
+void UViewport::SetViewRotation(const struct FRotator& Rotation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Viewport.SetViewRotation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x974b4a45);
 
 	UViewport_SetViewRotation_Params params;
 	params.Rotation = Rotation;
@@ -6924,11 +7858,12 @@ void UViewport::SetViewRotation(const class Rotator& Rotation)
 // Function UMG.Viewport.SetViewLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector3D                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Location                       (CPF_Parm, CPF_IsPlainOldData)
 
-void UViewport::SetViewLocation(const class Vector3D& Location)
+void UViewport::SetViewLocation(const struct FVector& Location)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Viewport.SetViewLocation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcc34277a);
 
 	UViewport_SetViewLocation_Params params;
 	params.Location = Location;
@@ -6945,11 +7880,12 @@ void UViewport::SetViewLocation(const class Vector3D& Location)
 // Function UMG.Viewport.GetViewRotation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FRotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Rotator UViewport::GetViewRotation()
+struct FRotator UViewport::GetViewRotation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewRotation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd6174f1);
 
 	UViewport_GetViewRotation_Params params;
 
@@ -6971,7 +7907,8 @@ class Rotator UViewport::GetViewRotation()
 
 class UWorld* UViewport::GetViewportWorld()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewportWorld");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x71c650b2);
 
 	UViewport_GetViewportWorld_Params params;
 
@@ -6989,11 +7926,12 @@ class UWorld* UViewport::GetViewportWorld()
 // Function UMG.Viewport.GetViewLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector3D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector3D UViewport::GetViewLocation()
+struct FVector UViewport::GetViewLocation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Viewport.GetViewLocation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcf622e16);
 
 	UViewport_GetViewLocation_Params params;
 
@@ -7008,78 +7946,16 @@ class Vector3D UViewport::GetViewLocation()
 }
 
 
-// Function UMG.WindowTitleBarArea.SetVerticalAlignment
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EVerticalAlignment> InVerticalAlignment            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UWindowTitleBarArea::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetVerticalAlignment");
-
-	UWindowTitleBarArea_SetVerticalAlignment_Params params;
-	params.InVerticalAlignment = InVerticalAlignment;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WindowTitleBarArea.SetPadding
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// struct FMargin                 InPadding                      (CPF_Parm)
-
-void UWindowTitleBarArea::SetPadding(const struct FMargin& InPadding)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetPadding");
-
-	UWindowTitleBarArea_SetPadding_Params params;
-	params.InPadding = InPadding;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function UMG.WindowTitleBarArea.SetHorizontalAlignment
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UWindowTitleBarArea::SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WindowTitleBarArea.SetHorizontalAlignment");
-
-	UWindowTitleBarArea_SetHorizontalAlignment_Params params;
-	params.InHorizontalAlignment = InHorizontalAlignment;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function UMG.GridPanel.AddChildToGrid
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UGridSlot*               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UGridSlot*               ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UGridSlot* UGridPanel::AddChildToGrid(class UWidget* Content)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.GridPanel.AddChildToGrid");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x711939e2);
 
 	UGridPanel_AddChildToGrid_Params params;
 	params.Content = Content;
@@ -7098,12 +7974,13 @@ class UGridSlot* UGridPanel::AddChildToGrid(class UWidget* Content)
 // Function UMG.HorizontalBox.AddChildToHorizontalBox
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UHorizontalBoxSlot*      ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UHorizontalBoxSlot*      ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UHorizontalBoxSlot* UHorizontalBox::AddChildToHorizontalBox(class UWidget* Content)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.HorizontalBox.AddChildToHorizontalBox");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x71c84c10);
 
 	UHorizontalBox_AddChildToHorizontalBox_Params params;
 	params.Content = Content;
@@ -7122,12 +7999,13 @@ class UHorizontalBoxSlot* UHorizontalBox::AddChildToHorizontalBox(class UWidget*
 // Function UMG.Overlay.AddChildToOverlay
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UOverlaySlot*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UOverlaySlot*            ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UOverlaySlot* UOverlay::AddChildToOverlay(class UWidget* Content)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Overlay.AddChildToOverlay");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x357b7b58);
 
 	UOverlay_AddChildToOverlay_Params params;
 	params.Content = Content;
@@ -7150,7 +8028,8 @@ class UOverlaySlot* UOverlay::AddChildToOverlay(class UWidget* Content)
 
 void UScrollBox::SetScrollOffset(float NewScrollOffset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.SetScrollOffset");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7e6a5452);
 
 	UScrollBox_SetScrollOffset_Params params;
 	params.NewScrollOffset = NewScrollOffset;
@@ -7167,12 +8046,13 @@ void UScrollBox::SetScrollOffset(float NewScrollOffset)
 // Function UMG.ScrollBox.ScrollWidgetIntoView
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 WidgetToFind                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 WidgetToFind                   (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // bool                           AnimateScroll                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 void UScrollBox::ScrollWidgetIntoView(class UWidget* WidgetToFind, bool AnimateScroll)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollWidgetIntoView");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbb76ff46);
 
 	UScrollBox_ScrollWidgetIntoView_Params params;
 	params.WidgetToFind = WidgetToFind;
@@ -7192,7 +8072,8 @@ void UScrollBox::ScrollWidgetIntoView(class UWidget* WidgetToFind, bool AnimateS
 
 void UScrollBox::ScrollToStart()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollToStart");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe9632cdc);
 
 	UScrollBox_ScrollToStart_Params params;
 
@@ -7210,7 +8091,8 @@ void UScrollBox::ScrollToStart()
 
 void UScrollBox::ScrollToEnd()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.ScrollToEnd");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd1d6d7f7);
 
 	UScrollBox_ScrollToEnd_Params params;
 
@@ -7230,7 +8112,8 @@ void UScrollBox::ScrollToEnd()
 
 float UScrollBox::GetScrollOffset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBox.GetScrollOffset");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9afad3e6);
 
 	UScrollBox_GetScrollOffset_Params params;
 
@@ -7252,7 +8135,8 @@ float UScrollBox::GetScrollOffset()
 
 void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetSlotPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd0ee563b);
 
 	UUniformGridPanel_SetSlotPadding_Params params;
 	params.InSlotPadding = InSlotPadding;
@@ -7273,7 +8157,8 @@ void UUniformGridPanel::SetSlotPadding(const struct FMargin& InSlotPadding)
 
 void UUniformGridPanel::SetMinDesiredSlotWidth(float InMinDesiredSlotWidth)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotWidth");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4d95a1fa);
 
 	UUniformGridPanel_SetMinDesiredSlotWidth_Params params;
 	params.InMinDesiredSlotWidth = InMinDesiredSlotWidth;
@@ -7294,7 +8179,8 @@ void UUniformGridPanel::SetMinDesiredSlotWidth(float InMinDesiredSlotWidth)
 
 void UUniformGridPanel::SetMinDesiredSlotHeight(float InMinDesiredSlotHeight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.SetMinDesiredSlotHeight");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7ac4afc3);
 
 	UUniformGridPanel_SetMinDesiredSlotHeight_Params params;
 	params.InMinDesiredSlotHeight = InMinDesiredSlotHeight;
@@ -7311,12 +8197,13 @@ void UUniformGridPanel::SetMinDesiredSlotHeight(float InMinDesiredSlotHeight)
 // Function UMG.UniformGridPanel.AddChildToUniformGrid
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UUniformGridSlot*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UUniformGridSlot*        ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(class UWidget* Content)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.UniformGridPanel.AddChildToUniformGrid");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa848151e);
 
 	UUniformGridPanel_AddChildToUniformGrid_Params params;
 	params.Content = Content;
@@ -7335,12 +8222,13 @@ class UUniformGridSlot* UUniformGridPanel::AddChildToUniformGrid(class UWidget* 
 // Function UMG.VerticalBox.AddChildToVerticalBox
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UVerticalBoxSlot*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UVerticalBoxSlot*        ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UVerticalBoxSlot* UVerticalBox::AddChildToVerticalBox(class UWidget* Content)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.VerticalBox.AddChildToVerticalBox");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdce9025c);
 
 	UVerticalBox_AddChildToVerticalBox_Params params;
 	params.Content = Content;
@@ -7363,7 +8251,8 @@ class UVerticalBoxSlot* UVerticalBox::AddChildToVerticalBox(class UWidget* Conte
 
 void UWidgetSwitcher::SetActiveWidgetIndex(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidgetIndex");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x55b8b773);
 
 	UWidgetSwitcher_SetActiveWidgetIndex_Params params;
 	params.Index = Index;
@@ -7380,11 +8269,12 @@ void UWidgetSwitcher::SetActiveWidgetIndex(int Index)
 // Function UMG.WidgetSwitcher.SetActiveWidget
 // (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 void UWidgetSwitcher::SetActiveWidget(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.SetActiveWidget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5d308bd1);
 
 	UWidgetSwitcher_SetActiveWidget_Params params;
 	params.Widget = Widget;
@@ -7402,11 +8292,12 @@ void UWidgetSwitcher::SetActiveWidget(class UWidget* Widget)
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UWidget* UWidgetSwitcher::GetWidgetAtIndex(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetWidgetAtIndex");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x11e01cc);
 
 	UWidgetSwitcher_GetWidgetAtIndex_Params params;
 	params.Index = Index;
@@ -7429,7 +8320,8 @@ class UWidget* UWidgetSwitcher::GetWidgetAtIndex(int Index)
 
 int UWidgetSwitcher::GetNumWidgets()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetNumWidgets");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x48c188a0);
 
 	UWidgetSwitcher_GetNumWidgets_Params params;
 
@@ -7451,7 +8343,8 @@ int UWidgetSwitcher::GetNumWidgets()
 
 int UWidgetSwitcher::GetActiveWidgetIndex()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetSwitcher.GetActiveWidgetIndex");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe3b6a9f7);
 
 	UWidgetSwitcher_GetActiveWidgetIndex_Params params;
 
@@ -7469,11 +8362,12 @@ int UWidgetSwitcher::GetActiveWidgetIndex()
 // Function UMG.WrapBox.SetInnerSlotPadding
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 InPadding                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InPadding                      (CPF_Parm, CPF_IsPlainOldData)
 
-void UWrapBox::SetInnerSlotPadding(const class Vector2D& InPadding)
+void UWrapBox::SetInnerSlotPadding(const struct FVector2D& InPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WrapBox.SetInnerSlotPadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7e884d52);
 
 	UWrapBox_SetInnerSlotPadding_Params params;
 	params.InPadding = InPadding;
@@ -7490,12 +8384,13 @@ void UWrapBox::SetInnerSlotPadding(const class Vector2D& InPadding)
 // Function UMG.WrapBox.AddChildWrapBox
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWrapBoxSlot*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Content                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UWrapBoxSlot*            ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UWrapBoxSlot* UWrapBox::AddChildWrapBox(class UWidget* Content)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WrapBox.AddChildWrapBox");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1e93b195);
 
 	UWrapBox_AddChildWrapBox_Params params;
 	params.Content = Content;
@@ -7518,7 +8413,8 @@ class UWrapBoxSlot* UWrapBox::AddChildWrapBox(class UWidget* Content)
 
 void UProgressBar::SetPercent(float InPercent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetPercent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x82dd9a5d);
 
 	UProgressBar_SetPercent_Params params;
 	params.InPercent = InPercent;
@@ -7539,7 +8435,8 @@ void UProgressBar::SetPercent(float InPercent)
 
 void UProgressBar::SetIsMarquee(bool InbIsMarquee)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetIsMarquee");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbf9e9e2e);
 
 	UProgressBar_SetIsMarquee_Params params;
 	params.InbIsMarquee = InbIsMarquee;
@@ -7556,11 +8453,12 @@ void UProgressBar::SetIsMarquee(bool InbIsMarquee)
 // Function UMG.ProgressBar.SetFillColorAndOpacity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InColor                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InColor                        (CPF_Parm, CPF_IsPlainOldData)
 
 void UProgressBar::SetFillColorAndOpacity(const struct FLinearColor& InColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ProgressBar.SetFillColorAndOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7a2cc770);
 
 	UProgressBar_SetFillColorAndOpacity_Params params;
 	params.InColor = InColor;
@@ -7582,7 +8480,8 @@ void UProgressBar::SetFillColorAndOpacity(const struct FLinearColor& InColor)
 
 void UScrollBar::SetState(float InOffsetFraction, float InThumbSizeFraction)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.ScrollBar.SetState");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf1ba59a7);
 
 	UScrollBar_SetState_Params params;
 	params.InOffsetFraction = InOffsetFraction;
@@ -7604,7 +8503,8 @@ void UScrollBar::SetState(float InOffsetFraction, float InThumbSizeFraction)
 
 void USlider::SetValue(float InValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9f40e0ec);
 
 	USlider_SetValue_Params params;
 	params.InValue = InValue;
@@ -7625,7 +8525,8 @@ void USlider::SetValue(float InValue)
 
 void USlider::SetStepSize(float InValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetStepSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd9f9089c);
 
 	USlider_SetStepSize_Params params;
 	params.InValue = InValue;
@@ -7642,11 +8543,12 @@ void USlider::SetStepSize(float InValue)
 // Function UMG.Slider.SetSliderHandleColor
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InValue                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InValue                        (CPF_Parm, CPF_IsPlainOldData)
 
 void USlider::SetSliderHandleColor(const struct FLinearColor& InValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetSliderHandleColor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa1f08ff5);
 
 	USlider_SetSliderHandleColor_Params params;
 	params.InValue = InValue;
@@ -7663,11 +8565,12 @@ void USlider::SetSliderHandleColor(const struct FLinearColor& InValue)
 // Function UMG.Slider.SetSliderBarColor
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InValue                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InValue                        (CPF_Parm, CPF_IsPlainOldData)
 
 void USlider::SetSliderBarColor(const struct FLinearColor& InValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetSliderBarColor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4ab6640a);
 
 	USlider_SetSliderBarColor_Params params;
 	params.InValue = InValue;
@@ -7688,7 +8591,8 @@ void USlider::SetSliderBarColor(const struct FLinearColor& InValue)
 
 void USlider::SetLocked(bool InValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetLocked");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf9bb52eb);
 
 	USlider_SetLocked_Params params;
 	params.InValue = InValue;
@@ -7709,7 +8613,8 @@ void USlider::SetLocked(bool InValue)
 
 void USlider::SetIndentHandle(bool InValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Slider.SetIndentHandle");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd65451c9);
 
 	USlider_SetIndentHandle_Params params;
 	params.InValue = InValue;
@@ -7730,7 +8635,8 @@ void USlider::SetIndentHandle(bool InValue)
 
 float USlider::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Slider.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa5aa3ba8);
 
 	USlider_GetValue_Params params;
 
@@ -7748,11 +8654,12 @@ float USlider::GetValue()
 // Function UMG.Spacer.SetSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 InSize                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InSize                         (CPF_Parm, CPF_IsPlainOldData)
 
-void USpacer::SetSize(const class Vector2D& InSize)
+void USpacer::SetSize(const struct FVector2D& InSize)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Spacer.SetSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7f59d535);
 
 	USpacer_SetSize_Params params;
 	params.InSize = InSize;
@@ -7773,7 +8680,8 @@ void USpacer::SetSize(const class Vector2D& InSize)
 
 void USpinBox::SetValue(float NewValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x76b8a170);
 
 	USpinBox_SetValue_Params params;
 	params.NewValue = NewValue;
@@ -7794,7 +8702,8 @@ void USpinBox::SetValue(float NewValue)
 
 void USpinBox::SetMinValue(float NewValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe027bbde);
 
 	USpinBox_SetMinValue_Params params;
 	params.NewValue = NewValue;
@@ -7815,7 +8724,8 @@ void USpinBox::SetMinValue(float NewValue)
 
 void USpinBox::SetMinSliderValue(float NewValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMinSliderValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1e17656f);
 
 	USpinBox_SetMinSliderValue_Params params;
 	params.NewValue = NewValue;
@@ -7836,7 +8746,8 @@ void USpinBox::SetMinSliderValue(float NewValue)
 
 void USpinBox::SetMaxValue(float NewValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf927b7e8);
 
 	USpinBox_SetMaxValue_Params params;
 	params.NewValue = NewValue;
@@ -7857,7 +8768,8 @@ void USpinBox::SetMaxValue(float NewValue)
 
 void USpinBox::SetMaxSliderValue(float NewValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetMaxSliderValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x619757e9);
 
 	USpinBox_SetMaxSliderValue_Params params;
 	params.NewValue = NewValue;
@@ -7878,7 +8790,8 @@ void USpinBox::SetMaxSliderValue(float NewValue)
 
 void USpinBox::SetForegroundColor(const struct FSlateColor& InForegroundColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.SetForegroundColor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa058fd57);
 
 	USpinBox_SetForegroundColor_Params params;
 	params.InForegroundColor = InForegroundColor;
@@ -7900,7 +8813,8 @@ void USpinBox::SetForegroundColor(const struct FSlateColor& InForegroundColor)
 
 void USpinBox::OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxValueCommittedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xebfaf112);
 
 	USpinBox_OnSpinBoxValueCommittedEvent__DelegateSignature_Params params;
 	params.InValue = InValue;
@@ -7921,7 +8835,8 @@ void USpinBox::OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TE
 
 void USpinBox::OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxValueChangedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6d620368);
 
 	USpinBox_OnSpinBoxValueChangedEvent__DelegateSignature_Params params;
 	params.InValue = InValue;
@@ -7939,7 +8854,8 @@ void USpinBox::OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
 
 void USpinBox::OnSpinBoxBeginSliderMovement__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.SpinBox.OnSpinBoxBeginSliderMovement__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7f4806b4);
 
 	USpinBox_OnSpinBoxBeginSliderMovement__DelegateSignature_Params params;
 
@@ -7958,7 +8874,8 @@ void USpinBox::OnSpinBoxBeginSliderMovement__DelegateSignature()
 
 float USpinBox::GetValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6ae4f834);
 
 	USpinBox_GetValue_Params params;
 
@@ -7980,7 +8897,8 @@ float USpinBox::GetValue()
 
 float USpinBox::GetMinValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMinValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc4cafb4a);
 
 	USpinBox_GetMinValue_Params params;
 
@@ -8002,7 +8920,8 @@ float USpinBox::GetMinValue()
 
 float USpinBox::GetMinSliderValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMinSliderValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x22689b3);
 
 	USpinBox_GetMinSliderValue_Params params;
 
@@ -8024,7 +8943,8 @@ float USpinBox::GetMinSliderValue()
 
 float USpinBox::GetMaxValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMaxValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc437d7ec);
 
 	USpinBox_GetMaxValue_Params params;
 
@@ -8046,7 +8966,8 @@ float USpinBox::GetMaxValue()
 
 float USpinBox::GetMaxSliderValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.GetMaxSliderValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb8500fe5);
 
 	USpinBox_GetMaxSliderValue_Params params;
 
@@ -8066,7 +8987,8 @@ float USpinBox::GetMaxSliderValue()
 
 void USpinBox::ClearMinValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMinValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb9e21965);
 
 	USpinBox_ClearMinValue_Params params;
 
@@ -8084,7 +9006,8 @@ void USpinBox::ClearMinValue()
 
 void USpinBox::ClearMinSliderValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMinSliderValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xdec122b8);
 
 	USpinBox_ClearMinSliderValue_Params params;
 
@@ -8102,7 +9025,8 @@ void USpinBox::ClearMinSliderValue()
 
 void USpinBox::ClearMaxValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMaxValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x35195e37);
 
 	USpinBox_ClearMaxValue_Params params;
 
@@ -8120,7 +9044,8 @@ void USpinBox::ClearMaxValue()
 
 void USpinBox::ClearMaxSliderValue()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.SpinBox.ClearMaxSliderValue");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x38eaf1a);
 
 	USpinBox_ClearMaxSliderValue_Params params;
 
@@ -8137,11 +9062,12 @@ void USpinBox::ClearMaxSliderValue()
 // (FUNC_Public, FUNC_Delegate)
 // Parameters:
 // class UObject*                 Item                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UWidget* UTableViewBase::OnGenerateRowUObject__DelegateSignature(class UObject* Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.TableViewBase.OnGenerateRowUObject__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5424e836);
 
 	UTableViewBase_OnGenerateRowUObject__DelegateSignature_Params params;
 	params.Item = Item;
@@ -8163,7 +9089,8 @@ class UWidget* UTableViewBase::OnGenerateRowUObject__DelegateSignature(class UOb
 
 void UTileView::SetItemWidth(float Width)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TileView.SetItemWidth");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x62deb74);
 
 	UTileView_SetItemWidth_Params params;
 	params.Width = Width;
@@ -8184,7 +9111,8 @@ void UTileView::SetItemWidth(float Width)
 
 void UTileView::SetItemHeight(float Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TileView.SetItemHeight");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xed979a31);
 
 	UTileView_SetItemHeight_Params params;
 	params.Height = Height;
@@ -8203,7 +9131,8 @@ void UTileView::SetItemHeight(float Height)
 
 void UTileView::RequestListRefresh()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TileView.RequestListRefresh");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1408a1ab);
 
 	UTileView_RequestListRefresh_Params params;
 
@@ -8223,10 +9152,33 @@ void UTileView::RequestListRefresh()
 
 void UMultiLineEditableText::SetText(const struct FText& InText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.SetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8b69cdcb);
 
 	UMultiLineEditableText_SetText_Params params;
 	params.InText = InText;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.MultiLineEditableText.SetIsReadOnly
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           bReadOnly                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UMultiLineEditableText::SetIsReadOnly(bool bReadOnly)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x52477e78);
+
+	UMultiLineEditableText_SetIsReadOnly_Params params;
+	params.bReadOnly = bReadOnly;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8245,7 +9197,8 @@ void UMultiLineEditableText::SetText(const struct FText& InText)
 
 void UMultiLineEditableText::OnMultiLineEditableTextCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextCommittedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x41222cd3);
 
 	UMultiLineEditableText_OnMultiLineEditableTextCommittedEvent__DelegateSignature_Params params;
 	params.Text = Text;
@@ -8266,7 +9219,8 @@ void UMultiLineEditableText::OnMultiLineEditableTextCommittedEvent__DelegateSign
 
 void UMultiLineEditableText::OnMultiLineEditableTextChangedEvent__DelegateSignature(const struct FText& Text)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableText.OnMultiLineEditableTextChangedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9f743d61);
 
 	UMultiLineEditableText_OnMultiLineEditableTextChangedEvent__DelegateSignature_Params params;
 	params.Text = Text;
@@ -8286,7 +9240,8 @@ void UMultiLineEditableText::OnMultiLineEditableTextChangedEvent__DelegateSignat
 
 struct FText UMultiLineEditableText::GetText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableText.GetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2d06bb87);
 
 	UMultiLineEditableText_GetText_Params params;
 
@@ -8308,10 +9263,33 @@ struct FText UMultiLineEditableText::GetText()
 
 void UMultiLineEditableTextBox::SetText(const struct FText& InText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x23ae7e54);
 
 	UMultiLineEditableTextBox_SetText_Params params;
 	params.InText = InText;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.MultiLineEditableTextBox.SetIsReadOnly
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           bReadOnly                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UMultiLineEditableTextBox::SetIsReadOnly(bool bReadOnly)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8af05b77);
+
+	UMultiLineEditableTextBox_SetIsReadOnly_Params params;
+	params.bReadOnly = bReadOnly;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8329,7 +9307,8 @@ void UMultiLineEditableTextBox::SetText(const struct FText& InText)
 
 void UMultiLineEditableTextBox::SetError(const struct FText& InError)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.SetError");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x177ff09);
 
 	UMultiLineEditableTextBox_SetError_Params params;
 	params.InError = InError;
@@ -8351,7 +9330,8 @@ void UMultiLineEditableTextBox::SetError(const struct FText& InError)
 
 void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa6198aab);
 
 	UMultiLineEditableTextBox_OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature_Params params;
 	params.Text = Text;
@@ -8372,7 +9352,8 @@ void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxCommittedEvent__Delega
 
 void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const struct FText& Text)
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction UMG.MultiLineEditableTextBox.OnMultiLineEditableTextBoxChangedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6097e579);
 
 	UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Params params;
 	params.Text = Text;
@@ -8392,7 +9373,8 @@ void UMultiLineEditableTextBox::OnMultiLineEditableTextBoxChangedEvent__Delegate
 
 struct FText UMultiLineEditableTextBox::GetText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.MultiLineEditableTextBox.GetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x68765898);
 
 	UMultiLineEditableTextBox_GetText_Params params;
 
@@ -8408,13 +9390,14 @@ struct FText UMultiLineEditableTextBox::GetText()
 
 
 // Function UMG.TextBlock.SetText
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // struct FText                   InText                         (CPF_Parm)
 
 void UTextBlock::SetText(const struct FText& InText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x327391f3);
 
 	UTextBlock_SetText_Params params;
 	params.InText = InText;
@@ -8431,11 +9414,12 @@ void UTextBlock::SetText(const struct FText& InText)
 // Function UMG.TextBlock.SetShadowOffset
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 InShadowOffset                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 InShadowOffset                 (CPF_Parm, CPF_IsPlainOldData)
 
-void UTextBlock::SetShadowOffset(const class Vector2D& InShadowOffset)
+void UTextBlock::SetShadowOffset(const struct FVector2D& InShadowOffset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetShadowOffset");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9542b37f);
 
 	UTextBlock_SetShadowOffset_Params params;
 	params.InShadowOffset = InShadowOffset;
@@ -8452,11 +9436,12 @@ void UTextBlock::SetShadowOffset(const class Vector2D& InShadowOffset)
 // Function UMG.TextBlock.SetShadowColorAndOpacity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            InShadowColorAndOpacity        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            InShadowColorAndOpacity        (CPF_Parm, CPF_IsPlainOldData)
 
 void UTextBlock::SetShadowColorAndOpacity(const struct FLinearColor& InShadowColorAndOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetShadowColorAndOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x908b14ad);
 
 	UTextBlock_SetShadowColorAndOpacity_Params params;
 	params.InShadowColorAndOpacity = InShadowColorAndOpacity;
@@ -8477,10 +9462,33 @@ void UTextBlock::SetShadowColorAndOpacity(const struct FLinearColor& InShadowCol
 
 void UTextBlock::SetOpacity(float InOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb4b2ad41);
 
 	UTextBlock_SetOpacity_Params params;
 	params.InOpacity = InOpacity;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UMG.TextBlock.SetMinDesiredWidth
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// float                          InMinDesiredWidth              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UTextBlock::SetMinDesiredWidth(float InMinDesiredWidth)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x12647da0);
+
+	UTextBlock_SetMinDesiredWidth_Params params;
+	params.InMinDesiredWidth = InMinDesiredWidth;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8498,7 +9506,8 @@ void UTextBlock::SetOpacity(float InOpacity)
 
 void UTextBlock::SetJustification(TEnumAsByte<ETextJustify> InJustification)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetJustification");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xac4e4af0);
 
 	UTextBlock_SetJustification_Params params;
 	params.InJustification = InJustification;
@@ -8519,7 +9528,8 @@ void UTextBlock::SetJustification(TEnumAsByte<ETextJustify> InJustification)
 
 void UTextBlock::SetFont(const struct FSlateFontInfo& InFontInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetFont");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb1ab5521);
 
 	UTextBlock_SetFont_Params params;
 	params.InFontInfo = InFontInfo;
@@ -8540,7 +9550,8 @@ void UTextBlock::SetFont(const struct FSlateFontInfo& InFontInfo)
 
 void UTextBlock::SetColorAndOpacity(const struct FSlateColor& InColorAndOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.SetColorAndOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x281874a5);
 
 	UTextBlock_SetColorAndOpacity_Params params;
 	params.InColorAndOpacity = InColorAndOpacity;
@@ -8561,7 +9572,8 @@ void UTextBlock::SetColorAndOpacity(const struct FSlateColor& InColorAndOpacity)
 
 struct FText UTextBlock::GetText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.TextBlock.GetText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xfe937f2f);
 
 	UTextBlock_GetText_Params params;
 
@@ -8583,7 +9595,8 @@ struct FText UTextBlock::GetText()
 
 void UThrobber::SetNumberOfPieces(int InNumberOfPieces)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetNumberOfPieces");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2d58172b);
 
 	UThrobber_SetNumberOfPieces_Params params;
 	params.InNumberOfPieces = InNumberOfPieces;
@@ -8604,7 +9617,8 @@ void UThrobber::SetNumberOfPieces(int InNumberOfPieces)
 
 void UThrobber::SetAnimateVertically(bool bInAnimateVertically)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateVertically");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x40b02dec);
 
 	UThrobber_SetAnimateVertically_Params params;
 	params.bInAnimateVertically = bInAnimateVertically;
@@ -8625,7 +9639,8 @@ void UThrobber::SetAnimateVertically(bool bInAnimateVertically)
 
 void UThrobber::SetAnimateOpacity(bool bInAnimateOpacity)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateOpacity");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8983c012);
 
 	UThrobber_SetAnimateOpacity_Params params;
 	params.bInAnimateOpacity = bInAnimateOpacity;
@@ -8646,7 +9661,8 @@ void UThrobber::SetAnimateOpacity(bool bInAnimateOpacity)
 
 void UThrobber::SetAnimateHorizontally(bool bInAnimateHorizontally)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.Throbber.SetAnimateHorizontally");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x657b3696);
 
 	UThrobber_SetAnimateHorizontally_Params params;
 	params.bInAnimateHorizontally = bInAnimateHorizontally;
@@ -8667,7 +9683,8 @@ void UThrobber::SetAnimateHorizontally(bool bInAnimateHorizontally)
 
 float UWidgetAnimation::GetStartTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.GetStartTime");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9c60f2d7);
 
 	UWidgetAnimation_GetStartTime_Params params;
 
@@ -8689,7 +9706,8 @@ float UWidgetAnimation::GetStartTime()
 
 float UWidgetAnimation::GetEndTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetAnimation.GetEndTime");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2417acdc);
 
 	UWidgetAnimation_GetEndTime_Params params;
 
@@ -8712,7 +9730,8 @@ float UWidgetAnimation::GetEndTime()
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_UnlockMouse(struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.UnlockMouse");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd9b0e81);
 
 	UWidgetBlueprintLibrary_UnlockMouse_Params params;
 
@@ -8737,7 +9756,8 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_UnlockMouse(struct FEventRepl
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_Unhandled()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Unhandled");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x875ab525);
 
 	UWidgetBlueprintLibrary_Unhandled_Params params;
 
@@ -8756,13 +9776,14 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_Unhandled()
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FEventReply             Reply                          (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class UWidget*                 FocusWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 FocusWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // bool                           bInAllUsers                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_SetUserFocus(class UWidget* FocusWidget, bool bInAllUsers, struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetUserFocus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x86b9fe63);
 
 	UWidgetBlueprintLibrary_SetUserFocus_Params params;
 	params.FocusWidget = FocusWidget;
@@ -8786,12 +9807,13 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_SetUserFocus(class UWidget* F
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FEventReply             Reply                          (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector2D                 NewMousePosition               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 NewMousePosition               (CPF_Parm, CPF_IsPlainOldData)
 // struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-struct FEventReply UWidgetBlueprintLibrary::STATIC_SetMousePosition(const class Vector2D& NewMousePosition, struct FEventReply* Reply)
+struct FEventReply UWidgetBlueprintLibrary::STATIC_SetMousePosition(const struct FVector2D& NewMousePosition, struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetMousePosition");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x79302374);
 
 	UWidgetBlueprintLibrary_SetMousePosition_Params params;
 	params.NewMousePosition = NewMousePosition;
@@ -8814,12 +9836,13 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_SetMousePosition(const class 
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class APlayerController*       Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWidget*                 InWidgetToFocus                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// TEnumAsByte<EMouseLockMode>    InMouseLockMode                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 InWidgetToFocus                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// EMouseLockMode                 InMouseLockMode                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnlyEx(class APlayerController* Target, class UWidget* InWidgetToFocus, TEnumAsByte<EMouseLockMode> InMouseLockMode)
+void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnlyEx(class APlayerController* Target, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnlyEx");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc6f94c67);
 
 	UWidgetBlueprintLibrary_SetInputMode_UIOnlyEx_Params params;
 	params.Target = Target;
@@ -8839,12 +9862,13 @@ void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnlyEx(class APlayerControll
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class APlayerController*       Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWidget*                 InWidgetToFocus                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 InWidgetToFocus                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // bool                           bLockMouseToViewport           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnly(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_UIOnly");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa81c2998);
 
 	UWidgetBlueprintLibrary_SetInputMode_UIOnly_Params params;
 	params.Target = Target;
@@ -8867,7 +9891,8 @@ void UWidgetBlueprintLibrary::STATIC_SetInputMode_UIOnly(class APlayerController
 
 void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameOnly(class APlayerController* Target)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameOnly");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x411c77c8);
 
 	UWidgetBlueprintLibrary_SetInputMode_GameOnly_Params params;
 	params.Target = Target;
@@ -8885,13 +9910,14 @@ void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameOnly(class APlayerControll
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class APlayerController*       Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWidget*                 InWidgetToFocus                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// TEnumAsByte<EMouseLockMode>    InMouseLockMode                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 InWidgetToFocus                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// EMouseLockMode                 InMouseLockMode                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bHideCursorDuringCapture       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUIEx(class APlayerController* Target, class UWidget* InWidgetToFocus, TEnumAsByte<EMouseLockMode> InMouseLockMode, bool bHideCursorDuringCapture)
+void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUIEx(class APlayerController* Target, class UWidget* InWidgetToFocus, EMouseLockMode InMouseLockMode, bool bHideCursorDuringCapture)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUIEx");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb274b890);
 
 	UWidgetBlueprintLibrary_SetInputMode_GameAndUIEx_Params params;
 	params.Target = Target;
@@ -8912,13 +9938,14 @@ void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUIEx(class APlayerContr
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
 // class APlayerController*       Target                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UWidget*                 InWidgetToFocus                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 InWidgetToFocus                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // bool                           bLockMouseToViewport           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           bHideCursorDuringCapture       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUI(class APlayerController* Target, class UWidget* InWidgetToFocus, bool bLockMouseToViewport, bool bHideCursorDuringCapture)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetInputMode_GameAndUI");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3a0de587);
 
 	UWidgetBlueprintLibrary_SetInputMode_GameAndUI_Params params;
 	params.Target = Target;
@@ -8935,12 +9962,44 @@ void UWidgetBlueprintLibrary::STATIC_SetInputMode_GameAndUI(class APlayerControl
 }
 
 
+// Function UMG.WidgetBlueprintLibrary.SetHardwareCursor
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// TEnumAsByte<EMouseCursor>      CursorShape                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FName                   CursorName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 HotSpot                        (CPF_Parm, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UWidgetBlueprintLibrary::STATIC_SetHardwareCursor(class UObject* WorldContextObject, TEnumAsByte<EMouseCursor> CursorShape, const struct FName& CursorName, const struct FVector2D& HotSpot)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf417541a);
+
+	UWidgetBlueprintLibrary_SetHardwareCursor_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.CursorShape = CursorShape;
+	params.CursorName = CursorName;
+	params.HotSpot = HotSpot;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function UMG.WidgetBlueprintLibrary.SetFocusToGameViewport
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 
 void UWidgetBlueprintLibrary::STATIC_SetFocusToGameViewport()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetFocusToGameViewport");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3a29c60f);
 
 	UWidgetBlueprintLibrary_SetFocusToGameViewport_Params params;
 
@@ -8961,7 +10020,8 @@ void UWidgetBlueprintLibrary::STATIC_SetFocusToGameViewport()
 
 void UWidgetBlueprintLibrary::STATIC_SetBrushResourceToTexture(class UTexture2D* Texture, struct FSlateBrush* Brush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToTexture");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x84350b08);
 
 	UWidgetBlueprintLibrary_SetBrushResourceToTexture_Params params;
 	params.Texture = Texture;
@@ -8986,7 +10046,8 @@ void UWidgetBlueprintLibrary::STATIC_SetBrushResourceToTexture(class UTexture2D*
 
 void UWidgetBlueprintLibrary::STATIC_SetBrushResourceToMaterial(class UMaterialInterface* Material, struct FSlateBrush* Brush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.SetBrushResourceToMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1fdd7c4c);
 
 	UWidgetBlueprintLibrary_SetBrushResourceToMaterial_Params params;
 	params.Material = Material;
@@ -9011,7 +10072,8 @@ void UWidgetBlueprintLibrary::STATIC_SetBrushResourceToMaterial(class UMaterialI
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_ReleaseMouseCapture(struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseMouseCapture");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe0be7a26);
 
 	UWidgetBlueprintLibrary_ReleaseMouseCapture_Params params;
 
@@ -9038,7 +10100,8 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_ReleaseMouseCapture(struct FE
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_ReleaseJoystickCapture(bool bInAllJoysticks, struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ReleaseJoystickCapture");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xee9f74d1);
 
 	UWidgetBlueprintLibrary_ReleaseJoystickCapture_Params params;
 	params.bInAllJoysticks = bInAllJoysticks;
@@ -9064,7 +10127,8 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_ReleaseJoystickCapture(bool b
 
 struct FSlateBrush UWidgetBlueprintLibrary::STATIC_NoResourceBrush()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.NoResourceBrush");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x83627a77);
 
 	UWidgetBlueprintLibrary_NoResourceBrush_Params params;
 
@@ -9089,7 +10153,8 @@ struct FSlateBrush UWidgetBlueprintLibrary::STATIC_NoResourceBrush()
 
 struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromTexture(class UTexture2D* Texture, int Width, int Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromTexture");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3520e3d7);
 
 	UWidgetBlueprintLibrary_MakeBrushFromTexture_Params params;
 	params.Texture = Texture;
@@ -9117,7 +10182,8 @@ struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromTexture(class UT
 
 struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromMaterial(class UMaterialInterface* Material, int Width, int Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6325550d);
 
 	UWidgetBlueprintLibrary_MakeBrushFromMaterial_Params params;
 	params.Material = Material;
@@ -9143,7 +10209,8 @@ struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromMaterial(class U
 
 struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromAsset(class USlateBrushAsset* BrushAsset)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.MakeBrushFromAsset");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x10625d0a);
 
 	UWidgetBlueprintLibrary_MakeBrushFromAsset_Params params;
 	params.BrushAsset = BrushAsset;
@@ -9163,12 +10230,13 @@ struct FSlateBrush UWidgetBlueprintLibrary::STATIC_MakeBrushFromAsset(class USla
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FEventReply             Reply                          (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class UWidget*                 CapturingWidget                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 CapturingWidget                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_LockMouse(class UWidget* CapturingWidget, struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.LockMouse");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x95162c6a);
 
 	UWidgetBlueprintLibrary_LockMouse_Params params;
 	params.CapturingWidget = CapturingWidget;
@@ -9194,7 +10262,8 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_LockMouse(class UWidget* Capt
 
 bool UWidgetBlueprintLibrary::STATIC_IsDragDropping()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.IsDragDropping");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x54285655);
 
 	UWidgetBlueprintLibrary_IsDragDropping_Params params;
 
@@ -9216,7 +10285,8 @@ bool UWidgetBlueprintLibrary::STATIC_IsDragDropping()
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_Handled()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Handled");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5faf5e3e);
 
 	UWidgetBlueprintLibrary_Handled_Params params;
 
@@ -9235,13 +10305,14 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_Handled()
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 SafePadding                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 SafePaddingScale               (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 SpillOverPadding               (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 SafePadding                    (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FVector2D                 SafePaddingScale               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+// struct FVector2D                 SpillOverPadding               (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 
-void UWidgetBlueprintLibrary::STATIC_GetSafeZonePadding(class UObject* WorldContextObject, class Vector2D* SafePadding, class Vector2D* SafePaddingScale, class Vector2D* SpillOverPadding)
+void UWidgetBlueprintLibrary::STATIC_GetSafeZonePadding(class UObject* WorldContextObject, struct FVector2D* SafePadding, struct FVector2D* SafePaddingScale, struct FVector2D* SpillOverPadding)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetSafeZonePadding");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9eddebd4);
 
 	UWidgetBlueprintLibrary_GetSafeZonePadding_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -9270,7 +10341,8 @@ void UWidgetBlueprintLibrary::STATIC_GetSafeZonePadding(class UObject* WorldCont
 
 struct FKeyEvent UWidgetBlueprintLibrary::STATIC_GetKeyEventFromAnalogInputEvent(const struct FAnalogInputEvent& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetKeyEventFromAnalogInputEvent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x466a8a17);
 
 	UWidgetBlueprintLibrary_GetKeyEventFromAnalogInputEvent_Params params;
 	params.Event = Event;
@@ -9294,7 +10366,8 @@ struct FKeyEvent UWidgetBlueprintLibrary::STATIC_GetKeyEventFromAnalogInputEvent
 
 struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromPointerEvent(const struct FPointerEvent& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromPointerEvent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1a511e25);
 
 	UWidgetBlueprintLibrary_GetInputEventFromPointerEvent_Params params;
 	params.Event = Event;
@@ -9318,7 +10391,8 @@ struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromPointerEvent
 
 struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromNavigationEvent(const struct FNavigationEvent& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromNavigationEvent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1ba7cee6);
 
 	UWidgetBlueprintLibrary_GetInputEventFromNavigationEvent_Params params;
 	params.Event = Event;
@@ -9342,7 +10416,8 @@ struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromNavigationEv
 
 struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromKeyEvent(const struct FKeyEvent& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromKeyEvent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7d2c61c3);
 
 	UWidgetBlueprintLibrary_GetInputEventFromKeyEvent_Params params;
 	params.Event = Event;
@@ -9366,7 +10441,8 @@ struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromKeyEvent(con
 
 struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromControllerEvent(const struct FControllerEvent& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromControllerEvent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x555a01f4);
 
 	UWidgetBlueprintLibrary_GetInputEventFromControllerEvent_Params params;
 	params.Event = Event;
@@ -9390,7 +10466,8 @@ struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromControllerEv
 
 struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromCharacterEvent(const struct FCharacterEvent& Event)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetInputEventFromCharacterEvent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcf30fa3b);
 
 	UWidgetBlueprintLibrary_GetInputEventFromCharacterEvent_Params params;
 	params.Event = Event;
@@ -9414,7 +10491,8 @@ struct FInputEvent UWidgetBlueprintLibrary::STATIC_GetInputEventFromCharacterEve
 
 class UMaterialInstanceDynamic* UWidgetBlueprintLibrary::STATIC_GetDynamicMaterial(struct FSlateBrush* Brush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDynamicMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9fea344);
 
 	UWidgetBlueprintLibrary_GetDynamicMaterial_Params params;
 
@@ -9439,7 +10517,8 @@ class UMaterialInstanceDynamic* UWidgetBlueprintLibrary::STATIC_GetDynamicMateri
 
 class UDragDropOperation* UWidgetBlueprintLibrary::STATIC_GetDragDroppingContent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetDragDroppingContent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x923a9be4);
 
 	UWidgetBlueprintLibrary_GetDragDroppingContent_Params params;
 
@@ -9462,7 +10541,8 @@ class UDragDropOperation* UWidgetBlueprintLibrary::STATIC_GetDragDroppingContent
 
 class UTexture2D* UWidgetBlueprintLibrary::STATIC_GetBrushResourceAsTexture2D(struct FSlateBrush* Brush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsTexture2D");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6e45617b);
 
 	UWidgetBlueprintLibrary_GetBrushResourceAsTexture2D_Params params;
 
@@ -9488,7 +10568,8 @@ class UTexture2D* UWidgetBlueprintLibrary::STATIC_GetBrushResourceAsTexture2D(st
 
 class UMaterialInterface* UWidgetBlueprintLibrary::STATIC_GetBrushResourceAsMaterial(struct FSlateBrush* Brush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResourceAsMaterial");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4aa31987);
 
 	UWidgetBlueprintLibrary_GetBrushResourceAsMaterial_Params params;
 
@@ -9514,7 +10595,8 @@ class UMaterialInterface* UWidgetBlueprintLibrary::STATIC_GetBrushResourceAsMate
 
 class UObject* UWidgetBlueprintLibrary::STATIC_GetBrushResource(struct FSlateBrush* Brush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetBrushResource");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd9ab955c);
 
 	UWidgetBlueprintLibrary_GetBrushResource_Params params;
 
@@ -9542,7 +10624,8 @@ class UObject* UWidgetBlueprintLibrary::STATIC_GetBrushResource(struct FSlateBru
 
 void UWidgetBlueprintLibrary::STATIC_GetAllWidgetsWithInterface(class UObject* WorldContextObject, class UClass* Interface, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsWithInterface");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1bbe6ff1);
 
 	UWidgetBlueprintLibrary_GetAllWidgetsWithInterface_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -9571,7 +10654,8 @@ void UWidgetBlueprintLibrary::STATIC_GetAllWidgetsWithInterface(class UObject* W
 
 void UWidgetBlueprintLibrary::STATIC_GetAllWidgetsOfClass(class UObject* WorldContextObject, class UClass* WidgetClass, bool TopLevelOnly, TArray<class UUserWidget*>* FoundWidgets)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.GetAllWidgetsOfClass");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x53b3c6d1);
 
 	UWidgetBlueprintLibrary_GetAllWidgetsOfClass_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -9598,7 +10682,8 @@ void UWidgetBlueprintLibrary::STATIC_GetAllWidgetsOfClass(class UObject* WorldCo
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_EndDragDrop(struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.EndDragDrop");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa210c30a);
 
 	UWidgetBlueprintLibrary_EndDragDrop_Params params;
 
@@ -9621,15 +10706,16 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_EndDragDrop(struct FEventRepl
 // Parameters:
 // struct FPaintContext           Context                        (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // struct FText                   Text                           (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Position                       (CPF_Parm, CPF_IsPlainOldData)
 // class UFont*                   Font                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            FontSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FName                   FontTypeFace                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FLinearColor            Tint                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            Tint                           (CPF_Parm, CPF_IsPlainOldData)
 
-void UWidgetBlueprintLibrary::STATIC_DrawTextFormatted(const struct FText& Text, const class Vector2D& Position, class UFont* Font, int FontSize, const struct FName& FontTypeFace, const struct FLinearColor& Tint, struct FPaintContext* Context)
+void UWidgetBlueprintLibrary::STATIC_DrawTextFormatted(const struct FText& Text, const struct FVector2D& Position, class UFont* Font, int FontSize, const struct FName& FontTypeFace, const struct FLinearColor& Tint, struct FPaintContext* Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawTextFormatted");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x91631ba9);
 
 	UWidgetBlueprintLibrary_DrawTextFormatted_Params params;
 	params.Text = Text;
@@ -9656,12 +10742,13 @@ void UWidgetBlueprintLibrary::STATIC_DrawTextFormatted(const struct FText& Text,
 // Parameters:
 // struct FPaintContext           Context                        (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // struct FString                 inString                       (CPF_Parm, CPF_ZeroConstructor)
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FLinearColor            Tint                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Position                       (CPF_Parm, CPF_IsPlainOldData)
+// struct FLinearColor            Tint                           (CPF_Parm, CPF_IsPlainOldData)
 
-void UWidgetBlueprintLibrary::STATIC_DrawText(const struct FString& inString, const class Vector2D& Position, const struct FLinearColor& Tint, struct FPaintContext* Context)
+void UWidgetBlueprintLibrary::STATIC_DrawText(const struct FString& inString, const struct FVector2D& Position, const struct FLinearColor& Tint, struct FPaintContext* Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawText");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x226cdd0f);
 
 	UWidgetBlueprintLibrary_DrawText_Params params;
 	params.inString = inString;
@@ -9684,13 +10771,14 @@ void UWidgetBlueprintLibrary::STATIC_DrawText(const struct FString& inString, co
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FPaintContext           Context                        (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// TArray<class Vector2D>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-// struct FLinearColor            Tint                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// TArray<struct FVector2D>         Points                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// struct FLinearColor            Tint                           (CPF_Parm, CPF_IsPlainOldData)
 // bool                           bAntiAlias                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UWidgetBlueprintLibrary::STATIC_DrawLines(TArray<class Vector2D> Points, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
+void UWidgetBlueprintLibrary::STATIC_DrawLines(TArray<struct FVector2D> Points, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLines");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd33c717);
 
 	UWidgetBlueprintLibrary_DrawLines_Params params;
 	params.Points = Points;
@@ -9713,14 +10801,15 @@ void UWidgetBlueprintLibrary::STATIC_DrawLines(TArray<class Vector2D> Points, co
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FPaintContext           Context                        (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector2D                 PositionA                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 PositionB                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FLinearColor            Tint                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 PositionA                      (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 PositionB                      (CPF_Parm, CPF_IsPlainOldData)
+// struct FLinearColor            Tint                           (CPF_Parm, CPF_IsPlainOldData)
 // bool                           bAntiAlias                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UWidgetBlueprintLibrary::STATIC_DrawLine(const class Vector2D& PositionA, const class Vector2D& PositionB, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
+void UWidgetBlueprintLibrary::STATIC_DrawLine(const struct FVector2D& PositionA, const struct FVector2D& PositionB, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawLine");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x613ef1e4);
 
 	UWidgetBlueprintLibrary_DrawLine_Params params;
 	params.PositionA = PositionA;
@@ -9744,14 +10833,15 @@ void UWidgetBlueprintLibrary::STATIC_DrawLine(const class Vector2D& PositionA, c
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // struct FPaintContext           Context                        (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class Vector2D                 Position                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Position                       (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 Size                           (CPF_Parm, CPF_IsPlainOldData)
 // class USlateBrushAsset*        Brush                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FLinearColor            Tint                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            Tint                           (CPF_Parm, CPF_IsPlainOldData)
 
-void UWidgetBlueprintLibrary::STATIC_DrawBox(const class Vector2D& Position, const class Vector2D& Size, class USlateBrushAsset* Brush, const struct FLinearColor& Tint, struct FPaintContext* Context)
+void UWidgetBlueprintLibrary::STATIC_DrawBox(const struct FVector2D& Position, const struct FVector2D& Size, class USlateBrushAsset* Brush, const struct FLinearColor& Tint, struct FPaintContext* Context)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DrawBox");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3e027a9);
 
 	UWidgetBlueprintLibrary_DrawBox_Params params;
 	params.Position = Position;
@@ -9776,7 +10866,8 @@ void UWidgetBlueprintLibrary::STATIC_DrawBox(const class Vector2D& Position, con
 
 void UWidgetBlueprintLibrary::STATIC_DismissAllMenus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DismissAllMenus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf527b39f);
 
 	UWidgetBlueprintLibrary_DismissAllMenus_Params params;
 
@@ -9793,13 +10884,14 @@ void UWidgetBlueprintLibrary::STATIC_DismissAllMenus()
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable)
 // Parameters:
 // struct FPointerEvent           PointerEvent                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class UWidget*                 WidgetDetectingDrag            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 WidgetDetectingDrag            (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FKey                    DragKey                        (CPF_Parm)
 // struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_DetectDragIfPressed(const struct FPointerEvent& PointerEvent, class UWidget* WidgetDetectingDrag, const struct FKey& DragKey)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDragIfPressed");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6d8c21e8);
 
 	UWidgetBlueprintLibrary_DetectDragIfPressed_Params params;
 	params.PointerEvent = PointerEvent;
@@ -9821,13 +10913,14 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_DetectDragIfPressed(const str
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FEventReply             Reply                          (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class UWidget*                 WidgetDetectingDrag            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 WidgetDetectingDrag            (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FKey                    DragKey                        (CPF_Parm)
 // struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_DetectDrag(class UWidget* WidgetDetectingDrag, const struct FKey& DragKey, struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.DetectDrag");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x988b9bfb);
 
 	UWidgetBlueprintLibrary_DetectDrag_Params params;
 	params.WidgetDetectingDrag = WidgetDetectingDrag;
@@ -9855,7 +10948,8 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_DetectDrag(class UWidget* Wid
 
 class UDragDropOperation* UWidgetBlueprintLibrary::STATIC_CreateDragDropOperation(class UClass* OperationClass)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CreateDragDropOperation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x69adcbcc);
 
 	UWidgetBlueprintLibrary_CreateDragDropOperation_Params params;
 	params.OperationClass = OperationClass;
@@ -9877,11 +10971,12 @@ class UDragDropOperation* UWidgetBlueprintLibrary::STATIC_CreateDragDropOperatio
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UClass*                  WidgetType                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class APlayerController*       OwningPlayer                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UUserWidget*             ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UUserWidget* UWidgetBlueprintLibrary::STATIC_Create(class UObject* WorldContextObject, class UClass* WidgetType, class APlayerController* OwningPlayer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.Create");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe5044210);
 
 	UWidgetBlueprintLibrary_Create_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -9908,7 +11003,8 @@ class UUserWidget* UWidgetBlueprintLibrary::STATIC_Create(class UObject* WorldCo
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_ClearUserFocus(bool bInAllUsers, struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.ClearUserFocus");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3e55df7e);
 
 	UWidgetBlueprintLibrary_ClearUserFocus_Params params;
 	params.bInAllUsers = bInAllUsers;
@@ -9931,12 +11027,13 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_ClearUserFocus(bool bInAllUse
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FEventReply             Reply                          (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class UWidget*                 CapturingWidget                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 CapturingWidget                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_CaptureMouse(class UWidget* CapturingWidget, struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureMouse");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x13a6be87);
 
 	UWidgetBlueprintLibrary_CaptureMouse_Params params;
 	params.CapturingWidget = CapturingWidget;
@@ -9959,13 +11056,14 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_CaptureMouse(class UWidget* C
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // struct FEventReply             Reply                          (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-// class UWidget*                 CapturingWidget                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UWidget*                 CapturingWidget                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 // bool                           bInAllJoysticks                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
 struct FEventReply UWidgetBlueprintLibrary::STATIC_CaptureJoystick(class UWidget* CapturingWidget, bool bInAllJoysticks, struct FEventReply* Reply)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CaptureJoystick");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x90714378);
 
 	UWidgetBlueprintLibrary_CaptureJoystick_Params params;
 	params.CapturingWidget = CapturingWidget;
@@ -9990,7 +11088,8 @@ struct FEventReply UWidgetBlueprintLibrary::STATIC_CaptureJoystick(class UWidget
 
 void UWidgetBlueprintLibrary::STATIC_CancelDragDrop()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetBlueprintLibrary.CancelDragDrop");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa8ef7a77);
 
 	UWidgetBlueprintLibrary_CancelDragDrop_Params params;
 
@@ -10006,11 +11105,12 @@ void UWidgetBlueprintLibrary::STATIC_CancelDragDrop()
 // Function UMG.WidgetComponent.SetWidget
 // (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
-// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 void UWidgetComponent::SetWidget(class UUserWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetWidget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x33e78ca7);
 
 	UWidgetComponent_SetWidget_Params params;
 	params.Widget = Widget;
@@ -10031,7 +11131,8 @@ void UWidgetComponent::SetWidget(class UUserWidget* Widget)
 
 void UWidgetComponent::SetOwnerPlayer(class ULocalPlayer* LocalPlayer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetOwnerPlayer");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x404b36d3);
 
 	UWidgetComponent_SetOwnerPlayer_Params params;
 	params.LocalPlayer = LocalPlayer;
@@ -10048,11 +11149,12 @@ void UWidgetComponent::SetOwnerPlayer(class ULocalPlayer* LocalPlayer)
 // Function UMG.WidgetComponent.SetDrawSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// class Vector2D                 Size                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D                 Size                           (CPF_Parm, CPF_IsPlainOldData)
 
-void UWidgetComponent::SetDrawSize(const class Vector2D& Size)
+void UWidgetComponent::SetDrawSize(const struct FVector2D& Size)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetDrawSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x841b20ee);
 
 	UWidgetComponent_SetDrawSize_Params params;
 	params.Size = Size;
@@ -10069,11 +11171,12 @@ void UWidgetComponent::SetDrawSize(const class Vector2D& Size)
 // Function UMG.WidgetComponent.SetBackgroundColor
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
-// struct FLinearColor            NewBackgroundColor             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            NewBackgroundColor             (CPF_ConstParm, CPF_Parm, CPF_IsPlainOldData)
 
 void UWidgetComponent::SetBackgroundColor(const struct FLinearColor& NewBackgroundColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.SetBackgroundColor");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb8319418);
 
 	UWidgetComponent_SetBackgroundColor_Params params;
 	params.NewBackgroundColor = NewBackgroundColor;
@@ -10092,7 +11195,8 @@ void UWidgetComponent::SetBackgroundColor(const struct FLinearColor& NewBackgrou
 
 void UWidgetComponent::RequestRedraw()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.RequestRedraw");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8d1b3acd);
 
 	UWidgetComponent_RequestRedraw_Params params;
 
@@ -10108,11 +11212,12 @@ void UWidgetComponent::RequestRedraw()
 // Function UMG.WidgetComponent.GetUserWidgetObject
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UUserWidget*             ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UUserWidget* UWidgetComponent::GetUserWidgetObject()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetUserWidgetObject");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5a1f562b);
 
 	UWidgetComponent_GetUserWidgetObject_Params params;
 
@@ -10134,7 +11239,8 @@ class UUserWidget* UWidgetComponent::GetUserWidgetObject()
 
 class UTextureRenderTarget2D* UWidgetComponent::GetRenderTarget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetRenderTarget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x50f1c404);
 
 	UWidgetComponent_GetRenderTarget_Params params;
 
@@ -10156,7 +11262,8 @@ class UTextureRenderTarget2D* UWidgetComponent::GetRenderTarget()
 
 class ULocalPlayer* UWidgetComponent::GetOwnerPlayer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetOwnerPlayer");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x962c6ec7);
 
 	UWidgetComponent_GetOwnerPlayer_Params params;
 
@@ -10178,7 +11285,8 @@ class ULocalPlayer* UWidgetComponent::GetOwnerPlayer()
 
 class UMaterialInstanceDynamic* UWidgetComponent::GetMaterialInstance()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetMaterialInstance");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9e0bb15);
 
 	UWidgetComponent_GetMaterialInstance_Params params;
 
@@ -10196,11 +11304,12 @@ class UMaterialInstanceDynamic* UWidgetComponent::GetMaterialInstance()
 // Function UMG.WidgetComponent.GetDrawSize
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UWidgetComponent::GetDrawSize()
+struct FVector2D UWidgetComponent::GetDrawSize()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetComponent.GetDrawSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6d9ba272);
 
 	UWidgetComponent_GetDrawSize_Params params;
 
@@ -10222,7 +11331,8 @@ class Vector2D UWidgetComponent::GetDrawSize()
 
 void UWidgetInteractionComponent::SetCustomHitResult(const struct FHitResult& HitResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.SetCustomHitResult");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa73a8aba);
 
 	UWidgetInteractionComponent_SetCustomHitResult_Params params;
 	params.HitResult = HitResult;
@@ -10245,7 +11355,8 @@ void UWidgetInteractionComponent::SetCustomHitResult(const struct FHitResult& Hi
 
 bool UWidgetInteractionComponent::SendKeyChar(const struct FString& Characters, bool bRepeat)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.SendKeyChar");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1039cbdc);
 
 	UWidgetInteractionComponent_SendKeyChar_Params params;
 	params.Characters = Characters;
@@ -10269,7 +11380,8 @@ bool UWidgetInteractionComponent::SendKeyChar(const struct FString& Characters, 
 
 void UWidgetInteractionComponent::ScrollWheel(float ScrollDelta)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ScrollWheel");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc8d903af);
 
 	UWidgetInteractionComponent_ScrollWheel_Params params;
 	params.ScrollDelta = ScrollDelta;
@@ -10290,7 +11402,8 @@ void UWidgetInteractionComponent::ScrollWheel(float ScrollDelta)
 
 void UWidgetInteractionComponent::ReleasePointerKey(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ReleasePointerKey");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbb750214);
 
 	UWidgetInteractionComponent_ReleasePointerKey_Params params;
 	params.Key = Key;
@@ -10312,7 +11425,8 @@ void UWidgetInteractionComponent::ReleasePointerKey(const struct FKey& Key)
 
 bool UWidgetInteractionComponent::ReleaseKey(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.ReleaseKey");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x49845ce1);
 
 	UWidgetInteractionComponent_ReleaseKey_Params params;
 	params.Key = Key;
@@ -10335,7 +11449,8 @@ bool UWidgetInteractionComponent::ReleaseKey(const struct FKey& Key)
 
 void UWidgetInteractionComponent::PressPointerKey(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressPointerKey");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe8cc33a);
 
 	UWidgetInteractionComponent_PressPointerKey_Params params;
 	params.Key = Key;
@@ -10358,7 +11473,8 @@ void UWidgetInteractionComponent::PressPointerKey(const struct FKey& Key)
 
 bool UWidgetInteractionComponent::PressKey(const struct FKey& Key, bool bRepeat)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressKey");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4c5a45bf);
 
 	UWidgetInteractionComponent_PressKey_Params params;
 	params.Key = Key;
@@ -10383,7 +11499,8 @@ bool UWidgetInteractionComponent::PressKey(const struct FKey& Key, bool bRepeat)
 
 bool UWidgetInteractionComponent::PressAndReleaseKey(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.PressAndReleaseKey");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x54c5cbd1);
 
 	UWidgetInteractionComponent_PressAndReleaseKey_Params params;
 	params.Key = Key;
@@ -10406,7 +11523,8 @@ bool UWidgetInteractionComponent::PressAndReleaseKey(const struct FKey& Key)
 
 bool UWidgetInteractionComponent::IsOverInteractableWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverInteractableWidget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7e6685);
 
 	UWidgetInteractionComponent_IsOverInteractableWidget_Params params;
 
@@ -10428,7 +11546,8 @@ bool UWidgetInteractionComponent::IsOverInteractableWidget()
 
 bool UWidgetInteractionComponent::IsOverHitTestVisibleWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverHitTestVisibleWidget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x77b15bc);
 
 	UWidgetInteractionComponent_IsOverHitTestVisibleWidget_Params params;
 
@@ -10450,7 +11569,8 @@ bool UWidgetInteractionComponent::IsOverHitTestVisibleWidget()
 
 bool UWidgetInteractionComponent::IsOverFocusableWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.IsOverFocusableWidget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe5a2d029);
 
 	UWidgetInteractionComponent_IsOverFocusableWidget_Params params;
 
@@ -10472,7 +11592,8 @@ bool UWidgetInteractionComponent::IsOverFocusableWidget()
 
 struct FHitResult UWidgetInteractionComponent::GetLastHitResult()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.GetLastHitResult");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x497f3499);
 
 	UWidgetInteractionComponent_GetLastHitResult_Params params;
 
@@ -10494,7 +11615,8 @@ struct FHitResult UWidgetInteractionComponent::GetLastHitResult()
 
 class UWidgetComponent* UWidgetInteractionComponent::GetHoveredWidgetComponent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.GetHoveredWidgetComponent");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6ea806c1);
 
 	UWidgetInteractionComponent_GetHoveredWidgetComponent_Params params;
 
@@ -10512,11 +11634,12 @@ class UWidgetComponent* UWidgetInteractionComponent::GetHoveredWidgetComponent()
 // Function UMG.WidgetInteractionComponent.Get2DHitLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UWidgetInteractionComponent::Get2DHitLocation()
+struct FVector2D UWidgetInteractionComponent::Get2DHitLocation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetInteractionComponent.Get2DHitLocation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7edede8d);
 
 	UWidgetInteractionComponent_Get2DHitLocation_Params params;
 
@@ -10534,12 +11657,13 @@ class Vector2D UWidgetInteractionComponent::Get2DHitLocation()
 // Function UMG.WidgetLayoutLibrary.SlotAsVerticalBoxSlot
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UVerticalBoxSlot*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UVerticalBoxSlot*        ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UVerticalBoxSlot* UWidgetLayoutLibrary::STATIC_SlotAsVerticalBoxSlot(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsVerticalBoxSlot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x50331820);
 
 	UWidgetLayoutLibrary_SlotAsVerticalBoxSlot_Params params;
 	params.Widget = Widget;
@@ -10558,12 +11682,13 @@ class UVerticalBoxSlot* UWidgetLayoutLibrary::STATIC_SlotAsVerticalBoxSlot(class
 // Function UMG.WidgetLayoutLibrary.SlotAsUniformGridSlot
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UUniformGridSlot*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UUniformGridSlot*        ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UUniformGridSlot* UWidgetLayoutLibrary::STATIC_SlotAsUniformGridSlot(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsUniformGridSlot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x33098a1);
 
 	UWidgetLayoutLibrary_SlotAsUniformGridSlot_Params params;
 	params.Widget = Widget;
@@ -10582,12 +11707,13 @@ class UUniformGridSlot* UWidgetLayoutLibrary::STATIC_SlotAsUniformGridSlot(class
 // Function UMG.WidgetLayoutLibrary.SlotAsOverlaySlot
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UOverlaySlot*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UOverlaySlot*            ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UOverlaySlot* UWidgetLayoutLibrary::STATIC_SlotAsOverlaySlot(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsOverlaySlot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb45a049d);
 
 	UWidgetLayoutLibrary_SlotAsOverlaySlot_Params params;
 	params.Widget = Widget;
@@ -10606,12 +11732,13 @@ class UOverlaySlot* UWidgetLayoutLibrary::STATIC_SlotAsOverlaySlot(class UWidget
 // Function UMG.WidgetLayoutLibrary.SlotAsHorizontalBoxSlot
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UHorizontalBoxSlot*      ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UHorizontalBoxSlot*      ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UHorizontalBoxSlot* UWidgetLayoutLibrary::STATIC_SlotAsHorizontalBoxSlot(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsHorizontalBoxSlot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbd796586);
 
 	UWidgetLayoutLibrary_SlotAsHorizontalBoxSlot_Params params;
 	params.Widget = Widget;
@@ -10630,12 +11757,13 @@ class UHorizontalBoxSlot* UWidgetLayoutLibrary::STATIC_SlotAsHorizontalBoxSlot(c
 // Function UMG.WidgetLayoutLibrary.SlotAsGridSlot
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UGridSlot*               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UGridSlot*               ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UGridSlot* UWidgetLayoutLibrary::STATIC_SlotAsGridSlot(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsGridSlot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd5a81c8f);
 
 	UWidgetLayoutLibrary_SlotAsGridSlot_Params params;
 	params.Widget = Widget;
@@ -10654,12 +11782,13 @@ class UGridSlot* UWidgetLayoutLibrary::STATIC_SlotAsGridSlot(class UWidget* Widg
 // Function UMG.WidgetLayoutLibrary.SlotAsCanvasSlot
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UCanvasPanelSlot*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UCanvasPanelSlot*        ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UCanvasPanelSlot* UWidgetLayoutLibrary::STATIC_SlotAsCanvasSlot(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsCanvasSlot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x78c55b6f);
 
 	UWidgetLayoutLibrary_SlotAsCanvasSlot_Params params;
 	params.Widget = Widget;
@@ -10678,12 +11807,13 @@ class UCanvasPanelSlot* UWidgetLayoutLibrary::STATIC_SlotAsCanvasSlot(class UWid
 // Function UMG.WidgetLayoutLibrary.SlotAsBorderSlot
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
-// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UBorderSlot*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class UBorderSlot*             ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
 class UBorderSlot* UWidgetLayoutLibrary::STATIC_SlotAsBorderSlot(class UWidget* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.SlotAsBorderSlot");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb6b5de31);
 
 	UWidgetLayoutLibrary_SlotAsBorderSlot_Params params;
 	params.Widget = Widget;
@@ -10706,7 +11836,8 @@ class UBorderSlot* UWidgetLayoutLibrary::STATIC_SlotAsBorderSlot(class UWidget* 
 
 void UWidgetLayoutLibrary::STATIC_RemoveAllWidgets(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.RemoveAllWidgets");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb2d99a7);
 
 	UWidgetLayoutLibrary_RemoveAllWidgets_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -10724,13 +11855,14 @@ void UWidgetLayoutLibrary::STATIC_RemoveAllWidgets(class UObject* WorldContextOb
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 WorldLocation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ScreenPosition                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 WorldLocation                  (CPF_Parm, CPF_IsPlainOldData)
+// struct FVector2D                 ScreenPosition                 (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 // bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-bool UWidgetLayoutLibrary::STATIC_ProjectWorldLocationToWidgetPosition(class APlayerController* PlayerController, const class Vector3D& WorldLocation, class Vector2D* ScreenPosition)
+bool UWidgetLayoutLibrary::STATIC_ProjectWorldLocationToWidgetPosition(class APlayerController* PlayerController, const struct FVector& WorldLocation, struct FVector2D* ScreenPosition)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.ProjectWorldLocationToWidgetPosition");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5f864af1);
 
 	UWidgetLayoutLibrary_ProjectWorldLocationToWidgetPosition_Params params;
 	params.PlayerController = PlayerController;
@@ -10754,11 +11886,12 @@ bool UWidgetLayoutLibrary::STATIC_ProjectWorldLocationToWidgetPosition(class APl
 // (FUNC_Final, FUNC_BlueprintCosmetic, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+// struct FVector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class Vector2D UWidgetLayoutLibrary::STATIC_GetViewportSize(class UObject* WorldContextObject)
+struct FVector2D UWidgetLayoutLibrary::STATIC_GetViewportSize(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetViewportSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6df0d748);
 
 	UWidgetLayoutLibrary_GetViewportSize_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -10782,7 +11915,8 @@ class Vector2D UWidgetLayoutLibrary::STATIC_GetViewportSize(class UObject* World
 
 float UWidgetLayoutLibrary::STATIC_GetViewportScale(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetViewportScale");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa9d45c7);
 
 	UWidgetLayoutLibrary_GetViewportScale_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -10808,7 +11942,8 @@ float UWidgetLayoutLibrary::STATIC_GetViewportScale(class UObject* WorldContextO
 
 bool UWidgetLayoutLibrary::STATIC_GetMousePositionScaledByDPI(class APlayerController* Player, float* LocationX, float* LocationY)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UMG.WidgetLayoutLibrary.GetMousePositionScaledByDPI");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2969af93);
 
 	UWidgetLayoutLibrary_GetMousePositionScaledByDPI_Params params;
 	params.Player = Player;

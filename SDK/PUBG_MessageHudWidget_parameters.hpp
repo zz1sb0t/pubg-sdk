@@ -14,6 +14,18 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function MessageHudWidget.MessageHudWidget_C.Icon_DisplayKilledMessage
+struct UMessageHudWidget_C_Icon_DisplayKilledMessage_Params
+{
+	struct FDeathMessage                               Input;                                                    // (CPF_Parm)
+};
+
+// Function MessageHudWidget.MessageHudWidget_C.Normal_DisplayKilledMessage
+struct UMessageHudWidget_C_Normal_DisplayKilledMessage_Params
+{
+	struct FDeathMessage                               InputPin;                                                 // (CPF_Parm)
+};
+
 // Function MessageHudWidget.MessageHudWidget_C.CreateGamePlayMessage
 struct UMessageHudWidget_C_CreateGamePlayMessage_Params
 {
@@ -29,7 +41,7 @@ struct UMessageHudWidget_C_CreateGamePlayMessage_Params
 // Function MessageHudWidget.MessageHudWidget_C.OnDisplayMessage
 struct UMessageHudWidget_C_OnDisplayMessage_Params
 {
-	TEnumAsByte<ESystemMessageType>                    MessageType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	ESystemMessageType                                 MessageType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FText                                       Message;                                                  // (CPF_Parm)
 	float                                              Duration;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UAkAudioEvent*                               Sound;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -44,6 +56,8 @@ struct UMessageHudWidget_C_CreateKillMessage_Params
 	int                                                TextSize;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Duration;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               bUseFade_In;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bShowMyKillCount;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseMessagePool;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UNewSystemMessageWidget_C*                   MessageWidget;                                            // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -69,7 +83,7 @@ struct UMessageHudWidget_C_OnDisplayKilledMessage_Params
 // Function MessageHudWidget.MessageHudWidget_C.OnDisplaySystemMessage
 struct UMessageHudWidget_C_OnDisplaySystemMessage_Params
 {
-	TEnumAsByte<ESystemMessageType>                    MessageType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	ESystemMessageType                                 MessageType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FText                                       Message;                                                  // (CPF_Parm)
 };
 

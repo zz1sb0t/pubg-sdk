@@ -20,7 +20,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass WidgetFunctionLibrary.WidgetFunctionLibrary_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x6955d4e5);
 		return ptr;
 	}
 

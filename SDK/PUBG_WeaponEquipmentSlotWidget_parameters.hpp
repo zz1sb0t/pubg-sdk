@@ -277,7 +277,7 @@ struct UWeaponEquipmentSlotWidget_C_OnDrop_Params
 // Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.GetWeaponSlotEquipId
 struct UWeaponEquipmentSlotWidget_C_GetWeaponSlotEquipId_Params
 {
-	TEnumAsByte<EEquipSlotID>                          EquipSlotID;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EEquipSlotID                                       EquipSlotID;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.MainPrepass_1
@@ -323,7 +323,7 @@ struct UWeaponEquipmentSlotWidget_C_OnMouseButtonDown_Params
 // Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.GetSlotVisibility
 struct UWeaponEquipmentSlotWidget_C_GetSlotVisibility_Params
 {
-	TEnumAsByte<ESlateVisibility>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	ESlateVisibility                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.GetWeaponIcon

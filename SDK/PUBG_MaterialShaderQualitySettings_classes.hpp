@@ -12,6 +12,23 @@ namespace Classes
 //Classes
 //---------------------------------------------------------------------------
 
+// Class MaterialShaderQualitySettings.MaterialShaderQualitySettings
+// 0x0050 (0x0078 - 0x0028)
+class UMaterialShaderQualitySettings : public UObject
+{
+public:
+	TMap<struct FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                        // 0x0028(0x0050) (CPF_ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x98df038f);
+		return ptr;
+	}
+
+};
+
+
 // Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
 // 0x0018 (0x0040 - 0x0028)
 class UShaderPlatformQualitySettings : public UObject
@@ -22,23 +39,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings");
-		return ptr;
-	}
-
-};
-
-
-// Class MaterialShaderQualitySettings.MaterialShaderQualitySettings
-// 0x0050 (0x0078 - 0x0028)
-class UMaterialShaderQualitySettings : public UObject
-{
-public:
-	TMap<struct FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                        // 0x0028(0x0050) (CPF_ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MaterialShaderQualitySettings.MaterialShaderQualitySettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x7cd504f1);
 		return ptr;
 	}
 

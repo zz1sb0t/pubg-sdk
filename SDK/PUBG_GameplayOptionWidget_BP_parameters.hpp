@@ -14,6 +14,12 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Get_ClientReplay_Visibility
+struct UGameplayOptionWidget_BP_C_Get_ClientReplay_Visibility_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
 // Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.IsKeyUp
 struct UGameplayOptionWidget_BP_C_IsKeyUp_Params
 {

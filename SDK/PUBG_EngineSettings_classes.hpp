@@ -24,16 +24,17 @@ public:
 	float                                              BackgroundOpacityPercentage;                              // 0x0050(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bOrderTopToBottom;                                        // 0x0054(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
-	struct FColor                                      InputColor;                                               // 0x0058(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FColor                                      HistoryColor;                                             // 0x005C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FColor                                      AutoCompleteCommandColor;                                 // 0x0060(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FColor                                      AutoCompleteCVarColor;                                    // 0x0064(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FColor                                      AutoCompleteFadedColor;                                   // 0x0068(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FColor                                      InputColor;                                               // 0x0058(0x0004) (CPF_Edit, CPF_Config, CPF_IsPlainOldData)
+	struct FColor                                      HistoryColor;                                             // 0x005C(0x0004) (CPF_Edit, CPF_Config, CPF_IsPlainOldData)
+	struct FColor                                      AutoCompleteCommandColor;                                 // 0x0060(0x0004) (CPF_Edit, CPF_Config, CPF_IsPlainOldData)
+	struct FColor                                      AutoCompleteCVarColor;                                    // 0x0064(0x0004) (CPF_Edit, CPF_Config, CPF_IsPlainOldData)
+	struct FColor                                      AutoCompleteFadedColor;                                   // 0x0068(0x0004) (CPF_Edit, CPF_Config, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.ConsoleSettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0xe44e239c);
 		return ptr;
 	}
 
@@ -45,25 +46,26 @@ public:
 class UGameMapsSettings : public UObject
 {
 public:
-	struct FStringAssetReference                       EditorStartupMap;                                         // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	struct FStringAssetReference                       EditorStartupMap;                                         // 0x0028(0x0010) (CPF_Edit, CPF_Config)
 	struct FString                                     LocalMapOptions;                                          // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	struct FStringAssetReference                       TransitionMap;                                            // 0x0048(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	struct FStringAssetReference                       TransitionMap;                                            // 0x0048(0x0010) (CPF_Edit, CPF_Config)
 	bool                                               bUseSplitscreen;                                          // 0x0058(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	TEnumAsByte<ETwoPlayerSplitScreenType>             TwoPlayerSplitscreenLayout;                               // 0x0059(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	TEnumAsByte<EThreePlayerSplitScreenType>           ThreePlayerSplitscreenLayout;                             // 0x005A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bOffsetPlayerGamepadIds;                                  // 0x005B(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
-	struct FStringClassReference                       GameInstanceClass;                                        // 0x0060(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_NoClear)
-	struct FStringAssetReference                       GameDefaultMap;                                           // 0x0070(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	struct FStringAssetReference                       ServerDefaultMap;                                         // 0x0080(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	struct FStringClassReference                       GlobalDefaultGameMode;                                    // 0x0090(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_NoClear)
-	struct FStringClassReference                       GlobalDefaultServerGameMode;                              // 0x00A0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	struct FStringClassReference                       GameInstanceClass;                                        // 0x0060(0x0010) (CPF_Edit, CPF_Config, CPF_NoClear)
+	struct FStringAssetReference                       GameDefaultMap;                                           // 0x0070(0x0010) (CPF_Edit, CPF_Config)
+	struct FStringAssetReference                       ServerDefaultMap;                                         // 0x0080(0x0010) (CPF_Edit, CPF_Config)
+	struct FStringClassReference                       GlobalDefaultGameMode;                                    // 0x0090(0x0010) (CPF_Edit, CPF_Config, CPF_NoClear)
+	struct FStringClassReference                       GlobalDefaultServerGameMode;                              // 0x00A0(0x0010) (CPF_Edit, CPF_Config)
 	TArray<struct FGameModeName>                       GameModeMapPrefixes;                                      // 0x00B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	TArray<struct FGameModeName>                       GameModeClassAliases;                                     // 0x00C0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GameMapsSettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x4dfa2900);
 		return ptr;
 	}
 
@@ -91,7 +93,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GameNetworkManagerSettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x3b3fb406);
 		return ptr;
 	}
 
@@ -110,7 +113,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GameSessionSettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x5115eeb9);
 		return ptr;
 	}
 
@@ -125,7 +129,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GeneralEngineSettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x30902dad);
 		return ptr;
 	}
 
@@ -144,7 +149,7 @@ public:
 	struct FString                                     Homepage;                                                 // 0x0068(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	struct FString                                     LicensingTerms;                                           // 0x0078(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	struct FString                                     PrivacyPolicy;                                            // 0x0088(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	struct FGuid                                       ProjectID;                                                // 0x0098(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FGuid                                       ProjectID;                                                // 0x0098(0x0010) (CPF_Edit, CPF_Config, CPF_IsPlainOldData)
 	struct FString                                     ProjectName;                                              // 0x00A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	struct FString                                     ProjectVersion;                                           // 0x00B8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	struct FString                                     SupportContact;                                           // 0x00C8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
@@ -161,7 +166,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.GeneralProjectSettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x37647a10);
 		return ptr;
 	}
 
@@ -179,7 +185,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class EngineSettings.HudSettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x9f579c4c);
 		return ptr;
 	}
 

@@ -33,7 +33,7 @@ struct UCastingBarInfoTextWidget_C_OnCastStart_Params
 // Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.Get_CastingInfoCancelMsgLayer_ContentColorAndOpacity_1
 struct UCastingBarInfoTextWidget_C_Get_CastingInfoCancelMsgLayer_ContentColorAndOpacity_1_Params
 {
-	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.On_CastingInfoCancelMsgBox_Prepass_1
@@ -57,7 +57,7 @@ struct UCastingBarInfoTextWidget_C_OnPrepass_1_Params
 // Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.GetVisibility_1
 struct UCastingBarInfoTextWidget_C_GetVisibility_1_Params
 {
-	TEnumAsByte<ESlateVisibility>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	ESlateVisibility                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.GetCastName

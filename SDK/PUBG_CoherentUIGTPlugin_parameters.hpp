@@ -18,7 +18,7 @@ namespace Classes
 struct UCoherentUIGTWidget_TriggerJSEvent_Params
 {
 	struct FString                                     Name;                                                     // (CPF_Parm, CPF_ZeroConstructor)
-	class UCoherentUIGTJSEvent*                        eventData;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCoherentUIGTJSEvent*                        EventData;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function CoherentUIGTPlugin.CoherentUIGTWidget.ShowPaintRects
@@ -139,6 +139,139 @@ struct UCoherentUIGTJSEvent_AddArray_Params
 	TArray<int>                                        Array;                                                    // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 };
 
+// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.ReadObject
+struct UCoherentUIGTJSPayload_ReadObject_Params
+{
+	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UObject*                                     Object;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetString
+struct UCoherentUIGTJSPayload_GetString_Params
+{
+	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetNumber
+struct UCoherentUIGTJSPayload_GetNumber_Params
+{
+	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetInt32
+struct UCoherentUIGTJSPayload_GetInt32_Params
+{
+	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetBool
+struct UCoherentUIGTJSPayload_GetBool_Params
+{
+	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.TriggerJSEvent
+struct UCoherentUIGTBaseComponent_TriggerJSEvent_Params
+{
+	struct FString                                     Name;                                                     // (CPF_Parm, CPF_ZeroConstructor)
+	class UCoherentUIGTJSEvent*                        EventData;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.ShowPaintRects
+struct UCoherentUIGTBaseComponent_ShowPaintRects_Params
+{
+	bool                                               show;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.SetClickThroughAlphaThreshold
+struct UCoherentUIGTBaseComponent_SetClickThroughAlphaThreshold_Params
+{
+	float                                              threshold;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Resize
+struct UCoherentUIGTBaseComponent_Resize_Params
+{
+	int                                                Width;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Height;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Reload
+struct UCoherentUIGTBaseComponent_Reload_Params
+{
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Redraw
+struct UCoherentUIGTBaseComponent_Redraw_Params
+{
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.Load
+struct UCoherentUIGTBaseComponent_Load_Params
+{
+	struct FString                                     path;                                                     // (CPF_Parm, CPF_ZeroConstructor)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsTransparent
+struct UCoherentUIGTBaseComponent_IsTransparent_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsReadyToCreateView
+struct UCoherentUIGTBaseComponent_IsReadyToCreateView_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsReadyForBindings
+struct UCoherentUIGTBaseComponent_IsReadyForBindings_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.IsDocumentReady
+struct UCoherentUIGTBaseComponent_IsDocumentReady_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.HasRequestedView
+struct UCoherentUIGTBaseComponent_HasRequestedView_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.GetClickThroughAlphaThreshold
+struct UCoherentUIGTBaseComponent_GetClickThroughAlphaThreshold_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.EnableDelayedUpdate
+struct UCoherentUIGTBaseComponent_EnableDelayedUpdate_Params
+{
+	bool                                               bEnabled;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBaseComponent.CreateJSEvent
+struct UCoherentUIGTBaseComponent_CreateJSEvent_Params
+{
+	class UCoherentUIGTJSEvent*                        ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.TriggerJSEvent
+struct UCoherentUIGTBlueprintFunctionLibrary_TriggerJSEvent_Params
+{
+	class UCoherentUIGTBaseComponent*                  Component;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FString                                     EventName;                                                // (CPF_Parm, CPF_ZeroConstructor)
+	class UCoherentUIGTJSEvent*                        JSEvent;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.PurgeCoherentDiskCache
 struct UCoherentUIGTBlueprintFunctionLibrary_PurgeCoherentDiskCache_Params
 {
@@ -215,39 +348,91 @@ struct UCoherentUIGTBlueprintFunctionLibrary_AddArray_Params
 	int                                                ArrayType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.ReadObject
-struct UCoherentUIGTJSPayload_ReadObject_Params
+// Function CoherentUIGTPlugin.CoherentUIGTGameHUD.SetupUIGTView
+struct ACoherentUIGTGameHUD_SetupUIGTView_Params
 {
-	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UObject*                                     Object;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FString                                     PageUrl;                                                  // (CPF_Parm, CPF_ZeroConstructor)
+	bool                                               bIsTransparent;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ClickThroughAlphaThreshold;                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              AnimationFrameDefer;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bDelayedUpdate;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetString
-struct UCoherentUIGTJSPayload_GetString_Params
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.ToggleCoherentUIGTInputFocus
+struct ACoherentUIGTInputActor_ToggleCoherentUIGTInputFocus_Params
 {
-	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 };
 
-// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetNumber
-struct UCoherentUIGTJSPayload_GetNumber_Params
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetLineTraceMode
+struct ACoherentUIGTInputActor_SetLineTraceMode_Params
 {
-	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	TEnumAsByte<EGTInputWidgetLineTraceMode>           Mode;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetInt32
-struct UCoherentUIGTJSPayload_GetInt32_Params
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetInputPropagationBehaviour
+struct ACoherentUIGTInputActor_SetInputPropagationBehaviour_Params
 {
-	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> Propagation;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetBool
-struct UCoherentUIGTJSPayload_GetBool_Params
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetCoherentUIGTViewFocus
+struct ACoherentUIGTInputActor_SetCoherentUIGTViewFocus_Params
 {
-	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UCoherentUIGTBaseComponent*                  NewFocusedView;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.SetCoherentUIGTInputFocus
+struct ACoherentUIGTInputActor_SetCoherentUIGTInputFocus_Params
+{
+	bool                                               FocusUI;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED
+struct ACoherentUIGTInputActor_IsJoystickInputWhileUIGTIsFocusedAllowed_DEPRECATED_Params
+{
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.IsCoherentUIGTFocused
+struct ACoherentUIGTInputActor_IsCoherentUIGTFocused_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.Initialize
+struct ACoherentUIGTInputActor_Initialize_Params
+{
+	TEnumAsByte<ECollisionChannel>                     CollisionChannel;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ETextureAddress>                       AddressMode;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<EGTInputWidgetRaycastQuality>          RaycastQuality;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                UVChannel;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.GetInputPropagationBehaviour
+struct ACoherentUIGTInputActor_GetInputPropagationBehaviour_Params
+{
+	TEnumAsByte<ECoherentUIGTInputPropagationBehaviour> ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.AlwaysAcceptMouseInput
+struct ACoherentUIGTInputActor_AlwaysAcceptMouseInput_Params
+{
+	bool                                               bAccept;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTInputActor.AllowJoystickInputWhileUIGTIsFocused_DEPRECATED
+struct ACoherentUIGTInputActor_AllowJoystickInputWhileUIGTIsFocused_DEPRECATED_Params
+{
+	bool                                               bAllow;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CoherentUIGTPlugin.CoherentUIGTLiveView.OnLiveViewSizeRequest
+struct UCoherentUIGTLiveView_OnLiveViewSizeRequest_Params
+{
+	class UCoherentUIGTBaseComponent*                  baseComponent;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FString                                     Name;                                                     // (CPF_Parm, CPF_ZeroConstructor)
+	int                                                Width;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Height;                                                   // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 }

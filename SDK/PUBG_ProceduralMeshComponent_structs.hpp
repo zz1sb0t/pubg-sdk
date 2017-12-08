@@ -31,7 +31,7 @@ enum class EProcMeshSliceCapOption : uint8_t
 // 0x0010
 struct FProcMeshTangent
 {
-	class Vector3D                                     TangentX;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     TangentX;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 	bool                                               bFlipTangentY;                                            // 0x000C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
 };
@@ -40,11 +40,11 @@ struct FProcMeshTangent
 // 0x0034
 struct FProcMeshVertex
 {
-	class Vector3D                                     Position;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Normal;                                                   // 0x000C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Position;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FVector                                     Normal;                                                   // 0x000C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 	struct FProcMeshTangent                            Tangent;                                                  // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible)
-	struct FColor                                      Color;                                                    // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector2D                                     UV0;                                                      // 0x002C(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      Color;                                                    // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FVector2D                                     UV0;                                                      // 0x002C(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 };
 
 // ScriptStruct ProceduralMeshComponent.ProcMeshSection
@@ -53,7 +53,7 @@ struct FProcMeshSection
 {
 	TArray<struct FProcMeshVertex>                     ProcVertexBuffer;                                         // 0x0000(0x0010) (CPF_ZeroConstructor)
 	TArray<int>                                        ProcIndexBuffer;                                          // 0x0010(0x0010) (CPF_ZeroConstructor)
-	struct FBox                                        SectionLocalBox;                                          // 0x0020(0x001C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FBox                                        SectionLocalBox;                                          // 0x0020(0x001C) (CPF_IsPlainOldData)
 	bool                                               bEnableCollision;                                         // 0x003C(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               bSectionVisible;                                          // 0x003D(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x003E(0x0002) MISSED OFFSET

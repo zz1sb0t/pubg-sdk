@@ -58,16 +58,17 @@ enum class EControllerHand : uint8_t
 	EControllerHand__Right         = 1,
 	EControllerHand__Pad           = 2,
 	EControllerHand__ExternalCamera = 3,
-	EControllerHand__Special       = 4,
-	EControllerHand__Special01     = 5,
-	EControllerHand__Special02     = 6,
-	EControllerHand__Special03     = 7,
-	EControllerHand__Special04     = 8,
-	EControllerHand__Special05     = 9,
-	EControllerHand__Special06     = 10,
-	EControllerHand__Special07     = 11,
-	EControllerHand__Special08     = 12,
-	EControllerHand__EControllerHand_MAX = 13
+	EControllerHand__Gun           = 4,
+	EControllerHand__Special       = 5,
+	EControllerHand__Special01     = 6,
+	EControllerHand__Special02     = 7,
+	EControllerHand__Special03     = 8,
+	EControllerHand__Special04     = 9,
+	EControllerHand__Special05     = 10,
+	EControllerHand__Special06     = 11,
+	EControllerHand__Special07     = 12,
+	EControllerHand__Special08     = 13,
+	EControllerHand__EControllerHand_MAX = 14
 };
 
 

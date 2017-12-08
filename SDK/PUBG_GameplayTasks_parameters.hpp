@@ -53,8 +53,8 @@ struct UGameplayTask_ClaimResource_ClaimResource_Params
 struct UGameplayTask_SpawnActor_SpawnActor_Params
 {
 	TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     SpawnLocation;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      SpawnRotation;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     SpawnLocation;                                            // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      SpawnRotation;                                            // (CPF_Parm, CPF_IsPlainOldData)
 	class UClass*                                      Class;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               bSpawnOnlyOnAuthority;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UGameplayTask_SpawnActor*                    ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
@@ -73,6 +73,11 @@ struct UGameplayTask_SpawnActor_BeginSpawningActor_Params
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class AActor*                                      SpawnedActor;                                             // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// DelegateFunction GameplayTasks.GameplayTask_TimeLimitedExecution.TaskFinishDelegate__DelegateSignature
+struct UGameplayTask_TimeLimitedExecution_TaskFinishDelegate__DelegateSignature_Params
+{
 };
 
 // Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
@@ -102,7 +107,7 @@ struct UGameplayTasksComponent_K2_RunGameplayTask_Params
 	unsigned char                                      Priority;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TArray<class UClass*>                              AdditionalRequiredResources;                              // (CPF_Parm, CPF_ZeroConstructor)
 	TArray<class UClass*>                              AdditionalClaimedResources;                               // (CPF_Parm, CPF_ZeroConstructor)
-	TEnumAsByte<EGameplayTaskRunResult>                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	EGameplayTaskRunResult                             ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 }

@@ -26,6 +26,18 @@ struct UWeaponAttachmentSlotWidget_C_GetSlotContainer_Params
 	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function WeaponAttachmentSlotWidget.WeaponAttachmentSlotWidget_C.CheckFirstAttachableSlot
+struct UWeaponAttachmentSlotWidget_C_CheckFirstAttachableSlot_Params
+{
+	bool                                               bAttachable;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function WeaponAttachmentSlotWidget.WeaponAttachmentSlotWidget_C.CheckAttachableByFocusSlot
+struct UWeaponAttachmentSlotWidget_C_CheckAttachableByFocusSlot_Params
+{
+	bool                                               bAttachable;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function WeaponAttachmentSlotWidget.WeaponAttachmentSlotWidget_C.InputB
 struct UWeaponAttachmentSlotWidget_C_InputB_Params
 {
@@ -157,7 +169,7 @@ struct UWeaponAttachmentSlotWidget_C_OnMouseButtonDown_Params
 // Function WeaponAttachmentSlotWidget.WeaponAttachmentSlotWidget_C.GetSlotVisibility
 struct UWeaponAttachmentSlotWidget_C_GetSlotVisibility_Params
 {
-	TEnumAsByte<ESlateVisibility>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	ESlateVisibility                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function WeaponAttachmentSlotWidget.WeaponAttachmentSlotWidget_C.GetSlotIcon

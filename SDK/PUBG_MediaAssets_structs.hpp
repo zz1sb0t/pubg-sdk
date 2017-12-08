@@ -37,16 +37,9 @@ struct FMediaPlayerOverlay
 {
 	bool                                               HasPosition;                                              // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	class Vector2D                                     Position;                                                 // 0x0004(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     Position;                                                 // 0x0004(0x0008) (CPF_IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	struct FText                                       Text;                                                     // 0x0010(0x0018)
-};
-
-// ScriptStruct MediaAssets.MediaSubtitle
-// 0x0030
-struct FMediaSubtitle
-{
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
 };
 
 }

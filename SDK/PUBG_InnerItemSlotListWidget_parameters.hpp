@@ -135,6 +135,12 @@ struct UInnerItemSlotListWidget_C_Up_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function InnerItemSlotListWidget.InnerItemSlotListWidget_C.IsSubFocus
+struct UInnerItemSlotListWidget_C_IsSubFocus_Params
+{
+	bool                                               bIsSubFocus;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function InnerItemSlotListWidget.InnerItemSlotListWidget_C.GetContentCount
 struct UInnerItemSlotListWidget_C_GetContentCount_Params
 {

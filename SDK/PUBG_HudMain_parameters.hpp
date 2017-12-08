@@ -14,6 +14,70 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function HudMain.HudMain_C.OnInit_Delegate
+struct UHudMain_C_OnInit_Delegate_Params
+{
+	class ATslBaseHUD**                                TslBaseHUD;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function HudMain.HudMain_C.OnInit_Replay
+struct UHudMain_C_OnInit_Replay_Params
+{
+	class ATslBaseHUD**                                TslBaseHUD;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function HudMain.HudMain_C.OnInit_Input
+struct UHudMain_C_OnInit_Input_Params
+{
+	class ATslBaseHUD**                                TslBaseHUD;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function HudMain.HudMain_C.OnInit_Widget
+struct UHudMain_C_OnInit_Widget_Params
+{
+	class ATslBaseHUD**                                TslBaseHUD;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function HudMain.HudMain_C.OnMouseMove
+struct UHudMain_C_OnMouseMove_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FPointerEvent*                              MouseEvent;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FEventReply                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
+// Function HudMain.HudMain_C.SetObserverSpectatingUp
+struct UHudMain_C_SetObserverSpectatingUp_Params
+{
+};
+
+// Function HudMain.HudMain_C.SetObserverSpectatingDown
+struct UHudMain_C_SetObserverSpectatingDown_Params
+{
+};
+
+// Function HudMain.HudMain_C.On_HideOnObserverSpectating_Prepass_1
+struct UHudMain_C_On_HideOnObserverSpectating_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function HudMain.HudMain_C.ShouldShowReplayMenu
+struct UHudMain_C_ShouldShowReplayMenu_Params
+{
+	bool                                               bShow;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function HudMain.HudMain_C.OnPrepass_3
+struct UHudMain_C_OnPrepass_3_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function HudMain.HudMain_C.BindEventForShowReplayTimeline
 struct UHudMain_C_BindEventForShowReplayTimeline_Params
 {
@@ -151,12 +215,6 @@ struct UHudMain_C_IsCharacterAlive_Params
 	bool                                               IsAlive;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function HudMain.HudMain_C.OnToggleInventory
-struct UHudMain_C_OnToggleInventory_Params
-{
-	bool                                               Bold;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function HudMain.HudMain_C.On_InventoryShowHiddenCanvas_Prepass_1
 struct UHudMain_C_On_InventoryShowHiddenCanvas_Prepass_1_Params
 {
@@ -209,19 +267,19 @@ struct UHudMain_C_OnNitifyHit_Params
 // Function HudMain.HudMain_C.Get_ParachuteText_Visibility_1
 struct UHudMain_C_Get_ParachuteText_Visibility_1_Params
 {
-	TEnumAsByte<ESlateVisibility>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	ESlateVisibility                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function HudMain.HudMain_C.Get_VisibilityOnMatchState
 struct UHudMain_C_Get_VisibilityOnMatchState_Params
 {
-	TEnumAsByte<ESlateVisibility>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	ESlateVisibility                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function HudMain.HudMain_C.OnDisplaySystemMessage
 struct UHudMain_C_OnDisplaySystemMessage_Params
 {
-	TEnumAsByte<ESystemMessageType>                    MessageType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	ESystemMessageType                                 MessageType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FText                                       Message;                                                  // (CPF_Parm)
 };
 
@@ -240,7 +298,7 @@ struct UHudMain_C_OnButtonClick_Params
 // Function HudMain.HudMain_C.Get_HealthBar_FillColorAndOpacity_1
 struct UHudMain_C_Get_HealthBar_FillColorAndOpacity_1_Params
 {
-	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function HudMain.HudMain_C.OnKey_SystemMenuOrEscape
@@ -257,7 +315,7 @@ struct UHudMain_C_Get_Vehicle_Health_Ratio_Params
 // Function HudMain.HudMain_C.GetFillColorAndOpacity_1
 struct UHudMain_C_GetFillColorAndOpacity_1_Params
 {
-	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function HudMain.HudMain_C.Get_DebugInformation_Text_1
@@ -268,11 +326,6 @@ struct UHudMain_C_Get_DebugInformation_Text_1_Params
 
 // Function HudMain.HudMain_C.OnToggleMap
 struct UHudMain_C_OnToggleMap_Params
-{
-};
-
-// Function HudMain.HudMain_C.OnKey_ToggleInventory
-struct UHudMain_C_OnKey_ToggleInventory_Params
 {
 };
 
@@ -311,11 +364,6 @@ struct UHudMain_C_OnPossessPawnChange_Params
 {
 };
 
-// Function HudMain.HudMain_C.InitializeHUD
-struct UHudMain_C_InitializeHUD_Params
-{
-};
-
 // Function HudMain.HudMain_C.Construct
 struct UHudMain_C_Construct_Params
 {
@@ -341,13 +389,6 @@ struct UHudMain_C_CheckReplayTimer_Params
 // Function HudMain.HudMain_C.CreateCheckReplayTimer
 struct UHudMain_C_CreateCheckReplayTimer_Params
 {
-};
-
-// Function HudMain.HudMain_C.Tick
-struct UHudMain_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function HudMain.HudMain_C.ExecuteUbergraph_HudMain

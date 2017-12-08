@@ -25,7 +25,6 @@ struct UGameplayTagAssetInterface_HasMatchingGameplayTag_Params
 struct UGameplayTagAssetInterface_HasAnyMatchingGameplayTags_Params
 {
 	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	bool                                               bCountEmptyAsMatch;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -33,7 +32,6 @@ struct UGameplayTagAssetInterface_HasAnyMatchingGameplayTags_Params
 struct UGameplayTagAssetInterface_HasAllMatchingGameplayTags_Params
 {
 	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	bool                                               bCountEmptyAsMatch;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -41,6 +39,14 @@ struct UGameplayTagAssetInterface_HasAllMatchingGameplayTags_Params
 struct UGameplayTagAssetInterface_GetOwnedGameplayTags_Params
 {
 	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_Parm, CPF_OutParm)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.RemoveGameplayTag
+struct UBlueprintGameplayTagLibrary_RemoveGameplayTag_Params
+{
+	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTag                                Tag;                                                      // (CPF_Parm)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function GameplayTags.BlueprintGameplayTagLibrary.NotEqual_TagTag
@@ -59,6 +65,47 @@ struct UBlueprintGameplayTagLibrary_NotEqual_TagContainerTagContainer_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function GameplayTags.BlueprintGameplayTagLibrary.NotEqual_GameplayTagContainer
+struct UBlueprintGameplayTagLibrary_NotEqual_GameplayTagContainer_Params
+{
+	struct FGameplayTagContainer                       A;                                                        // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTagContainer                       B;                                                        // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.NotEqual_GameplayTag
+struct UBlueprintGameplayTagLibrary_NotEqual_GameplayTag_Params
+{
+	struct FGameplayTag                                A;                                                        // (CPF_Parm)
+	struct FGameplayTag                                B;                                                        // (CPF_Parm)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.MatchesTag
+struct UBlueprintGameplayTagLibrary_MatchesTag_Params
+{
+	struct FGameplayTag                                TagOne;                                                   // (CPF_Parm)
+	struct FGameplayTag                                TagTwo;                                                   // (CPF_Parm)
+	bool                                               bExactMatch;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.MatchesAnyTags
+struct UBlueprintGameplayTagLibrary_MatchesAnyTags_Params
+{
+	struct FGameplayTag                                TagOne;                                                   // (CPF_Parm)
+	struct FGameplayTagContainer                       OtherContainer;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	bool                                               bExactMatch;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.MakeLiteralGameplayTagContainer
+struct UBlueprintGameplayTagLibrary_MakeLiteralGameplayTagContainer_Params
+{
+	struct FGameplayTagContainer                       Value;                                                    // (CPF_Parm)
+	struct FGameplayTagContainer                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
 // Function GameplayTags.BlueprintGameplayTagLibrary.MakeLiteralGameplayTag
 struct UBlueprintGameplayTagLibrary_MakeLiteralGameplayTag_Params
 {
@@ -73,10 +120,51 @@ struct UBlueprintGameplayTagLibrary_MakeGameplayTagQuery_Params
 	struct FGameplayTagQuery                           ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
+// Function GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromTag
+struct UBlueprintGameplayTagLibrary_MakeGameplayTagContainerFromTag_Params
+{
+	struct FGameplayTag                                SingleTag;                                                // (CPF_Parm)
+	struct FGameplayTagContainer                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.MakeGameplayTagContainerFromArray
+struct UBlueprintGameplayTagLibrary_MakeGameplayTagContainerFromArray_Params
+{
+	TArray<struct FGameplayTag>                        GameplayTags;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+	struct FGameplayTagContainer                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
 // Function GameplayTags.BlueprintGameplayTagLibrary.IsGameplayTagValid
 struct UBlueprintGameplayTagLibrary_IsGameplayTagValid_Params
 {
-	struct FGameplayTag                                TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTag                                GameplayTag;                                              // (CPF_Parm)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.HasTag
+struct UBlueprintGameplayTagLibrary_HasTag_Params
+{
+	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTag                                Tag;                                                      // (CPF_Parm)
+	bool                                               bExactMatch;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.HasAnyTags
+struct UBlueprintGameplayTagLibrary_HasAnyTags_Params
+{
+	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTagContainer                       OtherContainer;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	bool                                               bExactMatch;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.HasAllTags
+struct UBlueprintGameplayTagLibrary_HasAllTags_Params
+{
+	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTagContainer                       OtherContainer;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	bool                                               bExactMatch;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -85,8 +173,14 @@ struct UBlueprintGameplayTagLibrary_HasAllMatchingGameplayTags_Params
 {
 	TScriptInterface<class UGameplayTagAssetInterface> TagContainerInterface;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FGameplayTagContainer                       OtherContainer;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	bool                                               bCountEmptyAsMatch;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.GetTagName
+struct UBlueprintGameplayTagLibrary_GetTagName_Params
+{
+	struct FGameplayTag                                GameplayTag;                                              // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FName                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function GameplayTags.BlueprintGameplayTagLibrary.GetNumGameplayTagsInContainer
@@ -106,17 +200,32 @@ struct UBlueprintGameplayTagLibrary_GetDebugStringFromGameplayTagContainer_Param
 // Function GameplayTags.BlueprintGameplayTagLibrary.GetDebugStringFromGameplayTag
 struct UBlueprintGameplayTagLibrary_GetDebugStringFromGameplayTag_Params
 {
-	struct FGameplayTag                                GameplayTag;                                              // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTag                                GameplayTag;                                              // (CPF_Parm)
 	struct FString                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 };
 
-// Function GameplayTags.BlueprintGameplayTagLibrary.DoGameplayTagsMatch
-struct UBlueprintGameplayTagLibrary_DoGameplayTagsMatch_Params
+// Function GameplayTags.BlueprintGameplayTagLibrary.GetAllActorsOfClassMatchingTagQuery
+struct UBlueprintGameplayTagLibrary_GetAllActorsOfClassMatchingTagQuery_Params
 {
-	struct FGameplayTag                                TagOne;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	struct FGameplayTag                                TagTwo;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	TEnumAsByte<EGameplayTagMatchType>                 TagOneMatchType;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EGameplayTagMatchType>                 TagTwoMatchType;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ActorClass;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FGameplayTagQuery                           GameplayTagQuery;                                         // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	TArray<class AActor*>                              OutActors;                                                // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.EqualEqual_GameplayTagContainer
+struct UBlueprintGameplayTagLibrary_EqualEqual_GameplayTagContainer_Params
+{
+	struct FGameplayTagContainer                       A;                                                        // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTagContainer                       B;                                                        // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GameplayTags.BlueprintGameplayTagLibrary.EqualEqual_GameplayTag
+struct UBlueprintGameplayTagLibrary_EqualEqual_GameplayTag_Params
+{
+	struct FGameplayTag                                A;                                                        // (CPF_Parm)
+	struct FGameplayTag                                B;                                                        // (CPF_Parm)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -124,9 +233,7 @@ struct UBlueprintGameplayTagLibrary_DoGameplayTagsMatch_Params
 struct UBlueprintGameplayTagLibrary_DoesTagAssetInterfaceHaveTag_Params
 {
 	TScriptInterface<class UGameplayTagAssetInterface> TagContainerInterface;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EGameplayTagMatchType>                 ContainerTagsMatchType;                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FGameplayTag                                Tag;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	TEnumAsByte<EGameplayTagMatchType>                 TagMatchType;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FGameplayTag                                Tag;                                                      // (CPF_Parm)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -138,48 +245,25 @@ struct UBlueprintGameplayTagLibrary_DoesContainerMatchTagQuery_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
-// Function GameplayTags.BlueprintGameplayTagLibrary.DoesContainerMatchAnyTagsInContainer
-struct UBlueprintGameplayTagLibrary_DoesContainerMatchAnyTagsInContainer_Params
+// Function GameplayTags.BlueprintGameplayTagLibrary.BreakGameplayTagContainer
+struct UBlueprintGameplayTagLibrary_BreakGameplayTagContainer_Params
 {
-	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	struct FGameplayTagContainer                       OtherContainer;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	bool                                               bCountEmptyAsMatch;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function GameplayTags.BlueprintGameplayTagLibrary.DoesContainerMatchAllTagsInContainer
-struct UBlueprintGameplayTagLibrary_DoesContainerMatchAllTagsInContainer_Params
-{
-	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	struct FGameplayTagContainer                       OtherContainer;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	bool                                               bCountEmptyAsMatch;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function GameplayTags.BlueprintGameplayTagLibrary.DoesContainerHaveTag
-struct UBlueprintGameplayTagLibrary_DoesContainerHaveTag_Params
-{
-	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	TEnumAsByte<EGameplayTagMatchType>                 ContainerTagsMatchType;                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FGameplayTag                                Tag;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	TEnumAsByte<EGameplayTagMatchType>                 TagMatchType;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FGameplayTagContainer                       GameplayTagContainer;                                     // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	TArray<struct FGameplayTag>                        GameplayTags;                                             // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 };
 
 // Function GameplayTags.BlueprintGameplayTagLibrary.AppendGameplayTagContainers
 struct UBlueprintGameplayTagLibrary_AppendGameplayTagContainers_Params
 {
-	struct FGameplayTagContainer                       InTagContainer;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	struct FGameplayTagContainer                       InOutTagContainer;                                        // (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FGameplayTagContainer                       InTagContainer;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 };
 
-// Function GameplayTags.GameplayTagsManager.RequestGameplayTag
-struct UGameplayTagsManager_RequestGameplayTag_Params
+// Function GameplayTags.BlueprintGameplayTagLibrary.AddGameplayTag
+struct UBlueprintGameplayTagLibrary_AddGameplayTag_Params
 {
-	struct FName                                       TagName;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               ErrorIfNotFound;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FGameplayTag                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+	struct FGameplayTagContainer                       TagContainer;                                             // (CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FGameplayTag                                Tag;                                                      // (CPF_Parm)
 };
 
 }

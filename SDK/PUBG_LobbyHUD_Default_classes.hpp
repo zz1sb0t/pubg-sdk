@@ -13,14 +13,15 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LobbyHUD_Default.LobbyHUD_Default_C
-// 0x0000 (0x09B0 - 0x09B0)
+// 0x0000 (0x0B40 - 0x0B40)
 class ALobbyHUD_Default_C : public ALobbyHUD
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass LobbyHUD_Default.LobbyHUD_Default_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x40fa287f);
 		return ptr;
 	}
 

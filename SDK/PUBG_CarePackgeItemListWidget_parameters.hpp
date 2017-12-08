@@ -14,6 +14,11 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.HideTextCarePackageEmpty
+struct UCarePackgeItemListWidget_C_HideTextCarePackageEmpty_Params
+{
+};
+
 // Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.SetCarePackgeItemList
 struct UCarePackgeItemListWidget_C_SetCarePackgeItemList_Params
 {

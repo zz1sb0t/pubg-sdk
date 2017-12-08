@@ -19,7 +19,8 @@ namespace Classes
 
 struct FText UChildOptionTitleWidget_C::GetText_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ChildOptionTitleWidget.ChildOptionTitleWidget_C.GetText_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xabb62d9e);
 
 	UChildOptionTitleWidget_C_GetText_1_Params params;
 

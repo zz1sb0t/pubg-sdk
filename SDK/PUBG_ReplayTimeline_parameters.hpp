@@ -14,6 +14,46 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function ReplayTimeline.ReplayTimeline_C.CheckVideoCapture
+struct UReplayTimeline_C_CheckVideoCapture_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.OnToggleReplayTimeline
+struct UReplayTimeline_C_OnToggleReplayTimeline_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.SetTimelineMaximize
+struct UReplayTimeline_C_SetTimelineMaximize_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.SetTimelineMinimize
+struct UReplayTimeline_C_SetTimelineMinimize_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.CreateGetGroggyEventsTimer
+struct UReplayTimeline_C_CreateGetGroggyEventsTimer_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.ClearDBNOEventItems
+struct UReplayTimeline_C_ClearDBNOEventItems_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.HideDBNOEvents
+struct UReplayTimeline_C_HideDBNOEvents_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.ShowDBNOEvents
+struct UReplayTimeline_C_ShowDBNOEvents_Params
+{
+};
+
 // Function ReplayTimeline.ReplayTimeline_C.ClearKillEventItems
 struct UReplayTimeline_C_ClearKillEventItems_Params
 {
@@ -149,6 +189,32 @@ struct UReplayTimeline_C_GetKillEvents_Params
 
 // Function ReplayTimeline.ReplayTimeline_C.Destruct
 struct UReplayTimeline_C_Destruct_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.GetGroggyEvents
+struct UReplayTimeline_C_GetGroggyEvents_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.GetGroggyEventsDone
+struct UReplayTimeline_C_GetGroggyEventsDone_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.BndEvt__CheckBoxGroggys_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature
+struct UReplayTimeline_C_BndEvt__CheckBoxGroggys_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature_Params
+{
+	bool                                               bIsChecked;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnRec_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature
+struct UReplayTimeline_C_BndEvt__BtnRec_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature
+struct UReplayTimeline_C_BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

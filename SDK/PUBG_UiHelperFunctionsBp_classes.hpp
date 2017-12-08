@@ -20,19 +20,21 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass UiHelperFunctionsBp.UiHelperFunctionsBp_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x6b618965);
 		return ptr;
 	}
 
 
+	void STATIC_IsSelfputMode_Gamepad(class UUserWidget* Widget, class UObject* __WorldContext, bool* bIsSelfPut);
 	void STATIC_GetSelfPutAttachment(class UUserWidget* Widget, class UObject* __WorldContext, class UAttachableItem** GamepadadSelectedAttachableItem);
 	void STATIC_CancelSelfAttachmentPutMode(class UUserWidget* Widget, class UObject* __WorldContext);
 	void STATIC_IsSelfAttachmentPutMode(class UUserWidget* Widget, class UObject* __WorldContext, bool* bResult);
 	void STATIC_GetInventoryWidget(class UUserWidget* Widget, class UObject* __WorldContext, class UInventoryWidget_C** InventoryWidget);
 	void STATIC_InventoryFocusingColor(class UObject* __WorldContext, struct FLinearColor* NewParam);
 	void STATIC_IsXBoxOnePlatform(class UObject* __WorldContext, bool* NewParam);
-	void STATIC_GetCharacterLook(class UUserWidget* Widget, class UObject* __WorldContext, class Vector3D* Look);
-	void STATIC_GetCharacterPosititon(class UUserWidget* Widget, class UObject* __WorldContext, class Vector3D* Position);
+	void STATIC_GetCharacterLook(class UUserWidget* Widget, class UObject* __WorldContext, struct FVector* Look);
+	void STATIC_GetCharacterPosititon(class UUserWidget* Widget, class UObject* __WorldContext, struct FVector* Position);
 	void STATIC_GetCharacterAngle(class UUserWidget* Widget, class UObject* __WorldContext, float* Angle);
 	void STATIC_GetBluezoneWarningTimeBp(class UObject* WorldContextObject, class UObject* __WorldContext, float* WarningTime);
 	void STATIC_GetBluezoneReleaseTimeBp(class UObject* WorldContextObject, class UObject* __WorldContext, float* ReleaseTime);

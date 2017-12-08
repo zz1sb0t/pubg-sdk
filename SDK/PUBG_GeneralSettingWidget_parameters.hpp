@@ -42,12 +42,6 @@ struct UGeneralSettingWidget_C_IsChanged_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
-// Function GeneralSettingWidget.GeneralSettingWidget_C.GetResolutionEnabled
-struct UGeneralSettingWidget_C_GetResolutionEnabled_Params
-{
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
 // Function GeneralSettingWidget.GeneralSettingWidget_C.GetLanguageCultureName
 struct UGeneralSettingWidget_C_GetLanguageCultureName_Params
 {

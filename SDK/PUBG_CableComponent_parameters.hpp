@@ -25,7 +25,7 @@ struct UCableComponent_SetAttachEndTo_Params
 // Function CableComponent.CableComponent.GetCableParticleLocations
 struct UCableComponent_GetCableParticleLocations_Params
 {
-	TArray<class Vector3D>                             Locations;                                                // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+	TArray<struct FVector>                             Locations;                                                // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 };
 
 // Function CableComponent.CableComponent.GetAttachedComponent

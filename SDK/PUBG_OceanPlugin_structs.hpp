@@ -62,6 +62,20 @@ struct FWaveSetParameters
 	struct FWaveParameter                              Wave08;                                                   // 0x008C(0x0014) (CPF_Edit, CPF_BlueprintVisible)
 };
 
+// ScriptStruct OceanPlugin.ForceTriangle
+// 0x006C
+struct FForceTriangle
+{
+	unsigned char                                      UnknownData00[0x6C];                                      // 0x0000(0x006C) MISSED OFFSET
+};
+
+// ScriptStruct OceanPlugin.BuoyancyVertex
+// 0x0010
+struct FBuoyancyVertex
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+};
+
 // ScriptStruct OceanPlugin.TimeDate
 // 0x001C
 struct FTimeDate

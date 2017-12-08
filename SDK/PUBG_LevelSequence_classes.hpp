@@ -13,17 +13,20 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class LevelSequence.LevelSequence
-// 0x00A8 (0x00D0 - 0x0028)
+// 0x0100 (0x0430 - 0x0330)
 class ULevelSequence : public UMovieSceneSequence
 {
 public:
-	class UMovieScene*                                 MovieScene;                                               // 0x0028(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLevelSequenceObjectReferenceMap            ObjectReferences;                                         // 0x0030(0x0050)
-	TMap<struct FString, struct FLevelSequenceObject>  PossessedObjects;                                         // 0x0080(0x0050) (CPF_ZeroConstructor, CPF_Deprecated)
+	class UMovieScene*                                 MovieScene;                                               // 0x0330(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FLevelSequenceObjectReferenceMap            ObjectReferences;                                         // 0x0338(0x0050)
+	struct FLevelSequenceBindingReferences             BindingReferences;                                        // 0x0388(0x0050)
+	TMap<struct FString, struct FLevelSequenceObject>  PossessedObjects;                                         // 0x03D8(0x0050) (CPF_ZeroConstructor, CPF_Deprecated)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequence");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x90f32297);
 		return ptr;
 	}
 
@@ -31,49 +34,23 @@ public:
 
 
 // Class LevelSequence.LevelSequencePlayer
-// 0x0138 (0x0160 - 0x0028)
-class ULevelSequencePlayer : public UObject
+// 0x0080 (0x0780 - 0x0700)
+class ULevelSequencePlayer : public UMovieSceneSequencePlayer
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
-	class ULevelSequence*                              LevelSequence;                                            // 0x0048(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class ULevelSequencePlayer*                        CurrentPlayer;                                            // 0x0050(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	bool                                               bIsPlaying;                                               // 0x0058(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bReversePlayback;                                         // 0x0059(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x005A(0x0002) MISSED OFFSET
-	float                                              TimeCursorPosition;                                       // 0x005C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x0060(0x000C) MISSED OFFSET
-	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x006C(0x0008)
-	unsigned char                                      UnknownData03[0x44];                                      // 0x0074(0x0044) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnPlay;                                                   // 0x00B8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnStop;                                                   // 0x00C8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnPause;                                                  // 0x00D8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData04[0x78];                                      // 0x00E8(0x0078) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0700(0x0020) MISSED OFFSET
+	TArray<class UObject*>                             AdditionalEventReceivers;                                 // 0x0720(0x0010) (CPF_ZeroConstructor, CPF_Transient)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x0730(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequencePlayer");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0xfec432b8);
 		return ptr;
 	}
 
 
-	void Stop();
-	void StartPlayingNextTick();
-	void SetPlayRate(float PlayRate);
-	void SetPlaybackRange(float NewStartTime, float NewEndTime);
-	void SetPlaybackPosition(float NewPlaybackPosition);
-	void PlayReverse();
-	void PlayLooping(int NumLoops);
-	void Play();
-	void Pause();
-	bool IsPlaying();
-	float GetPlayRate();
-	float GetPlaybackStart();
-	float GetPlaybackPosition();
-	float GetPlaybackEnd();
-	float GetLength();
-	class ULevelSequencePlayer* STATIC_CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FLevelSequencePlaybackSettings& Settings);
-	void ChangePlaybackDirection();
+	class ULevelSequencePlayer* STATIC_CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings);
 };
 
 
@@ -85,7 +62,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInInitSettings");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x65b8f37c);
 		return ptr;
 	}
 
@@ -99,12 +77,13 @@ class ULevelSequenceBurnInOptions : public UObject
 public:
 	bool                                               bUseBurnIn;                                               // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	struct FStringClassReference                       BurnInClass;                                              // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	class ULevelSequenceBurnInInitSettings*            Settings;                                                 // 0x0040(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FStringClassReference                       BurnInClass;                                              // 0x0030(0x0010) (CPF_Edit)
+	class ULevelSequenceBurnInInitSettings*            Settings;                                                 // 0x0040(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInOptions");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x9a716ef1);
 		return ptr;
 	}
 
@@ -112,42 +91,52 @@ public:
 
 
 // Class LevelSequence.LevelSequenceActor
-// 0x0038 (0x03D8 - 0x03A0)
+// 0x0078 (0x0428 - 0x03B0)
 class ALevelSequenceActor : public AActor
 {
 public:
-	bool                                               bAutoPlay;                                                // 0x03A0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x03A1(0x0003) MISSED OFFSET
-	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x03A4(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
-	class ULevelSequencePlayer*                        SequencePlayer;                                           // 0x03B0(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	struct FStringAssetReference                       LevelSequence;                                            // 0x03B8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
-	class ULevelSequenceBurnInOptions*                 BurnInOptions;                                            // 0x03C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class ULevelSequenceBurnIn*                        BurnInInstance;                                           // 0x03D0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03B0(0x0008) MISSED OFFSET
+	bool                                               bAutoPlay;                                                // 0x03B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x03B9(0x0007) MISSED OFFSET
+	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                         // 0x03C0(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	class ULevelSequencePlayer*                        SequencePlayer;                                           // 0x03E8(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	struct FStringAssetReference                       LevelSequence;                                            // 0x03F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	TArray<class AActor*>                              AdditionalEventReceivers;                                 // 0x0400(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	class ULevelSequenceBurnInOptions*                 BurnInOptions;                                            // 0x0410(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UMovieSceneBindingOverrides*                 BindingOverrides;                                         // 0x0418(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	class ULevelSequenceBurnIn*                        BurnInInstance;                                           // 0x0420(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceActor");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x9623a3a6);
 		return ptr;
 	}
 
 
 	void SetSequence(class ULevelSequence* InSequence);
+	void SetEventReceivers(TArray<class AActor*> AdditionalReceivers);
+	void SetBinding(const struct FMovieSceneObjectBindingID& Binding, TArray<class AActor*> Actors, bool bAllowBindingsFromAsset);
+	void ResetBindings();
+	void ResetBinding(const struct FMovieSceneObjectBindingID& Binding);
+	void RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor);
 	class ULevelSequence* GetSequence(bool Load);
+	void AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset);
 };
 
 
 // Class LevelSequence.LevelSequenceBurnIn
-// 0x0050 (0x0290 - 0x0240)
+// 0x0058 (0x0298 - 0x0240)
 class ULevelSequenceBurnIn : public UUserWidget
 {
 public:
-	struct FLevelSequencePlayerSnapshot                FrameInformation;                                         // 0x0240(0x0048) (CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	class ALevelSequenceActor*                         LevelSequenceActor;                                       // 0x0288(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLevelSequencePlayerSnapshot                FrameInformation;                                         // 0x0240(0x0050) (CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	class ALevelSequenceActor*                         LevelSequenceActor;                                       // 0x0290(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnIn");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x39524cfd);
 		return ptr;
 	}
 

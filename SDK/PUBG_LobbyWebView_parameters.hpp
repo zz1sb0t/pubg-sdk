@@ -53,27 +53,6 @@ struct ULobbyWebView_C_WebViewLoad_Params
 	struct FString                                     URL;                                                      // (CPF_Parm, CPF_ZeroConstructor)
 };
 
-// Function LobbyWebView.LobbyWebView_C.BndEvt__CoherentUIGTWidget_0_K2Node_ComponentBoundEvent_383_UIGTReadyForBindingsSignature__DelegateSignature
-struct ULobbyWebView_C_BndEvt__CoherentUIGTWidget_0_K2Node_ComponentBoundEvent_383_UIGTReadyForBindingsSignature__DelegateSignature_Params
-{
-};
-
-// Function LobbyWebView.LobbyWebView_C.J_1
-struct ULobbyWebView_C_J_1_Params
-{
-	class UCoherentUIGTJSPayload*                      payload;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function LobbyWebView.LobbyWebView_C.BndEvt__WebView_1_K2Node_ComponentBoundEvent_545_UIGTReadyForBindingsSignature__DelegateSignature
-struct ULobbyWebView_C_BndEvt__WebView_1_K2Node_ComponentBoundEvent_545_UIGTReadyForBindingsSignature__DelegateSignature_Params
-{
-};
-
-// Function LobbyWebView.LobbyWebView_C.BndEvt__WebView_2_K2Node_ComponentBoundEvent_548_UIGTReadyForBindingsSignature__DelegateSignature
-struct ULobbyWebView_C_BndEvt__WebView_2_K2Node_ComponentBoundEvent_548_UIGTReadyForBindingsSignature__DelegateSignature_Params
-{
-};
-
 // Function LobbyWebView.LobbyWebView_C.Construct
 struct ULobbyWebView_C_Construct_Params
 {
@@ -88,6 +67,17 @@ struct ULobbyWebView_C_Tick_Params
 
 // Function LobbyWebView.LobbyWebView_C.Destruct
 struct ULobbyWebView_C_Destruct_Params
+{
+};
+
+// Function LobbyWebView.LobbyWebView_C.J_1
+struct ULobbyWebView_C_J_1_Params
+{
+	class UCoherentUIGTJSPayload*                      payload;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function LobbyWebView.LobbyWebView_C.BndEvt__CoherentUIGTWidget_0_K2Node_ComponentBoundEvent_383_UIGTReadyForBindingsSignature__DelegateSignature
+struct ULobbyWebView_C_BndEvt__CoherentUIGTWidget_0_K2Node_ComponentBoundEvent_383_UIGTReadyForBindingsSignature__DelegateSignature_Params
 {
 };
 

@@ -13,15 +13,16 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class CustomMeshComponent.CustomMeshComponent
-// 0x0010 (0x0790 - 0x0780)
+// 0x0010 (0x0950 - 0x0940)
 class UCustomMeshComponent : public UMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0780(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0940(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class CustomMeshComponent.CustomMeshComponent");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0xd31e268b);
 		return ptr;
 	}
 

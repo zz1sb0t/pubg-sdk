@@ -13,14 +13,15 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MaleCharacterProxy.MaleCharacterProxy_C
-// 0x0000 (0x0820 - 0x0820)
+// 0x0000 (0x0848 - 0x0848)
 class AMaleCharacterProxy_C : public ACharacterProxyBase_C
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass MaleCharacterProxy.MaleCharacterProxy_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x6d3cd295);
 		return ptr;
 	}
 

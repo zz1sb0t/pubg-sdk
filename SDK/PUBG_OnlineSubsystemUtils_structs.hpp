@@ -52,7 +52,8 @@ enum class EClientRequestType : uint8_t
 	EClientRequestType__ReservationUpdate = 2,
 	EClientRequestType__EmptyServerReservation = 3,
 	EClientRequestType__Reconnect  = 4,
-	EClientRequestType__EClientRequestType_MAX = 5
+	EClientRequestType__Abandon    = 5,
+	EClientRequestType__EClientRequestType_MAX = 6
 };
 
 

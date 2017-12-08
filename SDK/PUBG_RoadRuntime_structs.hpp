@@ -55,17 +55,28 @@ struct FSideMeshManager
 };
 
 // ScriptStruct RoadRuntime.CurbsManager
-// 0x0038
+// 0x0088
 struct FCurbsManager
 {
 	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UStaticMesh*                                 Prototype;                                                // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<class USplineMeshComponent*>                CurbsComp;                                                // 0x0010(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
-	class USplineComponent*                            Spline;                                                   // 0x0020(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	int                                                SplineIndex;                                              // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	int                                                SocketIndex;                                              // 0x002C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                Segmentation;                                             // 0x0030(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                StepGeneration;                                           // 0x0034(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UStaticMesh*                                 StartPrototype;                                           // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UStaticMesh*                                 EndPrototype;                                             // 0x0018(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<class USplineMeshComponent*>                CurbsComp;                                                // 0x0020(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
+	class USplineComponent*                            Spline;                                                   // 0x0030(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	int                                                SplineIndex;                                              // 0x0038(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	int                                                SocketIndex;                                              // 0x003C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Segmentation;                                             // 0x0040(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                StepGeneration;                                           // 0x0044(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Offset;                                                   // 0x0048(0x000C) (CPF_IsPlainOldData)
+	struct FVector                                     Scale;                                                    // 0x0054(0x000C) (CPF_IsPlainOldData)
+	bool                                               CurbEnable;                                               // 0x0060(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               StartEnable;                                              // 0x0061(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               EndEnable;                                                // 0x0062(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x0063(0x0005) MISSED OFFSET
+	struct FInterpCurveVector                          SplineInfo;                                               // 0x0068(0x0018)
+	float                                              StartRoll;                                                // 0x0080(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              EndRoll;                                                  // 0x0084(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 }

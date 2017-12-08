@@ -13,14 +13,15 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass MapGridWidget.MapGridWidget_C
-// 0x0000 (0x0640 - 0x0640)
+// 0x0000 (0x06C0 - 0x06C0)
 class UMapGridWidget_C : public UMapGridWidget
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass MapGridWidget.MapGridWidget_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0xae6af85);
 		return ptr;
 	}
 

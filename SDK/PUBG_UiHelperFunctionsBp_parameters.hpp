@@ -14,6 +14,14 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsSelfputMode_Gamepad
+struct UUiHelperFunctionsBp_C_IsSelfputMode_Gamepad_Params
+{
+	class UUserWidget*                                 Widget;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsSelfPut;                                               // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetSelfPutAttachment
 struct UUiHelperFunctionsBp_C_GetSelfPutAttachment_Params
 {
@@ -49,7 +57,7 @@ struct UUiHelperFunctionsBp_C_GetInventoryWidget_Params
 struct UUiHelperFunctionsBp_C_InventoryFocusingColor_Params
 {
 	class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                NewParam;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                NewParam;                                                 // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsXBoxOnePlatform
@@ -64,7 +72,7 @@ struct UUiHelperFunctionsBp_C_GetCharacterLook_Params
 {
 	class UUserWidget*                                 Widget;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Look;                                                     // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Look;                                                     // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetCharacterPosititon
@@ -72,7 +80,7 @@ struct UUiHelperFunctionsBp_C_GetCharacterPosititon_Params
 {
 	class UUserWidget*                                 Widget;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Position;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Position;                                                 // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetCharacterAngle
@@ -104,7 +112,7 @@ struct UUiHelperFunctionsBp_C_GetDistanceColor_Params
 {
 	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsLastSpectatorTeam
@@ -120,7 +128,7 @@ struct UUiHelperFunctionsBp_C_IsLastSpectatorTeam_Params
 struct UUiHelperFunctionsBp_C_GetTeamColor_Params
 {
 	class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsSpectatorTeam
@@ -153,7 +161,7 @@ struct UUiHelperFunctionsBp_C_GetSpectatorColor_Params
 {
 	bool                                               bISpectator;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                Color;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetCharacterStateIcon
@@ -186,7 +194,7 @@ struct UUiHelperFunctionsBp_C_GetTeamMarkerColor_Params
 {
 	int                                                MemberNumber;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                NewParam;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                NewParam;                                                 // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.CreateAndSetMaterial

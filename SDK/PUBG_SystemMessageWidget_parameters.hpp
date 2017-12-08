@@ -23,7 +23,7 @@ struct USystemMessageWidget_C_AddMessage_Params
 // Function SystemMessageWidget.SystemMessageWidget_C.DisplaySystemMessage
 struct USystemMessageWidget_C_DisplaySystemMessage_Params
 {
-	TEnumAsByte<ESystemMessageType>                    MessageType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	ESystemMessageType                                 MessageType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FText                                       Message;                                                  // (CPF_Parm)
 };
 

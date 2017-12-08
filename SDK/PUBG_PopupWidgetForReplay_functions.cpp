@@ -15,13 +15,14 @@ namespace Classes
 // Function PopupWidgetForReplay.PopupWidgetForReplay_C.SetPopup
 // (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPopupStyle>       PopupStyle                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EPopupStyle                    PopupStyle                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FText                   Message                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 // struct FScriptDelegate         PressedDelegate                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-void UPopupWidgetForReplay_C::SetPopup(TEnumAsByte<EPopupStyle> PopupStyle, const struct FText& Message, const struct FScriptDelegate& PressedDelegate)
+void UPopupWidgetForReplay_C::SetPopup(EPopupStyle PopupStyle, const struct FText& Message, const struct FScriptDelegate& PressedDelegate)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.SetPopup");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5800dcc1);
 
 	UPopupWidgetForReplay_C_SetPopup_Params params;
 	params.PopupStyle = PopupStyle;
@@ -41,7 +42,8 @@ void UPopupWidgetForReplay_C::SetPopup(TEnumAsByte<EPopupStyle> PopupStyle, cons
 
 void UPopupWidgetForReplay_C::BndEvt__ButtonOK_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.BndEvt__ButtonOK_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6991f7ea);
 
 	UPopupWidgetForReplay_C_BndEvt__ButtonOK_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -58,7 +60,8 @@ void UPopupWidgetForReplay_C::BndEvt__ButtonOK_K2Node_ComponentBoundEvent_85_OnB
 
 void UPopupWidgetForReplay_C::BndEvt__ButtonCancel_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.BndEvt__ButtonCancel_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc4917b0b);
 
 	UPopupWidgetForReplay_C_BndEvt__ButtonCancel_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -75,7 +78,8 @@ void UPopupWidgetForReplay_C::BndEvt__ButtonCancel_K2Node_ComponentBoundEvent_10
 
 void UPopupWidgetForReplay_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.Construct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb84a5e76);
 
 	UPopupWidgetForReplay_C_Construct_Params params;
 
@@ -92,7 +96,8 @@ void UPopupWidgetForReplay_C::Construct()
 
 void UPopupWidgetForReplay_C::Custom_Event_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.Custom Event_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2a4aabba);
 
 	UPopupWidgetForReplay_C_Custom_Event_1_Params params;
 
@@ -109,7 +114,8 @@ void UPopupWidgetForReplay_C::Custom_Event_1()
 
 void UPopupWidgetForReplay_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.Destruct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x357cc2a5);
 
 	UPopupWidgetForReplay_C_Destruct_Params params;
 
@@ -126,7 +132,8 @@ void UPopupWidgetForReplay_C::Destruct()
 
 void UPopupWidgetForReplay_C::XBoxOneOk()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.XBoxOneOk");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x84baeae2);
 
 	UPopupWidgetForReplay_C_XBoxOneOk_Params params;
 
@@ -145,7 +152,8 @@ void UPopupWidgetForReplay_C::XBoxOneOk()
 
 void UPopupWidgetForReplay_C::ExecuteUbergraph_PopupWidgetForReplay(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.ExecuteUbergraph_PopupWidgetForReplay");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4e4c3f5);
 
 	UPopupWidgetForReplay_C_ExecuteUbergraph_PopupWidgetForReplay_Params params;
 	params.EntryPoint = EntryPoint;
@@ -163,7 +171,8 @@ void UPopupWidgetForReplay_C::ExecuteUbergraph_PopupWidgetForReplay(int EntryPoi
 
 void UPopupWidgetForReplay_C::HideMyself__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.HideMyself__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x67d4114a);
 
 	UPopupWidgetForReplay_C_HideMyself__DelegateSignature_Params params;
 
@@ -178,11 +187,12 @@ void UPopupWidgetForReplay_C::HideMyself__DelegateSignature()
 // Function PopupWidgetForReplay.PopupWidgetForReplay_C.ButtonClickDispatcher__DelegateSignature
 // (FUNC_Public, FUNC_Delegate, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPopupButtonID>    NewParam                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EPopupButtonID                 NewParam                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPopupWidgetForReplay_C::ButtonClickDispatcher__DelegateSignature(TEnumAsByte<EPopupButtonID> NewParam)
+void UPopupWidgetForReplay_C::ButtonClickDispatcher__DelegateSignature(EPopupButtonID NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PopupWidgetForReplay.PopupWidgetForReplay_C.ButtonClickDispatcher__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2fb82ac1);
 
 	UPopupWidgetForReplay_C_ButtonClickDispatcher__DelegateSignature_Params params;
 	params.NewParam = NewParam;

@@ -62,12 +62,13 @@ struct FMovieSceneCaptureSettings
 	int                                                FrameRate;                                                // 0x003C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	struct FCaptureResolution                          Resolution;                                               // 0x0040(0x0008) (CPF_Edit, CPF_Config)
 	bool                                               bEnableTextureStreaming;                                  // 0x0048(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	bool                                               bCinematicMode;                                           // 0x0049(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	bool                                               bAllowMovement;                                           // 0x004A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	bool                                               bAllowTurning;                                            // 0x004B(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	bool                                               bShowPlayer;                                              // 0x004C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	bool                                               bShowHUD;                                                 // 0x004D(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x004E(0x0002) MISSED OFFSET
+	bool                                               bCinematicEngineScalability;                              // 0x0049(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bCinematicMode;                                           // 0x004A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bAllowMovement;                                           // 0x004B(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bAllowTurning;                                            // 0x004C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bShowPlayer;                                              // 0x004D(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bShowHUD;                                                 // 0x004E(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x1];                                       // 0x004F(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct MovieSceneCapture.CompositionGraphCapturePasses

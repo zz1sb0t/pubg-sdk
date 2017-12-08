@@ -14,6 +14,22 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_StanceManagerWidget.BP_StanceManagerWidget_C.On_StanceManagerCanvas_Prepass_1
+struct UBP_StanceManagerWidget_C_On_StanceManagerCanvas_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function BP_StanceManagerWidget.BP_StanceManagerWidget_C.SetStanceManagerShow
+struct UBP_StanceManagerWidget_C_SetStanceManagerShow_Params
+{
+};
+
+// Function BP_StanceManagerWidget.BP_StanceManagerWidget_C.SetStanceManagerHide
+struct UBP_StanceManagerWidget_C_SetStanceManagerHide_Params
+{
+};
+
 // Function BP_StanceManagerWidget.BP_StanceManagerWidget_C.OnDriver
 struct UBP_StanceManagerWidget_C_OnDriver_Params
 {

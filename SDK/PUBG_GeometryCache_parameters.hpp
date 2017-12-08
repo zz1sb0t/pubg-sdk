@@ -25,6 +25,12 @@ struct UGeometryCacheComponent_Stop_Params
 {
 };
 
+// Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset
+struct UGeometryCacheComponent_SetStartTimeOffset_Params
+{
+	float                                              NewStartTimeOffset;                                       // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
 struct UGeometryCacheComponent_SetPlaybackSpeed_Params
 {
@@ -85,6 +91,12 @@ struct UGeometryCacheComponent_IsPlaying_Params
 struct UGeometryCacheComponent_IsLooping_Params
 {
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function GeometryCache.GeometryCacheComponent.GetStartTimeOffset
+struct UGeometryCacheComponent_GetStartTimeOffset_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.GetPlaybackSpeed

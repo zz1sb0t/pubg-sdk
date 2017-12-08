@@ -14,6 +14,27 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function MediaAssets.MediaOverlays.GetTexts
+struct UMediaOverlays_GetTexts_Params
+{
+	TArray<struct FMediaPlayerOverlay>                 OutTexts;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+	struct FTimespan                                   Time;                                                     // (CPF_Parm)
+};
+
+// Function MediaAssets.MediaOverlays.GetSubtitles
+struct UMediaOverlays_GetSubtitles_Params
+{
+	TArray<struct FMediaPlayerOverlay>                 OutSubtitles;                                             // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+	struct FTimespan                                   Time;                                                     // (CPF_Parm)
+};
+
+// Function MediaAssets.MediaOverlays.GetCaptions
+struct UMediaOverlays_GetCaptions_Params
+{
+	TArray<struct FMediaPlayerOverlay>                 OutCaptions;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+	struct FTimespan                                   Time;                                                     // (CPF_Parm)
+};
+
 // Function MediaAssets.MediaPlayer.SupportsSeeking
 struct UMediaPlayer_SupportsSeeking_Params
 {
@@ -53,17 +74,29 @@ struct UMediaPlayer_SetRate_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function MediaAssets.MediaPlayer.SetOverlays
+struct UMediaPlayer_SetOverlays_Params
+{
+	class UMediaOverlays*                              NewOverlays;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function MediaAssets.MediaPlayer.SetLooping
 struct UMediaPlayer_SetLooping_Params
 {
-	bool                                               InLooping;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               Looping;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function MediaAssets.MediaPlayer.SetDesiredPlayerName
+struct UMediaPlayer_SetDesiredPlayerName_Params
+{
+	struct FName                                       PlayerName;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function MediaAssets.MediaPlayer.SelectTrack
 struct UMediaPlayer_SelectTrack_Params
 {
-	TEnumAsByte<EMediaPlayerTrack>                     TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EMediaPlayerTrack                                  TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                TrackIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
@@ -71,7 +104,7 @@ struct UMediaPlayer_SelectTrack_Params
 // Function MediaAssets.MediaPlayer.Seek
 struct UMediaPlayer_Seek_Params
 {
-	struct FTimespan                                   InTime;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+	struct FTimespan                                   Time;                                                     // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -186,7 +219,7 @@ struct UMediaPlayer_GetUrl_Params
 // Function MediaAssets.MediaPlayer.GetTrackLanguage
 struct UMediaPlayer_GetTrackLanguage_Params
 {
-	TEnumAsByte<EMediaPlayerTrack>                     TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EMediaPlayerTrack                                  TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                TrackIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FString                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 };
@@ -194,7 +227,7 @@ struct UMediaPlayer_GetTrackLanguage_Params
 // Function MediaAssets.MediaPlayer.GetTrackDisplayName
 struct UMediaPlayer_GetTrackDisplayName_Params
 {
-	TEnumAsByte<EMediaPlayerTrack>                     TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EMediaPlayerTrack                                  TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                TrackIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
@@ -202,25 +235,13 @@ struct UMediaPlayer_GetTrackDisplayName_Params
 // Function MediaAssets.MediaPlayer.GetTime
 struct UMediaPlayer_GetTime_Params
 {
-	struct FTimespan                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
-};
-
-// Function MediaAssets.MediaPlayer.GetTexts
-struct UMediaPlayer_GetTexts_Params
-{
-	TArray<struct FMediaPlayerOverlay>                 OutTexts;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
-};
-
-// Function MediaAssets.MediaPlayer.GetSubtitles
-struct UMediaPlayer_GetSubtitles_Params
-{
-	TArray<struct FMediaPlayerOverlay>                 OutSubtitles;                                             // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+	struct FTimespan                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
 // Function MediaAssets.MediaPlayer.GetSelectedTrack
 struct UMediaPlayer_GetSelectedTrack_Params
 {
-	TEnumAsByte<EMediaPlayerTrack>                     TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EMediaPlayerTrack                                  TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -228,7 +249,7 @@ struct UMediaPlayer_GetSelectedTrack_Params
 struct UMediaPlayer_GetReverseRates_Params
 {
 	bool                                               Unthinned;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FFloatRange                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FFloatRange                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
 // Function MediaAssets.MediaPlayer.GetRate
@@ -246,7 +267,7 @@ struct UMediaPlayer_GetPlayerName_Params
 // Function MediaAssets.MediaPlayer.GetNumTracks
 struct UMediaPlayer_GetNumTracks_Params
 {
-	TEnumAsByte<EMediaPlayerTrack>                     TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EMediaPlayerTrack                                  TrackType;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -254,19 +275,19 @@ struct UMediaPlayer_GetNumTracks_Params
 struct UMediaPlayer_GetForwardRates_Params
 {
 	bool                                               Unthinned;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FFloatRange                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FFloatRange                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
 // Function MediaAssets.MediaPlayer.GetDuration
 struct UMediaPlayer_GetDuration_Params
 {
-	struct FTimespan                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+	struct FTimespan                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
-// Function MediaAssets.MediaPlayer.GetCaptions
-struct UMediaPlayer_GetCaptions_Params
+// Function MediaAssets.MediaPlayer.GetDesiredPlayerName
+struct UMediaPlayer_GetDesiredPlayerName_Params
 {
-	TArray<struct FMediaPlayerOverlay>                 OutCaptions;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
+	struct FName                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function MediaAssets.MediaPlayer.Close
@@ -278,6 +299,13 @@ struct UMediaPlayer_Close_Params
 struct UMediaPlayer_CanPlayUrl_Params
 {
 	struct FString                                     URL;                                                      // (CPF_Parm, CPF_ZeroConstructor)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function MediaAssets.MediaPlayer.CanPlaySource
+struct UMediaPlayer_CanPlaySource_Params
+{
+	class UMediaSource*                                MediaSource;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -350,6 +378,24 @@ struct UMediaPlaylist_Add_Params
 struct UFileMediaSource_SetFilePath_Params
 {
 	struct FString                                     path;                                                     // (CPF_Parm, CPF_ZeroConstructor)
+};
+
+// Function MediaAssets.MediaTexture.GetWidth
+struct UMediaTexture_GetWidth_Params
+{
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function MediaAssets.MediaTexture.GetHeight
+struct UMediaTexture_GetHeight_Params
+{
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function MediaAssets.MediaTexture.GetAspectRatio
+struct UMediaTexture_GetAspectRatio_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 }

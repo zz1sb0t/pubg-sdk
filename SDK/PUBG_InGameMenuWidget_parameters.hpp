@@ -14,6 +14,18 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function InGameMenuWidget.InGameMenuWidget_C.IsPCOnly
+struct UInGameMenuWidget_C_IsPCOnly_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InGameMenuWidget.InGameMenuWidget_C.IsGamepadOnly
+struct UInGameMenuWidget_C_IsGamepadOnly_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function InGameMenuWidget.InGameMenuWidget_C.GetVersionText_1
 struct UInGameMenuWidget_C_GetVersionText_1_Params
 {
@@ -23,28 +35,13 @@ struct UInGameMenuWidget_C_GetVersionText_1_Params
 // Function InGameMenuWidget.InGameMenuWidget_C.QuitGame
 struct UInGameMenuWidget_C_QuitGame_Params
 {
-	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupButtonID                                     ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function InGameMenuWidget.InGameMenuWidget_C.GoToLobby
 struct UInGameMenuWidget_C_GoToLobby_Params
 {
-	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function InGameMenuWidget.InGameMenuWidget_C.BndEvt__OptionButton_K2Node_ComponentBoundEvent_107_OnClickedEventDispatcher__DelegateSignature
-struct UInGameMenuWidget_C_BndEvt__OptionButton_K2Node_ComponentBoundEvent_107_OnClickedEventDispatcher__DelegateSignature_Params
-{
-};
-
-// Function InGameMenuWidget.InGameMenuWidget_C.BndEvt__GotoLobbyButton_K2Node_ComponentBoundEvent_89_OnClickedEventDispatcher__DelegateSignature
-struct UInGameMenuWidget_C_BndEvt__GotoLobbyButton_K2Node_ComponentBoundEvent_89_OnClickedEventDispatcher__DelegateSignature_Params
-{
-};
-
-// Function InGameMenuWidget.InGameMenuWidget_C.BndEvt__ButtonWidget_108_K2Node_ComponentBoundEvent_96_OnClickedEventDispatcher__DelegateSignature
-struct UInGameMenuWidget_C_BndEvt__ButtonWidget_108_K2Node_ComponentBoundEvent_96_OnClickedEventDispatcher__DelegateSignature_Params
-{
+	EPopupButtonID                                     ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function InGameMenuWidget.InGameMenuWidget_C.BndEvt__Resume_K2Node_ComponentBoundEvent_195_OnClickedEventDispatcher__DelegateSignature
@@ -59,6 +56,11 @@ struct UInGameMenuWidget_C_Construct_Params
 
 // Function InGameMenuWidget.InGameMenuWidget_C.OnHiddenWidget
 struct UInGameMenuWidget_C_OnHiddenWidget_Params
+{
+};
+
+// Function InGameMenuWidget.InGameMenuWidget_C.BndEvt__OptionButton_K2Node_ComponentBoundEvent_107_OnClickedEventDispatcher__DelegateSignature
+struct UInGameMenuWidget_C_BndEvt__OptionButton_K2Node_ComponentBoundEvent_107_OnClickedEventDispatcher__DelegateSignature_Params
 {
 };
 
@@ -77,6 +79,26 @@ struct UInGameMenuWidget_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InGameMenuWidget.InGameMenuWidget_C.BndEvt__ButtonWidget_108_K2Node_ComponentBoundEvent_96_OnClickedEventDispatcher__DelegateSignature
+struct UInGameMenuWidget_C_BndEvt__ButtonWidget_108_K2Node_ComponentBoundEvent_96_OnClickedEventDispatcher__DelegateSignature_Params
+{
+};
+
+// Function InGameMenuWidget.InGameMenuWidget_C.BndEvt__GotoLobbyButton_K2Node_ComponentBoundEvent_89_OnClickedEventDispatcher__DelegateSignature
+struct UInGameMenuWidget_C_BndEvt__GotoLobbyButton_K2Node_ComponentBoundEvent_89_OnClickedEventDispatcher__DelegateSignature_Params
+{
+};
+
+// Function InGameMenuWidget.InGameMenuWidget_C.OpenGamepadOption
+struct UInGameMenuWidget_C_OpenGamepadOption_Params
+{
+};
+
+// Function InGameMenuWidget.InGameMenuWidget_C.BndEvt__GamepadGuide_K2Node_ComponentBoundEvent_123_OnClickedEventDispatcher__DelegateSignature
+struct UInGameMenuWidget_C_BndEvt__GamepadGuide_K2Node_ComponentBoundEvent_123_OnClickedEventDispatcher__DelegateSignature_Params
+{
 };
 
 // Function InGameMenuWidget.InGameMenuWidget_C.ExecuteUbergraph_InGameMenuWidget

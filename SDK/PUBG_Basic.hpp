@@ -15,6 +15,20 @@ inline Fn GetVFunction(const void *instance, std::size_t index)
 	return reinterpret_cast<Fn>(vtable[index]);
 }
 
+// Credits to namazso <3
+static unsigned fnv_hash_runtime(const char* str) {
+	static constexpr auto k_fnv_prime = 16777619u;
+	static constexpr auto k_offset_basis = 2166136261u;
+
+	auto hash = k_offset_basis;
+	do {
+		hash ^= *str++;
+		hash *= k_fnv_prime;
+	} while (*(str - 1) != 0);
+
+	return hash;
+}
+
 class UObject;
 
 class FUObjectItem
@@ -23,6 +37,7 @@ public:
 	UObject* Object;
 	int32_t Flags;
 	int32_t SerialNumber;
+	void* unk;
 
 	enum class EInternalObjectFlags : int32_t
 	{
@@ -281,7 +296,7 @@ struct FString : private TArray<wchar_t>
 
 	FString(const wchar_t* other)
 	{
-		Max = Count = *other ? std::wcslen(other) + 1 : 0;
+		Max = Count = *other ? (int32_t)std::wcslen(other) + 1 : 0;
 
 		if (Count)
 		{
@@ -391,9 +406,31 @@ public:
 	}
 };
 
+/*
 struct FText
 {
 	char UnknownData[0x18];
+};*/
+
+class FTextData {
+public:
+	char pad_0x0000[0x28];  //0x0000
+	wchar_t* Name;          //0x0028 
+	__int32 Length;         //0x0030 
+
+};
+
+struct FText {
+	FTextData* Data;
+	char UnknownData[0x10];
+
+	wchar_t* Get() const {
+		if (Data) {
+			return Data->Name;
+		}
+
+		return nullptr;
+	}
 };
 
 struct FScriptDelegate

@@ -391,10 +391,65 @@ struct UEquipmentWidget_C_OnSlotMoveRight_Params
 {
 };
 
+// Function EquipmentWidget.EquipmentWidget_C.OnEnterSlot_Event_1
+struct UEquipmentWidget_C_OnEnterSlot_Event_1_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnLeaveSlot_Event_1
+struct UEquipmentWidget_C_OnLeaveSlot_Event_1_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnDoSlotAction_Event_1
+struct UEquipmentWidget_C_OnDoSlotAction_Event_1_Params
+{
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.BndEvt__Button_68_K2Node_ComponentBoundEvent_209_OnButtonClickedEvent__DelegateSignature
+struct UEquipmentWidget_C_BndEvt__Button_68_K2Node_ComponentBoundEvent_209_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.BndEvt__CharacterCaptureCheckBox_K2Node_ComponentBoundEvent_87_OnCheckBoxComponentStateChanged__DelegateSignature
+struct UEquipmentWidget_C_BndEvt__CharacterCaptureCheckBox_K2Node_ComponentBoundEvent_87_OnCheckBoxComponentStateChanged__DelegateSignature_Params
+{
+	bool                                               bIsChecked;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function EquipmentWidget.EquipmentWidget_C.ExecuteUbergraph_EquipmentWidget
 struct UEquipmentWidget_C_ExecuteUbergraph_EquipmentWidget_Params
 {
 	int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnDoSlotAction__DelegateSignature
+struct UEquipmentWidget_C_OnDoSlotAction__DelegateSignature_Params
+{
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnLeaveSlot__DelegateSignature
+struct UEquipmentWidget_C_OnLeaveSlot__DelegateSignature_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnEnterSlot__DelegateSignature
+struct UEquipmentWidget_C_OnEnterSlot__DelegateSignature_Params
+{
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnInventoryDrop__DelegateSignature
+struct UEquipmentWidget_C_OnInventoryDrop__DelegateSignature_Params
+{
+	class UDragDropOperation*                          Operation;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 }

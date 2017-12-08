@@ -44,6 +44,18 @@ enum class EGameplayTagMatchType : uint8_t
 };
 
 
+// Enum GameplayTags.EGameplayTagSourceType
+enum class EGameplayTagSourceType : uint8_t
+{
+	EGameplayTagSourceType__Native = 0,
+	EGameplayTagSourceType__DefaultTagList = 1,
+	EGameplayTagSourceType__TagList = 2,
+	EGameplayTagSourceType__DataTable = 3,
+	EGameplayTagSourceType__Invalid = 4,
+	EGameplayTagSourceType__EGameplayTagSourceType_MAX = 5
+};
+
+
 
 //---------------------------------------------------------------------------
 //Script Structs
@@ -73,23 +85,55 @@ struct FGameplayTagQuery
 struct FGameplayTagContainer
 {
 	TArray<struct FGameplayTag>                        GameplayTags;                                             // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
-	TArray<struct FName>                               Tags;                                                     // 0x0010(0x0010) (CPF_ZeroConstructor, CPF_Deprecated)
+	TArray<struct FGameplayTag>                        ParentTags;                                               // 0x0010(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 };
 
-// ScriptStruct GameplayTags.GameplayTagNode
-// 0x0078
-struct FGameplayTagNode
+// ScriptStruct GameplayTags.GameplayTagSource
+// 0x0018
+struct FGameplayTagSource
 {
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0000(0x0078) MISSED OFFSET
+	struct FName                                       SourceName;                                               // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EGameplayTagSourceType                             SourceType;                                               // 0x0008(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+	class UGameplayTagsList*                           SourceTagList;                                            // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct GameplayTags.GameplayTagTableRow
-// 0x0038 (0x0040 - 0x0008)
+// 0x0018 (0x0020 - 0x0008)
 struct FGameplayTagTableRow : public FTableRowBase
 {
-	struct FString                                     Tag;                                                      // 0x0008(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	struct FText                                       CategoryText;                                             // 0x0018(0x0018) (CPF_Edit, CPF_BlueprintVisible)
-	struct FString                                     DevComment;                                               // 0x0030(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	struct FName                                       Tag;                                                      // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FString                                     DevComment;                                               // 0x0010(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+};
+
+// ScriptStruct GameplayTags.GameplayTagCategoryRemap
+// 0x0020
+struct FGameplayTagCategoryRemap
+{
+	struct FString                                     BaseCategory;                                             // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	TArray<struct FString>                             RemapCategories;                                          // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+};
+
+// ScriptStruct GameplayTags.GameplayTagRedirect
+// 0x0010
+struct FGameplayTagRedirect
+{
+	struct FName                                       OldTagName;                                               // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FName                                       NewTagName;                                               // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct GameplayTags.GameplayTagReferenceHelper
+// 0x0040
+struct FGameplayTagReferenceHelper
+{
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0000(0x0040) MISSED OFFSET
+};
+
+// ScriptStruct GameplayTags.GameplayTagNode
+// 0x0050
+struct FGameplayTagNode
+{
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
 };
 
 }

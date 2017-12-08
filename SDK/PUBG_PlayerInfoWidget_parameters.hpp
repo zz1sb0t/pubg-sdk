@@ -14,6 +14,54 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PlayerInfoWidget.PlayerInfoWidget_C.SetPlayerInfoData
+struct UPlayerInfoWidget_C_SetPlayerInfoData_Params
+{
+	class ATslCharacter*                               TslCharacter;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.UpdateHealthPrepass_Hori
+struct UPlayerInfoWidget_C_UpdateHealthPrepass_Hori_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_TextTeamNumber_Prepass_1
+struct UPlayerInfoWidget_C_On_TextTeamNumber_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_TextShortcut_Prepass_1
+struct UPlayerInfoWidget_C_On_TextShortcut_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.OnPrepass_2
+struct UPlayerInfoWidget_C_OnPrepass_2_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_HPGaugeSizeBox_Hori_Prepass_1
+struct UPlayerInfoWidget_C_On_HPGaugeSizeBox_Hori_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_HPGaugeSizeBox_Vert_Prepass_1
+struct UPlayerInfoWidget_C_On_HPGaugeSizeBox_Vert_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_ObserverCameraLayer_Prepass_1
+struct UPlayerInfoWidget_C_On_ObserverCameraLayer_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Free
 struct UPlayerInfoWidget_C_SetCameraMode_Free_Params
 {
@@ -81,39 +129,16 @@ struct UPlayerInfoWidget_C_On_KillCount_Prepass_1_Params
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function PlayerInfoWidget.PlayerInfoWidget_C.On_BoostGauge_Prepass_1
-struct UPlayerInfoWidget_C_On_BoostGauge_Prepass_1_Params
-{
-	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function PlayerInfoWidget.PlayerInfoWidget_C.On_InfoLayer_Prepass_1
 struct UPlayerInfoWidget_C_On_InfoLayer_Prepass_1_Params
 {
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function PlayerInfoWidget.PlayerInfoWidget_C.UpdateHealthPrepass
-struct UPlayerInfoWidget_C_UpdateHealthPrepass_Params
+// Function PlayerInfoWidget.PlayerInfoWidget_C.UpdateHealthPrepass_Vert
+struct UPlayerInfoWidget_C_UpdateHealthPrepass_Vert_Params
 {
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature
-struct UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
-// Function PlayerInfoWidget.PlayerInfoWidget_C.Tick
-struct UPlayerInfoWidget_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function PlayerInfoWidget.PlayerInfoWidget_C.Construct
-struct UPlayerInfoWidget_C_Construct_Params
-{
 };
 
 // Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature
@@ -134,10 +159,22 @@ struct UPlayerInfoWidget_C_OnMouseLeave_Params
 	struct FPointerEvent*                              MouseEvent;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 };
 
+// Function PlayerInfoWidget.PlayerInfoWidget_C.Tick
+struct UPlayerInfoWidget_C_Tick_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function PlayerInfoWidget.PlayerInfoWidget_C.CustomEvent_1
 struct UPlayerInfoWidget_C_CustomEvent_1_Params
 {
-	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupButtonID                                     ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.Construct
+struct UPlayerInfoWidget_C_Construct_Params
+{
 };
 
 // Function PlayerInfoWidget.PlayerInfoWidget_C.CustomEvent_3
@@ -152,6 +189,21 @@ struct UPlayerInfoWidget_C_CustomEvent_2_Params
 
 // Function PlayerInfoWidget.PlayerInfoWidget_C.Destruct
 struct UPlayerInfoWidget_C_Destruct_Params
+{
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_26_OnButtonHoverEvent__DelegateSignature
+struct UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_26_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_57_OnButtonHoverEvent__DelegateSignature
+struct UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_57_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature
+struct UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

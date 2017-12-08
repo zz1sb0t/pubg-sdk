@@ -14,6 +14,11 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function NewSystemMessageWidget.NewSystemMessageWidget_C.PlayFadeIn
+struct UNewSystemMessageWidget_C_PlayFadeIn_Params
+{
+};
+
 // Function NewSystemMessageWidget.NewSystemMessageWidget_C.StartFadeIn
 struct UNewSystemMessageWidget_C_StartFadeIn_Params
 {

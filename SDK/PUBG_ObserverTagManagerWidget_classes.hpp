@@ -17,19 +17,24 @@ namespace Classes
 class UObserverTagManagerWidget_C : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0240(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0240(0x0008) (CPF_Transient, CPF_DuplicateTransient)
 	TArray<class UPlayerHeadWidget_C*>                 PlayerHeadWidgets;                                        // 0x0248(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass ObserverTagManagerWidget.ObserverTagManagerWidget_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0xdea5de0b);
 		return ptr;
 	}
 
 
+	void UpdateReplicateCharacter();
 	void RemoveReplicateCharacter(TArray<class ATslCharacter*>* Characters);
 	void AddReplicateCharacter(TArray<class ATslCharacter*>* Characters);
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
+	void Construct();
+	void CustomTick();
+	void TimerCheckUpdateList();
 	void ExecuteUbergraph_ObserverTagManagerWidget(int EntryPoint);
 };
 

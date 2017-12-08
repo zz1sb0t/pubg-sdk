@@ -22,7 +22,7 @@ struct UMainOptionWidget_C_ClearOptionButtonsColors_Params
 // Function MainOptionWidget.MainOptionWidget_C.PopupButtonClicked
 struct UMainOptionWidget_C_PopupButtonClicked_Params
 {
-	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupButtonID                                     ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function MainOptionWidget.MainOptionWidget_C.Get_ResetButton_bIsEnabled_1

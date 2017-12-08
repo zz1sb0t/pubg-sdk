@@ -14,6 +14,33 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function HudAlwaysOn.HudAlwaysOn_C.OnPrepass_4
+struct UHudAlwaysOn_C_OnPrepass_4_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function HudAlwaysOn.HudAlwaysOn_C.SetCharacterInfoDown
+struct UHudAlwaysOn_C_SetCharacterInfoDown_Params
+{
+};
+
+// Function HudAlwaysOn.HudAlwaysOn_C.SetCharacterInfoUp
+struct UHudAlwaysOn_C_SetCharacterInfoUp_Params
+{
+};
+
+// Function HudAlwaysOn.HudAlwaysOn_C.OnPrepass_3
+struct UHudAlwaysOn_C_OnPrepass_3_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function HudAlwaysOn.HudAlwaysOn_C.UpdatePlayerHealth
+struct UHudAlwaysOn_C_UpdatePlayerHealth_Params
+{
+};
+
 // Function HudAlwaysOn.HudAlwaysOn_C.TeamInfoPrepass
 struct UHudAlwaysOn_C_TeamInfoPrepass_Params
 {
@@ -41,7 +68,7 @@ struct UHudAlwaysOn_C_On_CharacterCanvas_Prepass_1_Params
 // Function HudAlwaysOn.HudAlwaysOn_C.GetVisibilityOnMatchState
 struct UHudAlwaysOn_C_GetVisibilityOnMatchState_Params
 {
-	TEnumAsByte<ESlateVisibility>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	ESlateVisibility                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function HudAlwaysOn.HudAlwaysOn_C.On_BlueZoneGpsWidget_RoundType_Prepass_1

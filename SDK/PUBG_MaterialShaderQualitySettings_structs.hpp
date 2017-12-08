@@ -36,7 +36,7 @@ struct FMaterialQualityOverrides
 	bool                                               bForceNonMetal;                                           // 0x0002(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bForceDisableLMDirectionality;                            // 0x0003(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	bool                                               bForceLQReflections;                                      // 0x0004(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	TEnumAsByte<EMobileCSMQuality>                     MobileCSMQuality;                                         // 0x0005(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	EMobileCSMQuality                                  MobileCSMQuality;                                         // 0x0005(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 };
 
 }

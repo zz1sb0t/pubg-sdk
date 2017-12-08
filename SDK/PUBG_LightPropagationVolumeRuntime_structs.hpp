@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // ScriptStruct LightPropagationVolumeRuntime.LightPropagationVolumeSettings
-// 0x0038
+// 0x0040
 struct FLightPropagationVolumeSettings
 {
 	unsigned char                                      bOverride_LPVIntensity : 1;                               // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible)
@@ -43,6 +43,8 @@ struct FLightPropagationVolumeSettings
 	float                                              LPVSpecularOcclusionExponent;                             // 0x002C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              LPVDiffuseOcclusionIntensity;                             // 0x0030(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              LPVSpecularOcclusionIntensity;                            // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LPVFadeRange;                                             // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LPVDirectionalOcclusionFadeRange;                         // 0x003C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 }

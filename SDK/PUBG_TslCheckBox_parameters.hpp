@@ -14,6 +14,61 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function TslCheckBox.TslCheckBox_C.GetGamePadHelpWidgetClass
+struct UTslCheckBox_C_GetGamePadHelpWidgetClass_Params
+{
+	class UClass*                                      GuideClass;                                               // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslCheckBox.TslCheckBox_C.OnKeyDown
+struct UTslCheckBox_C_OnKeyDown_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (CPF_Parm)
+	struct FEventReply                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
+// Function TslCheckBox.TslCheckBox_C.OnKeyUp
+struct UTslCheckBox_C_OnKeyUp_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (CPF_Parm)
+	struct FEventReply                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
+// Function TslCheckBox.TslCheckBox_C.IsToggleKey
+struct UTslCheckBox_C_IsToggleKey_Params
+{
+	struct FKey                                        Key;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	bool                                               IsToggle;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslCheckBox.TslCheckBox_C.Toggle
+struct UTslCheckBox_C_Toggle_Params
+{
+};
+
+// Function TslCheckBox.TslCheckBox_C.ProcessKeyDown
+struct UTslCheckBox_C_ProcessKeyDown_Params
+{
+	struct FKey                                        Key;                                                      // (CPF_Parm)
+	struct FEventReply                                 Reply;                                                    // (CPF_Parm, CPF_OutParm)
+};
+
+// Function TslCheckBox.TslCheckBox_C.OnFocusReceived
+struct UTslCheckBox_C_OnFocusReceived_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FFocusEvent*                                InFocusEvent;                                             // (CPF_Parm)
+	struct FEventReply                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
+// Function TslCheckBox.TslCheckBox_C.OnPrepass_1
+struct UTslCheckBox_C_OnPrepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function TslCheckBox.TslCheckBox_C.OnMouseButtonDown_1
 struct UTslCheckBox_C_OnMouseButtonDown_1_Params
 {

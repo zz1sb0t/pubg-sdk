@@ -128,6 +128,7 @@ struct UAkComponent_GetAttenuationRadius_Params
 // Function AkAudio.AkComponent.CalculateRelativeSpeed
 struct UAkComponent_CalculateRelativeSpeed_Params
 {
+	float                                              DeltaTime;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function AkAudio.AkComponent.CalculateDynamicReverb
@@ -205,8 +206,8 @@ struct UAkGameplayStatics_SpawnAkComponentAtLocation_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UAkAudioEvent*                               AkEvent;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Location;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      Orientation;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      Orientation;                                              // (CPF_Parm, CPF_IsPlainOldData)
 	bool                                               AutoPost;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FString                                     EventName;                                                // (CPF_Parm, CPF_ZeroConstructor)
 	bool                                               AutoDestroy;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -281,8 +282,8 @@ struct UAkGameplayStatics_PostEventAttached_Params
 struct UAkGameplayStatics_PostEventAtLocationByName_Params
 {
 	struct FString                                     EventName;                                                // (CPF_Parm, CPF_ZeroConstructor)
-	class Vector3D                                     Location;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      Orientation;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      Orientation;                                              // (CPF_Parm, CPF_IsPlainOldData)
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -290,8 +291,8 @@ struct UAkGameplayStatics_PostEventAtLocationByName_Params
 struct UAkGameplayStatics_PostEventAtLocation_Params
 {
 	class UAkAudioEvent*                               AkEvent;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Location;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      Orientation;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	struct FRotator                                      Orientation;                                              // (CPF_Parm, CPF_IsPlainOldData)
 	struct FString                                     EventName;                                                // (CPF_Parm, CPF_ZeroConstructor)
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
@@ -337,7 +338,7 @@ struct UAkGameplayStatics_GetAkComponent_Params
 {
 	class USceneComponent*                             AttachToComponent;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	struct FName                                       AttachPointName;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Location;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Location;                                                 // (CPF_Parm, CPF_IsPlainOldData)
 	TEnumAsByte<EAttachLocation>                       LocationType;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UAkComponent*                                ReturnValue;                                              // (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 };

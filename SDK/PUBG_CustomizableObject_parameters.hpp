@@ -14,6 +14,18 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function CustomizableObject.CustomizableSkeletalComponent.UpdateSkeletalMeshAsync
+struct UCustomizableSkeletalComponent_UpdateSkeletalMeshAsync_Params
+{
+	bool                                               bForceReuseResources;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function CustomizableObject.CustomizableSkeletalComponent.UpdateSkeletalMesh
+struct UCustomizableSkeletalComponent_UpdateSkeletalMesh_Params
+{
+	bool                                               bForceReuseResources;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function CustomizableObject.CustomizableObjectInstance.SetRandomValues
 struct UCustomizableObjectInstance_SetRandomValues_Params
 {

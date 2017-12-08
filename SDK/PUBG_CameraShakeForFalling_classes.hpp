@@ -17,11 +17,12 @@ namespace Classes
 class UCameraShakeForFalling_C : public UCameraShake
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0160(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0160(0x0008) (CPF_Transient, CPF_DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass CameraShakeForFalling.CameraShakeForFalling_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x2e06c28d);
 		return ptr;
 	}
 

@@ -17,7 +17,7 @@ namespace Classes
 // Function PopupWidgetForReplay.PopupWidgetForReplay_C.SetPopup
 struct UPopupWidgetForReplay_C_SetPopup_Params
 {
-	TEnumAsByte<EPopupStyle>                           PopupStyle;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupStyle                                        PopupStyle;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FText                                       Message;                                                  // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	struct FScriptDelegate                             PressedDelegate;                                          // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 };
@@ -66,7 +66,7 @@ struct UPopupWidgetForReplay_C_HideMyself__DelegateSignature_Params
 // Function PopupWidgetForReplay.PopupWidgetForReplay_C.ButtonClickDispatcher__DelegateSignature
 struct UPopupWidgetForReplay_C_ButtonClickDispatcher__DelegateSignature_Params
 {
-	TEnumAsByte<EPopupButtonID>                        NewParam;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupButtonID                                     NewParam;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 }

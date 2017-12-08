@@ -17,7 +17,7 @@ namespace Classes
 // Function OptionButton.OptionButton_C.SetButtonBgColor
 struct UOptionButton_C_SetButtonBgColor_Params
 {
-	struct FLinearColor                                InBackgroundColor;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                InBackgroundColor;                                        // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function OptionButton.OptionButton_C.GetText_1

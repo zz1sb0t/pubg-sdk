@@ -14,10 +14,26 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function NewWorldMapWidget.NewWorldMapWidget_C.CheckObserverStatus
+struct UNewWorldMapWidget_C_CheckObserverStatus_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnInteract
+struct UNewWorldMapWidget_C_OnInteract_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.GetZoomMultiplier
+struct UNewWorldMapWidget_C_GetZoomMultiplier_Params
+{
+	float                                              Multiplier;                                               // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetMoveMapGridViewCenterToMyIconCenterDir
 struct UNewWorldMapWidget_C_GetMoveMapGridViewCenterToMyIconCenterDir_Params
 {
-	class Vector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.OnMoveMapGridViewCenterToMyIconCenter
@@ -28,7 +44,7 @@ struct UNewWorldMapWidget_C_OnMoveMapGridViewCenterToMyIconCenter_Params
 // Function NewWorldMapWidget.NewWorldMapWidget_C.SetMapGridPositoin
 struct UNewWorldMapWidget_C_SetMapGridPositoin_Params
 {
-	class Vector2D                                     Position;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     Position;                                                 // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.OnHideWorldMap
@@ -83,13 +99,13 @@ struct UNewWorldMapWidget_C_OnPutMarkerPad_Params
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_MC
 struct UNewWorldMapWidget_C_GetPadGuidePos_MC_Params
 {
-	class Vector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_UC
 struct UNewWorldMapWidget_C_GetPadGuidePos_UC_Params
 {
-	class Vector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.OnMarkerDelete
@@ -118,8 +134,8 @@ struct UNewWorldMapWidget_C_MapMoveGamepadX_Params
 // Function NewWorldMapWidget.NewWorldMapWidget_C.ComputeServerToLocalPosition
 struct UNewWorldMapWidget_C_ComputeServerToLocalPosition_Params
 {
-	class Vector3D                                     Server;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FVector                                     Server;                                                   // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.MapZoom
@@ -153,7 +169,7 @@ struct UNewWorldMapWidget_C_OnMapMove_Params
 // Function NewWorldMapWidget.NewWorldMapWidget_C.MoveMapGrid
 struct UNewWorldMapWidget_C_MoveMapGrid_Params
 {
-	class Vector2D                                     AdditionalPos;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     AdditionalPos;                                            // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.OnMarker
@@ -174,15 +190,15 @@ struct UNewWorldMapWidget_C_InitNewWorldMapWidget_Params
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetMapWidgetScreenLocation
 struct UNewWorldMapWidget_C_GetMapWidgetScreenLocation_Params
 {
-	class Vector2D                                     Position;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector2D                                     LeftTop;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector2D                                     RightBottom;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     Position;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector2D                                     LeftTop;                                                  // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
+	struct FVector2D                                     RightBottom;                                              // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetWheelUpAlignment
 struct UNewWorldMapWidget_C_GetWheelUpAlignment_Params
 {
-	class Vector2D                                     Alignment;                                                // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     Alignment;                                                // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.TestClear
@@ -193,8 +209,8 @@ struct UNewWorldMapWidget_C_TestClear_Params
 // Function NewWorldMapWidget.NewWorldMapWidget_C.UpdateMapAlignment
 struct UNewWorldMapWidget_C_UpdateMapAlignment_Params
 {
-	class Vector2D                                     Aligment;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector2D                                     Size;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     Aligment;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector2D                                     Size;                                                     // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.PlayFadeInAnim
@@ -212,15 +228,15 @@ struct UNewWorldMapWidget_C_TickMapPositionMove_Params
 // Function NewWorldMapWidget.NewWorldMapWidget_C.IsInMapWidget
 struct UNewWorldMapWidget_C_IsInMapWidget_Params
 {
-	class Vector2D                                     Position;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     Position;                                                 // (CPF_Parm, CPF_IsPlainOldData)
 	bool                                               IsIn;                                                     // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.ClampPosition
 struct UNewWorldMapWidget_C_ClampPosition_Params
 {
-	class Vector2D                                     Position;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector2D                                     ConvertedPosition;                                        // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     Position;                                                 // (CPF_Parm, CPF_IsPlainOldData)
+	struct FVector2D                                     ConvertedPosition;                                        // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.TickChangeMapSize
@@ -268,14 +284,14 @@ struct UNewWorldMapWidget_C_InitializeWorldMap_Params
 // Function NewWorldMapWidget.NewWorldMapWidget_C.UpdateMap
 struct UNewWorldMapWidget_C_UpdateMap_Params
 {
-	class Vector2D                                     MapSize;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     MapSize;                                                  // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetMapSize
 struct UNewWorldMapWidget_C_GetMapSize_Params
 {
 	float                                              Zoom;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector2D                                     MapSize;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D                                     MapSize;                                                  // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.OnMouseWheel

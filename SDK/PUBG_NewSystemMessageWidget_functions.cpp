@@ -12,6 +12,24 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
+// Function NewSystemMessageWidget.NewSystemMessageWidget_C.PlayFadeIn
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UNewSystemMessageWidget_C::PlayFadeIn()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xab61357a);
+
+	UNewSystemMessageWidget_C_PlayFadeIn_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function NewSystemMessageWidget.NewSystemMessageWidget_C.StartFadeIn
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
@@ -20,7 +38,8 @@ namespace Classes
 
 void UNewSystemMessageWidget_C::StartFadeIn(class UWidgetAnimation* Animation, float Time)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.StartFadeIn");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x92a8971e);
 
 	UNewSystemMessageWidget_C_StartFadeIn_Params params;
 	params.Animation = Animation;
@@ -41,7 +60,8 @@ void UNewSystemMessageWidget_C::StartFadeIn(class UWidgetAnimation* Animation, f
 
 void UNewSystemMessageWidget_C::GetFadeOutAnimation(class UWidgetAnimation** Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.GetFadeOutAnimation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x23dc8d79);
 
 	UNewSystemMessageWidget_C_GetFadeOutAnimation_Params params;
 
@@ -63,7 +83,8 @@ void UNewSystemMessageWidget_C::GetFadeOutAnimation(class UWidgetAnimation** Ani
 
 void UNewSystemMessageWidget_C::GetFadeInAnimation(class UWidgetAnimation** Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.GetFadeInAnimation");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x15d059d0);
 
 	UNewSystemMessageWidget_C_GetFadeInAnimation_Params params;
 
@@ -85,7 +106,8 @@ void UNewSystemMessageWidget_C::GetFadeInAnimation(class UWidgetAnimation** Anim
 
 void UNewSystemMessageWidget_C::SetTextSize(class UTextBlock* TextBlock)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.SetTextSize");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb8a25ecf);
 
 	UNewSystemMessageWidget_C_SetTextSize_Params params;
 	params.TextBlock = TextBlock;
@@ -103,7 +125,8 @@ void UNewSystemMessageWidget_C::SetTextSize(class UTextBlock* TextBlock)
 
 void UNewSystemMessageWidget_C::StartFadeOut()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.StartFadeOut");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x95ed0859);
 
 	UNewSystemMessageWidget_C_StartFadeOut_Params params;
 
@@ -120,7 +143,8 @@ void UNewSystemMessageWidget_C::StartFadeOut()
 
 void UNewSystemMessageWidget_C::OnFadeOutFinished()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.OnFadeOutFinished");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9efeba1c);
 
 	UNewSystemMessageWidget_C_OnFadeOutFinished_Params params;
 
@@ -137,7 +161,8 @@ void UNewSystemMessageWidget_C::OnFadeOutFinished()
 
 void UNewSystemMessageWidget_C::OnFadeInFinished()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.OnFadeInFinished");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6a74a61d);
 
 	UNewSystemMessageWidget_C_OnFadeInFinished_Params params;
 
@@ -154,7 +179,8 @@ void UNewSystemMessageWidget_C::OnFadeInFinished()
 
 void UNewSystemMessageWidget_C::InitializeMessage()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.InitializeMessage");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x23af4c6e);
 
 	UNewSystemMessageWidget_C_InitializeMessage_Params params;
 
@@ -171,7 +197,8 @@ void UNewSystemMessageWidget_C::InitializeMessage()
 
 void UNewSystemMessageWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.Construct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x685746ee);
 
 	UNewSystemMessageWidget_C_Construct_Params params;
 
@@ -190,7 +217,8 @@ void UNewSystemMessageWidget_C::Construct()
 
 void UNewSystemMessageWidget_C::ExecuteUbergraph_NewSystemMessageWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.ExecuteUbergraph_NewSystemMessageWidget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6fbe2bd5);
 
 	UNewSystemMessageWidget_C_ExecuteUbergraph_NewSystemMessageWidget_Params params;
 	params.EntryPoint = EntryPoint;
@@ -210,7 +238,8 @@ void UNewSystemMessageWidget_C::ExecuteUbergraph_NewSystemMessageWidget(int Entr
 
 void UNewSystemMessageWidget_C::EndMessage__DelegateSignature(class UNewSystemMessageWidget_C* SystemMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewSystemMessageWidget.NewSystemMessageWidget_C.EndMessage__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x89f5804e);
 
 	UNewSystemMessageWidget_C_EndMessage__DelegateSignature_Params params;
 	params.SystemMessage = SystemMessage;

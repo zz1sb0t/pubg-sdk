@@ -12,6 +12,16 @@ namespace Classes
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum Paper2D.EFlipbookCollisionMode
+enum class EFlipbookCollisionMode : uint8_t
+{
+	EFlipbookCollisionMode__NoCollision = 0,
+	EFlipbookCollisionMode__FirstFrameCollision = 1,
+	EFlipbookCollisionMode__EachFrameCollision = 2,
+	EFlipbookCollisionMode__EFlipbookCollisionMode_MAX = 3
+};
+
+
 // Enum Paper2D.ESpritePivotMode
 enum class ESpritePivotMode : uint8_t
 {
@@ -61,16 +71,6 @@ enum class ESpriteCollisionMode : uint8_t
 };
 
 
-// Enum Paper2D.EFlipbookCollisionMode
-enum class EFlipbookCollisionMode : uint8_t
-{
-	EFlipbookCollisionMode__NoCollision = 0,
-	EFlipbookCollisionMode__FirstFrameCollision = 1,
-	EFlipbookCollisionMode__EachFrameCollision = 2,
-	EFlipbookCollisionMode__EFlipbookCollisionMode_MAX = 3
-};
-
-
 // Enum Paper2D.EPaperSpriteAtlasPadding
 enum class EPaperSpriteAtlasPadding : uint8_t
 {
@@ -96,15 +96,6 @@ enum class ETileMapProjectionMode : uint8_t
 //Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct Paper2D.PaperSpriteSocket
-// 0x0040
-struct FPaperSpriteSocket
-{
-	struct FTransform                                  LocalTransform;                                           // 0x0000(0x0030) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
-	struct FName                                       SocketName;                                               // 0x0030(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct Paper2D.PaperFlipbookKeyFrame
 // 0x0010
 struct FPaperFlipbookKeyFrame
@@ -118,10 +109,19 @@ struct FPaperFlipbookKeyFrame
 // 0x0050
 struct FSpriteInstanceData
 {
-	struct FMatrix                                     Transform;                                                // 0x0000(0x0040) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FMatrix                                     Transform;                                                // 0x0000(0x0040) (CPF_Edit, CPF_IsPlainOldData)
 	class UPaperSprite*                                SourceSprite;                                             // 0x0040(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      VertexColor;                                              // 0x0048(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      VertexColor;                                              // 0x0048(0x0004) (CPF_Edit, CPF_IsPlainOldData)
 	int                                                MaterialIndex;                                            // 0x004C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct Paper2D.PaperSpriteSocket
+// 0x0040
+struct FPaperSpriteSocket
+{
+	struct FTransform                                  LocalTransform;                                           // 0x0000(0x0030) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
+	struct FName                                       SocketName;                                               // 0x0030(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Paper2D.PaperTerrainMaterialRule
@@ -140,6 +140,15 @@ struct FPaperTerrainMaterialRule
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Paper2D.PaperTileInfo
+// 0x0010
+struct FPaperTileInfo
+{
+	class UPaperTileSet*                               TileSet;                                                  // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                PackedTileIndex;                                          // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct Paper2D.IntMargin
 // 0x0010
 struct FIntMargin
@@ -154,11 +163,11 @@ struct FIntMargin
 // 0x0030
 struct FSpriteGeometryShape
 {
-	TEnumAsByte<ESpriteShapeType>                      ShapeType;                                                // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	ESpriteShapeType                                   ShapeType;                                                // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	TArray<class Vector2D>                             Vertices;                                                 // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	class Vector2D                                     BoxSize;                                                  // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	class Vector2D                                     BoxPosition;                                              // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	TArray<struct FVector2D>                             Vertices;                                                 // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	struct FVector2D                                     BoxSize;                                                  // 0x0018(0x0008) (CPF_Edit, CPF_EditConst, CPF_IsPlainOldData)
+	struct FVector2D                                     BoxPosition;                                              // 0x0020(0x0008) (CPF_Edit, CPF_EditConst, CPF_IsPlainOldData)
 	float                                              Rotation;                                                 // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	bool                                               bNegativeWinding;                                         // 0x002C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
@@ -200,15 +209,6 @@ struct FPaperTileSetTerrain
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct Paper2D.PaperTileInfo
-// 0x0010
-struct FPaperTileInfo
-{
-	class UPaperTileSet*                               TileSet;                                                  // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                PackedTileIndex;                                          // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-};
-
 // ScriptStruct Paper2D.SpriteAssetInitParameters
 // 0x0040
 struct FSpriteAssetInitParameters
@@ -233,11 +233,11 @@ struct FPaperSpriteAtlasSlot
 // 0x00D0
 struct FSpriteDrawCallRecord
 {
-	class Vector3D                                     Destination;                                              // 0x0000(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector                                     Destination;                                              // 0x0000(0x000C) (CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	class UTexture*                                    BaseTexture;                                              // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData01[0x30];                                      // 0x0018(0x0030) MISSED OFFSET
-	struct FColor                                      Color;                                                    // 0x0048(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      Color;                                                    // 0x0048(0x0004) (CPF_IsPlainOldData)
 	unsigned char                                      UnknownData02[0x84];                                      // 0x004C(0x0084) MISSED OFFSET
 };
 

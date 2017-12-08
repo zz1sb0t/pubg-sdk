@@ -19,6 +19,28 @@ struct FLevelSequenceObjectReferenceMap
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
 };
 
+// ScriptStruct LevelSequence.LevelSequenceBindingReference
+// 0x0020
+struct FLevelSequenceBindingReference
+{
+	struct FString                                     PackageName;                                              // 0x0000(0x0010) (CPF_ZeroConstructor)
+	struct FString                                     ObjectPath;                                               // 0x0010(0x0010) (CPF_ZeroConstructor)
+};
+
+// ScriptStruct LevelSequence.LevelSequenceBindingReferenceArray
+// 0x0010
+struct FLevelSequenceBindingReferenceArray
+{
+	TArray<struct FLevelSequenceBindingReference>      References;                                               // 0x0000(0x0010) (CPF_ZeroConstructor)
+};
+
+// ScriptStruct LevelSequence.LevelSequenceBindingReferences
+// 0x0050
+struct FLevelSequenceBindingReferences
+{
+	TMap<struct FGuid, struct FLevelSequenceBindingReferenceArray> BindingIdToReferences;                                    // 0x0000(0x0050) (CPF_ZeroConstructor)
+};
+
 // ScriptStruct LevelSequence.LevelSequenceObject
 // 0x0038
 struct FLevelSequenceObject
@@ -27,14 +49,6 @@ struct FLevelSequenceObject
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 	struct FString                                     ComponentName;                                            // 0x0020(0x0010) (CPF_ZeroConstructor)
 	TWeakObjectPtr<class UObject>                      CachedComponent;                                          // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-};
-
-// ScriptStruct LevelSequence.LevelSequencePlaybackSettings
-// 0x0008
-struct FLevelSequencePlaybackSettings
-{
-	int                                                LoopCount;                                                // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              PlayRate;                                                 // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct LevelSequence.LevelSequenceSnapshotSettings
@@ -47,7 +61,7 @@ struct FLevelSequenceSnapshotSettings
 };
 
 // ScriptStruct LevelSequence.LevelSequencePlayerSnapshot
-// 0x0048
+// 0x0050
 struct FLevelSequencePlayerSnapshot
 {
 	struct FText                                       MasterName;                                               // 0x0000(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_EditConst)
@@ -55,15 +69,23 @@ struct FLevelSequencePlayerSnapshot
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 	struct FText                                       CurrentShotName;                                          // 0x0020(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_EditConst)
 	float                                              CurrentShotLocalTime;                                     // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	struct FLevelSequenceSnapshotSettings              Settings;                                                 // 0x003C(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_EditConst)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	class UCameraComponent*                            CameraComponent;                                          // 0x0040(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FLevelSequenceSnapshotSettings              Settings;                                                 // 0x0048(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_EditConst)
 };
 
-// ScriptStruct LevelSequence.LevelSequenceObjectReference
+// ScriptStruct LevelSequence.LevelSequenceLegacyObjectReference
 // 0x0020
-struct FLevelSequenceObjectReference
+struct FLevelSequenceLegacyObjectReference
 {
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
+};
+
+// ScriptStruct LevelSequence.BoundActorProxy
+// 0x0001
+struct FBoundActorProxy
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

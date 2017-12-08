@@ -12,12 +12,157 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
+// Function ReplayTimeline.ReplayTimeline_C.CheckVideoCapture
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::CheckVideoCapture()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xcd0df170);
+
+	UReplayTimeline_C_CheckVideoCapture_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.OnToggleReplayTimeline
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::OnToggleReplayTimeline()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe894b148);
+
+	UReplayTimeline_C_OnToggleReplayTimeline_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.SetTimelineMaximize
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::SetTimelineMaximize()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb396c78e);
+
+	UReplayTimeline_C_SetTimelineMaximize_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.SetTimelineMinimize
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::SetTimelineMinimize()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6f733120);
+
+	UReplayTimeline_C_SetTimelineMinimize_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.CreateGetGroggyEventsTimer
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::CreateGetGroggyEventsTimer()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x53c21f5a);
+
+	UReplayTimeline_C_CreateGetGroggyEventsTimer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.ClearDBNOEventItems
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::ClearDBNOEventItems()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb60778cd);
+
+	UReplayTimeline_C_ClearDBNOEventItems_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.HideDBNOEvents
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::HideDBNOEvents()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc7132b0b);
+
+	UReplayTimeline_C_HideDBNOEvents_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.ShowDBNOEvents
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::ShowDBNOEvents()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf261089c);
+
+	UReplayTimeline_C_ShowDBNOEvents_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ReplayTimeline.ReplayTimeline_C.ClearKillEventItems
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UReplayTimeline_C::ClearKillEventItems()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.ClearKillEventItems");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb018b922);
 
 	UReplayTimeline_C_ClearKillEventItems_Params params;
 
@@ -34,7 +179,8 @@ void UReplayTimeline_C::ClearKillEventItems()
 
 void UReplayTimeline_C::CreateGetKillEventsTimer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.CreateGetKillEventsTimer");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa0bddd59);
 
 	UReplayTimeline_C_CreateGetKillEventsTimer_Params params;
 
@@ -51,7 +197,8 @@ void UReplayTimeline_C::CreateGetKillEventsTimer()
 
 void UReplayTimeline_C::UpdatePlayPauseBtns()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.UpdatePlayPauseBtns");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xed4090a3);
 
 	UReplayTimeline_C_UpdatePlayPauseBtns_Params params;
 
@@ -70,7 +217,8 @@ void UReplayTimeline_C::UpdatePlayPauseBtns()
 
 void UReplayTimeline_C::SetVisibleCtrls(bool bVisible)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.SetVisibleCtrls");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x375e67e5);
 
 	UReplayTimeline_C_SetVisibleCtrls_Params params;
 	params.bVisible = bVisible;
@@ -88,7 +236,8 @@ void UReplayTimeline_C::SetVisibleCtrls(bool bVisible)
 
 void UReplayTimeline_C::OnSpeedDown()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.OnSpeedDown");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1a03571d);
 
 	UReplayTimeline_C_OnSpeedDown_Params params;
 
@@ -105,7 +254,8 @@ void UReplayTimeline_C::OnSpeedDown()
 
 void UReplayTimeline_C::OnSpeedUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.OnSpeedUp");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe90a8972);
 
 	UReplayTimeline_C_OnSpeedUp_Params params;
 
@@ -122,7 +272,8 @@ void UReplayTimeline_C::OnSpeedUp()
 
 void UReplayTimeline_C::OnPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.OnPlay");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x582091ee);
 
 	UReplayTimeline_C_OnPlay_Params params;
 
@@ -139,7 +290,8 @@ void UReplayTimeline_C::OnPlay()
 
 void UReplayTimeline_C::OnPause()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.OnPause");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x342cf3ce);
 
 	UReplayTimeline_C_OnPause_Params params;
 
@@ -156,7 +308,8 @@ void UReplayTimeline_C::OnPause()
 
 void UReplayTimeline_C::OnTogglePause()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.OnTogglePause");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3e4509ca);
 
 	UReplayTimeline_C_OnTogglePause_Params params;
 
@@ -175,7 +328,8 @@ void UReplayTimeline_C::OnTogglePause()
 
 void UReplayTimeline_C::SetEnableUI(bool IsEnable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.SetEnableUI");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf066bdba);
 
 	UReplayTimeline_C_SetEnableUI_Params params;
 	params.IsEnable = IsEnable;
@@ -193,7 +347,8 @@ void UReplayTimeline_C::SetEnableUI(bool IsEnable)
 
 void UReplayTimeline_C::HideKillEvents()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.HideKillEvents");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xac6492f0);
 
 	UReplayTimeline_C_HideKillEvents_Params params;
 
@@ -210,7 +365,8 @@ void UReplayTimeline_C::HideKillEvents()
 
 void UReplayTimeline_C::ShowKillEvents()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.ShowKillEvents");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x6b5747d7);
 
 	UReplayTimeline_C_ShowKillEvents_Params params;
 
@@ -227,7 +383,8 @@ void UReplayTimeline_C::ShowKillEvents()
 
 void UReplayTimeline_C::SetCurTimeSpeed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.SetCurTimeSpeed");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xaaef6b73);
 
 	UReplayTimeline_C_SetCurTimeSpeed_Params params;
 
@@ -247,7 +404,8 @@ void UReplayTimeline_C::SetCurTimeSpeed()
 
 void UReplayTimeline_C::FloatToSeconds(float InputTime, struct FText* TextTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.FloatToSeconds");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe3696ca3);
 
 	UReplayTimeline_C_FloatToSeconds_Params params;
 	params.InputTime = InputTime;
@@ -268,7 +426,8 @@ void UReplayTimeline_C::FloatToSeconds(float InputTime, struct FText* TextTime)
 
 void UReplayTimeline_C::UpdateTimeline()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.UpdateTimeline");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x56a7fa1d);
 
 	UReplayTimeline_C_UpdateTimeline_Params params;
 
@@ -285,7 +444,8 @@ void UReplayTimeline_C::UpdateTimeline()
 
 void UReplayTimeline_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.Construct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd7994a1e);
 
 	UReplayTimeline_C_Construct_Params params;
 
@@ -305,7 +465,8 @@ void UReplayTimeline_C::Construct()
 
 void UReplayTimeline_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.Tick");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x155e88c4);
 
 	UReplayTimeline_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -326,7 +487,8 @@ void UReplayTimeline_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 void UReplayTimeline_C::BndEvt__TimelineSlider_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature(float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.BndEvt__TimelineSlider_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x32991dad);
 
 	UReplayTimeline_C_BndEvt__TimelineSlider_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature_Params params;
 	params.Value = Value;
@@ -344,7 +506,8 @@ void UReplayTimeline_C::BndEvt__TimelineSlider_K2Node_ComponentBoundEvent_4_OnFl
 
 void UReplayTimeline_C::BndEvt__BtnPause_K2Node_ComponentBoundEvent_234_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnPause_K2Node_ComponentBoundEvent_234_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9af50cba);
 
 	UReplayTimeline_C_BndEvt__BtnPause_K2Node_ComponentBoundEvent_234_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -361,7 +524,8 @@ void UReplayTimeline_C::BndEvt__BtnPause_K2Node_ComponentBoundEvent_234_OnButton
 
 void UReplayTimeline_C::BndEvt__BtnPlay_K2Node_ComponentBoundEvent_257_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnPlay_K2Node_ComponentBoundEvent_257_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3742f09f);
 
 	UReplayTimeline_C_BndEvt__BtnPlay_K2Node_ComponentBoundEvent_257_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -378,7 +542,8 @@ void UReplayTimeline_C::BndEvt__BtnPlay_K2Node_ComponentBoundEvent_257_OnButtonC
 
 void UReplayTimeline_C::BndEvt__BtnSpeedUp_K2Node_ComponentBoundEvent_317_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnSpeedUp_K2Node_ComponentBoundEvent_317_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x66055c7e);
 
 	UReplayTimeline_C_BndEvt__BtnSpeedUp_K2Node_ComponentBoundEvent_317_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -395,7 +560,8 @@ void UReplayTimeline_C::BndEvt__BtnSpeedUp_K2Node_ComponentBoundEvent_317_OnButt
 
 void UReplayTimeline_C::BndEvt__BtnSpeedDown_K2Node_ComponentBoundEvent_338_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnSpeedDown_K2Node_ComponentBoundEvent_338_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9498ad1a);
 
 	UReplayTimeline_C_BndEvt__BtnSpeedDown_K2Node_ComponentBoundEvent_338_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -412,7 +578,8 @@ void UReplayTimeline_C::BndEvt__BtnSpeedDown_K2Node_ComponentBoundEvent_338_OnBu
 
 void UReplayTimeline_C::GetKillEventsDone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.GetKillEventsDone");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x54a3f496);
 
 	UReplayTimeline_C_GetKillEventsDone_Params params;
 
@@ -431,7 +598,8 @@ void UReplayTimeline_C::GetKillEventsDone()
 
 void UReplayTimeline_C::BndEvt__CheckBoxKills_K2Node_ComponentBoundEvent_15_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.BndEvt__CheckBoxKills_K2Node_ComponentBoundEvent_15_OnCheckBoxComponentStateChanged__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1f1e4fd7);
 
 	UReplayTimeline_C_BndEvt__CheckBoxKills_K2Node_ComponentBoundEvent_15_OnCheckBoxComponentStateChanged__DelegateSignature_Params params;
 	params.bIsChecked = bIsChecked;
@@ -449,7 +617,8 @@ void UReplayTimeline_C::BndEvt__CheckBoxKills_K2Node_ComponentBoundEvent_15_OnCh
 
 void UReplayTimeline_C::GetKillEvents()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.GetKillEvents");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x483ea97e);
 
 	UReplayTimeline_C_GetKillEvents_Params params;
 
@@ -466,9 +635,103 @@ void UReplayTimeline_C::GetKillEvents()
 
 void UReplayTimeline_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.Destruct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1392925d);
 
 	UReplayTimeline_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.GetGroggyEvents
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::GetGroggyEvents()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe3f38d0b);
+
+	UReplayTimeline_C_GetGroggyEvents_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.GetGroggyEventsDone
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::GetGroggyEventsDone()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4ec6e1ef);
+
+	UReplayTimeline_C_GetGroggyEventsDone_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.BndEvt__CheckBoxGroggys_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature
+// (FUNC_BlueprintEvent)
+// Parameters:
+// bool                           bIsChecked                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UReplayTimeline_C::BndEvt__CheckBoxGroggys_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5023370e);
+
+	UReplayTimeline_C_BndEvt__CheckBoxGroggys_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature_Params params;
+	params.bIsChecked = bIsChecked;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnRec_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::BndEvt__BtnRec_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf5b907f9);
+
+	UReplayTimeline_C_BndEvt__BtnRec_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe28e5fe1);
+
+	UReplayTimeline_C_BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -485,7 +748,8 @@ void UReplayTimeline_C::Destruct()
 
 void UReplayTimeline_C::ExecuteUbergraph_ReplayTimeline(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.ExecuteUbergraph_ReplayTimeline");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x20506ce3);
 
 	UReplayTimeline_C_ExecuteUbergraph_ReplayTimeline_Params params;
 	params.EntryPoint = EntryPoint;

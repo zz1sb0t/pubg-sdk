@@ -28,7 +28,7 @@ struct UQualitySettingsWidget_C_SettingDefautl_Params
 // Function QualitySettingsWidget.QualitySettingsWidget_C.UpdateOtionStringByUserStting
 struct UQualitySettingsWidget_C_UpdateOtionStringByUserStting_Params
 {
-	TEnumAsByte<EQualityType>                          Selection;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EQualityType                                       Selection;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.UpdateMainOptionStringByComboBox
@@ -39,20 +39,20 @@ struct UQualitySettingsWidget_C_UpdateMainOptionStringByComboBox_Params
 // Function QualitySettingsWidget.QualitySettingsWidget_C.GetComboBox
 struct UQualitySettingsWidget_C_GetComboBox_Params
 {
-	TEnumAsByte<EQualityType>                          Selection;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EQualityType                                       Selection;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UQualityComboBox_C*                          ComboBox;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.SetQualityLevelByComboBox
 struct UQualitySettingsWidget_C_SetQualityLevelByComboBox_Params
 {
-	TEnumAsByte<EQualityType>                          QualityType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EQualityType                                       QualityType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.GetQualityLevelByComboBox
 struct UQualitySettingsWidget_C_GetQualityLevelByComboBox_Params
 {
-	TEnumAsByte<EQualityType>                          QualityType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EQualityType                                       QualityType;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                QualityLevel;                                             // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 

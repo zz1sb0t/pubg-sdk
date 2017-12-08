@@ -21,7 +21,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobileInstalledContent");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0xcc9dfa3f);
 		return ptr;
 	}
 
@@ -41,7 +42,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobilePendingContent");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x105b13be);
 		return ptr;
 	}
 
@@ -64,7 +66,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MobilePatchingUtils.MobilePatchingLibrary");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0xc8af1749);
 		return ptr;
 	}
 

@@ -14,6 +14,12 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.SetupHealthGaugeColor
+struct UTslHealthGaugeBpWidget_C_SetupHealthGaugeColor_Params
+{
+	struct FLinearColor                                InitColor;                                                // (CPF_Parm, CPF_IsPlainOldData)
+};
+
 // Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.On_Background_Prepass_1
 struct UTslHealthGaugeBpWidget_C_On_Background_Prepass_1_Params
 {
@@ -23,13 +29,13 @@ struct UTslHealthGaugeBpWidget_C_On_Background_Prepass_1_Params
 // Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.Get_Background_ColorAndOpacity_1
 struct UTslHealthGaugeBpWidget_C_Get_Background_ColorAndOpacity_1_Params
 {
-	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.Get_Background_Visibility_1
 struct UTslHealthGaugeBpWidget_C_Get_Background_Visibility_1_Params
 {
-	TEnumAsByte<ESlateVisibility>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	ESlateVisibility                                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.UpdateWaning
@@ -63,7 +69,7 @@ struct UTslHealthGaugeBpWidget_C_MoveTick_Params
 // Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.GetHealthGaugeColorOpacity
 struct UTslHealthGaugeBpWidget_C_GetHealthGaugeColorOpacity_Params
 {
-	struct FLinearColor                                Color;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                Color;                                                    // (CPF_Parm, CPF_OutParm, CPF_IsPlainOldData)
 };
 
 // Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.Construct

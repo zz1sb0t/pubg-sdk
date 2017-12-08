@@ -12,12 +12,181 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
-// Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Free
+// Function PlayerInfoWidget.PlayerInfoWidget_C.SetPlayerInfoData
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class ATslCharacter*           TslCharacter                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::SetPlayerInfoData(class ATslCharacter* TslCharacter)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x68fdaa60);
+
+	UPlayerInfoWidget_C_SetPlayerInfoData_Params params;
+	params.TslCharacter = TslCharacter;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.UpdateHealthPrepass_Hori
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::UpdateHealthPrepass_Hori(class UWidget* BoundWidget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xedc92213);
+
+	UPlayerInfoWidget_C_UpdateHealthPrepass_Hori_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_TextTeamNumber_Prepass_1
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::On_TextTeamNumber_Prepass_1(class UWidget* BoundWidget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa9b067f1);
+
+	UPlayerInfoWidget_C_On_TextTeamNumber_Prepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_TextShortcut_Prepass_1
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::On_TextShortcut_Prepass_1(class UWidget* BoundWidget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd35c1c17);
+
+	UPlayerInfoWidget_C_On_TextShortcut_Prepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.OnPrepass_2
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::OnPrepass_2(class UWidget* BoundWidget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xeadc10d);
+
+	UPlayerInfoWidget_C_OnPrepass_2_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_HPGaugeSizeBox_Hori_Prepass_1
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::On_HPGaugeSizeBox_Hori_Prepass_1(class UWidget* BoundWidget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x896fc032);
+
+	UPlayerInfoWidget_C_On_HPGaugeSizeBox_Hori_Prepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_HPGaugeSizeBox_Vert_Prepass_1
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::On_HPGaugeSizeBox_Vert_Prepass_1(class UWidget* BoundWidget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x63781fdf);
+
+	UPlayerInfoWidget_C_On_HPGaugeSizeBox_Vert_Prepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.On_ObserverCameraLayer_Prepass_1
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::On_ObserverCameraLayer_Prepass_1(class UWidget* BoundWidget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf9999d4);
+
+	UPlayerInfoWidget_C_On_ObserverCameraLayer_Prepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Free
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UPlayerInfoWidget_C::SetCameraMode_Free()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Free");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xfab70db8);
 
 	UPlayerInfoWidget_C_SetCameraMode_Free_Params params;
 
@@ -34,7 +203,8 @@ void UPlayerInfoWidget_C::SetCameraMode_Free()
 
 void UPlayerInfoWidget_C::SetCameraMode_Follow()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Follow");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4eb87acd);
 
 	UPlayerInfoWidget_C_SetCameraMode_Follow_Params params;
 
@@ -51,7 +221,8 @@ void UPlayerInfoWidget_C::SetCameraMode_Follow()
 
 void UPlayerInfoWidget_C::SetCameraMode_Spectator()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Spectator");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc2322621);
 
 	UPlayerInfoWidget_C_SetCameraMode_Spectator_Params params;
 
@@ -72,7 +243,8 @@ void UPlayerInfoWidget_C::SetCameraMode_Spectator()
 
 struct FEventReply UPlayerInfoWidget_C::OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.OnKeyDown");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x66940a77);
 
 	UPlayerInfoWidget_C_OnKeyDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -97,7 +269,8 @@ struct FEventReply UPlayerInfoWidget_C::OnKeyDown(struct FGeometry* MyGeometry, 
 
 struct FEventReply UPlayerInfoWidget_C::OnMouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.OnMouseButtonDown_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x81b4c1db);
 
 	UPlayerInfoWidget_C_OnMouseButtonDown_1_Params params;
 	params.MyGeometry = MyGeometry;
@@ -120,7 +293,8 @@ struct FEventReply UPlayerInfoWidget_C::OnMouseButtonDown_1(const struct FGeomet
 
 void UPlayerInfoWidget_C::On_KickButtonLayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.On_KickButtonLayer_Prepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xac9d797);
 
 	UPlayerInfoWidget_C_On_KickButtonLayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -140,7 +314,8 @@ void UPlayerInfoWidget_C::On_KickButtonLayer_Prepass_1(class UWidget* BoundWidge
 
 void UPlayerInfoWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.OnPrepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x34b03b76);
 
 	UPlayerInfoWidget_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -160,7 +335,8 @@ void UPlayerInfoWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 
 void UPlayerInfoWidget_C::On_PlayerName_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.On_PlayerName_Prepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbebaa29a);
 
 	UPlayerInfoWidget_C_On_PlayerName_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -180,7 +356,8 @@ void UPlayerInfoWidget_C::On_PlayerName_Prepass_1(class UWidget* BoundWidget)
 
 void UPlayerInfoWidget_C::On_IconLayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.On_IconLayer_Prepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x270ea6b0);
 
 	UPlayerInfoWidget_C_On_IconLayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -200,7 +377,8 @@ void UPlayerInfoWidget_C::On_IconLayer_Prepass_1(class UWidget* BoundWidget)
 
 void UPlayerInfoWidget_C::On_IconImage_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.On_IconImage_Prepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb1c1e1b8);
 
 	UPlayerInfoWidget_C_On_IconImage_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -220,29 +398,10 @@ void UPlayerInfoWidget_C::On_IconImage_Prepass_1(class UWidget* BoundWidget)
 
 void UPlayerInfoWidget_C::On_KillCount_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.On_KillCount_Prepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd375d133);
 
 	UPlayerInfoWidget_C_On_KillCount_Prepass_1_Params params;
-	params.BoundWidget = BoundWidget;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function PlayerInfoWidget.PlayerInfoWidget_C.On_BoostGauge_Prepass_1
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UPlayerInfoWidget_C::On_BoostGauge_Prepass_1(class UWidget* BoundWidget)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.On_BoostGauge_Prepass_1");
-
-	UPlayerInfoWidget_C_On_BoostGauge_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
 
 	auto flags = fn->FunctionFlags;
@@ -260,7 +419,8 @@ void UPlayerInfoWidget_C::On_BoostGauge_Prepass_1(class UWidget* BoundWidget)
 
 void UPlayerInfoWidget_C::On_InfoLayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.On_InfoLayer_Prepass_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xfdc57b59);
 
 	UPlayerInfoWidget_C_On_InfoLayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -273,73 +433,18 @@ void UPlayerInfoWidget_C::On_InfoLayer_Prepass_1(class UWidget* BoundWidget)
 }
 
 
-// Function PlayerInfoWidget.PlayerInfoWidget_C.UpdateHealthPrepass
+// Function PlayerInfoWidget.PlayerInfoWidget_C.UpdateHealthPrepass_Vert
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
 // class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPlayerInfoWidget_C::UpdateHealthPrepass(class UWidget* BoundWidget)
+void UPlayerInfoWidget_C::UpdateHealthPrepass_Vert(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.UpdateHealthPrepass");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xe29681a);
 
-	UPlayerInfoWidget_C_UpdateHealthPrepass_Params params;
+	UPlayerInfoWidget_C_UpdateHealthPrepass_Vert_Params params;
 	params.BoundWidget = BoundWidget;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature
-// (FUNC_BlueprintEvent)
-
-void UPlayerInfoWidget_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature");
-
-	UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function PlayerInfoWidget.PlayerInfoWidget_C.Tick
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-// Parameters:
-// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
-// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UPlayerInfoWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.Tick");
-
-	UPlayerInfoWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function PlayerInfoWidget.PlayerInfoWidget_C.Construct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void UPlayerInfoWidget_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.Construct");
-
-	UPlayerInfoWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -354,7 +459,8 @@ void UPlayerInfoWidget_C::Construct()
 
 void UPlayerInfoWidget_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xad0265a8);
 
 	UPlayerInfoWidget_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -374,7 +480,8 @@ void UPlayerInfoWidget_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_32_OnButto
 
 void UPlayerInfoWidget_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.OnMouseEnter");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9118f3f);
 
 	UPlayerInfoWidget_C_OnMouseEnter_Params params;
 	params.MyGeometry = MyGeometry;
@@ -395,7 +502,8 @@ void UPlayerInfoWidget_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPoi
 
 void UPlayerInfoWidget_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.OnMouseLeave");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x9904fd88);
 
 	UPlayerInfoWidget_C_OnMouseLeave_Params params;
 	params.MouseEvent = MouseEvent;
@@ -408,17 +516,59 @@ void UPlayerInfoWidget_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 }
 
 
+// Function PlayerInfoWidget.PlayerInfoWidget_C.Tick
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerInfoWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb3ccd846);
+
+	UPlayerInfoWidget_C_Tick_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function PlayerInfoWidget.PlayerInfoWidget_C.CustomEvent_1
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
-// TEnumAsByte<EPopupButtonID>    ButtonID                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// EPopupButtonID                 ButtonID                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPlayerInfoWidget_C::CustomEvent_1(TEnumAsByte<EPopupButtonID> ButtonID)
+void UPlayerInfoWidget_C::CustomEvent_1(EPopupButtonID ButtonID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.CustomEvent_1");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa84200bc);
 
 	UPlayerInfoWidget_C_CustomEvent_1_Params params;
 	params.ButtonID = ButtonID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UPlayerInfoWidget_C::Construct()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc91ef90c);
+
+	UPlayerInfoWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -433,7 +583,8 @@ void UPlayerInfoWidget_C::CustomEvent_1(TEnumAsByte<EPopupButtonID> ButtonID)
 
 void UPlayerInfoWidget_C::CustomEvent_3()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.CustomEvent_3");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf446f58e);
 
 	UPlayerInfoWidget_C_CustomEvent_3_Params params;
 
@@ -450,7 +601,8 @@ void UPlayerInfoWidget_C::CustomEvent_3()
 
 void UPlayerInfoWidget_C::CustomEvent_2()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.CustomEvent_2");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1a496ff7);
 
 	UPlayerInfoWidget_C_CustomEvent_2_Params params;
 
@@ -467,9 +619,64 @@ void UPlayerInfoWidget_C::CustomEvent_2()
 
 void UPlayerInfoWidget_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.Destruct");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x10dfbfb3);
 
 	UPlayerInfoWidget_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_26_OnButtonHoverEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UPlayerInfoWidget_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_26_OnButtonHoverEvent__DelegateSignature()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x5073acc3);
+
+	UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_26_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_57_OnButtonHoverEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UPlayerInfoWidget_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_57_OnButtonHoverEvent__DelegateSignature()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc269fc97);
+
+	UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_57_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UPlayerInfoWidget_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x73482054);
+
+	UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -486,7 +693,8 @@ void UPlayerInfoWidget_C::Destruct()
 
 void UPlayerInfoWidget_C::ExecuteUbergraph_PlayerInfoWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerInfoWidget.PlayerInfoWidget_C.ExecuteUbergraph_PlayerInfoWidget");
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x2f816c36);
 
 	UPlayerInfoWidget_C_ExecuteUbergraph_PlayerInfoWidget_Params params;
 	params.EntryPoint = EntryPoint;

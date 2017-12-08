@@ -14,6 +14,29 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function PlayerHeadWidget.PlayerHeadWidget_C.Get_TextWeaponName_Text_1
+struct UPlayerHeadWidget_C_Get_TextWeaponName_Text_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.On_IndicatorArrow_Prepass_1
+struct UPlayerHeadWidget_C_On_IndicatorArrow_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateHealthGaugeColor
+struct UPlayerHeadWidget_C_UpdateHealthGaugeColor_Params
+{
+};
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.On_TeamNumber_Prepass_1
+struct UPlayerHeadWidget_C_On_TeamNumber_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function PlayerHeadWidget.PlayerHeadWidget_C.AddAlphaWhenADS
 struct UPlayerHeadWidget_C_AddAlphaWhenADS_Params
 {
@@ -61,12 +84,6 @@ struct UPlayerHeadWidget_C_GetCurrentWeaponGun_Params
 	class ATslWeapon_Gun*                              WeaponGun;                                                // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function PlayerHeadWidget.PlayerHeadWidget_C.On_WeaponHandsOnLoadedAmmoCount_Prepass_1
-struct UPlayerHeadWidget_C_On_WeaponHandsOnLoadedAmmoCount_Prepass_1_Params
-{
-	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function PlayerHeadWidget.PlayerHeadWidget_C.GetCurrentWeapon
 struct UPlayerHeadWidget_C_GetCurrentWeapon_Params
 {
@@ -100,7 +117,7 @@ struct UPlayerHeadWidget_C_GetWeaponProcessor_Params
 // Function PlayerHeadWidget.PlayerHeadWidget_C.GetTslWeaponColor
 struct UPlayerHeadWidget_C_GetTslWeaponColor_Params
 {
-	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateIcon
@@ -114,16 +131,10 @@ struct UPlayerHeadWidget_C_On_weaponImage_Prepass_1_Params
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function PlayerHeadWidget.PlayerHeadWidget_C.On_WeaponImageSizeBox_Prepass_1
-struct UPlayerHeadWidget_C_On_WeaponImageSizeBox_Prepass_1_Params
-{
-	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function PlayerHeadWidget.PlayerHeadWidget_C.GetTslWeaponVisibility
 struct UPlayerHeadWidget_C_GetTslWeaponVisibility_Params
 {
-	TEnumAsByte<ESlateVisibility>                      Visible;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	ESlateVisibility                                   Visible;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function PlayerHeadWidget.PlayerHeadWidget_C.GetBoostGauge
@@ -186,8 +197,18 @@ struct UPlayerHeadWidget_C_Tick_Params
 // Function PlayerHeadWidget.PlayerHeadWidget_C.SetCharacterIconPosition_UC
 struct UPlayerHeadWidget_C_SetCharacterIconPosition_UC_Params
 {
-	class Vector2D*                                    Pos_UC;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector2D*                                    Pos_UC;                                                   // (CPF_Parm, CPF_IsPlainOldData)
 	bool*                                              IsHidden;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.CustomTick
+struct UPlayerHeadWidget_C_CustomTick_Params
+{
+};
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.TimerCheckUpdateList
+struct UPlayerHeadWidget_C_TimerCheckUpdateList_Params
+{
 };
 
 // Function PlayerHeadWidget.PlayerHeadWidget_C.ExecuteUbergraph_PlayerHeadWidget

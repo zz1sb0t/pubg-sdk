@@ -13,12 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass InventorySlotBaseWidget.InventorySlotBaseWidget_C
-// 0x00A0 (0x02F0 - 0x0250)
+// 0x00F8 (0x0348 - 0x0250)
 class UInventorySlotBaseWidget_C : public USlotBaseWidget_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0250(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
-	TEnumAsByte<EEquipSlotID>                          EquipSlotID;                                              // 0x0258(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0250(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	EEquipSlotID                                       EquipSlotID;                                              // 0x0258(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0259(0x0003) MISSED OFFSET
 	int                                                WeaponSlotIndex;                                          // 0x025C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UTexture*                                    SlotBackground_NormalEmpty;                               // 0x0260(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -26,8 +26,9 @@ public:
 	class UTexture*                                    SlotBackground_On;                                        // 0x0270(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UTexture*                                    SlotBackGround_SubOn;                                     // 0x0278(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UTexture*                                    SlotBackground_Over;                                      // 0x0280(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bMouseOver;                                               // 0x0288(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0289(0x0007) MISSED OFFSET
+	bool                                               bGamepadFocus;                                            // 0x0288(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bMouseOver;                                               // 0x0289(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x028A(0x0006) MISSED OFFSET
 	class UMaterialInstanceDynamic*                    SlotDynamicMaterial;                                      // 0x0290(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FName                                       TexParm;                                                  // 0x0298(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UImage*                                      ItemIcon;                                                 // 0x02A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -41,10 +42,17 @@ public:
 	unsigned char                                      UnknownData03[0x4];                                       // 0x02D4(0x0004) MISSED OFFSET
 	class UInventoryWidget_C*                          InventoryWidget;                                          // 0x02D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FScriptMulticastDelegate                    RefreshFocus;                                             // 0x02E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
+	TScriptInterface<class USlotInterface>             FocusItemSlot;                                            // 0x02F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FScriptMulticastDelegate                    OnChildFocusSlotID;                                       // 0x0300(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
+	class UItemToolTipWidget_Bp_C*                     SaveToolTip;                                              // 0x0310(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FScriptMulticastDelegate                    OnEnterSlot;                                              // 0x0318(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnLeaveSlot;                                              // 0x0328(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnDoSlotAction;                                           // 0x0338(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass InventorySlotBaseWidget.InventorySlotBaseWidget_C");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x24f7dcdd);
 		return ptr;
 	}
 
@@ -69,6 +77,8 @@ public:
 	bool Right();
 	bool SetFocus(bool NewFocus);
 	bool Up();
+	void RaiseEnterEvent();
+	void RaiseLeaveEvent();
 	void GetBackgroundState(float* State);
 	void GetInventoryWidget(class UInventoryWidget_C** InventoryWidget);
 	void GetOperationSpawnValue_Bp(class UItem** Item, class UEquipableItem** EquipableItem, class UWeaponItem** WeaponItem, class UThrowableItem** ThrowableItem, class UAttachableItem** AttachmentItem, TScriptInterface<class USlotInterface>* SlotItem, TScriptInterface<class USlotContainerInterface>* Container);
@@ -85,13 +95,6 @@ public:
 	void IsSlotSubOn_Bp(bool* SubOn);
 	void IsSlotOn_Bp(bool* IsOn);
 	void GetBackgroundTexture_Bp(class UTexture** BackgroundTexture);
-	void UpdateDragDroppingItem(class UItem* DroppingItem);
-	void OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
-	void OnMouseLeave(struct FPointerEvent* MouseEvent);
-	void OnDragEnter(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation);
-	void OnDragLeave(struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation);
-	void OnUpdateItem(class UItem* Item);
-	void Destruct();
 	void ShowToolTip();
 	void UpdateDragDropObject(class UTslItemDragDropOperation_C* DragDropObject);
 	void SetInventory(class UInventoryWidget_C* InventoryWidget);
@@ -99,7 +102,18 @@ public:
 	void UI_Gamepad_B();
 	void OnWidgetInputX();
 	void OnInputWidgetInputB();
+	void Destruct();
+	void OnUpdateItem(class UItem* Item);
+	void OnDragLeave(struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation);
+	void OnDragEnter(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation);
+	void OnMouseLeave(struct FPointerEvent* MouseEvent);
+	void OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
+	void UpdateDragDroppingItem(class UItem* DroppingItem);
 	void ExecuteUbergraph_InventorySlotBaseWidget(int EntryPoint);
+	void OnDoSlotAction__DelegateSignature();
+	void OnLeaveSlot__DelegateSignature(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& SlotContainer);
+	void OnEnterSlot__DelegateSignature(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& SlotContainer);
+	void OnChildFocusSlotID__DelegateSignature(EEquipSlotID FocusSlotID);
 	void RefreshFocus__DelegateSignature();
 };
 

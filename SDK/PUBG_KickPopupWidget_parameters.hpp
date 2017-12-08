@@ -17,7 +17,7 @@ namespace Classes
 // Function KickPopupWidget.KickPopupWidget_C.SetPopup
 struct UKickPopupWidget_C_SetPopup_Params
 {
-	TEnumAsByte<EPopupStyle>                           PopupStyle;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupStyle                                        PopupStyle;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FText                                       Message;                                                  // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	struct FScriptDelegate                             PressedDelegate;                                          // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 };
@@ -61,7 +61,7 @@ struct UKickPopupWidget_C_ExecuteUbergraph_KickPopupWidget_Params
 // Function KickPopupWidget.KickPopupWidget_C.ButttonClick__DelegateSignature
 struct UKickPopupWidget_C_ButttonClick__DelegateSignature_Params
 {
-	TEnumAsByte<EPopupButtonID>                        NewParam;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EPopupButtonID                                     NewParam;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 }

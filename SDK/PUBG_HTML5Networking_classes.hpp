@@ -13,15 +13,16 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class HTML5Networking.WebSocketConnection
-// 0x0010 (0x336F8 - 0x336E8)
+// 0x0010 (0x33658 - 0x33648)
 class UWebSocketConnection : public UNetConnection
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x336E8(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x33648(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class HTML5Networking.WebSocketConnection");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0x7a0f5d88);
 		return ptr;
 	}
 
@@ -29,16 +30,17 @@ public:
 
 
 // Class HTML5Networking.WebSocketNetDriver
-// 0x0010 (0x0428 - 0x0418)
+// 0x0010 (0x0430 - 0x0420)
 class UWebSocketNetDriver : public UNetDriver
 {
 public:
-	int                                                WebSocketPort;                                            // 0x0418(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x041C(0x000C) MISSED OFFSET
+	int                                                WebSocketPort;                                            // 0x0420(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0424(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class HTML5Networking.WebSocketNetDriver");
+		static UClass* ptr = nullptr; 
+ if (!ptr) ptr = UObject::FindClass(0xa2c1cc6b);
 		return ptr;
 	}
 
