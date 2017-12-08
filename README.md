@@ -1,2 +1,2 @@
 # pubg-sdk
-10.26.17 v 2.6.41 Early Access.
+pubg test server sdk version 3.3.11.4
