@@ -14,6 +14,21 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.UpdateIconTexture
+struct UCarePackgeItemListWidget_C_UpdateIconTexture_Params
+{
+};
+
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.FinishCarePackgeItemList
+struct UCarePackgeItemListWidget_C_FinishCarePackgeItemList_Params
+{
+};
+
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.PrepareCarePackgeItemList
+struct UCarePackgeItemListWidget_C_PrepareCarePackgeItemList_Params
+{
+};
+
 // Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.HideTextCarePackageEmpty
 struct UCarePackgeItemListWidget_C_HideTextCarePackageEmpty_Params
 {
@@ -55,6 +70,16 @@ struct UCarePackgeItemListWidget_C_Construct_Params
 
 // Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.ShowCarePackageItem
 struct UCarePackgeItemListWidget_C_ShowCarePackageItem_Params
+{
+};
+
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.CustomTick
+struct UCarePackgeItemListWidget_C_CustomTick_Params
+{
+};
+
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.TimerCheckUpdateList
+struct UCarePackgeItemListWidget_C_TimerCheckUpdateList_Params
 {
 };
 

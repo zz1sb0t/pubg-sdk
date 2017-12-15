@@ -30,6 +30,7 @@ public:
 	}
 
 
+	void On_TeamList_Prepass_2(class UWidget* BoundWidget);
 	void CollapseAllSquadPlayerInfos();
 	void SetSquadPlayerInfo(int Index, class ATslCharacter* TslCharacter, class USquadPlayerInfoWidget_C** SquadPlayerInfo);
 	void DestructSquadPlayerInfoPool();

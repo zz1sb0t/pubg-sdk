@@ -160,24 +160,6 @@ void UScreenSettingWidget_C::InitializeResolutionIWidget()
 }
 
 
-// Function ScreenSettingWidget.ScreenSettingWidget_C.OnApply
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void UScreenSettingWidget_C::OnApply()
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x1ecff610);
-
-	UScreenSettingWidget_C_OnApply_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnDefault
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -205,6 +187,24 @@ void UScreenSettingWidget_C::OnReset()
  if (!fn) fn = UObject::FindObject<UFunction>(0xdd5fce11);
 
 	UScreenSettingWidget_C_OnReset_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ScreenSettingWidget.ScreenSettingWidget_C.OnApply
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UScreenSettingWidget_C::OnApply()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x1ecff610);
+
+	UScreenSettingWidget_C_OnApply_Params params;
 
 	auto flags = fn->FunctionFlags;
 

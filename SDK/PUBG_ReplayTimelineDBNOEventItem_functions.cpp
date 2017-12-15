@@ -81,6 +81,45 @@ struct FText UReplayTimelineDBNOEventItem_C::GetToolTipText()
 }
 
 
+// Function ReplayTimelineDBNOEventItem.ReplayTimelineDBNOEventItem_C.OnGotoTimelineDone
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimelineDBNOEventItem_C::OnGotoTimelineDone()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x659d1f0c);
+
+	UReplayTimelineDBNOEventItem_C_OnGotoTimelineDone_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimelineDBNOEventItem.ReplayTimelineDBNOEventItem_C.ExecuteUbergraph_ReplayTimelineDBNOEventItem
+// ()
+// Parameters:
+// int                            EntryPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UReplayTimelineDBNOEventItem_C::ExecuteUbergraph_ReplayTimelineDBNOEventItem(int EntryPoint)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa01aac4d);
+
+	UReplayTimelineDBNOEventItem_C_ExecuteUbergraph_ReplayTimelineDBNOEventItem_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

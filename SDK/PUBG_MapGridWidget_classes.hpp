@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass MapGridWidget.MapGridWidget_C
-// 0x0000 (0x06C0 - 0x06C0)
+// 0x0000 (0x06E8 - 0x06E8)
 class UMapGridWidget_C : public UMapGridWidget
 {
 public:
@@ -25,6 +25,9 @@ public:
 		return ptr;
 	}
 
+
+	struct FSlateBrush Get_Replayzone_Brush_2();
+	struct FSlateBrush Get_Replayzone_Brush_1();
 };
 
 

@@ -17,7 +17,7 @@ namespace Classes
 // Parameters:
 // class UBloodSpotWidget_C*      return                         (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHitNotifyWidget_C::GetBloodSpotWidget(class UBloodSpotWidget_C** returnValue)
+void UHitNotifyWidget_C::GetBloodSpotWidget(class UBloodSpotWidget_C** Return)
 {
 	static UFunction* fn = nullptr; 
  if (!fn) fn = UObject::FindObject<UFunction>(0x4476ad9f);
@@ -30,8 +30,8 @@ void UHitNotifyWidget_C::GetBloodSpotWidget(class UBloodSpotWidget_C** returnVal
 
 	fn->FunctionFlags = flags;
 
-	if (returnValue != nullptr)
-		*returnValue = params.returnValue;
+	if (Return != nullptr)
+		*Return = params.Return;
 }
 
 

@@ -13,12 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class CustomizableObject.CustomizableSkeletalComponent
-// 0x0050 (0x0430 - 0x03E0)
+// 0x0050 (0x0440 - 0x03F0)
 class UCustomizableSkeletalComponent : public USceneComponent
 {
 public:
-	class UCustomizableObjectInstance*                 CustomizableObjectInstance;                               // 0x03E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x03E8(0x0048) MISSED OFFSET
+	class UCustomizableObjectInstance*                 CustomizableObjectInstance;                               // 0x03F0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x48];                                      // 0x03F8(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -87,7 +87,7 @@ public:
 
 
 // Class CustomizableObject.CustomizableObject
-// 0x00C8 (0x00F0 - 0x0028)
+// 0x00D0 (0x00F8 - 0x0028)
 class UCustomizableObject : public UObject
 {
 public:
@@ -99,11 +99,10 @@ public:
 	TArray<class UMaterialInterface*>                  ReferencedMaterials;                                      // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
 	TArray<struct FMutableModelImageProperties>        ImageProperties;                                          // 0x0050(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
 	TMap<struct FString, struct FCustomizableObjectIdPair> GroupNodeMap;                                             // 0x0060(0x0050) (CPF_ZeroConstructor)
-	struct FCompilationOptions                         CompileOptions;                                           // 0x00B0(0x000C)
-	struct FGuid                                       VersionId;                                                // 0x00BC(0x0010) (CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x00CC(0x0004) MISSED OFFSET
-	TArray<struct FMutableModelParameterProperties>    ParameterProperties;                                      // 0x00D0(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x00E0(0x0010) MISSED OFFSET
+	struct FCompilationOptions                         CompileOptions;                                           // 0x00B0(0x0018)
+	struct FGuid                                       VersionId;                                                // 0x00C8(0x0010) (CPF_IsPlainOldData)
+	TArray<struct FMutableModelParameterProperties>    ParameterProperties;                                      // 0x00D8(0x0010) (CPF_ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x00E8(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

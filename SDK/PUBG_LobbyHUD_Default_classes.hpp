@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LobbyHUD_Default.LobbyHUD_Default_C
-// 0x0000 (0x0B40 - 0x0B40)
+// 0x0000 (0x0B50 - 0x0B50)
 class ALobbyHUD_Default_C : public ALobbyHUD
 {
 public:

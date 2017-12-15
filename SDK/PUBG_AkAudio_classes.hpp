@@ -112,20 +112,20 @@ public:
 
 
 // Class AkAudio.AkComponent
-// 0x0070 (0x0450 - 0x03E0)
+// 0x0070 (0x0460 - 0x03F0)
 class UAkComponent : public USceneComponent
 {
 public:
-	bool                                               StopWhenOwnerDestroyed;                                   // 0x03E0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bDynamicReverb;                                           // 0x03E1(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               bUseDoppler;                                              // 0x03E2(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1];                                       // 0x03E3(0x0001) MISSED OFFSET
-	float                                              AttenuationScalingFactor;                                 // 0x03E4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              OcclusionRefreshInterval;                                 // 0x03E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x03EC(0x0004) MISSED OFFSET
-	class UAkAudioEvent*                               AkAudioEvent;                                             // 0x03F0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     EventName;                                                // 0x03F8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData02[0x48];                                      // 0x0408(0x0048) MISSED OFFSET
+	bool                                               StopWhenOwnerDestroyed;                                   // 0x03F0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bDynamicReverb;                                           // 0x03F1(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bUseDoppler;                                              // 0x03F2(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x03F3(0x0001) MISSED OFFSET
+	float                                              AttenuationScalingFactor;                                 // 0x03F4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              OcclusionRefreshInterval;                                 // 0x03F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x03FC(0x0004) MISSED OFFSET
+	class UAkAudioEvent*                               AkAudioEvent;                                             // 0x0400(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FString                                     EventName;                                                // 0x0408(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData02[0x48];                                      // 0x0418(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

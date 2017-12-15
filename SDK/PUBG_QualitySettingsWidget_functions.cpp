@@ -225,24 +225,6 @@ void UQualitySettingsWidget_C::InitQualitySettingsWidget()
 }
 
 
-// Function QualitySettingsWidget.QualitySettingsWidget_C.OnDefault
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void UQualitySettingsWidget_C::OnDefault()
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0xfacca05f);
-
-	UQualitySettingsWidget_C_OnDefault_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function QualitySettingsWidget.QualitySettingsWidget_C.OnApply
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -275,6 +257,24 @@ void UQualitySettingsWidget_C::BndEvt__MainQualityComboBox_K2Node_ComponentBound
 	UQualitySettingsWidget_C_BndEvt__MainQualityComboBox_K2Node_ComponentBoundEvent_663_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
 	params.SelectionType = SelectionType;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function QualitySettingsWidget.QualitySettingsWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UQualitySettingsWidget_C::Construct()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7d10110e);
+
+	UQualitySettingsWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -463,15 +463,15 @@ void UQualitySettingsWidget_C::OnReset()
 }
 
 
-// Function QualitySettingsWidget.QualitySettingsWidget_C.Construct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Function QualitySettingsWidget.QualitySettingsWidget_C.OnDefault
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UQualitySettingsWidget_C::Construct()
+void UQualitySettingsWidget_C::OnDefault()
 {
 	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x7d10110e);
+ if (!fn) fn = UObject::FindObject<UFunction>(0xfacca05f);
 
-	UQualitySettingsWidget_C_Construct_Params params;
+	UQualitySettingsWidget_C_OnDefault_Params params;
 
 	auto flags = fn->FunctionFlags;
 

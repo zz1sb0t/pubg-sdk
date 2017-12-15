@@ -2669,55 +2669,55 @@ public:
 
 
 // Class UMG.WidgetComponent
-// 0x0130 (0x0A70 - 0x0940)
+// 0x0130 (0x0A80 - 0x0950)
 class UWidgetComponent : public UMeshComponent
 {
 public:
-	EWidgetSpace                                       Space;                                                    // 0x0940(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EWidgetTimingPolicy                                TimingPolicy;                                             // 0x0941(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0942(0x0006) MISSED OFFSET
-	class UClass*                                      WidgetClass;                                              // 0x0948(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FIntPoint                                   DrawSize;                                                 // 0x0950(0x0008) (CPF_Edit, CPF_IsPlainOldData)
-	bool                                               bManuallyRedraw;                                          // 0x0958(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bRedrawRequested;                                         // 0x0959(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x095A(0x0002) MISSED OFFSET
-	float                                              RedrawTime;                                               // 0x095C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0960(0x0008) MISSED OFFSET
-	struct FIntPoint                                   CurrentDrawSize;                                          // 0x0968(0x0008) (CPF_IsPlainOldData)
-	bool                                               bDrawAtDesiredSize;                                       // 0x0970(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x0971(0x0003) MISSED OFFSET
-	struct FVector2D                                     Pivot;                                                    // 0x0974(0x0008) (CPF_Edit, CPF_IsPlainOldData)
-	bool                                               bReceiveHardwareInput;                                    // 0x097C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bWindowFocusable;                                         // 0x097D(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData04[0x2];                                       // 0x097E(0x0002) MISSED OFFSET
-	class ULocalPlayer*                                OwnerPlayer;                                              // 0x0980(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                BackgroundColor;                                          // 0x0988(0x0010) (CPF_Edit, CPF_IsPlainOldData)
-	struct FLinearColor                                TintColorAndOpacity;                                      // 0x0998(0x0010) (CPF_Edit, CPF_IsPlainOldData)
-	float                                              OpacityFromTexture;                                       // 0x09A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EWidgetBlendMode                                   BlendMode;                                                // 0x09AC(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bIsTwoSided;                                              // 0x09AD(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               TickWhenOffscreen;                                        // 0x09AE(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData05[0x1];                                       // 0x09AF(0x0001) MISSED OFFSET
-	class UUserWidget*                                 Widget;                                                   // 0x09B0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_DuplicateTransient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData06[0x20];                                      // 0x09B8(0x0020) MISSED OFFSET
-	class UBodySetup*                                  BodySetup;                                                // 0x09D8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
-	class UMaterialInterface*                          TranslucentMaterial;                                      // 0x09E0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInterface*                          TranslucentMaterial_OneSided;                             // 0x09E8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInterface*                          OpaqueMaterial;                                           // 0x09F0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInterface*                          OpaqueMaterial_OneSided;                                  // 0x09F8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInterface*                          MaskedMaterial;                                           // 0x0A00(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInterface*                          MaskedMaterial_OneSided;                                  // 0x0A08(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0A10(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
-	class UMaterialInstanceDynamic*                    MaterialInstance;                                         // 0x0A18(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
-	bool                                               bAddedToScreen;                                           // 0x0A20(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
-	bool                                               bEditTimeUsable;                                          // 0x0A21(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData07[0x6];                                       // 0x0A22(0x0006) MISSED OFFSET
-	struct FName                                       SharedLayerName;                                          // 0x0A28(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	int                                                LayerZOrder;                                              // 0x0A30(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	EWidgetGeometryMode                                GeometryMode;                                             // 0x0A34(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData08[0x3];                                       // 0x0A35(0x0003) MISSED OFFSET
-	float                                              CylinderArcAngle;                                         // 0x0A38(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData09[0x34];                                      // 0x0A3C(0x0034) MISSED OFFSET
+	EWidgetSpace                                       Space;                                                    // 0x0950(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EWidgetTimingPolicy                                TimingPolicy;                                             // 0x0951(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0952(0x0006) MISSED OFFSET
+	class UClass*                                      WidgetClass;                                              // 0x0958(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FIntPoint                                   DrawSize;                                                 // 0x0960(0x0008) (CPF_Edit, CPF_IsPlainOldData)
+	bool                                               bManuallyRedraw;                                          // 0x0968(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRedrawRequested;                                         // 0x0969(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x096A(0x0002) MISSED OFFSET
+	float                                              RedrawTime;                                               // 0x096C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0970(0x0008) MISSED OFFSET
+	struct FIntPoint                                   CurrentDrawSize;                                          // 0x0978(0x0008) (CPF_IsPlainOldData)
+	bool                                               bDrawAtDesiredSize;                                       // 0x0980(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0981(0x0003) MISSED OFFSET
+	struct FVector2D                                     Pivot;                                                    // 0x0984(0x0008) (CPF_Edit, CPF_IsPlainOldData)
+	bool                                               bReceiveHardwareInput;                                    // 0x098C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bWindowFocusable;                                         // 0x098D(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x2];                                       // 0x098E(0x0002) MISSED OFFSET
+	class ULocalPlayer*                                OwnerPlayer;                                              // 0x0990(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                BackgroundColor;                                          // 0x0998(0x0010) (CPF_Edit, CPF_IsPlainOldData)
+	struct FLinearColor                                TintColorAndOpacity;                                      // 0x09A8(0x0010) (CPF_Edit, CPF_IsPlainOldData)
+	float                                              OpacityFromTexture;                                       // 0x09B8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EWidgetBlendMode                                   BlendMode;                                                // 0x09BC(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsTwoSided;                                              // 0x09BD(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               TickWhenOffscreen;                                        // 0x09BE(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData05[0x1];                                       // 0x09BF(0x0001) MISSED OFFSET
+	class UUserWidget*                                 Widget;                                                   // 0x09C0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_DuplicateTransient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData06[0x20];                                      // 0x09C8(0x0020) MISSED OFFSET
+	class UBodySetup*                                  BodySetup;                                                // 0x09E8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
+	class UMaterialInterface*                          TranslucentMaterial;                                      // 0x09F0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInterface*                          TranslucentMaterial_OneSided;                             // 0x09F8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInterface*                          OpaqueMaterial;                                           // 0x0A00(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInterface*                          OpaqueMaterial_OneSided;                                  // 0x0A08(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInterface*                          MaskedMaterial;                                           // 0x0A10(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInterface*                          MaskedMaterial_OneSided;                                  // 0x0A18(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0A20(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
+	class UMaterialInstanceDynamic*                    MaterialInstance;                                         // 0x0A28(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
+	bool                                               bAddedToScreen;                                           // 0x0A30(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
+	bool                                               bEditTimeUsable;                                          // 0x0A31(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData07[0x6];                                       // 0x0A32(0x0006) MISSED OFFSET
+	struct FName                                       SharedLayerName;                                          // 0x0A38(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	int                                                LayerZOrder;                                              // 0x0A40(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	EWidgetGeometryMode                                GeometryMode;                                             // 0x0A44(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x0A45(0x0003) MISSED OFFSET
+	float                                              CylinderArcAngle;                                         // 0x0A48(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData09[0x34];                                      // 0x0A4C(0x0034) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2741,32 +2741,32 @@ public:
 
 
 // Class UMG.WidgetInteractionComponent
-// 0x01F0 (0x05D0 - 0x03E0)
+// 0x01F0 (0x05E0 - 0x03F0)
 class UWidgetInteractionComponent : public USceneComponent
 {
 public:
-	struct FScriptMulticastDelegate                    OnHoveredWidgetChanged;                                   // 0x03E0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x03F0(0x0010) MISSED OFFSET
-	int                                                VirtualUserIndex;                                         // 0x0400(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              PointerIndex;                                             // 0x0404(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     TraceChannel;                                             // 0x0408(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0409(0x0003) MISSED OFFSET
-	float                                              InteractionDistance;                                      // 0x040C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	EWidgetInteractionSource                           InteractionSource;                                        // 0x0410(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bEnableHitTesting;                                        // 0x0411(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bShowDebug;                                               // 0x0412(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x0413(0x0001) MISSED OFFSET
-	struct FLinearColor                                DebugColor;                                               // 0x0414(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7C];                                      // 0x0424(0x007C) MISSED OFFSET
-	struct FHitResult                                  CustomHitResult;                                          // 0x04A0(0x0088) (CPF_Transient, CPF_IsPlainOldData)
-	struct FVector2D                                     LocalHitLocation;                                         // 0x0528(0x0008) (CPF_Transient, CPF_IsPlainOldData)
-	struct FVector2D                                     LastLocalHitLocation;                                     // 0x0530(0x0008) (CPF_Transient, CPF_IsPlainOldData)
-	class UWidgetComponent*                            HoveredWidgetComponent;                                   // 0x0538(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FHitResult                                  LastHitResult;                                            // 0x0540(0x0088) (CPF_Transient, CPF_IsPlainOldData)
-	bool                                               bIsHoveredWidgetInteractable;                             // 0x05C8(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	bool                                               bIsHoveredWidgetFocusable;                                // 0x05C9(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	bool                                               bIsHoveredWidgetHitTestVisible;                           // 0x05CA(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData04[0x5];                                       // 0x05CB(0x0005) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnHoveredWidgetChanged;                                   // 0x03F0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0400(0x0010) MISSED OFFSET
+	int                                                VirtualUserIndex;                                         // 0x0410(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              PointerIndex;                                             // 0x0414(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     TraceChannel;                                             // 0x0418(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0419(0x0003) MISSED OFFSET
+	float                                              InteractionDistance;                                      // 0x041C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	EWidgetInteractionSource                           InteractionSource;                                        // 0x0420(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bEnableHitTesting;                                        // 0x0421(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bShowDebug;                                               // 0x0422(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1];                                       // 0x0423(0x0001) MISSED OFFSET
+	struct FLinearColor                                DebugColor;                                               // 0x0424(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7C];                                      // 0x0434(0x007C) MISSED OFFSET
+	struct FHitResult                                  CustomHitResult;                                          // 0x04B0(0x0088) (CPF_Transient, CPF_IsPlainOldData)
+	struct FVector2D                                     LocalHitLocation;                                         // 0x0538(0x0008) (CPF_Transient, CPF_IsPlainOldData)
+	struct FVector2D                                     LastLocalHitLocation;                                     // 0x0540(0x0008) (CPF_Transient, CPF_IsPlainOldData)
+	class UWidgetComponent*                            HoveredWidgetComponent;                                   // 0x0548(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FHitResult                                  LastHitResult;                                            // 0x0550(0x0088) (CPF_Transient, CPF_IsPlainOldData)
+	bool                                               bIsHoveredWidgetInteractable;                             // 0x05D8(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	bool                                               bIsHoveredWidgetFocusable;                                // 0x05D9(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	bool                                               bIsHoveredWidgetHitTestVisible;                           // 0x05DA(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x5];                                       // 0x05DB(0x0005) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

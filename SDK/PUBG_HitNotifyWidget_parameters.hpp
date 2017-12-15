@@ -17,7 +17,7 @@ namespace Classes
 // Function HitNotifyWidget.HitNotifyWidget_C.GetBloodSpotWidget
 struct UHitNotifyWidget_C_GetBloodSpotWidget_Params
 {
-	class UBloodSpotWidget_C*                          returnValue;                                                   // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UBloodSpotWidget_C*                          Return;                                                   // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function HitNotifyWidget.HitNotifyWidget_C.InitializeBloodSpotWidgets

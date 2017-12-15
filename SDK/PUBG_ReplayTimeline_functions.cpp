@@ -12,6 +12,51 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
+// Function ReplayTimeline.ReplayTimeline_C.UnBindOnGotoTimelineDoneToFindCharacter
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::UnBindOnGotoTimelineDoneToFindCharacter()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x66b0bddf);
+
+	UReplayTimeline_C_UnBindOnGotoTimelineDoneToFindCharacter_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.BindOnGotoTimelineDoneToFindCharacter
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// struct FString                 strKillerID                    (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 strKillerName                  (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 strVictimID                    (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 strVictimName                  (CPF_Parm, CPF_ZeroConstructor)
+
+void UReplayTimeline_C::BindOnGotoTimelineDoneToFindCharacter(const struct FString& strKillerID, const struct FString& strKillerName, const struct FString& strVictimID, const struct FString& strVictimName)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x93c57a74);
+
+	UReplayTimeline_C_BindOnGotoTimelineDoneToFindCharacter_Params params;
+	params.strKillerID = strKillerID;
+	params.strKillerName = strKillerName;
+	params.strVictimID = strVictimID;
+	params.strVictimName = strVictimName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function ReplayTimeline.ReplayTimeline_C.CheckVideoCapture
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -732,6 +777,24 @@ void UReplayTimeline_C::BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonCl
  if (!fn) fn = UObject::FindObject<UFunction>(0xe28e5fe1);
 
 	UReplayTimeline_C_BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimeline.ReplayTimeline_C.OnGoToFindTimeToFindCharacter
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::OnGoToFindTimeToFindCharacter()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd2d9eb5e);
+
+	UReplayTimeline_C_OnGoToFindTimeToFindCharacter_Params params;
 
 	auto flags = fn->FunctionFlags;
 

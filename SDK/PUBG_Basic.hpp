@@ -406,18 +406,17 @@ public:
 	}
 };
 
-/*
-struct FText
+/*struct FText
 {
 	char UnknownData[0x18];
-};*/
+};
+*/
 
 class FTextData {
 public:
 	char pad_0x0000[0x28];  //0x0000
 	wchar_t* Name;          //0x0028 
-	__int32 Length;         //0x0030 
-
+	__int32 Length;         //0x0030
 };
 
 struct FText {
@@ -432,6 +431,7 @@ struct FText {
 		return nullptr;
 	}
 };
+
 
 struct FScriptDelegate
 {

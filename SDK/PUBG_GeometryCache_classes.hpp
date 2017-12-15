@@ -52,19 +52,19 @@ public:
 
 
 // Class GeometryCache.GeometryCacheComponent
-// 0x0070 (0x09B0 - 0x0940)
+// 0x0070 (0x09C0 - 0x0950)
 class UGeometryCacheComponent : public UMeshComponent
 {
 public:
-	class UGeometryCache*                              GeometryCache;                                            // 0x0940(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bRunning;                                                 // 0x0948(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bLooping;                                                 // 0x0949(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x094A(0x0002) MISSED OFFSET
-	float                                              StartTimeOffset;                                          // 0x094C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              PlaybackSpeed;                                            // 0x0950(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                NumTracks;                                                // 0x0954(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	float                                              ElapsedTime;                                              // 0x0958(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x54];                                      // 0x095C(0x0054) MISSED OFFSET
+	class UGeometryCache*                              GeometryCache;                                            // 0x0950(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRunning;                                                 // 0x0958(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bLooping;                                                 // 0x0959(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x095A(0x0002) MISSED OFFSET
+	float                                              StartTimeOffset;                                          // 0x095C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              PlaybackSpeed;                                            // 0x0960(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                NumTracks;                                                // 0x0964(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	float                                              ElapsedTime;                                              // 0x0968(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x54];                                      // 0x096C(0x0054) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

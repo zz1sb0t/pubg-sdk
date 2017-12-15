@@ -12,6 +12,60 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.UpdateIconTexture
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UCarePackgeItemListWidget_C::UpdateIconTexture()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xf6edbb42);
+
+	UCarePackgeItemListWidget_C_UpdateIconTexture_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.FinishCarePackgeItemList
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UCarePackgeItemListWidget_C::FinishCarePackgeItemList()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xac898fbd);
+
+	UCarePackgeItemListWidget_C_FinishCarePackgeItemList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.PrepareCarePackgeItemList
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UCarePackgeItemListWidget_C::PrepareCarePackgeItemList()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x65bb7763);
+
+	UCarePackgeItemListWidget_C_PrepareCarePackgeItemList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.HideTextCarePackageEmpty
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -167,8 +221,44 @@ void UCarePackgeItemListWidget_C::ShowCarePackageItem()
 }
 
 
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.CustomTick
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UCarePackgeItemListWidget_C::CustomTick()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xadf78ff);
+
+	UCarePackgeItemListWidget_C_CustomTick_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.TimerCheckUpdateList
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UCarePackgeItemListWidget_C::TimerCheckUpdateList()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbc3f1d3f);
+
+	UCarePackgeItemListWidget_C_TimerCheckUpdateList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.ExecuteUbergraph_CarePackgeItemListWidget
-// ()
+// (FUNC_HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 

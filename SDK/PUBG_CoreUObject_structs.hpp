@@ -747,6 +747,7 @@ struct alignas(16) FPlane : public FVector
 };
 
 
+
 // ScriptStruct CoreUObject.Quat
 // 0x0010
 struct alignas(16) FQuat

@@ -14,6 +14,20 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function ReplayTimeline.ReplayTimeline_C.UnBindOnGotoTimelineDoneToFindCharacter
+struct UReplayTimeline_C_UnBindOnGotoTimelineDoneToFindCharacter_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.BindOnGotoTimelineDoneToFindCharacter
+struct UReplayTimeline_C_BindOnGotoTimelineDoneToFindCharacter_Params
+{
+	struct FString                                     strKillerID;                                              // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     strKillerName;                                            // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     strVictimID;                                              // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     strVictimName;                                            // (CPF_Parm, CPF_ZeroConstructor)
+};
+
 // Function ReplayTimeline.ReplayTimeline_C.CheckVideoCapture
 struct UReplayTimeline_C_CheckVideoCapture_Params
 {
@@ -215,6 +229,11 @@ struct UReplayTimeline_C_BndEvt__BtnRec_K2Node_ComponentBoundEvent_15_OnButtonCl
 
 // Function ReplayTimeline.ReplayTimeline_C.BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature
 struct UReplayTimeline_C_BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function ReplayTimeline.ReplayTimeline_C.OnGoToFindTimeToFindCharacter
+struct UReplayTimeline_C_OnGoToFindTimeToFindCharacter_Params
 {
 };
 

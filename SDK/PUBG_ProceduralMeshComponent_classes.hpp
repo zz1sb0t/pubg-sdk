@@ -13,18 +13,18 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class ProceduralMeshComponent.ProceduralMeshComponent
-// 0x0060 (0x09A0 - 0x0940)
+// 0x0060 (0x09B0 - 0x0950)
 class UProceduralMeshComponent : public UMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0940(0x0008) MISSED OFFSET
-	bool                                               bUseComplexAsSimpleCollision;                             // 0x0948(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0949(0x0007) MISSED OFFSET
-	class UBodySetup*                                  ProcMeshBodySetup;                                        // 0x0950(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	TArray<struct FProcMeshSection>                    ProcMeshSections;                                         // 0x0958(0x0010) (CPF_ZeroConstructor)
-	TArray<struct FKConvexElem>                        CollisionConvexElems;                                     // 0x0968(0x0010) (CPF_ZeroConstructor)
-	struct FBoxSphereBounds                            LocalBounds;                                              // 0x0978(0x001C) (CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x0994(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0950(0x0008) MISSED OFFSET
+	bool                                               bUseComplexAsSimpleCollision;                             // 0x0958(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0959(0x0007) MISSED OFFSET
+	class UBodySetup*                                  ProcMeshBodySetup;                                        // 0x0960(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	TArray<struct FProcMeshSection>                    ProcMeshSections;                                         // 0x0968(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FKConvexElem>                        CollisionConvexElems;                                     // 0x0978(0x0010) (CPF_ZeroConstructor)
+	struct FBoxSphereBounds                            LocalBounds;                                              // 0x0988(0x001C) (CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0xC];                                       // 0x09A4(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

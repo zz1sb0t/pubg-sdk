@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass NewMatchResultWidget.NewMatchResultWidget_C
-// 0x04B8 (0x0748 - 0x0290)
+// 0x04D0 (0x0760 - 0x0290)
 class UNewMatchResultWidget_C : public UInputHookingWidget_C
 {
 public:
@@ -131,6 +131,7 @@ public:
 	bool                                               SwapHumanZombieBox;                                       // 0x0728(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData03[0x7];                                       // 0x0729(0x0007) MISSED OFFSET
 	struct FText                                       UnableReplayKillcamTooltipText;                           // 0x0730(0x0018) (CPF_Edit, CPF_BlueprintVisible)
+	struct FText                                       KillcamUnusualMovementTooltip;                            // 0x0748(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 
 	static UClass* StaticClass()
 	{

@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapSawnOff.WeapSawnoff_C
-// 0x0000 (0x0CE0 - 0x0CE0)
+// 0x0000 (0x0CE8 - 0x0CE8)
 class AWeapSawnoff_C : public ADefaultPistolSetting_C
 {
 public:

@@ -12,6 +12,32 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
+// Function MainLobbyHUD.MainLobbyHUD_C.OnKeyDown
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// struct FKeyEvent*              InKeyEvent                     (CPF_Parm)
+// struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+
+struct FEventReply UMainLobbyHUD_C::OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xfac91a69);
+
+	UMainLobbyHUD_C_OnKeyDown_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function MainLobbyHUD.MainLobbyHUD_C.OnPrepass_isShipping
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
@@ -23,27 +49,6 @@ void UMainLobbyHUD_C::OnPrepass_isShipping(class UWidget* BoundWidget)
  if (!fn) fn = UObject::FindObject<UFunction>(0xdac63c1d);
 
 	UMainLobbyHUD_C_OnPrepass_isShipping_Params params;
-	params.BoundWidget = BoundWidget;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function MainLobbyHUD.MainLobbyHUD_C.On_NameTag_Prepass_1
-// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UMainLobbyHUD_C::On_NameTag_Prepass_1(class UWidget* BoundWidget)
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x1175278f);
-
-	UMainLobbyHUD_C_On_NameTag_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
 
 	auto flags = fn->FunctionFlags;

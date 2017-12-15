@@ -54,11 +54,6 @@ struct UScreenSettingWidget_C_InitializeResolutionIWidget_Params
 {
 };
 
-// Function ScreenSettingWidget.ScreenSettingWidget_C.OnApply
-struct UScreenSettingWidget_C_OnApply_Params
-{
-};
-
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnDefault
 struct UScreenSettingWidget_C_OnDefault_Params
 {
@@ -66,6 +61,11 @@ struct UScreenSettingWidget_C_OnDefault_Params
 
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnReset
 struct UScreenSettingWidget_C_OnReset_Params
+{
+};
+
+// Function ScreenSettingWidget.ScreenSettingWidget_C.OnApply
+struct UScreenSettingWidget_C_OnApply_Params
 {
 };
 

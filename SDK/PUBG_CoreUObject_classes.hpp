@@ -55,41 +55,10 @@ public:
 	}
 
 	template<typename T>
-	static T* GetObjectCasted(std::size_t index) {
-		return static_cast<T*>(GetGlobalObjects().GetByIndex(index));
-	}
-
-	/*
-	template<typename T>
-	static T* FindObject(const std::string& name)
-	{
-		for (int i = 0; i < GetGlobalObjects().Num(); ++i)
-		{
-			auto object = GetGlobalObjects().GetByIndex(i);
-	
-			if (object == nullptr)
-			{
-				continue;
-			}
-	
-			if (object->GetFullName() == name)
-			{
-				return static_cast<T*>(object);
-			}
-		}
-		return nullptr;
-	}
-
-	static UClass* FindClass(const std::string& name)
-	{
-		return FindObject<UClass>(name);
-	}
-
-	template<typename T>
 	static T* GetObjectCasted(std::size_t index)
 	{
 		return static_cast<T*>(GetGlobalObjects().GetByIndex(index));
-	}*/
+	}
 
 	bool IsA(UClass* cmp) const;
 

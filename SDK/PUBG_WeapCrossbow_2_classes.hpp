@@ -13,14 +13,14 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapCrossbow_2.WeapCrossbow_1_C
-// 0x000B (0x0D7B - 0x0D70)
+// 0x000B (0x0D83 - 0x0D78)
 class AWeapCrossbow_1_C : public ADefaultRifleSetting_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0D70(0x0008) (CPF_Transient, CPF_DuplicateTransient)
-	TEnumAsByte<ENUM_CrossbowState>                    CurrentState;                                             // 0x0D78(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_Net, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<ENUM_CrossbowState>                    LastState;                                                // 0x0D79(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	bool                                               bWantsToReload;                                           // 0x0D7A(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0D78(0x0008) (CPF_Transient, CPF_DuplicateTransient)
+	TEnumAsByte<ENUM_CrossbowState>                    CurrentState;                                             // 0x0D80(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_Net, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<ENUM_CrossbowState>                    LastState;                                                // 0x0D81(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bWantsToReload;                                           // 0x0D82(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

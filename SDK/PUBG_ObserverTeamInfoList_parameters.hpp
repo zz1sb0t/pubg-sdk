@@ -14,6 +14,12 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function ObserverTeamInfoList.ObserverTeamInfoList_C.On_TeamList_Prepass_2
+struct UObserverTeamInfoList_C_On_TeamList_Prepass_2_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function ObserverTeamInfoList.ObserverTeamInfoList_C.CollapseAllSquadPlayerInfos
 struct UObserverTeamInfoList_C_CollapseAllSquadPlayerInfos_Params
 {

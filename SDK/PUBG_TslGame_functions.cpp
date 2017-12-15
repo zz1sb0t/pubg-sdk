@@ -2222,6 +2222,28 @@ void ATslPlayerController::ServerSetAccumViewRotation(const struct FVector& InAc
 }
 
 
+// Function TslGame.TslPlayerController.ServerSendTPPacketReliable
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
+// Parameters:
+// TArray<unsigned char>          Packet                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
+
+void ATslPlayerController::ServerSendTPPacketReliable(TArray<unsigned char> Packet)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x18aa7e8f);
+
+	ATslPlayerController_ServerSendTPPacketReliable_Params params;
+	params.Packet = Packet;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslPlayerController.ServerSendPacketUnreliable
 // (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 // Parameters:
@@ -2816,6 +2838,25 @@ void ATslPlayerController::OnRep_CameraViewBehaviour()
  if (!fn) fn = UObject::FindObject<UFunction>(0xb3dd6ba4);
 
 	ATslPlayerController_OnRep_CameraViewBehaviour_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslPlayerController.OnRep_bUseTPAntibotClient
+// (FUNC_Final, FUNC_Native, FUNC_Private)
+
+void ATslPlayerController::OnRep_bUseTPAntibotClient()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3cdc6eb4);
+
+	ATslPlayerController_OnRep_bUseTPAntibotClient_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -3997,6 +4038,50 @@ bool ATslPlayerController::CompleteReportKiller()
 }
 
 
+// Function TslGame.TslPlayerController.ClientWasWarnedTobeKicked
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
+// Parameters:
+// struct FText                   KickReason                     (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
+
+void ATslPlayerController::ClientWasWarnedTobeKicked(const struct FText& KickReason)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x301905d4);
+
+	ATslPlayerController_ClientWasWarnedTobeKicked_Params params;
+	params.KickReason = KickReason;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslPlayerController.ClientWasKickedAndExit
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
+// Parameters:
+// struct FText                   KickReason                     (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
+
+void ATslPlayerController::ClientWasKickedAndExit(const struct FText& KickReason)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x44c9147e);
+
+	ATslPlayerController_ClientWasKickedAndExit_Params params;
+	params.KickReason = KickReason;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslPlayerController.ClientUpdateSpectatorCameraMode
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
 // Parameters:
@@ -4123,6 +4208,28 @@ void ATslPlayerController::ClientSetCanAllSpectate(bool InbCanSpectate)
 
 	ATslPlayerController_ClientSetCanAllSpectate_Params params;
 	params.InbCanSpectate = InbCanSpectate;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslPlayerController.ClientSendTPPacketReliable
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
+// Parameters:
+// TArray<unsigned char>          Packet                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
+
+void ATslPlayerController::ClientSendTPPacketReliable(TArray<unsigned char> Packet)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xb6b3053);
+
+	ATslPlayerController_ClientSendTPPacketReliable_Params params;
+	params.Packet = Packet;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -12306,6 +12413,28 @@ void ATslCharacter::ShowDynamicCrosshair(bool bShow)
 }
 
 
+// Function TslGame.TslCharacter.ShowCharacterInformation
+// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+// Parameters:
+// bool                           bFullInfo                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslCharacter::ShowCharacterInformation(bool bFullInfo)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc1190678);
+
+	ATslCharacter_ShowCharacterInformation_Params params;
+	params.bFullInfo = bFullInfo;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslCharacter.SetWorldTransformIdentity
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
@@ -13233,6 +13362,28 @@ void ATslCharacter::ServerSetAimOffsets(const struct FVector& NewAimOffsets)
 }
 
 
+// Function TslGame.TslCharacter.ServerBroadCastAimingRemote
+// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
+// Parameters:
+// bool                           InbIsAming                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslCharacter::ServerBroadCastAimingRemote(bool InbIsAming)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x8fa90b43);
+
+	ATslCharacter_ServerBroadCastAimingRemote_Params params;
+	params.InbIsAming = InbIsAming;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslCharacter.Server_UnarmedHitNotify
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 // Parameters:
@@ -13986,25 +14137,6 @@ void ATslCharacter::OnTest_InspectObject()
 }
 
 
-// Function TslGame.TslCharacter.OnStopTargeting_HoldADS
-// (FUNC_Final, FUNC_Native, FUNC_Public)
-
-void ATslCharacter::OnStopTargeting_HoldADS()
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x119b98d8);
-
-	ATslCharacter_OnStopTargeting_HoldADS_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function TslGame.TslCharacter.OnStopTargeting
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
@@ -14033,25 +14165,6 @@ void ATslCharacter::OnStopFire()
  if (!fn) fn = UObject::FindObject<UFunction>(0xa5a8b945);
 
 	ATslCharacter_OnStopFire_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslCharacter.OnStartTargeting_HoldADS
-// (FUNC_Final, FUNC_Native, FUNC_Public)
-
-void ATslCharacter::OnStartTargeting_HoldADS()
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x6187b3a);
-
-	ATslCharacter_OnStartTargeting_HoldADS_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -14219,6 +14332,25 @@ void ATslCharacter::OnRep_LastTakeHitInfo()
 }
 
 
+// Function TslGame.TslCharacter.OnRep_IsWeaponObstructed
+// (FUNC_Final, FUNC_Native, FUNC_Protected)
+
+void ATslCharacter::OnRep_IsWeaponObstructed()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3d8fd926);
+
+	ATslCharacter_OnRep_IsWeaponObstructed_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslCharacter.OnRep_IsThrowHigh
 // (FUNC_Final, FUNC_Native, FUNC_Protected)
 
@@ -14266,6 +14398,25 @@ void ATslCharacter::OnRep_IsScopingRemote()
  if (!fn) fn = UObject::FindObject<UFunction>(0x583195ec);
 
 	ATslCharacter_OnRep_IsScopingRemote_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslCharacter.OnRep_IsReviving
+// (FUNC_Final, FUNC_Native, FUNC_Protected)
+
+void ATslCharacter::OnRep_IsReviving()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc30e9a23);
+
+	ATslCharacter_OnRep_IsReviving_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -14390,6 +14541,63 @@ void ATslCharacter::OnRep_IsCrouched()
 }
 
 
+// Function TslGame.TslCharacter.OnRep_IsCoatEquipped
+// (FUNC_Final, FUNC_Native, FUNC_Protected)
+
+void ATslCharacter::OnRep_IsCoatEquipped()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7f2d1f0b);
+
+	ATslCharacter_OnRep_IsCoatEquipped_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslCharacter.OnRep_IsAimingRemote
+// (FUNC_Final, FUNC_Native, FUNC_Protected)
+
+void ATslCharacter::OnRep_IsAimingRemote()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x763ed35e);
+
+	ATslCharacter_OnRep_IsAimingRemote_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslCharacter.OnRep_IgnoreRotation
+// (FUNC_Final, FUNC_Native, FUNC_Protected)
+
+void ATslCharacter::OnRep_IgnoreRotation()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x23e35ee9);
+
+	ATslCharacter_OnRep_IgnoreRotation_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslCharacter.OnRep_Health
 // (FUNC_Final, FUNC_Native, FUNC_Protected)
 // Parameters:
@@ -14484,6 +14692,25 @@ void ATslCharacter::OnRep_BoostGauge(float LastBoostGauge)
 
 	ATslCharacter_OnRep_BoostGauge_Params params;
 	params.LastBoostGauge = LastBoostGauge;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslCharacter.OnRep_AimStateActive
+// (FUNC_Final, FUNC_Native, FUNC_Protected)
+
+void ATslCharacter::OnRep_AimStateActive()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc0e21fb5);
+
+	ATslCharacter_OnRep_AimStateActive_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -16479,25 +16706,6 @@ void ATslCharacter::HandleVaultEnd_CP(const struct FVector& InVaultEndVelocity)
 }
 
 
-// Function TslGame.TslCharacter.HandleTargeting_HoldADS
-// (FUNC_Final, FUNC_Native, FUNC_Public)
-
-void ATslCharacter::HandleTargeting_HoldADS()
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x3d2e973f);
-
-	ATslCharacter_HandleTargeting_HoldADS_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function TslGame.TslCharacter.HandleCapsuleCollision
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
@@ -17911,31 +18119,6 @@ struct FRotator ATslCharacter::GetFreelookDeltaRotation()
  if (!fn) fn = UObject::FindObject<UFunction>(0x3832360b);
 
 	ATslCharacter_GetFreelookDeltaRotation_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function TslGame.TslCharacter.GetEquippedItemClass
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// EEquipSlotID                   EEquipSlotID                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UClass*                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-class UClass* ATslCharacter::GetEquippedItemClass(EEquipSlotID EEquipSlotID)
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x775a0fec);
-
-	ATslCharacter_GetEquippedItemClass_Params params;
-	params.EEquipSlotID = EEquipSlotID;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -19549,6 +19732,71 @@ void ATslCharacter::AddBuffMoveSpeedFactor(float MoveSpeedFactor)
 }
 
 
+// Function TslGame.ObserverTagWidget.SetTeamNumber
+// (FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintEvent)
+// Parameters:
+// int                            TeamNumber                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor            teamColor                      (CPF_Parm, CPF_IsPlainOldData)
+
+void UObserverTagWidget::SetTeamNumber(int TeamNumber, const struct FLinearColor& teamColor)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x92af0a6);
+
+	UObserverTagWidget_SetTeamNumber_Params params;
+	params.TeamNumber = TeamNumber;
+	params.teamColor = teamColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.ObserverTagWidget.SetPlayerNameTag
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FName                   PlayerName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UObserverTagWidget::SetPlayerNameTag(const struct FName& PlayerName)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa70189d0);
+
+	UObserverTagWidget_SetPlayerNameTag_Params params;
+	params.PlayerName = PlayerName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.ObserverTagWidget.SetIndicatorColor
+// (FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintEvent)
+// Parameters:
+// struct FLinearColor            teamColor                      (CPF_Parm, CPF_IsPlainOldData)
+
+void UObserverTagWidget::SetIndicatorColor(const struct FLinearColor& teamColor)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x46de8d82);
+
+	UObserverTagWidget_SetIndicatorColor_Params params;
+	params.teamColor = teamColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.ObserverTagWidget.SetCharacterIconPosition_UC
 // (FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintEvent)
 // Parameters:
@@ -19618,6 +19866,50 @@ bool UObserverTagWidget::IsLastSpectatedCharacter()
 }
 
 
+// Function TslGame.ObserverTagWidget.HandleWidgetPrepass
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+
+void UObserverTagWidget::HandleWidgetPrepass(class UWidget* Widget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x4cb4f024);
+
+	UObserverTagWidget_HandleWidgetPrepass_Params params;
+	params.Widget = Widget;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.ObserverTagWidget.HandleTeamNumberPrepass
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+
+void UObserverTagWidget::HandleTeamNumberPrepass(class UWidget* Widget)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc32b00ec);
+
+	UObserverTagWidget_HandleTeamNumberPrepass_Params params;
+	params.Widget = Widget;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.ObserverTagWidget.GetTeamId
 // (FUNC_Final, FUNC_Native, FUNC_Protected, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
@@ -19665,6 +19957,69 @@ struct FLinearColor UObserverTagWidget::GetTeamColor(class ATslCharacter* TslCha
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function TslGame.ObserverTagManagerBaseWidget.UpdateReplicateCharacter
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UObserverTagManagerBaseWidget::UpdateReplicateCharacter()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7a75b709);
+
+	UObserverTagManagerBaseWidget_UpdateReplicateCharacter_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.ObserverTagManagerBaseWidget.RemoveReplicateCharacter
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TArray<class ATslCharacter*>   Characters                     (CPF_Parm, CPF_ZeroConstructor)
+
+void UObserverTagManagerBaseWidget::RemoveReplicateCharacter(TArray<class ATslCharacter*> Characters)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xc87c13de);
+
+	UObserverTagManagerBaseWidget_RemoveReplicateCharacter_Params params;
+	params.Characters = Characters;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.ObserverTagManagerBaseWidget.AddReplicateCharacter
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TArray<class ATslCharacter*>   Characters                     (CPF_Parm, CPF_ZeroConstructor)
+
+void UObserverTagManagerBaseWidget::AddReplicateCharacter(TArray<class ATslCharacter*> Characters)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3803611f);
+
+	UObserverTagManagerBaseWidget_AddReplicateCharacter_Params params;
+	params.Characters = Characters;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -28848,6 +29203,25 @@ void ALobbyHUD::SetLobbyCharacterHiddenInGame(uint32_t SlotIndex, bool bNewHidde
 }
 
 
+// Function TslGame.LobbyHUD.RequestSystemMenu
+// (FUNC_Final, FUNC_Native, FUNC_Public)
+
+void ALobbyHUD::RequestSystemMenu()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xa377cd36);
+
+	ALobbyHUD_RequestSystemMenu_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.LobbyHUD.OnReplaySummary
 // (FUNC_Final, FUNC_Native, FUNC_Private)
 // Parameters:
@@ -37308,6 +37682,37 @@ void ATslSpectatorPawn::SetObserverCameraMode(EObserverCameraMode NewCameraMode,
 }
 
 
+// Function TslGame.TslSpectatorPawn.SetKillerOrVictimCamera
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FString                 strKillerID                    (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 strKillerName                  (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 strVictimID                    (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 strVictimName                  (CPF_Parm, CPF_ZeroConstructor)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool ATslSpectatorPawn::SetKillerOrVictimCamera(const struct FString& strKillerID, const struct FString& strKillerName, const struct FString& strVictimID, const struct FString& strVictimName)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xaafafc2d);
+
+	ATslSpectatorPawn_SetKillerOrVictimCamera_Params params;
+	params.strKillerID = strKillerID;
+	params.strKillerName = strKillerName;
+	params.strVictimID = strVictimID;
+	params.strVictimName = strVictimName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function TslGame.TslSpectatorPawn.SetFreeCamBattleLocation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
@@ -37720,6 +38125,25 @@ void ATslSpectatorPawn::OnPlayerInfoDistanceDown()
  if (!fn) fn = UObject::FindObject<UFunction>(0xf275f2d3);
 
 	ATslSpectatorPawn_OnPlayerInfoDistanceDown_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslSpectatorPawn.OnGotoTimelineDone
+// (FUNC_Final, FUNC_Native, FUNC_Public)
+
+void ATslSpectatorPawn::OnGotoTimelineDone()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x217a67c5);
+
+	ATslSpectatorPawn_OnGotoTimelineDone_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -44976,10 +45400,11 @@ void ATslWeapon_Trajectory::ServerWallCheckTest(const struct FVector& TraceStart
 // Function TslGame.TslWeapon_Trajectory.ServerNotifyHit
 // (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_HasDefaults, FUNC_NetValidate)
 // Parameters:
+// struct FVector                 ClientImpactLocation           (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 // struct FVector                 RelativeImpact                 (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 // float                          HandOffsetValue                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult              Impact                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
-// TArray<float>                  AimSpeeds                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
+// TArray<uint32_t>               Checksums                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 // struct FVector                 Origin                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 // struct FVector                 TraceStart                     (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 // struct FVector                 PreLocation                    (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
@@ -44990,16 +45415,17 @@ void ATslWeapon_Trajectory::ServerWallCheckTest(const struct FVector& TraceStart
 // struct FVector                 RelLocation                    (CPF_ConstParm, CPF_Parm, CPF_IsPlainOldData)
 // float                          SpeedLoss                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ATslWeapon_Trajectory::ServerNotifyHit(const struct FVector& RelativeImpact, float HandOffsetValue, const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation, float SpeedLoss)
+void ATslWeapon_Trajectory::ServerNotifyHit(const struct FVector& ClientImpactLocation, const struct FVector& RelativeImpact, float HandOffsetValue, const struct FHitResult& Impact, TArray<uint32_t> Checksums, const struct FVector& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation, float SpeedLoss)
 {
 	static UFunction* fn = nullptr; 
  if (!fn) fn = UObject::FindObject<UFunction>(0x60909602);
 
 	ATslWeapon_Trajectory_ServerNotifyHit_Params params;
+	params.ClientImpactLocation = ClientImpactLocation;
 	params.RelativeImpact = RelativeImpact;
 	params.HandOffsetValue = HandOffsetValue;
 	params.Impact = Impact;
-	params.AimSpeeds = AimSpeeds;
+	params.Checksums = Checksums;
 	params.Origin = Origin;
 	params.TraceStart = TraceStart;
 	params.PreLocation = PreLocation;
@@ -45946,6 +46372,36 @@ void ATslMotorbikeVehicle::OnPostDriverLeave()
  if (!fn) fn = UObject::FindObject<UFunction>(0x8803af25);
 
 	ATslMotorbikeVehicle_OnPostDriverLeave_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslMotorbikeVehicle.OnMeshHit
+// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_HasOutParms, FUNC_HasDefaults)
+// Parameters:
+// class UPrimitiveComponent*     HitComp                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// class AActor*                  OtherActor                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UPrimitiveComponent*     OtherComp                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_IsPlainOldData)
+// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+
+void ATslMotorbikeVehicle::OnMeshHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x91f629c2);
+
+	ATslMotorbikeVehicle_OnMeshHit_Params params;
+	params.HitComp = HitComp;
+	params.OtherActor = OtherActor;
+	params.OtherComp = OtherComp;
+	params.NormalImpulse = NormalImpulse;
+	params.Hit = Hit;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

@@ -13,14 +13,14 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class HeadMountedDisplay.MotionControllerComponent
-// 0x0060 (0x08A0 - 0x0840)
+// 0x0060 (0x08B0 - 0x0850)
 class UMotionControllerComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      bDisableLowLatencyUpdate : 1;                             // 0x0840(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0841(0x0003) MISSED OFFSET
-	ETrackingStatus                                    CurrentTrackingStatus;                                    // 0x0844(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5B];                                      // 0x0845(0x005B) MISSED OFFSET
+	unsigned char                                      bDisableLowLatencyUpdate : 1;                             // 0x0850(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0851(0x0003) MISSED OFFSET
+	ETrackingStatus                                    CurrentTrackingStatus;                                    // 0x0854(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x5B];                                      // 0x0855(0x005B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

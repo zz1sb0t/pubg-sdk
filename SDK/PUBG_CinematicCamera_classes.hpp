@@ -80,24 +80,24 @@ public:
 
 
 // Class CinematicCamera.CineCameraComponent
-// 0x00C0 (0x0A50 - 0x0990)
+// 0x00C0 (0x0A60 - 0x09A0)
 class UCineCameraComponent : public UCameraComponent
 {
 public:
-	struct FCameraFilmbackSettings                     FilmbackSettings;                                         // 0x0990(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	struct FCameraLensSettings                         LensSettings;                                             // 0x099C(0x0014) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
-	struct FCameraFocusSettings                        FocusSettings;                                            // 0x09B0(0x0038) (CPF_Edit, CPF_BlueprintVisible)
-	float                                              CurrentFocalLength;                                       // 0x09E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              CurrentAperture;                                          // 0x09EC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              CurrentFocusDistance;                                     // 0x09F0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x09F4(0x000C) MISSED OFFSET
-	TArray<struct FNamedFilmbackPreset>                FilmbackPresets;                                          // 0x0A00(0x0010) (CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FNamedLensPreset>                    LensPresets;                                              // 0x0A10(0x0010) (CPF_ZeroConstructor, CPF_Config)
-	struct FString                                     DefaultFilmbackPresetName;                                // 0x0A20(0x0010) (CPF_ZeroConstructor, CPF_Config)
-	struct FString                                     DefaultLensPresetName;                                    // 0x0A30(0x0010) (CPF_ZeroConstructor, CPF_Config)
-	float                                              DefaultLensFocalLength;                                   // 0x0A40(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              DefaultLensFStop;                                         // 0x0A44(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0A48(0x0008) MISSED OFFSET
+	struct FCameraFilmbackSettings                     FilmbackSettings;                                         // 0x09A0(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FCameraLensSettings                         LensSettings;                                             // 0x09AC(0x0014) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
+	struct FCameraFocusSettings                        FocusSettings;                                            // 0x09C0(0x0038) (CPF_Edit, CPF_BlueprintVisible)
+	float                                              CurrentFocalLength;                                       // 0x09F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              CurrentAperture;                                          // 0x09FC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              CurrentFocusDistance;                                     // 0x0A00(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0A04(0x000C) MISSED OFFSET
+	TArray<struct FNamedFilmbackPreset>                FilmbackPresets;                                          // 0x0A10(0x0010) (CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FNamedLensPreset>                    LensPresets;                                              // 0x0A20(0x0010) (CPF_ZeroConstructor, CPF_Config)
+	struct FString                                     DefaultFilmbackPresetName;                                // 0x0A30(0x0010) (CPF_ZeroConstructor, CPF_Config)
+	struct FString                                     DefaultLensPresetName;                                    // 0x0A40(0x0010) (CPF_ZeroConstructor, CPF_Config)
+	float                                              DefaultLensFocalLength;                                   // 0x0A50(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              DefaultLensFStop;                                         // 0x0A54(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0A58(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

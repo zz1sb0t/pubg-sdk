@@ -40,9 +40,9 @@ public:
 	bool GetResolutionEnabled();
 	void GetSelectedResolution(struct FScreenResolution* SelectedResolution);
 	void InitializeResolutionIWidget();
-	void OnApply();
 	void OnDefault();
 	void OnReset();
+	void OnApply();
 	void Construct();
 	void ExecuteUbergraph_ScreenSettingWidget(int EntryPoint);
 };

@@ -30,16 +30,16 @@ public:
 
 
 // Class Niagara.NiagaraComponent
-// 0x0050 (0x0890 - 0x0840)
+// 0x0050 (0x08A0 - 0x0850)
 class UNiagaraComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0840(0x0010) MISSED OFFSET
-	TArray<struct FNiagaraVariable>                    EffectParameterLocalOverrides;                            // 0x0850(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	TArray<struct FNiagaraScriptDataInterfaceInfo>     EffectDataInterfaceLocalOverrides;                        // 0x0860(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	TArray<class UNiagaraDataInterface*>               InstanceDataInterfaces;                                   // 0x0870(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
-	bool                                               bRenderingEnabled;                                        // 0x0880(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0xF];                                       // 0x0881(0x000F) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0850(0x0010) MISSED OFFSET
+	TArray<struct FNiagaraVariable>                    EffectParameterLocalOverrides;                            // 0x0860(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	TArray<struct FNiagaraScriptDataInterfaceInfo>     EffectDataInterfaceLocalOverrides;                        // 0x0870(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	TArray<class UNiagaraDataInterface*>               InstanceDataInterfaces;                                   // 0x0880(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
+	bool                                               bRenderingEnabled;                                        // 0x0890(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0xF];                                       // 0x0891(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -98,23 +98,23 @@ public:
 
 
 // Class Paper2D.PaperFlipbookComponent
-// 0x0050 (0x0990 - 0x0940)
+// 0x0050 (0x09A0 - 0x0950)
 class UPaperFlipbookComponent : public UMeshComponent
 {
 public:
-	class UPaperFlipbook*                              SourceFlipbook;                                           // 0x0940(0x0008) (CPF_Edit, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInterface*                          Material;                                                 // 0x0948(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	float                                              PlayRate;                                                 // 0x0950(0x0004) (CPF_Edit, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bLooping : 1;                                             // 0x0954(0x0001) (CPF_Net)
-	unsigned char                                      bReversePlayback : 1;                                     // 0x0954(0x0001) (CPF_Net)
-	unsigned char                                      bPlaying : 1;                                             // 0x0954(0x0001) (CPF_Net)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0955(0x0003) MISSED OFFSET
-	float                                              AccumulatedTime;                                          // 0x0958(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                CachedFrameIndex;                                         // 0x095C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                SpriteColor;                                              // 0x0960(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
-	class UBodySetup*                                  CachedBodySetup;                                          // 0x0970(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnFinishedPlaying;                                        // 0x0978(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0988(0x0008) MISSED OFFSET
+	class UPaperFlipbook*                              SourceFlipbook;                                           // 0x0950(0x0008) (CPF_Edit, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInterface*                          Material;                                                 // 0x0958(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	float                                              PlayRate;                                                 // 0x0960(0x0004) (CPF_Edit, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bLooping : 1;                                             // 0x0964(0x0001) (CPF_Net)
+	unsigned char                                      bReversePlayback : 1;                                     // 0x0964(0x0001) (CPF_Net)
+	unsigned char                                      bPlaying : 1;                                             // 0x0964(0x0001) (CPF_Net)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0965(0x0003) MISSED OFFSET
+	float                                              AccumulatedTime;                                          // 0x0968(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                CachedFrameIndex;                                         // 0x096C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                SpriteColor;                                              // 0x0970(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
+	class UBodySetup*                                  CachedBodySetup;                                          // 0x0980(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	struct FScriptMulticastDelegate                    OnFinishedPlaying;                                        // 0x0988(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0998(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -169,13 +169,13 @@ public:
 
 
 // Class Paper2D.PaperGroupedSpriteComponent
-// 0x0030 (0x0970 - 0x0940)
+// 0x0030 (0x0980 - 0x0950)
 class UPaperGroupedSpriteComponent : public UMeshComponent
 {
 public:
-	TArray<class UMaterialInterface*>                  InstanceMaterials;                                        // 0x0940(0x0010) (CPF_ZeroConstructor)
-	TArray<struct FSpriteInstanceData>                 PerInstanceSpriteData;                                    // 0x0950(0x0010) (CPF_Edit, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0960(0x0010) MISSED OFFSET
+	TArray<class UMaterialInterface*>                  InstanceMaterials;                                        // 0x0950(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FSpriteInstanceData>                 PerInstanceSpriteData;                                    // 0x0960(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0970(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -302,13 +302,13 @@ public:
 
 
 // Class Paper2D.PaperSpriteComponent
-// 0x0020 (0x0960 - 0x0940)
+// 0x0020 (0x0970 - 0x0950)
 class UPaperSpriteComponent : public UMeshComponent
 {
 public:
-	class UPaperSprite*                                SourceSprite;                                             // 0x0940(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UMaterialInterface*                          MaterialOverride;                                         // 0x0948(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	struct FLinearColor                                SpriteColor;                                              // 0x0950(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
+	class UPaperSprite*                                SourceSprite;                                             // 0x0950(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInterface*                          MaterialOverride;                                         // 0x0958(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	struct FLinearColor                                SpriteColor;                                              // 0x0960(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -344,24 +344,24 @@ public:
 
 
 // Class Paper2D.PaperTerrainComponent
-// 0x0050 (0x0890 - 0x0840)
+// 0x0050 (0x08A0 - 0x0850)
 class UPaperTerrainComponent : public UPrimitiveComponent
 {
 public:
-	bool                                               bClosedSpline;                                            // 0x0840(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bFilledSpline;                                            // 0x0841(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0842(0x0006) MISSED OFFSET
-	class UPaperTerrainSplineComponent*                AssociatedSpline;                                         // 0x0848(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	int                                                RandomSeed;                                               // 0x0850(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SegmentOverlapAmount;                                     // 0x0854(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FLinearColor                                TerrainColor;                                             // 0x0858(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
-	int                                                ReparamStepsPerSegment;                                   // 0x0868(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESpriteCollisionMode>                  SpriteCollisionDomain;                                    // 0x086C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x086D(0x0003) MISSED OFFSET
-	float                                              CollisionThickness;                                       // 0x0870(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0874(0x0004) MISSED OFFSET
-	class UBodySetup*                                  CachedBodySetup;                                          // 0x0878(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x10];                                      // 0x0880(0x0010) MISSED OFFSET
+	bool                                               bClosedSpline;                                            // 0x0850(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bFilledSpline;                                            // 0x0851(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0852(0x0006) MISSED OFFSET
+	class UPaperTerrainSplineComponent*                AssociatedSpline;                                         // 0x0858(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	int                                                RandomSeed;                                               // 0x0860(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SegmentOverlapAmount;                                     // 0x0864(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor                                TerrainColor;                                             // 0x0868(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
+	int                                                ReparamStepsPerSegment;                                   // 0x0878(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESpriteCollisionMode>                  SpriteCollisionDomain;                                    // 0x087C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x087D(0x0003) MISSED OFFSET
+	float                                              CollisionThickness;                                       // 0x0880(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0884(0x0004) MISSED OFFSET
+	class UBodySetup*                                  CachedBodySetup;                                          // 0x0888(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0890(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -394,11 +394,11 @@ public:
 
 
 // Class Paper2D.PaperTerrainSplineComponent
-// 0x0040 (0x0960 - 0x0920)
+// 0x0040 (0x0970 - 0x0930)
 class UPaperTerrainSplineComponent : public USplineComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0920(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0930(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -497,22 +497,22 @@ public:
 
 
 // Class Paper2D.PaperTileMapComponent
-// 0x0050 (0x0990 - 0x0940)
+// 0x0050 (0x09A0 - 0x0950)
 class UPaperTileMapComponent : public UMeshComponent
 {
 public:
-	int                                                MapWidth;                                                 // 0x0940(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	int                                                MapHeight;                                                // 0x0944(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	int                                                TileWidth;                                                // 0x0948(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	int                                                TileHeight;                                               // 0x094C(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	class UPaperTileSet*                               DefaultLayerTileSet;                                      // 0x0950(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	class UMaterialInterface*                          Material;                                                 // 0x0958(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	TArray<class UPaperTileLayer*>                     TileLayers;                                               // 0x0960(0x0010) (CPF_ZeroConstructor, CPF_Deprecated)
-	struct FLinearColor                                TileMapColor;                                             // 0x0970(0x0010) (CPF_Edit, CPF_IsPlainOldData)
-	int                                                UseSingleLayerIndex;                                      // 0x0980(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseSingleLayer;                                          // 0x0984(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0985(0x0003) MISSED OFFSET
-	class UPaperTileMap*                               TileMap;                                                  // 0x0988(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                MapWidth;                                                 // 0x0950(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	int                                                MapHeight;                                                // 0x0954(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	int                                                TileWidth;                                                // 0x0958(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	int                                                TileHeight;                                               // 0x095C(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	class UPaperTileSet*                               DefaultLayerTileSet;                                      // 0x0960(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	class UMaterialInterface*                          Material;                                                 // 0x0968(0x0008) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	TArray<class UPaperTileLayer*>                     TileLayers;                                               // 0x0970(0x0010) (CPF_ZeroConstructor, CPF_Deprecated)
+	struct FLinearColor                                TileMapColor;                                             // 0x0980(0x0010) (CPF_Edit, CPF_IsPlainOldData)
+	int                                                UseSingleLayerIndex;                                      // 0x0990(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseSingleLayer;                                          // 0x0994(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0995(0x0003) MISSED OFFSET
+	class UPaperTileMap*                               TileMap;                                                  // 0x0998(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

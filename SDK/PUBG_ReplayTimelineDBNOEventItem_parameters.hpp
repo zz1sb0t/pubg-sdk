@@ -34,6 +34,17 @@ struct UReplayTimelineDBNOEventItem_C_GetToolTipText_Params
 	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
+// Function ReplayTimelineDBNOEventItem.ReplayTimelineDBNOEventItem_C.OnGotoTimelineDone
+struct UReplayTimelineDBNOEventItem_C_OnGotoTimelineDone_Params
+{
+};
+
+// Function ReplayTimelineDBNOEventItem.ReplayTimelineDBNOEventItem_C.ExecuteUbergraph_ReplayTimelineDBNOEventItem
+struct UReplayTimelineDBNOEventItem_C_ExecuteUbergraph_ReplayTimelineDBNOEventItem_Params
+{
+	int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

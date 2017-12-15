@@ -14,14 +14,16 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function MainLobbyHUD.MainLobbyHUD_C.OnPrepass_isShipping
-struct UMainLobbyHUD_C_OnPrepass_isShipping_Params
+// Function MainLobbyHUD.MainLobbyHUD_C.OnKeyDown
+struct UMainLobbyHUD_C_OnKeyDown_Params
 {
-	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (CPF_Parm)
+	struct FEventReply                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
-// Function MainLobbyHUD.MainLobbyHUD_C.On_NameTag_Prepass_1
-struct UMainLobbyHUD_C_On_NameTag_Prepass_1_Params
+// Function MainLobbyHUD.MainLobbyHUD_C.OnPrepass_isShipping
+struct UMainLobbyHUD_C_OnPrepass_isShipping_Params
 {
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };

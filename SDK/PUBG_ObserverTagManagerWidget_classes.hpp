@@ -13,12 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ObserverTagManagerWidget.ObserverTagManagerWidget_C
-// 0x0018 (0x0258 - 0x0240)
-class UObserverTagManagerWidget_C : public UUserWidget
+// 0x0008 (0x02C0 - 0x02B8)
+class UObserverTagManagerWidget_C : public UObserverTagManagerBaseWidget
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0240(0x0008) (CPF_Transient, CPF_DuplicateTransient)
-	TArray<class UPlayerHeadWidget_C*>                 PlayerHeadWidgets;                                        // 0x0248(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x02B8(0x0008) (CPF_Transient, CPF_DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -28,13 +27,9 @@ public:
 	}
 
 
-	void UpdateReplicateCharacter();
-	void RemoveReplicateCharacter(TArray<class ATslCharacter*>* Characters);
-	void AddReplicateCharacter(TArray<class ATslCharacter*>* Characters);
-	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
-	void Construct();
 	void CustomTick();
 	void TimerCheckUpdateList();
+	void Construct();
 	void ExecuteUbergraph_ObserverTagManagerWidget(int EntryPoint);
 };
 

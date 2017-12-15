@@ -81,6 +81,45 @@ struct FText UReplayTimelineKillEventItem_C::GetToolTipText()
 }
 
 
+// Function ReplayTimelineKillEventItem.ReplayTimelineKillEventItem_C.OnGotoTimelineDone
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimelineKillEventItem_C::OnGotoTimelineDone()
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x3c5305f4);
+
+	UReplayTimelineKillEventItem_C_OnGotoTimelineDone_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ReplayTimelineKillEventItem.ReplayTimelineKillEventItem_C.ExecuteUbergraph_ReplayTimelineKillEventItem
+// ()
+// Parameters:
+// int                            EntryPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UReplayTimelineKillEventItem_C::ExecuteUbergraph_ReplayTimelineKillEventItem(int EntryPoint)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x7c59cae4);
+
+	UReplayTimelineKillEventItem_C_ExecuteUbergraph_ReplayTimelineKillEventItem_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 }
 
 #ifdef _MSC_VER

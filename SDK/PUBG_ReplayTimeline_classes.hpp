@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass ReplayTimeline.ReplayTimeline_C
-// 0x0126 (0x0366 - 0x0240)
+// 0x016C (0x03AC - 0x0240)
 class UReplayTimeline_C : public UUserWidget
 {
 public:
@@ -54,6 +54,13 @@ public:
 	struct FWidgetTransform                            TimelineBarMinimizeTransform;                             // 0x0348(0x001C) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	bool                                               IsTimelineMinimize;                                       // 0x0364(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	bool                                               IsFirstConstruct;                                         // 0x0365(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsRecording;                                              // 0x0366(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x0367(0x0001) MISSED OFFSET
+	struct FString                                     KillerIDToFind;                                           // 0x0368(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FString                                     KillerNameToFind;                                         // 0x0378(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FString                                     VictimIDToFind;                                           // 0x0388(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FString                                     VictimNameToFind;                                         // 0x0398(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	int                                                CountForFindingCharacter;                                 // 0x03A8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -63,6 +70,8 @@ public:
 	}
 
 
+	void UnBindOnGotoTimelineDoneToFindCharacter();
+	void BindOnGotoTimelineDoneToFindCharacter(const struct FString& strKillerID, const struct FString& strKillerName, const struct FString& strVictimID, const struct FString& strVictimName);
 	void CheckVideoCapture();
 	void OnToggleReplayTimeline();
 	void SetTimelineMaximize();
@@ -102,6 +111,7 @@ public:
 	void BndEvt__CheckBoxGroggys_K2Node_ComponentBoundEvent_86_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
 	void BndEvt__BtnRec_K2Node_ComponentBoundEvent_15_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__BtnStop_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature();
+	void OnGoToFindTimeToFindCharacter();
 	void ExecuteUbergraph_ReplayTimeline(int EntryPoint);
 };
 

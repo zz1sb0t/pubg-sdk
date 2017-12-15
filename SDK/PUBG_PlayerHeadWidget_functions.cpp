@@ -34,27 +34,6 @@ struct FText UPlayerHeadWidget_C::Get_TextWeaponName_Text_1()
 }
 
 
-// Function PlayerHeadWidget.PlayerHeadWidget_C.On_IndicatorArrow_Prepass_1
-// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UPlayerHeadWidget_C::On_IndicatorArrow_Prepass_1(class UWidget* BoundWidget)
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x66281f9e);
-
-	UPlayerHeadWidget_C_On_IndicatorArrow_Prepass_1_Params params;
-	params.BoundWidget = BoundWidget;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateHealthGaugeColor
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -64,27 +43,6 @@ void UPlayerHeadWidget_C::UpdateHealthGaugeColor()
  if (!fn) fn = UObject::FindObject<UFunction>(0xcecdc9a);
 
 	UPlayerHeadWidget_C_UpdateHealthGaugeColor_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function PlayerHeadWidget.PlayerHeadWidget_C.On_TeamNumber_Prepass_1
-// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UPlayerHeadWidget_C::On_TeamNumber_Prepass_1(class UWidget* BoundWidget)
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0xe5aa9ecc);
-
-	UPlayerHeadWidget_C_On_TeamNumber_Prepass_1_Params params;
-	params.BoundWidget = BoundWidget;
 
 	auto flags = fn->FunctionFlags;
 
@@ -180,27 +138,6 @@ void UPlayerHeadWidget_C::OnPrepass_2(class UWidget* BoundWidget)
 }
 
 
-// Function PlayerHeadWidget.PlayerHeadWidget_C.OnPrepass_1
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UPlayerHeadWidget_C::OnPrepass_1(class UWidget* BoundWidget)
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0xc78cb3b2);
-
-	UPlayerHeadWidget_C_OnPrepass_1_Params params;
-	params.BoundWidget = BoundWidget;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateTextColor
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -216,28 +153,6 @@ void UPlayerHeadWidget_C::UpdateTextColor()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function PlayerHeadWidget.PlayerHeadWidget_C.Get_PlayerName_Text_1
-// (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
-
-struct FText UPlayerHeadWidget_C::Get_PlayerName_Text_1()
-{
-	static UFunction* fn = nullptr; 
- if (!fn) fn = UObject::FindObject<UFunction>(0x732958f2);
-
-	UPlayerHeadWidget_C_Get_PlayerName_Text_1_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -721,6 +636,71 @@ void UPlayerHeadWidget_C::TimerCheckUpdateList()
  if (!fn) fn = UObject::FindObject<UFunction>(0x4e352e23);
 
 	UPlayerHeadWidget_C_TimerCheckUpdateList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.SetPlayerNameTag
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FName*                  PlayerName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UPlayerHeadWidget_C::SetPlayerNameTag(struct FName* PlayerName)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xd5c5f79b);
+
+	UPlayerHeadWidget_C_SetPlayerNameTag_Params params;
+	params.PlayerName = PlayerName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.SetTeamNumber
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// int*                           TeamNumber                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FLinearColor*           teamColor                      (CPF_Parm, CPF_IsPlainOldData)
+
+void UPlayerHeadWidget_C::SetTeamNumber(int* TeamNumber, struct FLinearColor* teamColor)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0xbd73036f);
+
+	UPlayerHeadWidget_C_SetTeamNumber_Params params;
+	params.TeamNumber = TeamNumber;
+	params.teamColor = teamColor;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.SetIndicatorColor
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FLinearColor*           teamColor                      (CPF_Parm, CPF_IsPlainOldData)
+
+void UPlayerHeadWidget_C::SetIndicatorColor(struct FLinearColor* teamColor)
+{
+	static UFunction* fn = nullptr; 
+ if (!fn) fn = UObject::FindObject<UFunction>(0x34a1bffb);
+
+	UPlayerHeadWidget_C_SetIndicatorColor_Params params;
+	params.teamColor = teamColor;
 
 	auto flags = fn->FunctionFlags;
 

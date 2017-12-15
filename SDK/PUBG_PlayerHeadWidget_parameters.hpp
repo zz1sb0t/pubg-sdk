@@ -20,21 +20,9 @@ struct UPlayerHeadWidget_C_Get_TextWeaponName_Text_1_Params
 	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
-// Function PlayerHeadWidget.PlayerHeadWidget_C.On_IndicatorArrow_Prepass_1
-struct UPlayerHeadWidget_C_On_IndicatorArrow_Prepass_1_Params
-{
-	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateHealthGaugeColor
 struct UPlayerHeadWidget_C_UpdateHealthGaugeColor_Params
 {
-};
-
-// Function PlayerHeadWidget.PlayerHeadWidget_C.On_TeamNumber_Prepass_1
-struct UPlayerHeadWidget_C_On_TeamNumber_Prepass_1_Params
-{
-	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function PlayerHeadWidget.PlayerHeadWidget_C.AddAlphaWhenADS
@@ -61,21 +49,9 @@ struct UPlayerHeadWidget_C_OnPrepass_2_Params
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function PlayerHeadWidget.PlayerHeadWidget_C.OnPrepass_1
-struct UPlayerHeadWidget_C_OnPrepass_1_Params
-{
-	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateTextColor
 struct UPlayerHeadWidget_C_UpdateTextColor_Params
 {
-};
-
-// Function PlayerHeadWidget.PlayerHeadWidget_C.Get_PlayerName_Text_1
-struct UPlayerHeadWidget_C_Get_PlayerName_Text_1_Params
-{
-	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
 // Function PlayerHeadWidget.PlayerHeadWidget_C.GetCurrentWeaponGun
@@ -209,6 +185,25 @@ struct UPlayerHeadWidget_C_CustomTick_Params
 // Function PlayerHeadWidget.PlayerHeadWidget_C.TimerCheckUpdateList
 struct UPlayerHeadWidget_C_TimerCheckUpdateList_Params
 {
+};
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.SetPlayerNameTag
+struct UPlayerHeadWidget_C_SetPlayerNameTag_Params
+{
+	struct FName*                                      PlayerName;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.SetTeamNumber
+struct UPlayerHeadWidget_C_SetTeamNumber_Params
+{
+	int*                                               TeamNumber;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FLinearColor*                               teamColor;                                                // (CPF_Parm, CPF_IsPlainOldData)
+};
+
+// Function PlayerHeadWidget.PlayerHeadWidget_C.SetIndicatorColor
+struct UPlayerHeadWidget_C_SetIndicatorColor_Params
+{
+	struct FLinearColor*                               teamColor;                                                // (CPF_Parm, CPF_IsPlainOldData)
 };
 
 // Function PlayerHeadWidget.PlayerHeadWidget_C.ExecuteUbergraph_PlayerHeadWidget

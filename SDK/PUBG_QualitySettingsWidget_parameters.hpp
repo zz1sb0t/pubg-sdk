@@ -73,11 +73,6 @@ struct UQualitySettingsWidget_C_InitQualitySettingsWidget_Params
 {
 };
 
-// Function QualitySettingsWidget.QualitySettingsWidget_C.OnDefault
-struct UQualitySettingsWidget_C_OnDefault_Params
-{
-};
-
 // Function QualitySettingsWidget.QualitySettingsWidget_C.OnApply
 struct UQualitySettingsWidget_C_OnApply_Params
 {
@@ -88,6 +83,11 @@ struct UQualitySettingsWidget_C_BndEvt__MainQualityComboBox_K2Node_ComponentBoun
 {
 	struct FString                                     SelectedItem;                                             // (CPF_Parm, CPF_ZeroConstructor)
 	TEnumAsByte<ESelectInfo>                           SelectionType;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function QualitySettingsWidget.QualitySettingsWidget_C.Construct
+struct UQualitySettingsWidget_C_Construct_Params
+{
 };
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_2029_OnSelectionChanged__DelegateSignature
@@ -144,8 +144,8 @@ struct UQualitySettingsWidget_C_OnReset_Params
 {
 };
 
-// Function QualitySettingsWidget.QualitySettingsWidget_C.Construct
-struct UQualitySettingsWidget_C_Construct_Params
+// Function QualitySettingsWidget.QualitySettingsWidget_C.OnDefault
+struct UQualitySettingsWidget_C_OnDefault_Params
 {
 };
 

@@ -148,13 +148,13 @@ struct FCustomizableObjectIdPair
 };
 
 // ScriptStruct CustomizableObject.CompilationOptions
-// 0x000C
+// 0x0018
 struct FCompilationOptions
 {
 	bool                                               bLocal;                                                   // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	int                                                OptimizationLevel;                                        // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0008(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct CustomizableObject.MutableModelParameterValue

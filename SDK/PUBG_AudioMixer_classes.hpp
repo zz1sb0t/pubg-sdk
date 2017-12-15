@@ -115,28 +115,28 @@ public:
 
 
 // Class AudioMixer.SynthComponent
-// 0x01D0 (0x05B0 - 0x03E0)
+// 0x01D0 (0x05C0 - 0x03F0)
 class USynthComponent : public USceneComponent
 {
 public:
-	unsigned char                                      bAutoDestroy : 1;                                         // 0x03E0(0x0001)
-	unsigned char                                      bStopWhenOwnerDestroyed : 1;                              // 0x03E0(0x0001)
-	unsigned char                                      bAllowSpatialization : 1;                                 // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      bOverrideAttenuation : 1;                                 // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x03E1(0x0007) MISSED OFFSET
-	class USoundAttenuation*                           AttenuationSettings;                                      // 0x03E8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FSoundAttenuationSettings                   AttenuationOverrides;                                     // 0x03F0(0x0130) (CPF_Edit, CPF_BlueprintVisible)
-	class USoundConcurrency*                           ConcurrencySettings;                                      // 0x0520(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class USoundClass*                                 SoundClass;                                               // 0x0528(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class USoundEffectSourcePresetChain*               SourceEffectChain;                                        // 0x0530(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DefaultMasterReverbSendAmount;                            // 0x0538(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x053C(0x0004) MISSED OFFSET
-	class USoundSubmix*                                SoundSubmix;                                              // 0x0540(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<struct FSoundSubmixSendInfo>                SoundSubmixSends;                                         // 0x0548(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0558(0x0008) MISSED OFFSET
-	class USynthSound*                                 Synth;                                                    // 0x0560(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class UAudioComponent*                             AudioComponent;                                           // 0x0568(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x40];                                      // 0x0570(0x0040) MISSED OFFSET
+	unsigned char                                      bAutoDestroy : 1;                                         // 0x03F0(0x0001)
+	unsigned char                                      bStopWhenOwnerDestroyed : 1;                              // 0x03F0(0x0001)
+	unsigned char                                      bAllowSpatialization : 1;                                 // 0x03F0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bOverrideAttenuation : 1;                                 // 0x03F0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x03F1(0x0007) MISSED OFFSET
+	class USoundAttenuation*                           AttenuationSettings;                                      // 0x03F8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FSoundAttenuationSettings                   AttenuationOverrides;                                     // 0x0400(0x0130) (CPF_Edit, CPF_BlueprintVisible)
+	class USoundConcurrency*                           ConcurrencySettings;                                      // 0x0530(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class USoundClass*                                 SoundClass;                                               // 0x0538(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class USoundEffectSourcePresetChain*               SourceEffectChain;                                        // 0x0540(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DefaultMasterReverbSendAmount;                            // 0x0548(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x054C(0x0004) MISSED OFFSET
+	class USoundSubmix*                                SoundSubmix;                                              // 0x0550(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<struct FSoundSubmixSendInfo>                SoundSubmixSends;                                         // 0x0558(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0568(0x0008) MISSED OFFSET
+	class USynthSound*                                 Synth;                                                    // 0x0570(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class UAudioComponent*                             AudioComponent;                                           // 0x0578(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x40];                                      // 0x0580(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

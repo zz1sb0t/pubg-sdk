@@ -14,6 +14,12 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_TeamOverallKillCountWidget.BP_TeamOverallKillCountWidget_C.OnPrepass_1
+struct UBP_TeamOverallKillCountWidget_C_OnPrepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER
