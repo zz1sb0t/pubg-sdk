@@ -11577,7 +11577,7 @@ public:
 	struct FName                                       StabilizeBone_Low;                                        // 0x07D0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FName                                       StabilizeBone_High;                                       // 0x07D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UCurveFloat*                                 Curve_Roll;                                               // 0x07E0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class UCurveFloat*                                 Curve_RollReturn;                                         // 0x07E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UCurveFloat*                                 Curve_RollreturnValue;                                         // 0x07E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UCurveFloat*                                 Curve_Steer;                                              // 0x07F0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UCurveFloat*                                 Curve_Yaw;                                                // 0x07F8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UCurveFloat*                                 Curve_Torque;                                             // 0x0800(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)

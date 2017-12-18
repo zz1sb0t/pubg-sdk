@@ -32,8 +32,8 @@ void AParachutePlayer_C::UserConstructionScript()
 
 // Function ParachutePlayer.ParachutePlayer_C.АР„З|·xЗ_
 // (FUNC_BlueprintEvent)
-
-/*void AParachutePlayer_C::АР„З|·xЗ_()
+/*
+void AParachutePlayer_C::АР„З|·xЗ_()
 {
 	static UFunction* fn = nullptr; 
  if (!fn) fn = UObject::FindObject<UFunction>(0xbc21ce67);
@@ -45,7 +45,8 @@ void AParachutePlayer_C::UserConstructionScript()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}*/
+}
+*/
 
 
 // Function ParachutePlayer.ParachutePlayer_C.ReceiveEndPlay

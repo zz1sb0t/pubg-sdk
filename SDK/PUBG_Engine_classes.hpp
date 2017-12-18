@@ -3938,7 +3938,8 @@ public:
 class ULevel : public UObject
 {
 public:
-	char unkdata00[0x88]; //unsigned char                                      UnknownData00[0x98];                                      // 0x0028(0x0098) MISSED OFFSET
+	//unsigned char                                      UnknownData00[0x98];                                      // 0x0028(0x0098) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x88];                                      // 0x0028(0x0098) MISSED OFFSET
 	TArray<class AActor*>							   AActors; //0xB0 (0x10)
 	class UWorld*                                      OwningWorld;                                              // 0x00C0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	class UModel*                                      Model;                                                    // 0x00C8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)

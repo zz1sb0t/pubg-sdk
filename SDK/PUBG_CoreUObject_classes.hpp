@@ -64,8 +64,8 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static UClass* ptr = nullptr; 
- if (!ptr) ptr = UObject::FindClass(0x551c5fcd);
+		static UClass* ptr = nullptr;
+		if (!ptr) ptr = UObject::FindClass(0x551c5fcd);
 		return ptr;
 	}
 

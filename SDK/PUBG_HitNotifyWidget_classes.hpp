@@ -35,7 +35,7 @@ public:
 	}
 
 
-	void GetBloodSpotWidget(class UBloodSpotWidget_C** Return);
+	void GetBloodSpotWidget(class UBloodSpotWidget_C** returnValue);
 	void InitializeBloodSpotWidgets();
 	void InitializeKoreanRating();
 	void InitializeChineseLicensing();
